@@ -18,3 +18,14 @@ venv/
 
 .vercel
 .env*
+
+# Research rasters and catalogs are regenerable; keep processed outputs tracked
+# because the deployed application consumes them.
+/data/
+app/data/raw/
+app/data/processed/*
+!app/data/processed/topografia_sitios_25km.csv
+app/data/catalogs/
+app/data/reference/
+app/data/input/*
+!app/data/input/sitios.csv
