@@ -13,6 +13,8 @@ from app.schemas.analog import SingleLaserProfile
 from app.schemas.planetary import (
     CelestialBody,
     DimensionSpec,
+    EarthdataAtl03Record,
+    EarthdataGranuleSummary,
     EnvironmentalFlags,
     LithologyClassSpec,
     PlanetarySite,
@@ -61,6 +63,10 @@ class FeatureIndexStore:
         )
         self.profiles_raw: dict[str, dict[str, Any]] = json.loads(
             (data_dir / "profiles" / "laser_profiles.json").read_text(encoding="utf-8")
+        )
+        atl03_path = data_dir / "earth_icesat2_atl03.json"
+        self.earth_atl03_raw: dict[str, dict[str, Any]] = (
+            json.loads(atl03_path.read_text(encoding="utf-8")) if atl03_path.exists() else {}
         )
 
         self.lithology_ids: list[str] = [c["id"] for c in self.taxonomy_raw["lithology_classes"]]
@@ -134,6 +140,8 @@ class FeatureIndexStore:
             min_dict[m_id] = round(val, 3) if val >= 0.0 else None
 
         fl = raw.get("flags", {})
+        eg_raw = raw.get("earthdata_granule")
+        earthdata_granule = EarthdataGranuleSummary(**eg_raw) if eg_raw else None
         return PlanetarySite(
             site_id=raw["site_id"],
             cell_id=raw["cell_id"],
@@ -156,6 +164,7 @@ class FeatureIndexStore:
                 has_ice=bool(fl.get("has_ice", False)),
                 is_volcanic=bool(fl.get("is_volcanic", False)),
             ),
+            earthdata_granule=earthdata_granule,
         )
 
     def list_curated_sites(self, body: CelestialBody) -> list[PlanetarySite]:
@@ -209,6 +218,19 @@ class FeatureIndexStore:
         if raw is None:
             return None
         return SingleLaserProfile(**raw)
+
+    def list_earthdata_atl03(self) -> list[EarthdataAtl03Record]:
+        return [EarthdataAtl03Record(**rec) for rec in self.earth_atl03_raw.values()]
+
+    def get_earthdata_atl03(self, identifier: str) -> EarthdataAtl03Record | None:
+        rec = self.earth_atl03_raw.get(identifier)
+        if rec is None:
+            site = self.get_site_by_id_or_cell(identifier)
+            if site is not None:
+                rec = self.earth_atl03_raw.get(site.site_id)
+        if rec is None:
+            return None
+        return EarthdataAtl03Record(**rec)
 
 
 @lru_cache

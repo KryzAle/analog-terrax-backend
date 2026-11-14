@@ -22,11 +22,13 @@ def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     return 2 * r_earth * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
 
-def build_profile_from_atl03_sample(sample_json_path: Path) -> dict[str, Any]:
-    """Read real extracted ATL03 JSON and format a standardized along-track elevation transect."""
-    raw = json.loads(sample_json_path.read_text(encoding="utf-8"))
+def build_profile_from_atl03_record(raw: dict[str, Any]) -> dict[str, Any]:
+    """Format a single site's extracted ATL03 record into a standardized along-track elevation transect."""
     segments = raw.get("geolocation_segments", [])
     photons = raw.get("photons", [])
+    granule = raw.get("granule", {})
+    sampled_beam = raw.get("sampled_beam", {})
+    orbit_info = raw.get("orbit_info", {})
 
     points: list[dict[str, float]] = []
     if segments:
@@ -36,7 +38,7 @@ def build_profile_from_atl03_sample(sample_json_path: Path) -> dict[str, Any]:
         for seg in segments:
             lat = float(seg["reference_lat"])
             lon = float(seg["reference_lon"])
-            elev = float(seg["dem_height_m"] or base_elev)
+            elev = float(seg["dem_height_m"] if seg.get("dem_height_m") is not None else base_elev)
             dist_km = haversine_km(lat0, lon0, lat, lon)
             points.append(
                 {
@@ -50,10 +52,33 @@ def build_profile_from_atl03_sample(sample_json_path: Path) -> dict[str, Any]:
 
     return {
         "instrument": "ATLAS / ICESat-2 (ATL03 v007)",
-        "granule_id": raw.get("granule", {}).get(
-            "granule_id", "ATL03_20240323120922_00742306_007_01.h5"
-        ),
-        "beam": raw.get("sampled_beam", {}).get("beam_id", "gt1r"),
+        "granule_id": granule.get("granule_id", "ATL03_007.h5"),
+        "concept_id": granule.get("concept_id"),
+        "time_start": granule.get("time_start"),
+        "https_url": granule.get("https_url"),
+        "beam": sampled_beam.get("beam_id", "gt1l"),
+        "orbit_info": orbit_info,
         "points": points,
         "photon_sample_count": len(photons),
     }
+
+
+def build_profile_from_atl03_sample(sample_json_path: Path) -> dict[str, Any]:
+    """Read real extracted ATL03 JSON and format a standardized along-track elevation transect."""
+    raw = json.loads(sample_json_path.read_text(encoding="utf-8"))
+    return build_profile_from_atl03_record(raw)
+
+
+def load_all_atl03_profiles(catalog_json_path: Path) -> dict[str, dict[str, Any]]:
+    """Load extracted ATL03 records for all curated Earth sites keyed by site_id and cell_id."""
+    raw_catalog: dict[str, dict[str, Any]] = json.loads(
+        catalog_json_path.read_text(encoding="utf-8")
+    )
+    by_key: dict[str, dict[str, Any]] = {}
+    for site_id, record in raw_catalog.items():
+        prof = build_profile_from_atl03_record(record)
+        by_key[site_id] = prof
+        cell_id = record.get("cell_id")
+        if cell_id:
+            by_key[str(cell_id)] = prof
+    return by_key

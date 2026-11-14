@@ -88,12 +88,45 @@ async def test_heatmap_and_laser_profile_endpoints(async_client: AsyncClient) ->
     assert len(hm_data["cells"]) >= 100
     assert all(0 <= c["score_uint8"] <= 100 for c in hm_data["cells"])
 
-    # Compare real extracted ICESat-2 ATL03 profile (earth_c013) against Moon Shackleton LOLA
-    prof_resp = await async_client.get(
-        "/api/v1/analogs/earth_c013/profile?target=moon_shackleton_rim"
+    # Compare real extracted ICESat-2 ATL03 profile (earth_c013 and earth_c001) against Moon Shackleton LOLA
+    for cell_id in ("earth_c001", "earth_c004", "earth_c009", "earth_c013"):
+        prof_resp = await async_client.get(
+            f"/api/v1/analogs/{cell_id}/profile?target=moon_shackleton_rim"
+        )
+        assert prof_resp.status_code == 200
+        prof_data = prof_resp.json()
+        assert "ICESat-2" in prof_data["earth_analog_profile"]["instrument"]
+        assert prof_data["earth_analog_profile"]["granule_id"].startswith("ATL03_")
+        assert prof_data["earth_analog_profile"]["granule_id"].endswith(".h5")
+        assert "LOLA" in prof_data["target_profile"]["instrument"]
+        assert len(prof_data["earth_analog_profile"]["points"]) == 25
+
+
+async def test_earthdata_atl03_endpoints_for_all_14_earth_sites(
+    async_client: AsyncClient,
+) -> None:
+    earth_sites_resp = await async_client.get("/api/v1/bodies/earth/sites")
+    assert earth_sites_resp.status_code == 200
+    earth_sites = earth_sites_resp.json()
+    assert len(earth_sites) == 14
+    for site in earth_sites:
+        gran = site["earthdata_granule"]
+        assert gran is not None
+        assert gran["granule_id"].startswith("ATL03_")
+        assert gran["concept_id"].endswith("-NSIDC_CPRD")
+        assert gran["segment_count"] == 25
+        assert gran["photon_sample_count"] == 25
+
+    all_ed_resp = await async_client.get("/api/v1/bodies/earth/earthdata")
+    assert all_ed_resp.status_code == 200
+    all_ed = all_ed_resp.json()
+    assert len(all_ed) == 14
+
+    single_ed_resp = await async_client.get(
+        "/api/v1/bodies/earth/sites/earth_haughton_crater/earthdata"
     )
-    assert prof_resp.status_code == 200
-    prof_data = prof_resp.json()
-    assert "ICESat-2" in prof_data["earth_analog_profile"]["instrument"]
-    assert "LOLA" in prof_data["target_profile"]["instrument"]
-    assert len(prof_data["earth_analog_profile"]["points"]) > 0
+    assert single_ed_resp.status_code == 200
+    single_ed = single_ed_resp.json()
+    assert single_ed["site_id"] == "earth_haughton_crater"
+    assert len(single_ed["geolocation_segments"]) == 25
+    assert len(single_ed["photons"]) == 25

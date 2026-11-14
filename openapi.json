@@ -28,6 +28,75 @@
         }
       }
     },
+    "/api/v1/bodies/earth/earthdata": {
+      "get": {
+        "tags": [
+          "planetary"
+        ],
+        "summary": "List real extracted NASA Earthdata ATLAS/ICESat-2 L2A (ATL03 v007) records for all Earth sites",
+        "description": "Return full extracted NASA Earthdata ATL03 v007 records (granules, orbit info, geolocation segments, and photons) for all curated Earth sites.",
+        "operationId": "planetary_list_earthdata_atl03_records",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/EarthdataAtl03Record"
+                  },
+                  "type": "array",
+                  "title": "Response Planetary List Earthdata Atl03 Records"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bodies/earth/sites/{site_id}/earthdata": {
+      "get": {
+        "tags": [
+          "planetary"
+        ],
+        "summary": "Get real extracted NASA Earthdata ATLAS/ICESat-2 L2A (ATL03 v007) record for a specific Earth site",
+        "description": "Retrieve the extracted NASA Earthdata ATL03 v007 granule, segments, and photon samples for an Earth site_id or cell_id.",
+        "operationId": "planetary_get_earthdata_atl03_record",
+        "parameters": [
+          {
+            "name": "site_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Site Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EarthdataAtl03Record"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/taxonomy": {
       "get": {
         "tags": [
@@ -640,6 +709,253 @@
         "title": "AnalogSearchResponse",
         "description": "Response returned by POST /api/v1/analogs/search."
       },
+      "Atl03ComputedTopography": {
+        "properties": {
+          "relief_m": {
+            "type": "number",
+            "title": "Relief M"
+          },
+          "slope_mean_deg": {
+            "type": "number",
+            "title": "Slope Mean Deg"
+          },
+          "slope_p90_deg": {
+            "type": "number",
+            "title": "Slope P90 Deg"
+          },
+          "ruggedness_tri_m": {
+            "type": "number",
+            "title": "Ruggedness Tri M"
+          },
+          "roughness_rms_m": {
+            "type": "number",
+            "title": "Roughness Rms M"
+          },
+          "hypsometric_integral": {
+            "type": "number",
+            "title": "Hypsometric Integral"
+          },
+          "mean_elevation_m": {
+            "type": "number",
+            "title": "Mean Elevation M"
+          }
+        },
+        "type": "object",
+        "required": [
+          "relief_m",
+          "slope_mean_deg",
+          "slope_p90_deg",
+          "ruggedness_tri_m",
+          "roughness_rms_m",
+          "hypsometric_integral",
+          "mean_elevation_m"
+        ],
+        "title": "Atl03ComputedTopography"
+      },
+      "Atl03GeolocationSegment": {
+        "properties": {
+          "segment_offset": {
+            "type": "integer",
+            "title": "Segment Offset"
+          },
+          "reference_lat": {
+            "type": "number",
+            "title": "Reference Lat"
+          },
+          "reference_lon": {
+            "type": "number",
+            "title": "Reference Lon"
+          },
+          "dem_height_m": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dem Height M"
+          },
+          "solar_elevation_deg": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Solar Elevation Deg"
+          },
+          "photon_count_in_segment": {
+            "type": "integer",
+            "title": "Photon Count In Segment"
+          }
+        },
+        "type": "object",
+        "required": [
+          "segment_offset",
+          "reference_lat",
+          "reference_lon",
+          "photon_count_in_segment"
+        ],
+        "title": "Atl03GeolocationSegment"
+      },
+      "Atl03GranuleMetadata": {
+        "properties": {
+          "granule_id": {
+            "type": "string",
+            "title": "Granule Id"
+          },
+          "concept_id": {
+            "type": "string",
+            "title": "Concept Id"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "time_start": {
+            "type": "string",
+            "title": "Time Start"
+          },
+          "time_end": {
+            "type": "string",
+            "title": "Time End"
+          },
+          "size_mb": {
+            "type": "number",
+            "title": "Size Mb"
+          },
+          "https_url": {
+            "type": "string",
+            "title": "Https Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "granule_id",
+          "concept_id",
+          "version",
+          "time_start",
+          "time_end",
+          "size_mb",
+          "https_url"
+        ],
+        "title": "Atl03GranuleMetadata"
+      },
+      "Atl03OrbitInfo": {
+        "properties": {
+          "orbit_number": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Orbit Number"
+          },
+          "rgt": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Rgt"
+          },
+          "cycle_number": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Cycle Number"
+          },
+          "sc_orient": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Sc Orient"
+          }
+        },
+        "type": "object",
+        "required": [
+          "orbit_number",
+          "rgt",
+          "cycle_number",
+          "sc_orient"
+        ],
+        "title": "Atl03OrbitInfo"
+      },
+      "Atl03PhotonSample": {
+        "properties": {
+          "photon_index": {
+            "type": "integer",
+            "title": "Photon Index"
+          },
+          "lat": {
+            "type": "number",
+            "title": "Lat"
+          },
+          "lon": {
+            "type": "number",
+            "title": "Lon"
+          },
+          "height_wgs84_m": {
+            "type": "number",
+            "title": "Height Wgs84 M"
+          },
+          "land_signal_confidence": {
+            "type": "integer",
+            "title": "Land Signal Confidence"
+          },
+          "quality_flag": {
+            "type": "integer",
+            "title": "Quality Flag"
+          },
+          "delta_time_s": {
+            "type": "number",
+            "title": "Delta Time S"
+          }
+        },
+        "type": "object",
+        "required": [
+          "photon_index",
+          "lat",
+          "lon",
+          "height_wgs84_m",
+          "land_signal_confidence",
+          "quality_flag",
+          "delta_time_s"
+        ],
+        "title": "Atl03PhotonSample"
+      },
+      "Atl03SampledBeam": {
+        "properties": {
+          "beam_id": {
+            "type": "string",
+            "title": "Beam Id"
+          },
+          "matched_query_bbox": {
+            "type": "boolean",
+            "title": "Matched Query Bbox"
+          },
+          "window_segments_evaluated": {
+            "type": "integer",
+            "title": "Window Segments Evaluated"
+          },
+          "total_segments_in_beam": {
+            "type": "integer",
+            "title": "Total Segments In Beam"
+          }
+        },
+        "type": "object",
+        "required": [
+          "beam_id",
+          "matched_query_bbox",
+          "window_segments_evaluated",
+          "total_segments_in_beam"
+        ],
+        "title": "Atl03SampledBeam"
+      },
       "DimensionSpec": {
         "properties": {
           "id": {
@@ -690,6 +1006,150 @@
           "label"
         ],
         "title": "DimensionSpec"
+      },
+      "EarthdataAtl03Record": {
+        "properties": {
+          "site_id": {
+            "type": "string",
+            "title": "Site Id"
+          },
+          "cell_id": {
+            "type": "string",
+            "title": "Cell Id"
+          },
+          "site_name": {
+            "type": "string",
+            "title": "Site Name"
+          },
+          "query_bbox": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Query Bbox"
+          },
+          "dataset": {
+            "type": "string",
+            "title": "Dataset"
+          },
+          "granule": {
+            "$ref": "#/components/schemas/Atl03GranuleMetadata"
+          },
+          "orbit_info": {
+            "$ref": "#/components/schemas/Atl03OrbitInfo"
+          },
+          "sampled_beam": {
+            "$ref": "#/components/schemas/Atl03SampledBeam"
+          },
+          "computed_topography": {
+            "$ref": "#/components/schemas/Atl03ComputedTopography"
+          },
+          "geolocation_segments": {
+            "items": {
+              "$ref": "#/components/schemas/Atl03GeolocationSegment"
+            },
+            "type": "array",
+            "title": "Geolocation Segments"
+          },
+          "photons": {
+            "items": {
+              "$ref": "#/components/schemas/Atl03PhotonSample"
+            },
+            "type": "array",
+            "title": "Photons"
+          }
+        },
+        "type": "object",
+        "required": [
+          "site_id",
+          "cell_id",
+          "site_name",
+          "query_bbox",
+          "dataset",
+          "granule",
+          "orbit_info",
+          "sampled_beam",
+          "computed_topography",
+          "geolocation_segments",
+          "photons"
+        ],
+        "title": "EarthdataAtl03Record",
+        "description": "Complete extracted NASA Earthdata ATLAS/ICESat-2 L2A (ATL03 v007) record for an Earth analog site."
+      },
+      "EarthdataGranuleSummary": {
+        "properties": {
+          "dataset": {
+            "type": "string",
+            "title": "Dataset",
+            "description": "NASA Earthdata dataset title",
+            "default": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)"
+          },
+          "granule_id": {
+            "type": "string",
+            "title": "Granule Id",
+            "description": "Producer granule HDF5 filename"
+          },
+          "concept_id": {
+            "type": "string",
+            "title": "Concept Id",
+            "description": "NASA CMR concept ID"
+          },
+          "time_start": {
+            "type": "string",
+            "title": "Time Start",
+            "description": "Granule acquisition start UTC timestamp"
+          },
+          "size_mb": {
+            "type": "number",
+            "title": "Size Mb",
+            "description": "Source HDF5 granule size in megabytes"
+          },
+          "https_url": {
+            "type": "string",
+            "title": "Https Url",
+            "description": "NSIDC Earthdata Cloud HTTPS URL"
+          },
+          "beam_id": {
+            "type": "string",
+            "title": "Beam Id",
+            "description": "Sampled ATLAS laser beam identifier (e.g. gt1l, gt2r)"
+          },
+          "photon_sample_count": {
+            "type": "integer",
+            "title": "Photon Sample Count",
+            "description": "Number of geolocated photons sampled"
+          },
+          "segment_count": {
+            "type": "integer",
+            "title": "Segment Count",
+            "description": "Number of 20m geolocation segments sampled"
+          },
+          "along_track_relief_m": {
+            "type": "number",
+            "title": "Along Track Relief M",
+            "description": "Along-track local relief (p95 - p5) from ICESat-2 segments in meters"
+          },
+          "along_track_mean_elevation_m": {
+            "type": "number",
+            "title": "Along Track Mean Elevation M",
+            "description": "Along-track mean elevation from ICESat-2 segments in meters"
+          }
+        },
+        "type": "object",
+        "required": [
+          "granule_id",
+          "concept_id",
+          "time_start",
+          "size_mb",
+          "https_url",
+          "beam_id",
+          "photon_sample_count",
+          "segment_count",
+          "along_track_relief_m",
+          "along_track_mean_elevation_m"
+        ],
+        "title": "EarthdataGranuleSummary",
+        "description": "Summary of the real NASA Earthdata ATLAS/ICESat-2 L2A (ATL03 v007) granule extracted for an Earth site."
       },
       "EnvironmentalFlags": {
         "properties": {
@@ -1119,6 +1579,17 @@
           },
           "flags": {
             "$ref": "#/components/schemas/EnvironmentalFlags"
+          },
+          "earthdata_granule": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EarthdataGranuleSummary"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Real NASA Earthdata ICESat-2 ATL03 granule metadata (for curated Earth sites)"
           }
         },
         "type": "object",
@@ -1245,6 +1716,61 @@
           "granule_id": {
             "type": "string",
             "title": "Granule Id"
+          },
+          "concept_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Concept Id"
+          },
+          "beam": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Beam"
+          },
+          "time_start": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Time Start"
+          },
+          "https_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Https Url"
+          },
+          "photon_sample_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Photon Sample Count"
           },
           "points": {
             "items": {
