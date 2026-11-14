@@ -1,0 +1,6708 @@
+{
+  "earth_haughton_crater": {
+    "site_id": "earth_haughton_crater",
+    "cell_id": "earth_c001",
+    "site_name": "Haughton Impact Crater, Devon Island",
+    "query_bbox": [
+      -90.13,
+      74.93,
+      -89.23,
+      75.83
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251217154743_00503003_007_01.h5",
+      "concept_id": "G4106625386-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-12-17T15:47:46.971Z",
+      "time_end": "2025-12-17T15:53:12.514Z",
+      "size_mb": 816.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/17/ATL03_20251217154743_00503003_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        40474
+      ],
+      "rgt": [
+        50
+      ],
+      "cycle_number": [
+        30
+      ],
+      "sc_orient": [
+        0
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1l",
+      "matched_query_bbox": true,
+      "window_segments_evaluated": 1200,
+      "total_segments_in_beam": 115328
+    },
+    "computed_topography": {
+      "relief_m": 96.43,
+      "slope_mean_deg": 3.14,
+      "slope_p90_deg": 6.56,
+      "ruggedness_tri_m": 1.16,
+      "roughness_rms_m": 27.68,
+      "hypsometric_integral": 0.449,
+      "mean_elevation_m": 326.64
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 86611,
+        "reference_lat": 74.930013,
+        "reference_lon": -89.912751,
+        "dem_height_m": 314.569,
+        "solar_elevation_deg": -10.257,
+        "photon_count_in_segment": 42
+      },
+      {
+        "segment_offset": 86658,
+        "reference_lat": 74.938341,
+        "reference_lon": -89.917624,
+        "dem_height_m": 339.603,
+        "solar_elevation_deg": -10.265,
+        "photon_count_in_segment": 65
+      },
+      {
+        "segment_offset": 86705,
+        "reference_lat": 74.946673,
+        "reference_lon": -89.922537,
+        "dem_height_m": 324.826,
+        "solar_elevation_deg": -10.273,
+        "photon_count_in_segment": 43
+      },
+      {
+        "segment_offset": 86752,
+        "reference_lat": 74.955004,
+        "reference_lon": -89.927408,
+        "dem_height_m": 364.37,
+        "solar_elevation_deg": -10.281,
+        "photon_count_in_segment": 30
+      },
+      {
+        "segment_offset": 86799,
+        "reference_lat": 74.963334,
+        "reference_lon": -89.932269,
+        "dem_height_m": 378.219,
+        "solar_elevation_deg": -10.289,
+        "photon_count_in_segment": 46
+      },
+      {
+        "segment_offset": 86846,
+        "reference_lat": 74.97166,
+        "reference_lon": -89.937216,
+        "dem_height_m": 307.756,
+        "solar_elevation_deg": -10.297,
+        "photon_count_in_segment": 23
+      },
+      {
+        "segment_offset": 86893,
+        "reference_lat": 74.979976,
+        "reference_lon": -89.942137,
+        "dem_height_m": 306.293,
+        "solar_elevation_deg": -10.305,
+        "photon_count_in_segment": 8
+      },
+      {
+        "segment_offset": 86940,
+        "reference_lat": 74.988315,
+        "reference_lon": -89.947111,
+        "dem_height_m": 336.395,
+        "solar_elevation_deg": -10.313,
+        "photon_count_in_segment": 11
+      },
+      {
+        "segment_offset": 86987,
+        "reference_lat": 74.996638,
+        "reference_lon": -89.952137,
+        "dem_height_m": 363.209,
+        "solar_elevation_deg": -10.32,
+        "photon_count_in_segment": 26
+      },
+      {
+        "segment_offset": 87034,
+        "reference_lat": 75.004975,
+        "reference_lon": -89.957158,
+        "dem_height_m": 344.133,
+        "solar_elevation_deg": -10.328,
+        "photon_count_in_segment": 28
+      },
+      {
+        "segment_offset": 87081,
+        "reference_lat": 75.013291,
+        "reference_lon": -89.962195,
+        "dem_height_m": 384.128,
+        "solar_elevation_deg": -10.336,
+        "photon_count_in_segment": 31
+      },
+      {
+        "segment_offset": 87128,
+        "reference_lat": 75.021617,
+        "reference_lon": -89.967249,
+        "dem_height_m": 333.078,
+        "solar_elevation_deg": -10.344,
+        "photon_count_in_segment": 49
+      },
+      {
+        "segment_offset": 87176,
+        "reference_lat": 75.030125,
+        "reference_lon": -89.972352,
+        "dem_height_m": 316.354,
+        "solar_elevation_deg": -10.352,
+        "photon_count_in_segment": 28
+      },
+      {
+        "segment_offset": 87223,
+        "reference_lat": 75.03844,
+        "reference_lon": -89.977354,
+        "dem_height_m": 287.199,
+        "solar_elevation_deg": -10.36,
+        "photon_count_in_segment": 19
+      },
+      {
+        "segment_offset": 87270,
+        "reference_lat": 75.046779,
+        "reference_lon": -89.982331,
+        "dem_height_m": 284.243,
+        "solar_elevation_deg": -10.368,
+        "photon_count_in_segment": 14
+      },
+      {
+        "segment_offset": 87317,
+        "reference_lat": 75.055153,
+        "reference_lon": -89.987317,
+        "dem_height_m": 293.792,
+        "solar_elevation_deg": -10.376,
+        "photon_count_in_segment": 3
+      },
+      {
+        "segment_offset": 87364,
+        "reference_lat": 75.063405,
+        "reference_lon": -89.992233,
+        "dem_height_m": 312.398,
+        "solar_elevation_deg": -10.384,
+        "photon_count_in_segment": 3
+      },
+      {
+        "segment_offset": 87412,
+        "reference_lat": 75.071971,
+        "reference_lon": -89.997347,
+        "dem_height_m": 346.468,
+        "solar_elevation_deg": -10.392,
+        "photon_count_in_segment": 6
+      },
+      {
+        "segment_offset": 87469,
+        "reference_lat": 75.08207,
+        "reference_lon": -90.003338,
+        "dem_height_m": 383.459,
+        "solar_elevation_deg": -10.401,
+        "photon_count_in_segment": 2
+      },
+      {
+        "segment_offset": 87546,
+        "reference_lat": 75.095737,
+        "reference_lon": -90.011595,
+        "dem_height_m": 316.777,
+        "solar_elevation_deg": -10.414,
+        "photon_count_in_segment": 3
+      },
+      {
+        "segment_offset": 87601,
+        "reference_lat": 75.105422,
+        "reference_lon": -90.017442,
+        "dem_height_m": 346.284,
+        "solar_elevation_deg": -10.423,
+        "photon_count_in_segment": 5
+      },
+      {
+        "segment_offset": 87651,
+        "reference_lat": 75.114314,
+        "reference_lon": -90.022859,
+        "dem_height_m": 328.863,
+        "solar_elevation_deg": -10.432,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 87707,
+        "reference_lat": 75.124262,
+        "reference_lon": -90.02895,
+        "dem_height_m": 306.335,
+        "solar_elevation_deg": -10.441,
+        "photon_count_in_segment": 2
+      },
+      {
+        "segment_offset": 87759,
+        "reference_lat": 75.133403,
+        "reference_lon": -90.034595,
+        "dem_height_m": 274.036,
+        "solar_elevation_deg": -10.45,
+        "photon_count_in_segment": 5
+      },
+      {
+        "segment_offset": 87810,
+        "reference_lat": 75.142368,
+        "reference_lon": -90.040073,
+        "dem_height_m": 297.496,
+        "solar_elevation_deg": -10.458,
+        "photon_count_in_segment": 2
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 7326328,
+        "lat": 75.0300432,
+        "lon": -89.9723015,
+        "height_wgs84_m": 315.727,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79793
+      },
+      {
+        "photon_index": 7326329,
+        "lat": 75.0300495,
+        "lon": -89.9723055,
+        "height_wgs84_m": 315.156,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79803
+      },
+      {
+        "photon_index": 7326330,
+        "lat": 75.0300558,
+        "lon": -89.9723093,
+        "height_wgs84_m": 315.304,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79813
+      },
+      {
+        "photon_index": 7326331,
+        "lat": 75.0300557,
+        "lon": -89.9723092,
+        "height_wgs84_m": 316.255,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79813
+      },
+      {
+        "photon_index": 7326332,
+        "lat": 75.0300558,
+        "lon": -89.9723096,
+        "height_wgs84_m": 313.276,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79813
+      },
+      {
+        "photon_index": 7326333,
+        "lat": 75.030062,
+        "lon": -89.9723131,
+        "height_wgs84_m": 316.294,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79823
+      },
+      {
+        "photon_index": 7326334,
+        "lat": 75.0300872,
+        "lon": -89.9723288,
+        "height_wgs84_m": 315.944,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79863
+      },
+      {
+        "photon_index": 7326335,
+        "lat": 75.0300872,
+        "lon": -89.972329,
+        "height_wgs84_m": 314.367,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79863
+      },
+      {
+        "photon_index": 7326336,
+        "lat": 75.0300935,
+        "lon": -89.9723329,
+        "height_wgs84_m": 314.027,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79873
+      },
+      {
+        "photon_index": 7326337,
+        "lat": 75.0300935,
+        "lon": -89.9723328,
+        "height_wgs84_m": 314.87,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79873
+      },
+      {
+        "photon_index": 7326338,
+        "lat": 75.0301061,
+        "lon": -89.9723408,
+        "height_wgs84_m": 313.955,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79893
+      },
+      {
+        "photon_index": 7326339,
+        "lat": 75.0301061,
+        "lon": -89.9723405,
+        "height_wgs84_m": 315.505,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79893
+      },
+      {
+        "photon_index": 7326340,
+        "lat": 75.0301064,
+        "lon": -89.9723438,
+        "height_wgs84_m": 293.894,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79893
+      },
+      {
+        "photon_index": 7326341,
+        "lat": 75.0301124,
+        "lon": -89.9723444,
+        "height_wgs84_m": 315.925,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79903
+      },
+      {
+        "photon_index": 7326342,
+        "lat": 75.0301187,
+        "lon": -89.9723485,
+        "height_wgs84_m": 314.193,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79913
+      },
+      {
+        "photon_index": 7326343,
+        "lat": 75.0301187,
+        "lon": -89.9723487,
+        "height_wgs84_m": 312.958,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79913
+      },
+      {
+        "photon_index": 7326344,
+        "lat": 75.0301249,
+        "lon": -89.9723522,
+        "height_wgs84_m": 316.028,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79923
+      },
+      {
+        "photon_index": 7326345,
+        "lat": 75.0301249,
+        "lon": -89.9723523,
+        "height_wgs84_m": 315.211,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79923
+      },
+      {
+        "photon_index": 7326346,
+        "lat": 75.0301312,
+        "lon": -89.9723561,
+        "height_wgs84_m": 315.887,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79933
+      },
+      {
+        "photon_index": 7326347,
+        "lat": 75.0301438,
+        "lon": -89.9723642,
+        "height_wgs84_m": 313.507,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.799529
+      },
+      {
+        "photon_index": 7326348,
+        "lat": 75.0301438,
+        "lon": -89.9723644,
+        "height_wgs84_m": 312.649,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.799529
+      },
+      {
+        "photon_index": 7326349,
+        "lat": 75.0301501,
+        "lon": -89.9723679,
+        "height_wgs84_m": 314.815,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79963
+      },
+      {
+        "photon_index": 7326350,
+        "lat": 75.0301564,
+        "lon": -89.9723722,
+        "height_wgs84_m": 312.662,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.799729
+      },
+      {
+        "photon_index": 7326351,
+        "lat": 75.0301564,
+        "lon": -89.972372,
+        "height_wgs84_m": 313.517,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.799729
+      },
+      {
+        "photon_index": 7326352,
+        "lat": 75.0301626,
+        "lon": -89.9723756,
+        "height_wgs84_m": 315.369,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251221912.79983
+      }
+    ]
+  },
+  "earth_atacama_yungay": {
+    "site_id": "earth_atacama_yungay",
+    "cell_id": "earth_c002",
+    "site_name": "Atacama Desert \u2014 Yungay Hyper-Arid Core",
+    "query_bbox": [
+      -70.37,
+      -24.53,
+      -69.47,
+      -23.63
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251014055811_04532908_007_01.h5",
+      "concept_id": "G3984839390-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-10-14T05:58:09.947Z",
+      "time_end": "2025-10-14T06:05:12.681Z",
+      "size_mb": 368.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/14/ATL03_20251014055811_04532908_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        39490
+      ],
+      "rgt": [
+        453
+      ],
+      "cycle_number": [
+        29
+      ],
+      "sc_orient": [
+        1
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1r",
+      "matched_query_bbox": true,
+      "window_segments_evaluated": 1200,
+      "total_segments_in_beam": 149891
+    },
+    "computed_topography": {
+      "relief_m": 383.67,
+      "slope_mean_deg": 2.81,
+      "slope_p90_deg": 6.0,
+      "ruggedness_tri_m": 0.99,
+      "roughness_rms_m": 111.56,
+      "hypsometric_integral": 0.462,
+      "mean_elevation_m": 847.37
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 131088,
+        "reference_lat": -23.630181,
+        "reference_lon": -70.150761,
+        "dem_height_m": 978.724,
+        "solar_elevation_deg": -50.163,
+        "photon_count_in_segment": 74
+      },
+      {
+        "segment_offset": 131137,
+        "reference_lat": -23.638972,
+        "reference_lon": -70.151878,
+        "dem_height_m": 992.975,
+        "solar_elevation_deg": -50.157,
+        "photon_count_in_segment": 70
+      },
+      {
+        "segment_offset": 131187,
+        "reference_lat": -23.647941,
+        "reference_lon": -70.153073,
+        "dem_height_m": 954.927,
+        "solar_elevation_deg": -50.15,
+        "photon_count_in_segment": 70
+      },
+      {
+        "segment_offset": 131237,
+        "reference_lat": -23.656907,
+        "reference_lon": -70.154294,
+        "dem_height_m": 924.909,
+        "solar_elevation_deg": -50.143,
+        "photon_count_in_segment": 88
+      },
+      {
+        "segment_offset": 131287,
+        "reference_lat": -23.665879,
+        "reference_lon": -70.155453,
+        "dem_height_m": 892.637,
+        "solar_elevation_deg": -50.137,
+        "photon_count_in_segment": 77
+      },
+      {
+        "segment_offset": 131337,
+        "reference_lat": -23.674863,
+        "reference_lon": -70.156532,
+        "dem_height_m": 868.188,
+        "solar_elevation_deg": -50.13,
+        "photon_count_in_segment": 70
+      },
+      {
+        "segment_offset": 131387,
+        "reference_lat": -23.683852,
+        "reference_lon": -70.157479,
+        "dem_height_m": 850.659,
+        "solar_elevation_deg": -50.124,
+        "photon_count_in_segment": 63
+      },
+      {
+        "segment_offset": 131437,
+        "reference_lat": -23.692861,
+        "reference_lon": -70.15829,
+        "dem_height_m": 792.854,
+        "solar_elevation_deg": -50.117,
+        "photon_count_in_segment": 62
+      },
+      {
+        "segment_offset": 131487,
+        "reference_lat": -23.701867,
+        "reference_lon": -70.159012,
+        "dem_height_m": 757.215,
+        "solar_elevation_deg": -50.11,
+        "photon_count_in_segment": 60
+      },
+      {
+        "segment_offset": 131537,
+        "reference_lat": -23.71088,
+        "reference_lon": -70.159686,
+        "dem_height_m": 708.314,
+        "solar_elevation_deg": -50.103,
+        "photon_count_in_segment": 37
+      },
+      {
+        "segment_offset": 131587,
+        "reference_lat": -23.719898,
+        "reference_lon": -70.160383,
+        "dem_height_m": 668.666,
+        "solar_elevation_deg": -50.096,
+        "photon_count_in_segment": 57
+      },
+      {
+        "segment_offset": 131637,
+        "reference_lat": -23.728903,
+        "reference_lon": -70.161165,
+        "dem_height_m": 656.13,
+        "solar_elevation_deg": -50.089,
+        "photon_count_in_segment": 54
+      },
+      {
+        "segment_offset": 131687,
+        "reference_lat": -23.737899,
+        "reference_lon": -70.162079,
+        "dem_height_m": 679.667,
+        "solar_elevation_deg": -50.083,
+        "photon_count_in_segment": 44
+      },
+      {
+        "segment_offset": 131737,
+        "reference_lat": -23.746886,
+        "reference_lon": -70.163119,
+        "dem_height_m": 696.294,
+        "solar_elevation_deg": -50.076,
+        "photon_count_in_segment": 51
+      },
+      {
+        "segment_offset": 131787,
+        "reference_lat": -23.755853,
+        "reference_lon": -70.164277,
+        "dem_height_m": 758.761,
+        "solar_elevation_deg": -50.069,
+        "photon_count_in_segment": 63
+      },
+      {
+        "segment_offset": 131837,
+        "reference_lat": -23.764819,
+        "reference_lon": -70.165531,
+        "dem_height_m": 850.331,
+        "solar_elevation_deg": -50.063,
+        "photon_count_in_segment": 69
+      },
+      {
+        "segment_offset": 131887,
+        "reference_lat": -23.773788,
+        "reference_lon": -70.166743,
+        "dem_height_m": 845.322,
+        "solar_elevation_deg": -50.056,
+        "photon_count_in_segment": 66
+      },
+      {
+        "segment_offset": 131937,
+        "reference_lat": -23.782757,
+        "reference_lon": -70.167922,
+        "dem_height_m": 843.957,
+        "solar_elevation_deg": -50.05,
+        "photon_count_in_segment": 59
+      },
+      {
+        "segment_offset": 131987,
+        "reference_lat": -23.791743,
+        "reference_lon": -70.168988,
+        "dem_height_m": 830.33,
+        "solar_elevation_deg": -50.043,
+        "photon_count_in_segment": 43
+      },
+      {
+        "segment_offset": 132037,
+        "reference_lat": -23.800729,
+        "reference_lon": -70.169937,
+        "dem_height_m": 847.201,
+        "solar_elevation_deg": -50.036,
+        "photon_count_in_segment": 62
+      },
+      {
+        "segment_offset": 132087,
+        "reference_lat": -23.809734,
+        "reference_lon": -70.170767,
+        "dem_height_m": 885.565,
+        "solar_elevation_deg": -50.029,
+        "photon_count_in_segment": 56
+      },
+      {
+        "segment_offset": 132137,
+        "reference_lat": -23.81874,
+        "reference_lon": -70.171501,
+        "dem_height_m": 932.406,
+        "solar_elevation_deg": -50.023,
+        "photon_count_in_segment": 51
+      },
+      {
+        "segment_offset": 132187,
+        "reference_lat": -23.82775,
+        "reference_lon": -70.172231,
+        "dem_height_m": 1028.074,
+        "solar_elevation_deg": -50.016,
+        "photon_count_in_segment": 69
+      },
+      {
+        "segment_offset": 132237,
+        "reference_lat": -23.836761,
+        "reference_lon": -70.172964,
+        "dem_height_m": 1051.495,
+        "solar_elevation_deg": -50.009,
+        "photon_count_in_segment": 57
+      },
+      {
+        "segment_offset": 132287,
+        "reference_lat": -23.845765,
+        "reference_lon": -70.173768,
+        "dem_height_m": 1071.787,
+        "solar_elevation_deg": -50.002,
+        "photon_count_in_segment": 65
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 2209968,
+        "lat": -23.7379945,
+        "lon": -70.1620891,
+        "height_wgs84_m": 677.652,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.342057
+      },
+      {
+        "photon_index": 2209969,
+        "lat": -23.7379945,
+        "lon": -70.1620892,
+        "height_wgs84_m": 677.865,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.342057
+      },
+      {
+        "photon_index": 2209970,
+        "lat": -23.7380072,
+        "lon": -70.1620905,
+        "height_wgs84_m": 677.709,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.342257
+      },
+      {
+        "photon_index": 2209971,
+        "lat": -23.7380136,
+        "lon": -70.1620912,
+        "height_wgs84_m": 677.6,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.342357
+      },
+      {
+        "photon_index": 2209972,
+        "lat": -23.7380136,
+        "lon": -70.1620911,
+        "height_wgs84_m": 677.229,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.342357
+      },
+      {
+        "photon_index": 2209973,
+        "lat": -23.7380199,
+        "lon": -70.1620921,
+        "height_wgs84_m": 678.12,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.342457
+      },
+      {
+        "photon_index": 2209974,
+        "lat": -23.7380327,
+        "lon": -70.1620933,
+        "height_wgs84_m": 677.755,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.342657
+      },
+      {
+        "photon_index": 2209975,
+        "lat": -23.738039,
+        "lon": -70.1620941,
+        "height_wgs84_m": 677.997,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.342757
+      },
+      {
+        "photon_index": 2209976,
+        "lat": -23.7380518,
+        "lon": -70.1620955,
+        "height_wgs84_m": 677.944,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.342957
+      },
+      {
+        "photon_index": 2209977,
+        "lat": -23.7380518,
+        "lon": -70.1620954,
+        "height_wgs84_m": 677.701,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.342957
+      },
+      {
+        "photon_index": 2209978,
+        "lat": -23.7380518,
+        "lon": -70.1620955,
+        "height_wgs84_m": 677.919,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.342957
+      },
+      {
+        "photon_index": 2209979,
+        "lat": -23.7380581,
+        "lon": -70.1620961,
+        "height_wgs84_m": 677.626,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343057
+      },
+      {
+        "photon_index": 2209980,
+        "lat": -23.7380581,
+        "lon": -70.1620961,
+        "height_wgs84_m": 677.667,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343057
+      },
+      {
+        "photon_index": 2209981,
+        "lat": -23.7380581,
+        "lon": -70.1620961,
+        "height_wgs84_m": 677.867,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343057
+      },
+      {
+        "photon_index": 2209982,
+        "lat": -23.7380661,
+        "lon": -70.1621429,
+        "height_wgs84_m": 813.455,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343157
+      },
+      {
+        "photon_index": 2209983,
+        "lat": -23.7380645,
+        "lon": -70.1620968,
+        "height_wgs84_m": 677.656,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343157
+      },
+      {
+        "photon_index": 2209984,
+        "lat": -23.7380645,
+        "lon": -70.162097,
+        "height_wgs84_m": 678.208,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343157
+      },
+      {
+        "photon_index": 2209985,
+        "lat": -23.7380773,
+        "lon": -70.1620982,
+        "height_wgs84_m": 677.88,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343357
+      },
+      {
+        "photon_index": 2209986,
+        "lat": -23.7380773,
+        "lon": -70.1620982,
+        "height_wgs84_m": 677.777,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343357
+      },
+      {
+        "photon_index": 2209987,
+        "lat": -23.7380773,
+        "lon": -70.1620982,
+        "height_wgs84_m": 677.814,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343357
+      },
+      {
+        "photon_index": 2209988,
+        "lat": -23.73809,
+        "lon": -70.1620996,
+        "height_wgs84_m": 677.953,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343557
+      },
+      {
+        "photon_index": 2209989,
+        "lat": -23.73809,
+        "lon": -70.1620996,
+        "height_wgs84_m": 677.861,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343557
+      },
+      {
+        "photon_index": 2209990,
+        "lat": -23.7380964,
+        "lon": -70.1621005,
+        "height_wgs84_m": 678.341,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343657
+      },
+      {
+        "photon_index": 2209991,
+        "lat": -23.7381091,
+        "lon": -70.1621016,
+        "height_wgs84_m": 677.496,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343857
+      },
+      {
+        "photon_index": 2209992,
+        "lat": -23.7381155,
+        "lon": -70.1621025,
+        "height_wgs84_m": 678.091,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245657061.343957
+      }
+    ]
+  },
+  "earth_mcmurdo_dry_valleys": {
+    "site_id": "earth_mcmurdo_dry_valleys",
+    "cell_id": "earth_c003",
+    "site_name": "McMurdo Dry Valleys \u2014 University Valley",
+    "query_bbox": [
+      160.21,
+      -78.36,
+      161.21,
+      -77.36
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251207112310_12812910_007_01.h5",
+      "concept_id": "G4107119189-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-12-07T11:23:16.716Z",
+      "time_end": "2025-12-07T11:30:57.697Z",
+      "size_mb": 1656.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/07/ATL03_20251207112310_12812910_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        40318
+      ],
+      "rgt": [
+        1281
+      ],
+      "cycle_number": [
+        29
+      ],
+      "sc_orient": [
+        0
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1l",
+      "matched_query_bbox": true,
+      "window_segments_evaluated": 1200,
+      "total_segments_in_beam": 163501
+    },
+    "computed_topography": {
+      "relief_m": 763.5,
+      "slope_mean_deg": 5.79,
+      "slope_p90_deg": 16.64,
+      "ruggedness_tri_m": 2.06,
+      "roughness_rms_m": 169.35,
+      "hypsometric_integral": 0.283,
+      "mean_elevation_m": 1221.62
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 155976,
+        "reference_lat": -77.687433,
+        "reference_lon": 161.209878,
+        "dem_height_m": 1191.964,
+        "solar_elevation_deg": 11.422,
+        "photon_count_in_segment": 621
+      },
+      {
+        "segment_offset": 156025,
+        "reference_lat": -77.696036,
+        "reference_lon": 161.202831,
+        "dem_height_m": 1004.838,
+        "solar_elevation_deg": 11.43,
+        "photon_count_in_segment": 372
+      },
+      {
+        "segment_offset": 156075,
+        "reference_lat": -77.704804,
+        "reference_lon": 161.195517,
+        "dem_height_m": 1015.628,
+        "solar_elevation_deg": 11.439,
+        "photon_count_in_segment": 195
+      },
+      {
+        "segment_offset": 156125,
+        "reference_lat": -77.713585,
+        "reference_lon": 161.188175,
+        "dem_height_m": 1022.973,
+        "solar_elevation_deg": 11.448,
+        "photon_count_in_segment": 578
+      },
+      {
+        "segment_offset": 156175,
+        "reference_lat": -77.722354,
+        "reference_lon": 161.180744,
+        "dem_height_m": 1071.145,
+        "solar_elevation_deg": 11.456,
+        "photon_count_in_segment": 479
+      },
+      {
+        "segment_offset": 156225,
+        "reference_lat": -77.731127,
+        "reference_lon": 161.173418,
+        "dem_height_m": 1096.898,
+        "solar_elevation_deg": 11.465,
+        "photon_count_in_segment": 656
+      },
+      {
+        "segment_offset": 156275,
+        "reference_lat": -77.739904,
+        "reference_lon": 161.165993,
+        "dem_height_m": 1087.217,
+        "solar_elevation_deg": 11.473,
+        "photon_count_in_segment": 621
+      },
+      {
+        "segment_offset": 156325,
+        "reference_lat": -77.748682,
+        "reference_lon": 161.158709,
+        "dem_height_m": 988.601,
+        "solar_elevation_deg": 11.482,
+        "photon_count_in_segment": 625
+      },
+      {
+        "segment_offset": 156375,
+        "reference_lat": -77.757449,
+        "reference_lon": 161.151244,
+        "dem_height_m": 1056.645,
+        "solar_elevation_deg": 11.491,
+        "photon_count_in_segment": 231
+      },
+      {
+        "segment_offset": 156425,
+        "reference_lat": -77.766227,
+        "reference_lon": 161.143946,
+        "dem_height_m": 1070.257,
+        "solar_elevation_deg": 11.499,
+        "photon_count_in_segment": 429
+      },
+      {
+        "segment_offset": 156475,
+        "reference_lat": -77.775005,
+        "reference_lon": 161.136625,
+        "dem_height_m": 1060.828,
+        "solar_elevation_deg": 11.508,
+        "photon_count_in_segment": 437
+      },
+      {
+        "segment_offset": 156525,
+        "reference_lat": -77.783781,
+        "reference_lon": 161.129313,
+        "dem_height_m": 1058.922,
+        "solar_elevation_deg": 11.516,
+        "photon_count_in_segment": 416
+      },
+      {
+        "segment_offset": 156575,
+        "reference_lat": -77.792547,
+        "reference_lon": 161.121917,
+        "dem_height_m": 1054.856,
+        "solar_elevation_deg": 11.525,
+        "photon_count_in_segment": 393
+      },
+      {
+        "segment_offset": 156625,
+        "reference_lat": -77.801326,
+        "reference_lon": 161.114533,
+        "dem_height_m": 1065.121,
+        "solar_elevation_deg": 11.534,
+        "photon_count_in_segment": 360
+      },
+      {
+        "segment_offset": 156675,
+        "reference_lat": -77.8101,
+        "reference_lon": 161.107102,
+        "dem_height_m": 1053.19,
+        "solar_elevation_deg": 11.542,
+        "photon_count_in_segment": 368
+      },
+      {
+        "segment_offset": 156725,
+        "reference_lat": -77.818871,
+        "reference_lon": 161.099718,
+        "dem_height_m": 1026.328,
+        "solar_elevation_deg": 11.551,
+        "photon_count_in_segment": 286
+      },
+      {
+        "segment_offset": 156775,
+        "reference_lat": -77.827642,
+        "reference_lon": 161.092222,
+        "dem_height_m": 1054.083,
+        "solar_elevation_deg": 11.559,
+        "photon_count_in_segment": 83
+      },
+      {
+        "segment_offset": 156825,
+        "reference_lat": -77.836408,
+        "reference_lon": 161.084593,
+        "dem_height_m": 1280.483,
+        "solar_elevation_deg": 11.568,
+        "photon_count_in_segment": 163
+      },
+      {
+        "segment_offset": 156875,
+        "reference_lat": -77.845177,
+        "reference_lon": 161.077078,
+        "dem_height_m": 1415.355,
+        "solar_elevation_deg": 11.577,
+        "photon_count_in_segment": 66
+      },
+      {
+        "segment_offset": 156925,
+        "reference_lat": -77.853942,
+        "reference_lon": 161.069471,
+        "dem_height_m": 1611.639,
+        "solar_elevation_deg": 11.585,
+        "photon_count_in_segment": 65
+      },
+      {
+        "segment_offset": 156975,
+        "reference_lat": -77.862705,
+        "reference_lon": 161.061975,
+        "dem_height_m": 1690.947,
+        "solar_elevation_deg": 11.594,
+        "photon_count_in_segment": 92
+      },
+      {
+        "segment_offset": 157025,
+        "reference_lat": -77.871486,
+        "reference_lon": 161.054445,
+        "dem_height_m": 1804.736,
+        "solar_elevation_deg": 11.602,
+        "photon_count_in_segment": 157
+      },
+      {
+        "segment_offset": 157075,
+        "reference_lat": -77.880265,
+        "reference_lon": 161.047098,
+        "dem_height_m": 1624.349,
+        "solar_elevation_deg": 11.611,
+        "photon_count_in_segment": 300
+      },
+      {
+        "segment_offset": 157125,
+        "reference_lat": -77.889033,
+        "reference_lon": 161.039664,
+        "dem_height_m": 1670.55,
+        "solar_elevation_deg": 11.619,
+        "photon_count_in_segment": 236
+      },
+      {
+        "segment_offset": 157175,
+        "reference_lat": -77.897812,
+        "reference_lon": 161.032212,
+        "dem_height_m": 1580.402,
+        "solar_elevation_deg": 11.628,
+        "photon_count_in_segment": 439
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 13286032,
+        "lat": -77.7926377,
+        "lon": 161.1217976,
+        "height_wgs84_m": 1148.472,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286033,
+        "lat": -77.7926388,
+        "lon": 161.1218095,
+        "height_wgs84_m": 1121.916,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286034,
+        "lat": -77.79264,
+        "lon": 161.1218225,
+        "height_wgs84_m": 1092.75,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286035,
+        "lat": -77.7926415,
+        "lon": 161.1218397,
+        "height_wgs84_m": 1054.131,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286036,
+        "lat": -77.7926415,
+        "lon": 161.1218395,
+        "height_wgs84_m": 1054.619,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286037,
+        "lat": -77.7926415,
+        "lon": 161.1218395,
+        "height_wgs84_m": 1054.596,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286038,
+        "lat": -77.7926415,
+        "lon": 161.1218395,
+        "height_wgs84_m": 1054.724,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286039,
+        "lat": -77.7926415,
+        "lon": 161.1218395,
+        "height_wgs84_m": 1054.657,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286040,
+        "lat": -77.7926415,
+        "lon": 161.1218396,
+        "height_wgs84_m": 1054.549,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286041,
+        "lat": -77.7926415,
+        "lon": 161.1218396,
+        "height_wgs84_m": 1054.468,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286042,
+        "lat": -77.7926415,
+        "lon": 161.1218398,
+        "height_wgs84_m": 1054.096,
+        "land_signal_confidence": 3,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286043,
+        "lat": -77.7926407,
+        "lon": 161.1218305,
+        "height_wgs84_m": 1074.721,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286044,
+        "lat": -77.7926415,
+        "lon": 161.1218396,
+        "height_wgs84_m": 1054.421,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286045,
+        "lat": -77.7926425,
+        "lon": 161.1218508,
+        "height_wgs84_m": 1029.449,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286046,
+        "lat": -77.7926466,
+        "lon": 161.1218971,
+        "height_wgs84_m": 925.699,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828679
+      },
+      {
+        "photon_index": 13286047,
+        "lat": -77.7926401,
+        "lon": 161.1217483,
+        "height_wgs84_m": 1247.335,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828779
+      },
+      {
+        "photon_index": 13286048,
+        "lat": -77.7926461,
+        "lon": 161.1218152,
+        "height_wgs84_m": 1097.493,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828779
+      },
+      {
+        "photon_index": 13286049,
+        "lat": -77.7926478,
+        "lon": 161.1218343,
+        "height_wgs84_m": 1054.702,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828779
+      },
+      {
+        "photon_index": 13286050,
+        "lat": -77.7926477,
+        "lon": 161.1218334,
+        "height_wgs84_m": 1056.742,
+        "land_signal_confidence": 2,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828779
+      },
+      {
+        "photon_index": 13286051,
+        "lat": -77.7926478,
+        "lon": 161.1218344,
+        "height_wgs84_m": 1054.47,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828779
+      },
+      {
+        "photon_index": 13286052,
+        "lat": -77.7926478,
+        "lon": 161.1218342,
+        "height_wgs84_m": 1054.964,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828779
+      },
+      {
+        "photon_index": 13286053,
+        "lat": -77.7926478,
+        "lon": 161.1218343,
+        "height_wgs84_m": 1054.667,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828779
+      },
+      {
+        "photon_index": 13286054,
+        "lat": -77.7926478,
+        "lon": 161.1218344,
+        "height_wgs84_m": 1054.56,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828779
+      },
+      {
+        "photon_index": 13286055,
+        "lat": -77.7926478,
+        "lon": 161.1218344,
+        "height_wgs84_m": 1054.617,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828779
+      },
+      {
+        "photon_index": 13286056,
+        "lat": -77.7926478,
+        "lon": 161.1218344,
+        "height_wgs84_m": 1054.574,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 250342237.828779
+      }
+    ]
+  },
+  "earth_lanzarote_corona_tube": {
+    "site_id": "earth_lanzarote_corona_tube",
+    "cell_id": "earth_c004",
+    "site_name": "Monte Corona Skylight & Lava Tube System",
+    "query_bbox": [
+      -13.79,
+      28.81,
+      -13.09,
+      29.51
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251023015143_05882906_007_01.h5",
+      "concept_id": "G3984519954-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-10-23T01:51:39.017Z",
+      "time_end": "2025-10-23T02:00:09.168Z",
+      "size_mb": 248.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/23/ATL03_20251023015143_05882906_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        39625
+      ],
+      "rgt": [
+        588
+      ],
+      "cycle_number": [
+        29
+      ],
+      "sc_orient": [
+        1
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1r",
+      "matched_query_bbox": true,
+      "window_segments_evaluated": 1200,
+      "total_segments_in_beam": 181028
+    },
+    "computed_topography": {
+      "relief_m": 1.27,
+      "slope_mean_deg": 0.0,
+      "slope_p90_deg": 0.01,
+      "ruggedness_tri_m": 0.0,
+      "roughness_rms_m": 0.16,
+      "hypsometric_integral": 0.685,
+      "mean_elevation_m": 45.67
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 167076,
+        "reference_lat": 29.50993,
+        "reference_lon": -13.372076,
+        "dem_height_m": 44.722,
+        "solar_elevation_deg": -63.773,
+        "photon_count_in_segment": 44
+      },
+      {
+        "segment_offset": 167125,
+        "reference_lat": 29.501107,
+        "reference_lon": -13.373077,
+        "dem_height_m": 44.819,
+        "solar_elevation_deg": -63.779,
+        "photon_count_in_segment": 46
+      },
+      {
+        "segment_offset": 167175,
+        "reference_lat": 29.492106,
+        "reference_lon": -13.374005,
+        "dem_height_m": 44.918,
+        "solar_elevation_deg": -63.785,
+        "photon_count_in_segment": 21
+      },
+      {
+        "segment_offset": 167225,
+        "reference_lat": 29.483107,
+        "reference_lon": -13.375099,
+        "dem_height_m": 45.021,
+        "solar_elevation_deg": -63.791,
+        "photon_count_in_segment": 52
+      },
+      {
+        "segment_offset": 167275,
+        "reference_lat": 29.474099,
+        "reference_lon": -13.376088,
+        "dem_height_m": 45.123,
+        "solar_elevation_deg": -63.797,
+        "photon_count_in_segment": 57
+      },
+      {
+        "segment_offset": 167325,
+        "reference_lat": 29.465097,
+        "reference_lon": -13.377072,
+        "dem_height_m": 45.222,
+        "solar_elevation_deg": -63.803,
+        "photon_count_in_segment": 23
+      },
+      {
+        "segment_offset": 167375,
+        "reference_lat": 29.456093,
+        "reference_lon": -13.378074,
+        "dem_height_m": 45.319,
+        "solar_elevation_deg": -63.809,
+        "photon_count_in_segment": 44
+      },
+      {
+        "segment_offset": 167425,
+        "reference_lat": 29.447085,
+        "reference_lon": -13.379072,
+        "dem_height_m": 45.415,
+        "solar_elevation_deg": -63.815,
+        "photon_count_in_segment": 45
+      },
+      {
+        "segment_offset": 167475,
+        "reference_lat": 29.438081,
+        "reference_lon": -13.380067,
+        "dem_height_m": 45.506,
+        "solar_elevation_deg": -63.821,
+        "photon_count_in_segment": 50
+      },
+      {
+        "segment_offset": 167525,
+        "reference_lat": 29.429087,
+        "reference_lon": -13.381076,
+        "dem_height_m": 45.595,
+        "solar_elevation_deg": -63.827,
+        "photon_count_in_segment": 45
+      },
+      {
+        "segment_offset": 167575,
+        "reference_lat": 29.420074,
+        "reference_lon": -13.382056,
+        "dem_height_m": 45.679,
+        "solar_elevation_deg": -63.833,
+        "photon_count_in_segment": 30
+      },
+      {
+        "segment_offset": 167625,
+        "reference_lat": 29.411073,
+        "reference_lon": -13.383054,
+        "dem_height_m": 45.758,
+        "solar_elevation_deg": -63.839,
+        "photon_count_in_segment": 40
+      },
+      {
+        "segment_offset": 167675,
+        "reference_lat": 29.402072,
+        "reference_lon": -13.38403,
+        "dem_height_m": 45.838,
+        "solar_elevation_deg": -63.845,
+        "photon_count_in_segment": 41
+      },
+      {
+        "segment_offset": 167725,
+        "reference_lat": 29.393061,
+        "reference_lon": -13.385028,
+        "dem_height_m": 45.918,
+        "solar_elevation_deg": -63.851,
+        "photon_count_in_segment": 28
+      },
+      {
+        "segment_offset": 167775,
+        "reference_lat": 29.384063,
+        "reference_lon": -13.386045,
+        "dem_height_m": 45.982,
+        "solar_elevation_deg": -63.857,
+        "photon_count_in_segment": 42
+      },
+      {
+        "segment_offset": 167825,
+        "reference_lat": 29.375057,
+        "reference_lon": -13.387042,
+        "dem_height_m": 46.034,
+        "solar_elevation_deg": -63.863,
+        "photon_count_in_segment": 34
+      },
+      {
+        "segment_offset": 167875,
+        "reference_lat": 29.366044,
+        "reference_lon": -13.387955,
+        "dem_height_m": 46.073,
+        "solar_elevation_deg": -63.869,
+        "photon_count_in_segment": 20
+      },
+      {
+        "segment_offset": 167925,
+        "reference_lat": 29.357055,
+        "reference_lon": -13.389045,
+        "dem_height_m": 46.098,
+        "solar_elevation_deg": -63.875,
+        "photon_count_in_segment": 50
+      },
+      {
+        "segment_offset": 167975,
+        "reference_lat": 29.348047,
+        "reference_lon": -13.390064,
+        "dem_height_m": 46.109,
+        "solar_elevation_deg": -63.881,
+        "photon_count_in_segment": 39
+      },
+      {
+        "segment_offset": 168025,
+        "reference_lat": 29.339034,
+        "reference_lon": -13.390972,
+        "dem_height_m": 46.11,
+        "solar_elevation_deg": -63.886,
+        "photon_count_in_segment": 33
+      },
+      {
+        "segment_offset": 168075,
+        "reference_lat": 29.330043,
+        "reference_lon": -13.392066,
+        "dem_height_m": 46.103,
+        "solar_elevation_deg": -63.892,
+        "photon_count_in_segment": 31
+      },
+      {
+        "segment_offset": 168125,
+        "reference_lat": 29.321045,
+        "reference_lon": -13.393091,
+        "dem_height_m": 46.085,
+        "solar_elevation_deg": -63.898,
+        "photon_count_in_segment": 50
+      },
+      {
+        "segment_offset": 168175,
+        "reference_lat": 29.312042,
+        "reference_lon": -13.394103,
+        "dem_height_m": 46.058,
+        "solar_elevation_deg": -63.904,
+        "photon_count_in_segment": 32
+      },
+      {
+        "segment_offset": 168225,
+        "reference_lat": 29.30303,
+        "reference_lon": -13.395032,
+        "dem_height_m": 46.009,
+        "solar_elevation_deg": -63.91,
+        "photon_count_in_segment": 28
+      },
+      {
+        "segment_offset": 168275,
+        "reference_lat": 29.294032,
+        "reference_lon": -13.396137,
+        "dem_height_m": 45.942,
+        "solar_elevation_deg": -63.916,
+        "photon_count_in_segment": 43
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 1036561,
+        "lat": 29.4019701,
+        "lon": -13.3840376,
+        "height_wgs84_m": 729.108,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.533301
+      },
+      {
+        "photon_index": 1036562,
+        "lat": 29.4019635,
+        "lon": -13.3840397,
+        "height_wgs84_m": 741.204,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.533401
+      },
+      {
+        "photon_index": 1036563,
+        "lat": 29.4019562,
+        "lon": -13.3840458,
+        "height_wgs84_m": 786.775,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.533501
+      },
+      {
+        "photon_index": 1036564,
+        "lat": 29.4019495,
+        "lon": -13.3840487,
+        "height_wgs84_m": 806.005,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.533601
+      },
+      {
+        "photon_index": 1036565,
+        "lat": 29.4019501,
+        "lon": -13.384045,
+        "height_wgs84_m": 774.031,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.533601
+      },
+      {
+        "photon_index": 1036566,
+        "lat": 29.4019499,
+        "lon": -13.3840461,
+        "height_wgs84_m": 783.401,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.533601
+      },
+      {
+        "photon_index": 1036567,
+        "lat": 29.4019445,
+        "lon": -13.3840409,
+        "height_wgs84_m": 731.738,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.533701
+      },
+      {
+        "photon_index": 1036568,
+        "lat": 29.4019243,
+        "lon": -13.3840495,
+        "height_wgs84_m": 787.243,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534001
+      },
+      {
+        "photon_index": 1036569,
+        "lat": 29.4019247,
+        "lon": -13.3840467,
+        "height_wgs84_m": 763.035,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534001
+      },
+      {
+        "photon_index": 1036570,
+        "lat": 29.4019115,
+        "lon": -13.3840511,
+        "height_wgs84_m": 788.201,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534201
+      },
+      {
+        "photon_index": 1036571,
+        "lat": 29.4019121,
+        "lon": -13.3840475,
+        "height_wgs84_m": 756.695,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534201
+      },
+      {
+        "photon_index": 1036572,
+        "lat": 29.4019051,
+        "lon": -13.3840517,
+        "height_wgs84_m": 786.944,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534301
+      },
+      {
+        "photon_index": 1036573,
+        "lat": 29.4018988,
+        "lon": -13.3840522,
+        "height_wgs84_m": 784.846,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534401
+      },
+      {
+        "photon_index": 1036574,
+        "lat": 29.4018993,
+        "lon": -13.384049,
+        "height_wgs84_m": 757.523,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534401
+      },
+      {
+        "photon_index": 1036575,
+        "lat": 29.4018926,
+        "lon": -13.3840514,
+        "height_wgs84_m": 771.405,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534501
+      },
+      {
+        "photon_index": 1036576,
+        "lat": 29.4018932,
+        "lon": -13.3840482,
+        "height_wgs84_m": 743.895,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534501
+      },
+      {
+        "photon_index": 1036577,
+        "lat": 29.401886,
+        "lon": -13.3840535,
+        "height_wgs84_m": 783.175,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534601
+      },
+      {
+        "photon_index": 1036578,
+        "lat": 29.4018809,
+        "lon": -13.3840465,
+        "height_wgs84_m": 717.035,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534701
+      },
+      {
+        "photon_index": 1036579,
+        "lat": 29.4018667,
+        "lon": -13.3840565,
+        "height_wgs84_m": 789.861,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534901
+      },
+      {
+        "photon_index": 1036580,
+        "lat": 29.4018667,
+        "lon": -13.3840567,
+        "height_wgs84_m": 792.001,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534901
+      },
+      {
+        "photon_index": 1036581,
+        "lat": 29.4018669,
+        "lon": -13.3840555,
+        "height_wgs84_m": 781.744,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.534901
+      },
+      {
+        "photon_index": 1036582,
+        "lat": 29.401855,
+        "lon": -13.3840513,
+        "height_wgs84_m": 732.879,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.535101
+      },
+      {
+        "photon_index": 1036583,
+        "lat": 29.401843,
+        "lon": -13.3840487,
+        "height_wgs84_m": 697.195,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.535301
+      },
+      {
+        "photon_index": 1036584,
+        "lat": 29.4018356,
+        "lon": -13.3840553,
+        "height_wgs84_m": 748.037,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.535401
+      },
+      {
+        "photon_index": 1036585,
+        "lat": 29.4018364,
+        "lon": -13.3840506,
+        "height_wgs84_m": 707.354,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 246419971.535401
+      }
+    ]
+  },
+  "earth_mauna_loa_hiseas": {
+    "site_id": "earth_mauna_loa_hiseas",
+    "cell_id": "earth_c005",
+    "site_name": "Mauna Loa Basaltic Flank & Tephra Cones",
+    "query_bbox": [
+      -155.88,
+      19.2,
+      -155.08,
+      20.0
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251117101013_09752907_007_01.h5",
+      "concept_id": "G3986018042-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-11-17T10:10:23.286Z",
+      "time_end": "2025-11-17T10:17:25.783Z",
+      "size_mb": 296.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/17/ATL03_20251117101013_09752907_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        40012
+      ],
+      "rgt": [
+        975
+      ],
+      "cycle_number": [
+        29
+      ],
+      "sc_orient": [
+        1
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1r",
+      "matched_query_bbox": true,
+      "window_segments_evaluated": 1063,
+      "total_segments_in_beam": 149706
+    },
+    "computed_topography": {
+      "relief_m": 118.91,
+      "slope_mean_deg": 1.33,
+      "slope_p90_deg": 4.28,
+      "ruggedness_tri_m": 0.51,
+      "roughness_rms_m": 21.29,
+      "hypsometric_integral": 0.368,
+      "mean_elevation_m": 62.79
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 38919,
+        "reference_lat": 19.983283,
+        "reference_lon": -155.08001,
+        "dem_height_m": 15.306,
+        "solar_elevation_deg": -88.137,
+        "photon_count_in_segment": 23
+      },
+      {
+        "segment_offset": 38963,
+        "reference_lat": 19.975341,
+        "reference_lon": -155.080842,
+        "dem_height_m": 15.54,
+        "solar_elevation_deg": -88.141,
+        "photon_count_in_segment": 33
+      },
+      {
+        "segment_offset": 39007,
+        "reference_lat": 19.96741,
+        "reference_lon": -155.081683,
+        "dem_height_m": 15.762,
+        "solar_elevation_deg": -88.145,
+        "photon_count_in_segment": 14
+      },
+      {
+        "segment_offset": 39051,
+        "reference_lat": 19.959475,
+        "reference_lon": -155.082503,
+        "dem_height_m": 15.978,
+        "solar_elevation_deg": -88.149,
+        "photon_count_in_segment": 10
+      },
+      {
+        "segment_offset": 39096,
+        "reference_lat": 19.951353,
+        "reference_lon": -155.08335,
+        "dem_height_m": 16.198,
+        "solar_elevation_deg": -88.153,
+        "photon_count_in_segment": 11
+      },
+      {
+        "segment_offset": 39140,
+        "reference_lat": 19.943441,
+        "reference_lon": -155.084166,
+        "dem_height_m": 16.408,
+        "solar_elevation_deg": -88.157,
+        "photon_count_in_segment": 9
+      },
+      {
+        "segment_offset": 39184,
+        "reference_lat": 19.935513,
+        "reference_lon": -155.084988,
+        "dem_height_m": 16.604,
+        "solar_elevation_deg": -88.161,
+        "photon_count_in_segment": 12
+      },
+      {
+        "segment_offset": 39228,
+        "reference_lat": 19.927587,
+        "reference_lon": -155.08583,
+        "dem_height_m": 16.79,
+        "solar_elevation_deg": -88.165,
+        "photon_count_in_segment": 5
+      },
+      {
+        "segment_offset": 39279,
+        "reference_lat": 19.918365,
+        "reference_lon": -155.087157,
+        "dem_height_m": 17.006,
+        "solar_elevation_deg": -88.17,
+        "photon_count_in_segment": 4
+      },
+      {
+        "segment_offset": 39326,
+        "reference_lat": 19.909871,
+        "reference_lon": -155.088046,
+        "dem_height_m": 17.188,
+        "solar_elevation_deg": -88.174,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 39370,
+        "reference_lat": 19.901993,
+        "reference_lon": -155.088884,
+        "dem_height_m": 17.358,
+        "solar_elevation_deg": -88.177,
+        "photon_count_in_segment": 7
+      },
+      {
+        "segment_offset": 39416,
+        "reference_lat": 19.893715,
+        "reference_lon": -155.089759,
+        "dem_height_m": 17.536,
+        "solar_elevation_deg": -88.181,
+        "photon_count_in_segment": 4
+      },
+      {
+        "segment_offset": 39475,
+        "reference_lat": 19.883023,
+        "reference_lon": -155.090813,
+        "dem_height_m": 17.766,
+        "solar_elevation_deg": -88.186,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 39598,
+        "reference_lat": 19.860875,
+        "reference_lon": -155.093218,
+        "dem_height_m": 48.935,
+        "solar_elevation_deg": -88.197,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 39654,
+        "reference_lat": 19.850699,
+        "reference_lon": -155.09422,
+        "dem_height_m": 84.256,
+        "solar_elevation_deg": -88.201,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 39715,
+        "reference_lat": 19.839812,
+        "reference_lon": -155.095393,
+        "dem_height_m": 122.576,
+        "solar_elevation_deg": -88.206,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 39763,
+        "reference_lat": 19.831155,
+        "reference_lon": -155.096314,
+        "dem_height_m": 136.62,
+        "solar_elevation_deg": -88.21,
+        "photon_count_in_segment": 7
+      },
+      {
+        "segment_offset": 39807,
+        "reference_lat": 19.823193,
+        "reference_lon": -155.097145,
+        "dem_height_m": 123.275,
+        "solar_elevation_deg": -88.213,
+        "photon_count_in_segment": 8
+      },
+      {
+        "segment_offset": 39851,
+        "reference_lat": 19.815265,
+        "reference_lon": -155.097985,
+        "dem_height_m": 126.492,
+        "solar_elevation_deg": -88.217,
+        "photon_count_in_segment": 10
+      },
+      {
+        "segment_offset": 39895,
+        "reference_lat": 19.807358,
+        "reference_lon": -155.098799,
+        "dem_height_m": 111.059,
+        "solar_elevation_deg": -88.22,
+        "photon_count_in_segment": 7
+      },
+      {
+        "segment_offset": 39940,
+        "reference_lat": 19.799211,
+        "reference_lon": -155.09966,
+        "dem_height_m": 111.781,
+        "solar_elevation_deg": -88.224,
+        "photon_count_in_segment": 3
+      },
+      {
+        "segment_offset": 39985,
+        "reference_lat": 19.791114,
+        "reference_lon": -155.100523,
+        "dem_height_m": 119.496,
+        "solar_elevation_deg": -88.227,
+        "photon_count_in_segment": 13
+      },
+      {
+        "segment_offset": 40029,
+        "reference_lat": 19.783187,
+        "reference_lon": -155.101343,
+        "dem_height_m": 122.756,
+        "solar_elevation_deg": -88.231,
+        "photon_count_in_segment": 9
+      },
+      {
+        "segment_offset": 40073,
+        "reference_lat": 19.775249,
+        "reference_lon": -155.102193,
+        "dem_height_m": 128.219,
+        "solar_elevation_deg": -88.234,
+        "photon_count_in_segment": 20
+      },
+      {
+        "segment_offset": 40118,
+        "reference_lat": 19.767131,
+        "reference_lon": -155.102987,
+        "dem_height_m": 144.109,
+        "solar_elevation_deg": -88.237,
+        "photon_count_in_segment": 22
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 1047706,
+        "lat": 19.8830233,
+        "lon": -155.0908134,
+        "height_wgs84_m": 1857.106,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609534.974387
+      },
+      {
+        "photon_index": 1047707,
+        "lat": 19.8825407,
+        "lon": -155.0909319,
+        "height_wgs84_m": 2288.906,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609534.981787
+      },
+      {
+        "photon_index": 1047708,
+        "lat": 19.8820508,
+        "lon": -155.0909483,
+        "height_wgs84_m": 2080.025,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609534.989487
+      },
+      {
+        "photon_index": 1047709,
+        "lat": 19.8817534,
+        "lon": -155.0909606,
+        "height_wgs84_m": 1964.565,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609534.994187
+      },
+      {
+        "photon_index": 1047710,
+        "lat": 19.8815967,
+        "lon": -155.0910739,
+        "height_wgs84_m": 2566.138,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609534.996487
+      },
+      {
+        "photon_index": 1047711,
+        "lat": 19.8814437,
+        "lon": -155.0910369,
+        "height_wgs84_m": 2236.645,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609534.998987
+      },
+      {
+        "photon_index": 1047712,
+        "lat": 19.8810084,
+        "lon": -155.0911584,
+        "height_wgs84_m": 2706.62,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.005687
+      },
+      {
+        "photon_index": 1047713,
+        "lat": 19.8790226,
+        "lon": -155.0912668,
+        "height_wgs84_m": 2107.518,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.036687
+      },
+      {
+        "photon_index": 1047714,
+        "lat": 19.8785811,
+        "lon": -155.0913548,
+        "height_wgs84_m": 2365.208,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.043587
+      },
+      {
+        "photon_index": 1047715,
+        "lat": 19.8783074,
+        "lon": -155.0913962,
+        "height_wgs84_m": 2440.672,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.047887
+      },
+      {
+        "photon_index": 1047716,
+        "lat": 19.8769928,
+        "lon": -155.0914653,
+        "height_wgs84_m": 1973.233,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.068587
+      },
+      {
+        "photon_index": 1047717,
+        "lat": 19.8768358,
+        "lon": -155.0915689,
+        "height_wgs84_m": 2510.7,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.070887
+      },
+      {
+        "photon_index": 1047718,
+        "lat": 19.8761695,
+        "lon": -155.0915387,
+        "height_wgs84_m": 1890.877,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.081487
+      },
+      {
+        "photon_index": 1047719,
+        "lat": 19.8757552,
+        "lon": -155.091636,
+        "height_wgs84_m": 2227.937,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.087887
+      },
+      {
+        "photon_index": 1047720,
+        "lat": 19.8716529,
+        "lon": -155.0921367,
+        "height_wgs84_m": 2662.741,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.151887
+      },
+      {
+        "photon_index": 1047721,
+        "lat": 19.8715698,
+        "lon": -155.0920288,
+        "height_wgs84_m": 1936.895,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.153387
+      },
+      {
+        "photon_index": 1047722,
+        "lat": 19.8713576,
+        "lon": -155.0920573,
+        "height_wgs84_m": 1974.782,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.156687
+      },
+      {
+        "photon_index": 1047723,
+        "lat": 19.8707135,
+        "lon": -155.0921395,
+        "height_wgs84_m": 2082.067,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.166687
+      },
+      {
+        "photon_index": 1047724,
+        "lat": 19.8706555,
+        "lon": -155.0922059,
+        "height_wgs84_m": 2458.654,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.167487
+      },
+      {
+        "photon_index": 1047725,
+        "lat": 19.8689564,
+        "lon": -155.0924232,
+        "height_wgs84_m": 2727.241,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.193987
+      },
+      {
+        "photon_index": 1047726,
+        "lat": 19.8689565,
+        "lon": -155.0924223,
+        "height_wgs84_m": 2722.03,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.193987
+      },
+      {
+        "photon_index": 1047727,
+        "lat": 19.8676159,
+        "lon": -155.0925134,
+        "height_wgs84_m": 2404.167,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.214887
+      },
+      {
+        "photon_index": 1047728,
+        "lat": 19.867274,
+        "lon": -155.0925579,
+        "height_wgs84_m": 2478.518,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.220187
+      },
+      {
+        "photon_index": 1047729,
+        "lat": 19.8670371,
+        "lon": -155.0925781,
+        "height_wgs84_m": 2462.825,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.223887
+      },
+      {
+        "photon_index": 1047730,
+        "lat": 19.8670404,
+        "lon": -155.0925476,
+        "height_wgs84_m": 2275.663,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 248609535.223887
+      }
+    ]
+  },
+  "earth_askja_highlands": {
+    "site_id": "earth_askja_highlands",
+    "cell_id": "earth_c006",
+    "site_name": "Askja & Holuhraun Glacio-Volcanic Highlands",
+    "query_bbox": [
+      -17.2,
+      64.58,
+      -16.3,
+      65.48
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251210000636_13202905_007_01.h5",
+      "concept_id": "G4106450333-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-12-10T00:06:37.802Z",
+      "time_end": "2025-12-10T00:12:02.943Z",
+      "size_mb": 208.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/10/ATL03_20251210000636_13202905_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        40357
+      ],
+      "rgt": [
+        1320
+      ],
+      "cycle_number": [
+        29
+      ],
+      "sc_orient": [
+        0
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1l",
+      "matched_query_bbox": true,
+      "window_segments_evaluated": 1200,
+      "total_segments_in_beam": 115334
+    },
+    "computed_topography": {
+      "relief_m": 101.58,
+      "slope_mean_deg": 0.95,
+      "slope_p90_deg": 2.31,
+      "ruggedness_tri_m": 0.75,
+      "roughness_rms_m": 5.31,
+      "hypsometric_integral": 0.52,
+      "mean_elevation_m": 470.64
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 81840,
+        "reference_lat": 65.479403,
+        "reference_lon": -17.069827,
+        "dem_height_m": 407.62,
+        "solar_elevation_deg": -46.651,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 81902,
+        "reference_lat": 65.468254,
+        "reference_lon": -17.072593,
+        "dem_height_m": 417.696,
+        "solar_elevation_deg": -46.662,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 81965,
+        "reference_lat": 65.457083,
+        "reference_lon": -17.07611,
+        "dem_height_m": 431.793,
+        "solar_elevation_deg": -46.672,
+        "photon_count_in_segment": 3
+      },
+      {
+        "segment_offset": 82002,
+        "reference_lat": 65.450452,
+        "reference_lon": -17.077561,
+        "dem_height_m": 433.835,
+        "solar_elevation_deg": -46.678,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82044,
+        "reference_lat": 65.442922,
+        "reference_lon": -17.079503,
+        "dem_height_m": 450.18,
+        "solar_elevation_deg": -46.685,
+        "photon_count_in_segment": 2
+      },
+      {
+        "segment_offset": 82095,
+        "reference_lat": 65.433944,
+        "reference_lon": -17.082035,
+        "dem_height_m": 443.955,
+        "solar_elevation_deg": -46.693,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82127,
+        "reference_lat": 65.428151,
+        "reference_lon": -17.083937,
+        "dem_height_m": 446.006,
+        "solar_elevation_deg": -46.699,
+        "photon_count_in_segment": 3
+      },
+      {
+        "segment_offset": 82186,
+        "reference_lat": 65.417656,
+        "reference_lon": -17.086385,
+        "dem_height_m": 449.451,
+        "solar_elevation_deg": -46.709,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82234,
+        "reference_lat": 65.409052,
+        "reference_lon": -17.088956,
+        "dem_height_m": 451.16,
+        "solar_elevation_deg": -46.717,
+        "photon_count_in_segment": 2
+      },
+      {
+        "segment_offset": 82266,
+        "reference_lat": 65.40343,
+        "reference_lon": -17.090286,
+        "dem_height_m": 457.297,
+        "solar_elevation_deg": -46.722,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82326,
+        "reference_lat": 65.392737,
+        "reference_lon": -17.093608,
+        "dem_height_m": 466.782,
+        "solar_elevation_deg": -46.732,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82391,
+        "reference_lat": 65.381137,
+        "reference_lon": -17.096282,
+        "dem_height_m": 472.851,
+        "solar_elevation_deg": -46.743,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82442,
+        "reference_lat": 65.372046,
+        "reference_lon": -17.098637,
+        "dem_height_m": 468.131,
+        "solar_elevation_deg": -46.751,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82484,
+        "reference_lat": 65.364473,
+        "reference_lon": -17.10076,
+        "dem_height_m": 481.755,
+        "solar_elevation_deg": -46.758,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82519,
+        "reference_lat": 65.358147,
+        "reference_lon": -17.102424,
+        "dem_height_m": 483.287,
+        "solar_elevation_deg": -46.764,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82554,
+        "reference_lat": 65.351947,
+        "reference_lon": -17.104195,
+        "dem_height_m": 480.401,
+        "solar_elevation_deg": -46.77,
+        "photon_count_in_segment": 2
+      },
+      {
+        "segment_offset": 82604,
+        "reference_lat": 65.343123,
+        "reference_lon": -17.106615,
+        "dem_height_m": 477.797,
+        "solar_elevation_deg": -46.778,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82647,
+        "reference_lat": 65.335413,
+        "reference_lon": -17.108691,
+        "dem_height_m": 477.086,
+        "solar_elevation_deg": -46.785,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82693,
+        "reference_lat": 65.327273,
+        "reference_lon": -17.111128,
+        "dem_height_m": 494.026,
+        "solar_elevation_deg": -46.793,
+        "photon_count_in_segment": 2
+      },
+      {
+        "segment_offset": 82755,
+        "reference_lat": 65.316161,
+        "reference_lon": -17.114124,
+        "dem_height_m": 499.638,
+        "solar_elevation_deg": -46.803,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82820,
+        "reference_lat": 65.304543,
+        "reference_lon": -17.116986,
+        "dem_height_m": 498.189,
+        "solar_elevation_deg": -46.814,
+        "photon_count_in_segment": 2
+      },
+      {
+        "segment_offset": 82873,
+        "reference_lat": 65.295136,
+        "reference_lon": -17.119569,
+        "dem_height_m": 503.717,
+        "solar_elevation_deg": -46.823,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82913,
+        "reference_lat": 65.287954,
+        "reference_lon": -17.121619,
+        "dem_height_m": 515.784,
+        "solar_elevation_deg": -46.829,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 82964,
+        "reference_lat": 65.278778,
+        "reference_lon": -17.124095,
+        "dem_height_m": 523.049,
+        "solar_elevation_deg": -46.838,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 83038,
+        "reference_lat": 65.265701,
+        "reference_lon": -17.12749,
+        "dem_height_m": 528.827,
+        "solar_elevation_deg": -46.85,
+        "photon_count_in_segment": 1
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 1475817,
+        "lat": 65.3720461,
+        "lon": -17.0986371,
+        "height_wgs84_m": 23.138,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.264378
+      },
+      {
+        "photon_index": 1475818,
+        "lat": 65.3710633,
+        "lon": -17.0989403,
+        "height_wgs84_m": 121.85,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.280078
+      },
+      {
+        "photon_index": 1475819,
+        "lat": 65.3709725,
+        "lon": -17.0990536,
+        "height_wgs84_m": 385.325,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.281678
+      },
+      {
+        "photon_index": 1475820,
+        "lat": 65.3709544,
+        "lon": -17.0990655,
+        "height_wgs84_m": 405.962,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.281978
+      },
+      {
+        "photon_index": 1475821,
+        "lat": 65.3709027,
+        "lon": -17.0991824,
+        "height_wgs84_m": 711.937,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.282978
+      },
+      {
+        "photon_index": 1475822,
+        "lat": 65.3708673,
+        "lon": -17.0992706,
+        "height_wgs84_m": 945.899,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.283678
+      },
+      {
+        "photon_index": 1475823,
+        "lat": 65.3708575,
+        "lon": -17.0993566,
+        "height_wgs84_m": 1193.498,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.283978
+      },
+      {
+        "photon_index": 1475824,
+        "lat": 65.3707742,
+        "lon": -17.0993051,
+        "height_wgs84_m": 973.67,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.285178
+      },
+      {
+        "photon_index": 1475825,
+        "lat": 65.3706234,
+        "lon": -17.0990658,
+        "height_wgs84_m": 144.611,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.287078
+      },
+      {
+        "photon_index": 1475826,
+        "lat": 65.3704841,
+        "lon": -17.0990463,
+        "height_wgs84_m": -21.477,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.289178
+      },
+      {
+        "photon_index": 1475827,
+        "lat": 65.3701405,
+        "lon": -17.0994199,
+        "height_wgs84_m": 825.303,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.295078
+      },
+      {
+        "photon_index": 1475828,
+        "lat": 65.369881,
+        "lon": -17.0995513,
+        "height_wgs84_m": 1016.511,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.299278
+      },
+      {
+        "photon_index": 1475829,
+        "lat": 65.3697411,
+        "lon": -17.0996993,
+        "height_wgs84_m": 1348.882,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.301678
+      },
+      {
+        "photon_index": 1475830,
+        "lat": 65.3696842,
+        "lon": -17.0995409,
+        "height_wgs84_m": 833.844,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.302278
+      },
+      {
+        "photon_index": 1475831,
+        "lat": 65.3687941,
+        "lon": -17.099631,
+        "height_wgs84_m": 395.317,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.316178
+      },
+      {
+        "photon_index": 1475832,
+        "lat": 65.3683841,
+        "lon": -17.0996779,
+        "height_wgs84_m": 201.02,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.322578
+      },
+      {
+        "photon_index": 1475833,
+        "lat": 65.3681857,
+        "lon": -17.099768,
+        "height_wgs84_m": 306.635,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.325778
+      },
+      {
+        "photon_index": 1475834,
+        "lat": 65.3680608,
+        "lon": -17.0997663,
+        "height_wgs84_m": 199.358,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.327678
+      },
+      {
+        "photon_index": 1475835,
+        "lat": 65.3672167,
+        "lon": -17.1000599,
+        "height_wgs84_m": 388.492,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.340978
+      },
+      {
+        "photon_index": 1475836,
+        "lat": 65.3672082,
+        "lon": -17.1001603,
+        "height_wgs84_m": 680.005,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.341278
+      },
+      {
+        "photon_index": 1475837,
+        "lat": 65.366798,
+        "lon": -17.1002009,
+        "height_wgs84_m": 476.971,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.347578
+      },
+      {
+        "photon_index": 1475838,
+        "lat": 65.3666947,
+        "lon": -17.1005064,
+        "height_wgs84_m": 1305.281,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.349678
+      },
+      {
+        "photon_index": 1475839,
+        "lat": 65.3654669,
+        "lon": -17.1007589,
+        "height_wgs84_m": 1104.945,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.368978
+      },
+      {
+        "photon_index": 1475840,
+        "lat": 65.3653684,
+        "lon": -17.1005746,
+        "height_wgs84_m": 479.697,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.370178
+      },
+      {
+        "photon_index": 1475841,
+        "lat": 65.3653585,
+        "lon": -17.1005435,
+        "height_wgs84_m": 379.404,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 250560630.370278
+      }
+    ]
+  },
+  "earth_waw_an_namus": {
+    "site_id": "earth_waw_an_namus",
+    "cell_id": "earth_c007",
+    "site_name": "Waw an Namus Dark Pyroclastic Caldera",
+    "query_bbox": [
+      17.26,
+      24.41,
+      18.26,
+      25.41
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251109230130_08612907_007_01.h5",
+      "concept_id": "G3986206979-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-11-09T23:01:18.632Z",
+      "time_end": "2025-11-09T23:08:21.373Z",
+      "size_mb": 616.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/09/ATL03_20251109230130_08612907_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        39898
+      ],
+      "rgt": [
+        861
+      ],
+      "cycle_number": [
+        29
+      ],
+      "sc_orient": [
+        1
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1r",
+      "matched_query_bbox": true,
+      "window_segments_evaluated": 1200,
+      "total_segments_in_beam": 149709
+    },
+    "computed_topography": {
+      "relief_m": 51.68,
+      "slope_mean_deg": 0.51,
+      "slope_p90_deg": 1.1,
+      "ruggedness_tri_m": 0.18,
+      "roughness_rms_m": 7.23,
+      "hypsometric_integral": 0.514,
+      "mean_elevation_m": 416.36
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 8771,
+        "reference_lat": 25.409885,
+        "reference_lon": 18.183812,
+        "dem_height_m": 401.853,
+        "solar_elevation_deg": -79.081,
+        "photon_count_in_segment": 109
+      },
+      {
+        "segment_offset": 8820,
+        "reference_lat": 25.401053,
+        "reference_lon": 18.182824,
+        "dem_height_m": 400.808,
+        "solar_elevation_deg": -79.088,
+        "photon_count_in_segment": 79
+      },
+      {
+        "segment_offset": 8870,
+        "reference_lat": 25.392049,
+        "reference_lon": 18.181826,
+        "dem_height_m": 401.057,
+        "solar_elevation_deg": -79.095,
+        "photon_count_in_segment": 81
+      },
+      {
+        "segment_offset": 8920,
+        "reference_lat": 25.383039,
+        "reference_lon": 18.180842,
+        "dem_height_m": 404.515,
+        "solar_elevation_deg": -79.102,
+        "photon_count_in_segment": 99
+      },
+      {
+        "segment_offset": 8970,
+        "reference_lat": 25.374028,
+        "reference_lon": 18.179869,
+        "dem_height_m": 396.71,
+        "solar_elevation_deg": -79.109,
+        "photon_count_in_segment": 109
+      },
+      {
+        "segment_offset": 9020,
+        "reference_lat": 25.365021,
+        "reference_lon": 18.178898,
+        "dem_height_m": 389.455,
+        "solar_elevation_deg": -79.116,
+        "photon_count_in_segment": 98
+      },
+      {
+        "segment_offset": 9070,
+        "reference_lat": 25.356013,
+        "reference_lon": 18.177914,
+        "dem_height_m": 388.783,
+        "solar_elevation_deg": -79.123,
+        "photon_count_in_segment": 89
+      },
+      {
+        "segment_offset": 9120,
+        "reference_lat": 25.347005,
+        "reference_lon": 18.176938,
+        "dem_height_m": 392.522,
+        "solar_elevation_deg": -79.13,
+        "photon_count_in_segment": 133
+      },
+      {
+        "segment_offset": 9170,
+        "reference_lat": 25.337999,
+        "reference_lon": 18.175951,
+        "dem_height_m": 397.582,
+        "solar_elevation_deg": -79.137,
+        "photon_count_in_segment": 80
+      },
+      {
+        "segment_offset": 9220,
+        "reference_lat": 25.328983,
+        "reference_lon": 18.174993,
+        "dem_height_m": 407.088,
+        "solar_elevation_deg": -79.143,
+        "photon_count_in_segment": 94
+      },
+      {
+        "segment_offset": 9270,
+        "reference_lat": 25.31997,
+        "reference_lon": 18.174049,
+        "dem_height_m": 419.154,
+        "solar_elevation_deg": -79.15,
+        "photon_count_in_segment": 89
+      },
+      {
+        "segment_offset": 9320,
+        "reference_lat": 25.310962,
+        "reference_lon": 18.173107,
+        "dem_height_m": 419.415,
+        "solar_elevation_deg": -79.157,
+        "photon_count_in_segment": 86
+      },
+      {
+        "segment_offset": 9370,
+        "reference_lat": 25.301947,
+        "reference_lon": 18.172167,
+        "dem_height_m": 412.588,
+        "solar_elevation_deg": -79.164,
+        "photon_count_in_segment": 100
+      },
+      {
+        "segment_offset": 9420,
+        "reference_lat": 25.292941,
+        "reference_lon": 18.17119,
+        "dem_height_m": 410.216,
+        "solar_elevation_deg": -79.171,
+        "photon_count_in_segment": 112
+      },
+      {
+        "segment_offset": 9470,
+        "reference_lat": 25.283928,
+        "reference_lon": 18.170224,
+        "dem_height_m": 415.21,
+        "solar_elevation_deg": -79.178,
+        "photon_count_in_segment": 84
+      },
+      {
+        "segment_offset": 9520,
+        "reference_lat": 25.274921,
+        "reference_lon": 18.169238,
+        "dem_height_m": 421.655,
+        "solar_elevation_deg": -79.185,
+        "photon_count_in_segment": 102
+      },
+      {
+        "segment_offset": 9570,
+        "reference_lat": 25.265912,
+        "reference_lon": 18.168247,
+        "dem_height_m": 427.654,
+        "solar_elevation_deg": -79.191,
+        "photon_count_in_segment": 90
+      },
+      {
+        "segment_offset": 9620,
+        "reference_lat": 25.256907,
+        "reference_lon": 18.167272,
+        "dem_height_m": 430.47,
+        "solar_elevation_deg": -79.198,
+        "photon_count_in_segment": 113
+      },
+      {
+        "segment_offset": 9670,
+        "reference_lat": 25.247895,
+        "reference_lon": 18.166297,
+        "dem_height_m": 436.881,
+        "solar_elevation_deg": -79.205,
+        "photon_count_in_segment": 99
+      },
+      {
+        "segment_offset": 9720,
+        "reference_lat": 25.238887,
+        "reference_lon": 18.165326,
+        "dem_height_m": 439.828,
+        "solar_elevation_deg": -79.212,
+        "photon_count_in_segment": 107
+      },
+      {
+        "segment_offset": 9770,
+        "reference_lat": 25.229876,
+        "reference_lon": 18.164336,
+        "dem_height_m": 439.078,
+        "solar_elevation_deg": -79.219,
+        "photon_count_in_segment": 97
+      },
+      {
+        "segment_offset": 9820,
+        "reference_lat": 25.220873,
+        "reference_lon": 18.163348,
+        "dem_height_m": 440.863,
+        "solar_elevation_deg": -79.226,
+        "photon_count_in_segment": 144
+      },
+      {
+        "segment_offset": 9870,
+        "reference_lat": 25.211859,
+        "reference_lon": 18.162354,
+        "dem_height_m": 442.398,
+        "solar_elevation_deg": -79.233,
+        "photon_count_in_segment": 95
+      },
+      {
+        "segment_offset": 9920,
+        "reference_lat": 25.202856,
+        "reference_lon": 18.161363,
+        "dem_height_m": 438.727,
+        "solar_elevation_deg": -79.239,
+        "photon_count_in_segment": 82
+      },
+      {
+        "segment_offset": 9970,
+        "reference_lat": 25.19384,
+        "reference_lon": 18.160409,
+        "dem_height_m": 434.136,
+        "solar_elevation_deg": -79.246,
+        "photon_count_in_segment": 83
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 817466,
+        "lat": 25.3018578,
+        "lon": 18.1721576,
+        "height_wgs84_m": 412.599,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.445769
+      },
+      {
+        "photon_index": 817467,
+        "lat": 25.3018578,
+        "lon": 18.1721576,
+        "height_wgs84_m": 412.578,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.445769
+      },
+      {
+        "photon_index": 817468,
+        "lat": 25.3018578,
+        "lon": 18.1721576,
+        "height_wgs84_m": 412.456,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.445769
+      },
+      {
+        "photon_index": 817469,
+        "lat": 25.3018514,
+        "lon": 18.1721572,
+        "height_wgs84_m": 411.602,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.445869
+      },
+      {
+        "photon_index": 817470,
+        "lat": 25.3018514,
+        "lon": 18.1721569,
+        "height_wgs84_m": 412.558,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.445869
+      },
+      {
+        "photon_index": 817471,
+        "lat": 25.3018514,
+        "lon": 18.172157,
+        "height_wgs84_m": 412.213,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.445869
+      },
+      {
+        "photon_index": 817472,
+        "lat": 25.3018514,
+        "lon": 18.1721571,
+        "height_wgs84_m": 411.945,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.445869
+      },
+      {
+        "photon_index": 817473,
+        "lat": 25.3018514,
+        "lon": 18.1721569,
+        "height_wgs84_m": 412.712,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.445869
+      },
+      {
+        "photon_index": 817474,
+        "lat": 25.301845,
+        "lon": 18.1721564,
+        "height_wgs84_m": 411.881,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.445969
+      },
+      {
+        "photon_index": 817475,
+        "lat": 25.301845,
+        "lon": 18.1721564,
+        "height_wgs84_m": 412.049,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.445969
+      },
+      {
+        "photon_index": 817476,
+        "lat": 25.3018387,
+        "lon": 18.1721557,
+        "height_wgs84_m": 412.015,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446069
+      },
+      {
+        "photon_index": 817477,
+        "lat": 25.3018387,
+        "lon": 18.1721558,
+        "height_wgs84_m": 411.683,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446069
+      },
+      {
+        "photon_index": 817478,
+        "lat": 25.3018323,
+        "lon": 18.1721549,
+        "height_wgs84_m": 412.259,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446169
+      },
+      {
+        "photon_index": 817479,
+        "lat": 25.3018323,
+        "lon": 18.172155,
+        "height_wgs84_m": 412.119,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446169
+      },
+      {
+        "photon_index": 817480,
+        "lat": 25.3018323,
+        "lon": 18.1721548,
+        "height_wgs84_m": 412.762,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446169
+      },
+      {
+        "photon_index": 817481,
+        "lat": 25.3018323,
+        "lon": 18.172155,
+        "height_wgs84_m": 412.164,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446169
+      },
+      {
+        "photon_index": 817482,
+        "lat": 25.3018259,
+        "lon": 18.1721542,
+        "height_wgs84_m": 412.396,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446269
+      },
+      {
+        "photon_index": 817483,
+        "lat": 25.3018259,
+        "lon": 18.1721544,
+        "height_wgs84_m": 411.629,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446269
+      },
+      {
+        "photon_index": 817484,
+        "lat": 25.3018259,
+        "lon": 18.1721542,
+        "height_wgs84_m": 412.431,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446269
+      },
+      {
+        "photon_index": 817485,
+        "lat": 25.3018196,
+        "lon": 18.1721537,
+        "height_wgs84_m": 411.753,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446369
+      },
+      {
+        "photon_index": 817486,
+        "lat": 25.3018195,
+        "lon": 18.1721535,
+        "height_wgs84_m": 412.501,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446369
+      },
+      {
+        "photon_index": 817487,
+        "lat": 25.3018196,
+        "lon": 18.1721536,
+        "height_wgs84_m": 411.939,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446369
+      },
+      {
+        "photon_index": 817488,
+        "lat": 25.3018195,
+        "lon": 18.1721536,
+        "height_wgs84_m": 412.134,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446369
+      },
+      {
+        "photon_index": 817489,
+        "lat": 25.3018195,
+        "lon": 18.1721534,
+        "height_wgs84_m": 412.557,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446369
+      },
+      {
+        "photon_index": 817490,
+        "lat": 25.3018132,
+        "lon": 18.1721528,
+        "height_wgs84_m": 412.373,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 247964505.446469
+      }
+    ]
+  },
+  "earth_salar_de_antofalla": {
+    "site_id": "earth_salar_de_antofalla",
+    "cell_id": "earth_c008",
+    "site_name": "Salar de Antofalla & Puna Volcanic Basin",
+    "query_bbox": [
+      -68.07,
+      -26.0,
+      -67.17,
+      -25.1
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20250830075521_11542808_007_01.h5",
+      "concept_id": "G3835019472-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-08-30T07:58:09.546Z",
+      "time_end": "2025-08-30T08:02:22.786Z",
+      "size_mb": 400.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/08/30/ATL03_20250830075521_11542808_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        38804
+      ],
+      "rgt": [
+        1154
+      ],
+      "cycle_number": [
+        28
+      ],
+      "sc_orient": [
+        1
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1r",
+      "matched_query_bbox": true,
+      "window_segments_evaluated": 1200,
+      "total_segments_in_beam": 149888
+    },
+    "computed_topography": {
+      "relief_m": 826.73,
+      "slope_mean_deg": 6.21,
+      "slope_p90_deg": 13.48,
+      "ruggedness_tri_m": 2.22,
+      "roughness_rms_m": 228.07,
+      "hypsometric_integral": 0.313,
+      "mean_elevation_m": 4290.33
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 139302,
+        "reference_lat": -25.100131,
+        "reference_lon": -67.535154,
+        "dem_height_m": 4046.606,
+        "solar_elevation_deg": -37.333,
+        "photon_count_in_segment": 42
+      },
+      {
+        "segment_offset": 139351,
+        "reference_lat": -25.108942,
+        "reference_lon": -67.536104,
+        "dem_height_m": 4129.98,
+        "solar_elevation_deg": -37.332,
+        "photon_count_in_segment": 55
+      },
+      {
+        "segment_offset": 139401,
+        "reference_lat": -25.117931,
+        "reference_lon": -67.537073,
+        "dem_height_m": 4219.289,
+        "solar_elevation_deg": -37.331,
+        "photon_count_in_segment": 53
+      },
+      {
+        "segment_offset": 139451,
+        "reference_lat": -25.12692,
+        "reference_lon": -67.538047,
+        "dem_height_m": 4317.188,
+        "solar_elevation_deg": -37.331,
+        "photon_count_in_segment": 34
+      },
+      {
+        "segment_offset": 139501,
+        "reference_lat": -25.13591,
+        "reference_lon": -67.539019,
+        "dem_height_m": 4401.617,
+        "solar_elevation_deg": -37.33,
+        "photon_count_in_segment": 56
+      },
+      {
+        "segment_offset": 139551,
+        "reference_lat": -25.144893,
+        "reference_lon": -67.539994,
+        "dem_height_m": 4408.382,
+        "solar_elevation_deg": -37.329,
+        "photon_count_in_segment": 44
+      },
+      {
+        "segment_offset": 139601,
+        "reference_lat": -25.153883,
+        "reference_lon": -67.54096,
+        "dem_height_m": 4435.177,
+        "solar_elevation_deg": -37.328,
+        "photon_count_in_segment": 41
+      },
+      {
+        "segment_offset": 139651,
+        "reference_lat": -25.162869,
+        "reference_lon": -67.541927,
+        "dem_height_m": 4427.017,
+        "solar_elevation_deg": -37.327,
+        "photon_count_in_segment": 45
+      },
+      {
+        "segment_offset": 139701,
+        "reference_lat": -25.171867,
+        "reference_lon": -67.542895,
+        "dem_height_m": 4431.317,
+        "solar_elevation_deg": -37.326,
+        "photon_count_in_segment": 45
+      },
+      {
+        "segment_offset": 139751,
+        "reference_lat": -25.180853,
+        "reference_lon": -67.543853,
+        "dem_height_m": 4366.75,
+        "solar_elevation_deg": -37.325,
+        "photon_count_in_segment": 40
+      },
+      {
+        "segment_offset": 139801,
+        "reference_lat": -25.18982,
+        "reference_lon": -67.544825,
+        "dem_height_m": 4324.466,
+        "solar_elevation_deg": -37.324,
+        "photon_count_in_segment": 46
+      },
+      {
+        "segment_offset": 139851,
+        "reference_lat": -25.198826,
+        "reference_lon": -67.545785,
+        "dem_height_m": 4195.608,
+        "solar_elevation_deg": -37.323,
+        "photon_count_in_segment": 38
+      },
+      {
+        "segment_offset": 139901,
+        "reference_lat": -25.207814,
+        "reference_lon": -67.546742,
+        "dem_height_m": 4133.585,
+        "solar_elevation_deg": -37.322,
+        "photon_count_in_segment": 40
+      },
+      {
+        "segment_offset": 139951,
+        "reference_lat": -25.216795,
+        "reference_lon": -67.54771,
+        "dem_height_m": 4085.55,
+        "solar_elevation_deg": -37.321,
+        "photon_count_in_segment": 49
+      },
+      {
+        "segment_offset": 140001,
+        "reference_lat": -25.22579,
+        "reference_lon": -67.54868,
+        "dem_height_m": 4010.243,
+        "solar_elevation_deg": -37.32,
+        "photon_count_in_segment": 62
+      },
+      {
+        "segment_offset": 140051,
+        "reference_lat": -25.23478,
+        "reference_lon": -67.549644,
+        "dem_height_m": 3971.376,
+        "solar_elevation_deg": -37.319,
+        "photon_count_in_segment": 56
+      },
+      {
+        "segment_offset": 140101,
+        "reference_lat": -25.243771,
+        "reference_lon": -67.550611,
+        "dem_height_m": 3955.946,
+        "solar_elevation_deg": -37.318,
+        "photon_count_in_segment": 60
+      },
+      {
+        "segment_offset": 140151,
+        "reference_lat": -25.252754,
+        "reference_lon": -67.551589,
+        "dem_height_m": 4093.631,
+        "solar_elevation_deg": -37.317,
+        "photon_count_in_segment": 64
+      },
+      {
+        "segment_offset": 140201,
+        "reference_lat": -25.261741,
+        "reference_lon": -67.552557,
+        "dem_height_m": 4079.351,
+        "solar_elevation_deg": -37.316,
+        "photon_count_in_segment": 53
+      },
+      {
+        "segment_offset": 140251,
+        "reference_lat": -25.270737,
+        "reference_lon": -67.553535,
+        "dem_height_m": 4215.95,
+        "solar_elevation_deg": -37.315,
+        "photon_count_in_segment": 45
+      },
+      {
+        "segment_offset": 140301,
+        "reference_lat": -25.279717,
+        "reference_lon": -67.554506,
+        "dem_height_m": 4315.385,
+        "solar_elevation_deg": -37.314,
+        "photon_count_in_segment": 57
+      },
+      {
+        "segment_offset": 140351,
+        "reference_lat": -25.288703,
+        "reference_lon": -67.555486,
+        "dem_height_m": 4459.123,
+        "solar_elevation_deg": -37.313,
+        "photon_count_in_segment": 49
+      },
+      {
+        "segment_offset": 140401,
+        "reference_lat": -25.297688,
+        "reference_lon": -67.556457,
+        "dem_height_m": 4621.527,
+        "solar_elevation_deg": -37.312,
+        "photon_count_in_segment": 35
+      },
+      {
+        "segment_offset": 140451,
+        "reference_lat": -25.306679,
+        "reference_lon": -67.557436,
+        "dem_height_m": 4832.631,
+        "solar_elevation_deg": -37.311,
+        "photon_count_in_segment": 59
+      },
+      {
+        "segment_offset": 140501,
+        "reference_lat": -25.315664,
+        "reference_lon": -67.558409,
+        "dem_height_m": 5043.138,
+        "solar_elevation_deg": -37.31,
+        "photon_count_in_segment": 55
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 3077715,
+        "lat": -25.2079042,
+        "lon": -67.5467518,
+        "height_wgs84_m": 4133.878,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.65987
+      },
+      {
+        "photon_index": 3077716,
+        "lat": -25.2079106,
+        "lon": -67.5467525,
+        "height_wgs84_m": 4133.438,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.65997
+      },
+      {
+        "photon_index": 3077717,
+        "lat": -25.207917,
+        "lon": -67.5467532,
+        "height_wgs84_m": 4133.218,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66007
+      },
+      {
+        "photon_index": 3077718,
+        "lat": -25.2079234,
+        "lon": -67.5467539,
+        "height_wgs84_m": 4133.224,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66017
+      },
+      {
+        "photon_index": 3077719,
+        "lat": -25.2079298,
+        "lon": -67.5467546,
+        "height_wgs84_m": 4132.654,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66027
+      },
+      {
+        "photon_index": 3077720,
+        "lat": -25.2079298,
+        "lon": -67.5467546,
+        "height_wgs84_m": 4132.72,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66027
+      },
+      {
+        "photon_index": 3077721,
+        "lat": -25.2079298,
+        "lon": -67.5467546,
+        "height_wgs84_m": 4132.837,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66027
+      },
+      {
+        "photon_index": 3077722,
+        "lat": -25.2079362,
+        "lon": -67.5467553,
+        "height_wgs84_m": 4133.794,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66037
+      },
+      {
+        "photon_index": 3077723,
+        "lat": -25.2079362,
+        "lon": -67.5467553,
+        "height_wgs84_m": 4133.152,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66037
+      },
+      {
+        "photon_index": 3077724,
+        "lat": -25.2079427,
+        "lon": -67.546756,
+        "height_wgs84_m": 4133.695,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66047
+      },
+      {
+        "photon_index": 3077725,
+        "lat": -25.2079426,
+        "lon": -67.546756,
+        "height_wgs84_m": 4133.545,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66047
+      },
+      {
+        "photon_index": 3077726,
+        "lat": -25.2079426,
+        "lon": -67.546756,
+        "height_wgs84_m": 4133.55,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66047
+      },
+      {
+        "photon_index": 3077727,
+        "lat": -25.2079491,
+        "lon": -67.5467567,
+        "height_wgs84_m": 4133.441,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66057
+      },
+      {
+        "photon_index": 3077728,
+        "lat": -25.2079619,
+        "lon": -67.5467581,
+        "height_wgs84_m": 4132.984,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66077
+      },
+      {
+        "photon_index": 3077729,
+        "lat": -25.2079683,
+        "lon": -67.5467588,
+        "height_wgs84_m": 4133.047,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66087
+      },
+      {
+        "photon_index": 3077730,
+        "lat": -25.2079747,
+        "lon": -67.5467596,
+        "height_wgs84_m": 4133.583,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66097
+      },
+      {
+        "photon_index": 3077731,
+        "lat": -25.2079747,
+        "lon": -67.5467596,
+        "height_wgs84_m": 4133.403,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66097
+      },
+      {
+        "photon_index": 3077732,
+        "lat": -25.2079811,
+        "lon": -67.5467602,
+        "height_wgs84_m": 4132.673,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66107
+      },
+      {
+        "photon_index": 3077733,
+        "lat": -25.2079811,
+        "lon": -67.5467603,
+        "height_wgs84_m": 4133.304,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66107
+      },
+      {
+        "photon_index": 3077734,
+        "lat": -25.2079876,
+        "lon": -67.546761,
+        "height_wgs84_m": 4133.734,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66117
+      },
+      {
+        "photon_index": 3077735,
+        "lat": -25.207994,
+        "lon": -67.5467616,
+        "height_wgs84_m": 4132.902,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66127
+      },
+      {
+        "photon_index": 3077736,
+        "lat": -25.207994,
+        "lon": -67.5467616,
+        "height_wgs84_m": 4132.292,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66127
+      },
+      {
+        "photon_index": 3077737,
+        "lat": -25.2080004,
+        "lon": -67.5467624,
+        "height_wgs84_m": 4132.885,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66137
+      },
+      {
+        "photon_index": 3077738,
+        "lat": -25.2080004,
+        "lon": -67.5467624,
+        "height_wgs84_m": 4133.178,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66137
+      },
+      {
+        "photon_index": 3077739,
+        "lat": -25.2080004,
+        "lon": -67.5467623,
+        "height_wgs84_m": 4132.682,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 241776114.66137
+      }
+    ]
+  },
+  "earth_lake_salda_delta": {
+    "site_id": "earth_lake_salda_delta",
+    "cell_id": "earth_c009",
+    "site_name": "Lake Salda Hydromagnesite Fan-Delta",
+    "query_bbox": [
+      29.28,
+      37.15,
+      30.08,
+      37.95
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251119214457_10132906_007_01.h5",
+      "concept_id": "G3985619957-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-11-19T21:45:00.306Z",
+      "time_end": "2025-11-19T21:53:31.199Z",
+      "size_mb": 408.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/19/ATL03_20251119214457_10132906_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        40050
+      ],
+      "rgt": [
+        1013
+      ],
+      "cycle_number": [
+        29
+      ],
+      "sc_orient": [
+        1
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1r",
+      "matched_query_bbox": true,
+      "window_segments_evaluated": 1186,
+      "total_segments_in_beam": 181026
+    },
+    "computed_topography": {
+      "relief_m": 410.45,
+      "slope_mean_deg": 5.12,
+      "slope_p90_deg": 11.89,
+      "ruggedness_tri_m": 1.85,
+      "roughness_rms_m": 136.26,
+      "hypsometric_integral": 0.316,
+      "mean_elevation_m": 845.62
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 120129,
+        "reference_lat": 37.949895,
+        "reference_lon": 29.479343,
+        "dem_height_m": 885.418,
+        "solar_elevation_deg": -71.71,
+        "photon_count_in_segment": 11
+      },
+      {
+        "segment_offset": 120178,
+        "reference_lat": 37.941067,
+        "reference_lon": 29.478308,
+        "dem_height_m": 911.569,
+        "solar_elevation_deg": -71.719,
+        "photon_count_in_segment": 4
+      },
+      {
+        "segment_offset": 120227,
+        "reference_lat": 37.932276,
+        "reference_lon": 29.477243,
+        "dem_height_m": 911.189,
+        "solar_elevation_deg": -71.728,
+        "photon_count_in_segment": 8
+      },
+      {
+        "segment_offset": 120277,
+        "reference_lat": 37.923276,
+        "reference_lon": 29.476138,
+        "dem_height_m": 917.342,
+        "solar_elevation_deg": -71.737,
+        "photon_count_in_segment": 2
+      },
+      {
+        "segment_offset": 120326,
+        "reference_lat": 37.914482,
+        "reference_lon": 29.475051,
+        "dem_height_m": 932.571,
+        "solar_elevation_deg": -71.745,
+        "photon_count_in_segment": 7
+      },
+      {
+        "segment_offset": 120375,
+        "reference_lat": 37.905658,
+        "reference_lon": 29.473916,
+        "dem_height_m": 1004.892,
+        "solar_elevation_deg": -71.754,
+        "photon_count_in_segment": 7
+      },
+      {
+        "segment_offset": 120425,
+        "reference_lat": 37.896719,
+        "reference_lon": 29.472805,
+        "dem_height_m": 977.216,
+        "solar_elevation_deg": -71.763,
+        "photon_count_in_segment": 5
+      },
+      {
+        "segment_offset": 120476,
+        "reference_lat": 37.887518,
+        "reference_lon": 29.471677,
+        "dem_height_m": 859.442,
+        "solar_elevation_deg": -71.772,
+        "photon_count_in_segment": 6
+      },
+      {
+        "segment_offset": 120527,
+        "reference_lat": 37.878292,
+        "reference_lon": 29.470524,
+        "dem_height_m": 798.912,
+        "solar_elevation_deg": -71.782,
+        "photon_count_in_segment": 5
+      },
+      {
+        "segment_offset": 120576,
+        "reference_lat": 37.869533,
+        "reference_lon": 29.469419,
+        "dem_height_m": 727.049,
+        "solar_elevation_deg": -71.79,
+        "photon_count_in_segment": 9
+      },
+      {
+        "segment_offset": 120625,
+        "reference_lat": 37.860692,
+        "reference_lon": 29.468266,
+        "dem_height_m": 800.498,
+        "solar_elevation_deg": -71.799,
+        "photon_count_in_segment": 4
+      },
+      {
+        "segment_offset": 120675,
+        "reference_lat": 37.851747,
+        "reference_lon": 29.467148,
+        "dem_height_m": 719.102,
+        "solar_elevation_deg": -71.808,
+        "photon_count_in_segment": 6
+      },
+      {
+        "segment_offset": 120724,
+        "reference_lat": 37.842916,
+        "reference_lon": 29.466021,
+        "dem_height_m": 703.191,
+        "solar_elevation_deg": -71.817,
+        "photon_count_in_segment": 10
+      },
+      {
+        "segment_offset": 120773,
+        "reference_lat": 37.834146,
+        "reference_lon": 29.464953,
+        "dem_height_m": 654.557,
+        "solar_elevation_deg": -71.826,
+        "photon_count_in_segment": 7
+      },
+      {
+        "segment_offset": 120823,
+        "reference_lat": 37.825113,
+        "reference_lon": 29.463824,
+        "dem_height_m": 727.881,
+        "solar_elevation_deg": -71.835,
+        "photon_count_in_segment": 3
+      },
+      {
+        "segment_offset": 120875,
+        "reference_lat": 37.815796,
+        "reference_lon": 29.462692,
+        "dem_height_m": 722.441,
+        "solar_elevation_deg": -71.844,
+        "photon_count_in_segment": 10
+      },
+      {
+        "segment_offset": 120926,
+        "reference_lat": 37.806611,
+        "reference_lon": 29.46162,
+        "dem_height_m": 650.104,
+        "solar_elevation_deg": -71.853,
+        "photon_count_in_segment": 6
+      },
+      {
+        "segment_offset": 120975,
+        "reference_lat": 37.797832,
+        "reference_lon": 29.460564,
+        "dem_height_m": 682.599,
+        "solar_elevation_deg": -71.862,
+        "photon_count_in_segment": 7
+      },
+      {
+        "segment_offset": 121024,
+        "reference_lat": 37.788991,
+        "reference_lon": 29.459523,
+        "dem_height_m": 720.974,
+        "solar_elevation_deg": -71.871,
+        "photon_count_in_segment": 8
+      },
+      {
+        "segment_offset": 121075,
+        "reference_lat": 37.779782,
+        "reference_lon": 29.458434,
+        "dem_height_m": 795.352,
+        "solar_elevation_deg": -71.88,
+        "photon_count_in_segment": 3
+      },
+      {
+        "segment_offset": 121124,
+        "reference_lat": 37.771026,
+        "reference_lon": 29.457417,
+        "dem_height_m": 818.764,
+        "solar_elevation_deg": -71.889,
+        "photon_count_in_segment": 4
+      },
+      {
+        "segment_offset": 121174,
+        "reference_lat": 37.762046,
+        "reference_lon": 29.456309,
+        "dem_height_m": 1038.485,
+        "solar_elevation_deg": -71.898,
+        "photon_count_in_segment": 9
+      },
+      {
+        "segment_offset": 121227,
+        "reference_lat": 37.752487,
+        "reference_lon": 29.455236,
+        "dem_height_m": 982.13,
+        "solar_elevation_deg": -71.908,
+        "photon_count_in_segment": 3
+      },
+      {
+        "segment_offset": 121277,
+        "reference_lat": 37.743476,
+        "reference_lon": 29.454149,
+        "dem_height_m": 1088.307,
+        "solar_elevation_deg": -71.917,
+        "photon_count_in_segment": 2
+      },
+      {
+        "segment_offset": 121328,
+        "reference_lat": 37.734327,
+        "reference_lon": 29.452978,
+        "dem_height_m": 1269.458,
+        "solar_elevation_deg": -71.926,
+        "photon_count_in_segment": 2
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 938832,
+        "lat": 37.8428015,
+        "lon": 29.4660094,
+        "height_wgs84_m": 698.963,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15088
+      },
+      {
+        "photon_index": 938833,
+        "lat": 37.8427951,
+        "lon": 29.4660079,
+        "height_wgs84_m": 700.7,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15098
+      },
+      {
+        "photon_index": 938834,
+        "lat": 37.8427696,
+        "lon": 29.4660048,
+        "height_wgs84_m": 700.74,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15138
+      },
+      {
+        "photon_index": 938835,
+        "lat": 37.8427377,
+        "lon": 29.4660015,
+        "height_wgs84_m": 699.353,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15188
+      },
+      {
+        "photon_index": 938836,
+        "lat": 37.8427186,
+        "lon": 29.4660001,
+        "height_wgs84_m": 697.129,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15218
+      },
+      {
+        "photon_index": 938837,
+        "lat": 37.8426867,
+        "lon": 29.4659961,
+        "height_wgs84_m": 697.384,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15268
+      },
+      {
+        "photon_index": 938838,
+        "lat": 37.8426421,
+        "lon": 29.4659902,
+        "height_wgs84_m": 698.669,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15338
+      },
+      {
+        "photon_index": 938839,
+        "lat": 37.8426166,
+        "lon": 29.4659876,
+        "height_wgs84_m": 697.387,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15378
+      },
+      {
+        "photon_index": 938840,
+        "lat": 37.8426038,
+        "lon": 29.4659862,
+        "height_wgs84_m": 697.054,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15398
+      },
+      {
+        "photon_index": 938841,
+        "lat": 37.8425337,
+        "lon": 29.4659778,
+        "height_wgs84_m": 696.665,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15508
+      },
+      {
+        "photon_index": 938842,
+        "lat": 37.8424572,
+        "lon": 29.465969,
+        "height_wgs84_m": 695.626,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15628
+      },
+      {
+        "photon_index": 938843,
+        "lat": 37.842419,
+        "lon": 29.465965,
+        "height_wgs84_m": 693.996,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15688
+      },
+      {
+        "photon_index": 938844,
+        "lat": 37.8423743,
+        "lon": 29.4659599,
+        "height_wgs84_m": 693.081,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15758
+      },
+      {
+        "photon_index": 938845,
+        "lat": 37.842368,
+        "lon": 29.4659591,
+        "height_wgs84_m": 693.088,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15768
+      },
+      {
+        "photon_index": 938846,
+        "lat": 37.8423297,
+        "lon": 29.4659552,
+        "height_wgs84_m": 691.219,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15828
+      },
+      {
+        "photon_index": 938847,
+        "lat": 37.8422978,
+        "lon": 29.465951,
+        "height_wgs84_m": 692.016,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15878
+      },
+      {
+        "photon_index": 938848,
+        "lat": 37.8422915,
+        "lon": 29.4659498,
+        "height_wgs84_m": 692.973,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15888
+      },
+      {
+        "photon_index": 938849,
+        "lat": 37.8422851,
+        "lon": 29.4659493,
+        "height_wgs84_m": 692.24,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15898
+      },
+      {
+        "photon_index": 938850,
+        "lat": 37.8422724,
+        "lon": 29.4659489,
+        "height_wgs84_m": 689.351,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15918
+      },
+      {
+        "photon_index": 938851,
+        "lat": 37.842266,
+        "lon": 29.465948,
+        "height_wgs84_m": 689.672,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15928
+      },
+      {
+        "photon_index": 938852,
+        "lat": 37.8422532,
+        "lon": 29.4659454,
+        "height_wgs84_m": 692.148,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.15948
+      },
+      {
+        "photon_index": 938853,
+        "lat": 37.8422023,
+        "lon": 29.4659409,
+        "height_wgs84_m": 688.006,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.16028
+      },
+      {
+        "photon_index": 938854,
+        "lat": 37.8421959,
+        "lon": 29.4659392,
+        "height_wgs84_m": 690.122,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.16038
+      },
+      {
+        "photon_index": 938855,
+        "lat": 37.8421959,
+        "lon": 29.4659394,
+        "height_wgs84_m": 689.677,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.16038
+      },
+      {
+        "photon_index": 938856,
+        "lat": 37.8421895,
+        "lon": 29.4659389,
+        "height_wgs84_m": 689.052,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 248824241.16048
+      }
+    ]
+  },
+  "earth_queen_maud_anorthosite": {
+    "site_id": "earth_queen_maud_anorthosite",
+    "cell_id": "earth_c010",
+    "site_name": "Gruber Mountains (Wohlthat Massif) Anorthosite Ridge",
+    "query_bbox": [
+      12.95,
+      -71.85,
+      13.95,
+      -70.85
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251222204114_01293010_007_01.h5",
+      "concept_id": "G4107185414-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-12-22T20:41:17.226Z",
+      "time_end": "2025-12-22T20:48:58.376Z",
+      "size_mb": 1024.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/22/ATL03_20251222204114_01293010_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        40553
+      ],
+      "rgt": [
+        129
+      ],
+      "cycle_number": [
+        30
+      ],
+      "sc_orient": [
+        0
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1l",
+      "matched_query_bbox": false,
+      "window_segments_evaluated": 600,
+      "total_segments_in_beam": 163502
+    },
+    "computed_topography": {
+      "relief_m": 120.06,
+      "slope_mean_deg": 0.62,
+      "slope_p90_deg": 1.65,
+      "ruggedness_tri_m": 0.21,
+      "roughness_rms_m": 14.32,
+      "hypsometric_integral": 0.436,
+      "mean_elevation_m": 1706.74
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 121426,
+        "reference_lat": -71.595008,
+        "reference_lon": 14.202739,
+        "dem_height_m": 1651.528,
+        "solar_elevation_deg": 7.955,
+        "photon_count_in_segment": 62
+      },
+      {
+        "segment_offset": 121450,
+        "reference_lat": -71.599256,
+        "reference_lon": 14.200983,
+        "dem_height_m": 1655.947,
+        "solar_elevation_deg": 7.959,
+        "photon_count_in_segment": 91
+      },
+      {
+        "segment_offset": 121475,
+        "reference_lat": -71.603689,
+        "reference_lon": 14.199422,
+        "dem_height_m": 1661.664,
+        "solar_elevation_deg": 7.963,
+        "photon_count_in_segment": 108
+      },
+      {
+        "segment_offset": 121500,
+        "reference_lat": -71.608099,
+        "reference_lon": 14.197264,
+        "dem_height_m": 1667.182,
+        "solar_elevation_deg": 7.967,
+        "photon_count_in_segment": 66
+      },
+      {
+        "segment_offset": 121525,
+        "reference_lat": -71.612521,
+        "reference_lon": 14.19543,
+        "dem_height_m": 1670.141,
+        "solar_elevation_deg": 7.971,
+        "photon_count_in_segment": 93
+      },
+      {
+        "segment_offset": 121550,
+        "reference_lat": -71.616957,
+        "reference_lon": 14.193901,
+        "dem_height_m": 1671.872,
+        "solar_elevation_deg": 7.975,
+        "photon_count_in_segment": 41
+      },
+      {
+        "segment_offset": 121575,
+        "reference_lat": -71.621378,
+        "reference_lon": 14.192059,
+        "dem_height_m": 1673.79,
+        "solar_elevation_deg": 7.979,
+        "photon_count_in_segment": 130
+      },
+      {
+        "segment_offset": 121600,
+        "reference_lat": -71.625788,
+        "reference_lon": 14.189931,
+        "dem_height_m": 1675.729,
+        "solar_elevation_deg": 7.983,
+        "photon_count_in_segment": 64
+      },
+      {
+        "segment_offset": 121625,
+        "reference_lat": -71.630205,
+        "reference_lon": 14.188063,
+        "dem_height_m": 1677.277,
+        "solar_elevation_deg": 7.987,
+        "photon_count_in_segment": 88
+      },
+      {
+        "segment_offset": 121650,
+        "reference_lat": -71.634632,
+        "reference_lon": 14.186261,
+        "dem_height_m": 1678.714,
+        "solar_elevation_deg": 7.991,
+        "photon_count_in_segment": 79
+      },
+      {
+        "segment_offset": 121675,
+        "reference_lat": -71.639058,
+        "reference_lon": 14.184443,
+        "dem_height_m": 1681.044,
+        "solar_elevation_deg": 7.995,
+        "photon_count_in_segment": 73
+      },
+      {
+        "segment_offset": 121700,
+        "reference_lat": -71.643477,
+        "reference_lon": 14.182613,
+        "dem_height_m": 1683.903,
+        "solar_elevation_deg": 7.999,
+        "photon_count_in_segment": 57
+      },
+      {
+        "segment_offset": 121725,
+        "reference_lat": -71.647898,
+        "reference_lon": 14.180788,
+        "dem_height_m": 1687.383,
+        "solar_elevation_deg": 8.003,
+        "photon_count_in_segment": 93
+      },
+      {
+        "segment_offset": 121750,
+        "reference_lat": -71.652335,
+        "reference_lon": 14.179241,
+        "dem_height_m": 1691.035,
+        "solar_elevation_deg": 8.007,
+        "photon_count_in_segment": 51
+      },
+      {
+        "segment_offset": 121775,
+        "reference_lat": -71.656742,
+        "reference_lon": 14.177147,
+        "dem_height_m": 1695.126,
+        "solar_elevation_deg": 8.011,
+        "photon_count_in_segment": 85
+      },
+      {
+        "segment_offset": 121800,
+        "reference_lat": -71.661169,
+        "reference_lon": 14.175331,
+        "dem_height_m": 1700.034,
+        "solar_elevation_deg": 8.015,
+        "photon_count_in_segment": 59
+      },
+      {
+        "segment_offset": 121825,
+        "reference_lat": -71.665592,
+        "reference_lon": 14.173477,
+        "dem_height_m": 1715.292,
+        "solar_elevation_deg": 8.019,
+        "photon_count_in_segment": 60
+      },
+      {
+        "segment_offset": 121850,
+        "reference_lat": -71.670014,
+        "reference_lon": 14.171707,
+        "dem_height_m": 1735.81,
+        "solar_elevation_deg": 8.023,
+        "photon_count_in_segment": 56
+      },
+      {
+        "segment_offset": 121875,
+        "reference_lat": -71.674435,
+        "reference_lon": 14.169887,
+        "dem_height_m": 1752.713,
+        "solar_elevation_deg": 8.027,
+        "photon_count_in_segment": 58
+      },
+      {
+        "segment_offset": 121900,
+        "reference_lat": -71.678858,
+        "reference_lon": 14.168017,
+        "dem_height_m": 1764.933,
+        "solar_elevation_deg": 8.031,
+        "photon_count_in_segment": 44
+      },
+      {
+        "segment_offset": 121925,
+        "reference_lat": -71.683297,
+        "reference_lon": 14.166424,
+        "dem_height_m": 1773.049,
+        "solar_elevation_deg": 8.035,
+        "photon_count_in_segment": 108
+      },
+      {
+        "segment_offset": 121950,
+        "reference_lat": -71.687707,
+        "reference_lon": 14.1644,
+        "dem_height_m": 1777.489,
+        "solar_elevation_deg": 8.039,
+        "photon_count_in_segment": 60
+      },
+      {
+        "segment_offset": 121975,
+        "reference_lat": -71.692123,
+        "reference_lon": 14.162559,
+        "dem_height_m": 1777.133,
+        "solar_elevation_deg": 8.043,
+        "photon_count_in_segment": 54
+      },
+      {
+        "segment_offset": 122000,
+        "reference_lat": -71.696556,
+        "reference_lon": 14.160946,
+        "dem_height_m": 1776.841,
+        "solar_elevation_deg": 8.047,
+        "photon_count_in_segment": 93
+      },
+      {
+        "segment_offset": 122025,
+        "reference_lat": -71.700988,
+        "reference_lon": 14.159091,
+        "dem_height_m": 1778.051,
+        "solar_elevation_deg": 8.051,
+        "photon_count_in_segment": 91
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 3602879,
+        "lat": -71.647991,
+        "lon": 14.1807373,
+        "height_wgs84_m": 2678.597,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.286758
+      },
+      {
+        "photon_index": 3602880,
+        "lat": -71.6479917,
+        "lon": 14.1807429,
+        "height_wgs84_m": 2659.562,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.286758
+      },
+      {
+        "photon_index": 3602881,
+        "lat": -71.6479918,
+        "lon": 14.1807443,
+        "height_wgs84_m": 2654.956,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.286758
+      },
+      {
+        "photon_index": 3602882,
+        "lat": -71.6479933,
+        "lon": 14.1807569,
+        "height_wgs84_m": 2611.807,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.286758
+      },
+      {
+        "photon_index": 3602883,
+        "lat": -71.6479987,
+        "lon": 14.1807464,
+        "height_wgs84_m": 2639.186,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.286858
+      },
+      {
+        "photon_index": 3602884,
+        "lat": -71.6479991,
+        "lon": 14.1807499,
+        "height_wgs84_m": 2627.056,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.286858
+      },
+      {
+        "photon_index": 3602885,
+        "lat": -71.6480001,
+        "lon": 14.1807584,
+        "height_wgs84_m": 2598.197,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.286858
+      },
+      {
+        "photon_index": 3602886,
+        "lat": -71.6480055,
+        "lon": 14.1807483,
+        "height_wgs84_m": 2623.745,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.286958
+      },
+      {
+        "photon_index": 3602887,
+        "lat": -71.648006,
+        "lon": 14.1807525,
+        "height_wgs84_m": 2609.458,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.286958
+      },
+      {
+        "photon_index": 3602888,
+        "lat": -71.6480077,
+        "lon": 14.1807672,
+        "height_wgs84_m": 2559.602,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.286958
+      },
+      {
+        "photon_index": 3602889,
+        "lat": -71.6480093,
+        "lon": 14.1807252,
+        "height_wgs84_m": 2694.028,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287058
+      },
+      {
+        "photon_index": 3602890,
+        "lat": -71.6480095,
+        "lon": 14.1807269,
+        "height_wgs84_m": 2688.277,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287058
+      },
+      {
+        "photon_index": 3602891,
+        "lat": -71.6480171,
+        "lon": 14.1807357,
+        "height_wgs84_m": 2649.603,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287158
+      },
+      {
+        "photon_index": 3602892,
+        "lat": -71.6480193,
+        "lon": 14.180754,
+        "height_wgs84_m": 2587.09,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287158
+      },
+      {
+        "photon_index": 3602893,
+        "lat": -71.6480214,
+        "lon": 14.180772,
+        "height_wgs84_m": 2525.787,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287158
+      },
+      {
+        "photon_index": 3602894,
+        "lat": -71.6480235,
+        "lon": 14.1807345,
+        "height_wgs84_m": 2644.846,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287258
+      },
+      {
+        "photon_index": 3602895,
+        "lat": -71.6480253,
+        "lon": 14.1807495,
+        "height_wgs84_m": 2593.907,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287258
+      },
+      {
+        "photon_index": 3602896,
+        "lat": -71.648025,
+        "lon": 14.180747,
+        "height_wgs84_m": 2602.191,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287258
+      },
+      {
+        "photon_index": 3602897,
+        "lat": -71.6480269,
+        "lon": 14.1807629,
+        "height_wgs84_m": 2548.228,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287258
+      },
+      {
+        "photon_index": 3602898,
+        "lat": -71.6480278,
+        "lon": 14.1807147,
+        "height_wgs84_m": 2703.806,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287358
+      },
+      {
+        "photon_index": 3602899,
+        "lat": -71.6480279,
+        "lon": 14.1807161,
+        "height_wgs84_m": 2698.951,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287358
+      },
+      {
+        "photon_index": 3602900,
+        "lat": -71.64803,
+        "lon": 14.1807334,
+        "height_wgs84_m": 2640.175,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287358
+      },
+      {
+        "photon_index": 3602901,
+        "lat": -71.648032,
+        "lon": 14.1807504,
+        "height_wgs84_m": 2582.162,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287358
+      },
+      {
+        "photon_index": 3602902,
+        "lat": -71.6480342,
+        "lon": 14.1807138,
+        "height_wgs84_m": 2698.125,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287458
+      },
+      {
+        "photon_index": 3602903,
+        "lat": -71.6480375,
+        "lon": 14.1807411,
+        "height_wgs84_m": 2605.038,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 251671620.287458
+      }
+    ]
+  },
+  "earth_craters_of_the_moon": {
+    "site_id": "earth_craters_of_the_moon",
+    "cell_id": "earth_c011",
+    "site_name": "Craters of the Moon \u2014 Great Rift Basalt Plains",
+    "query_bbox": [
+      -113.97,
+      42.97,
+      -113.07,
+      43.87
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251227053010_01963006_007_01.h5",
+      "concept_id": "G4106886248-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-12-27T05:30:10.535Z",
+      "time_end": "2025-12-27T05:38:40.730Z",
+      "size_mb": 360.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/27/ATL03_20251227053010_01963006_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        40620
+      ],
+      "rgt": [
+        196
+      ],
+      "cycle_number": [
+        30
+      ],
+      "sc_orient": [
+        0
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1l",
+      "matched_query_bbox": false,
+      "window_segments_evaluated": 600,
+      "total_segments_in_beam": 181024
+    },
+    "computed_topography": {
+      "relief_m": 88.02,
+      "slope_mean_deg": 1.17,
+      "slope_p90_deg": 2.54,
+      "ruggedness_tri_m": 0.41,
+      "roughness_rms_m": 22.49,
+      "hypsometric_integral": 0.318,
+      "mean_elevation_m": 1563.84
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 89819,
+        "reference_lat": 43.401643,
+        "reference_lon": -112.929175,
+        "dem_height_m": 1620.107,
+        "solar_elevation_deg": -58.444,
+        "photon_count_in_segment": 43
+      },
+      {
+        "segment_offset": 89843,
+        "reference_lat": 43.397332,
+        "reference_lon": -112.929755,
+        "dem_height_m": 1630.068,
+        "solar_elevation_deg": -58.446,
+        "photon_count_in_segment": 40
+      },
+      {
+        "segment_offset": 89868,
+        "reference_lat": 43.392847,
+        "reference_lon": -112.930343,
+        "dem_height_m": 1617.773,
+        "solar_elevation_deg": -58.448,
+        "photon_count_in_segment": 26
+      },
+      {
+        "segment_offset": 89893,
+        "reference_lat": 43.388355,
+        "reference_lon": -112.930933,
+        "dem_height_m": 1583.622,
+        "solar_elevation_deg": -58.45,
+        "photon_count_in_segment": 36
+      },
+      {
+        "segment_offset": 89918,
+        "reference_lat": 43.383867,
+        "reference_lon": -112.931516,
+        "dem_height_m": 1580.308,
+        "solar_elevation_deg": -58.452,
+        "photon_count_in_segment": 43
+      },
+      {
+        "segment_offset": 89943,
+        "reference_lat": 43.379362,
+        "reference_lon": -112.932111,
+        "dem_height_m": 1568.298,
+        "solar_elevation_deg": -58.454,
+        "photon_count_in_segment": 30
+      },
+      {
+        "segment_offset": 89968,
+        "reference_lat": 43.374897,
+        "reference_lon": -112.932766,
+        "dem_height_m": 1544.496,
+        "solar_elevation_deg": -58.456,
+        "photon_count_in_segment": 44
+      },
+      {
+        "segment_offset": 89993,
+        "reference_lat": 43.3704,
+        "reference_lon": -112.93333,
+        "dem_height_m": 1533.327,
+        "solar_elevation_deg": -58.458,
+        "photon_count_in_segment": 46
+      },
+      {
+        "segment_offset": 90018,
+        "reference_lat": 43.365903,
+        "reference_lon": -112.933908,
+        "dem_height_m": 1533.106,
+        "solar_elevation_deg": -58.46,
+        "photon_count_in_segment": 47
+      },
+      {
+        "segment_offset": 90043,
+        "reference_lat": 43.361428,
+        "reference_lon": -112.934483,
+        "dem_height_m": 1539.707,
+        "solar_elevation_deg": -58.463,
+        "photon_count_in_segment": 58
+      },
+      {
+        "segment_offset": 90068,
+        "reference_lat": 43.356926,
+        "reference_lon": -112.93503,
+        "dem_height_m": 1550.062,
+        "solar_elevation_deg": -58.465,
+        "photon_count_in_segment": 53
+      },
+      {
+        "segment_offset": 90093,
+        "reference_lat": 43.352436,
+        "reference_lon": -112.935612,
+        "dem_height_m": 1550.464,
+        "solar_elevation_deg": -58.467,
+        "photon_count_in_segment": 52
+      },
+      {
+        "segment_offset": 90118,
+        "reference_lat": 43.347951,
+        "reference_lon": -112.936202,
+        "dem_height_m": 1545.104,
+        "solar_elevation_deg": -58.469,
+        "photon_count_in_segment": 63
+      },
+      {
+        "segment_offset": 90143,
+        "reference_lat": 43.343458,
+        "reference_lon": -112.936757,
+        "dem_height_m": 1545.793,
+        "solar_elevation_deg": -58.471,
+        "photon_count_in_segment": 56
+      },
+      {
+        "segment_offset": 90168,
+        "reference_lat": 43.338967,
+        "reference_lon": -112.937304,
+        "dem_height_m": 1549.988,
+        "solar_elevation_deg": -58.473,
+        "photon_count_in_segment": 45
+      },
+      {
+        "segment_offset": 90193,
+        "reference_lat": 43.334471,
+        "reference_lon": -112.937849,
+        "dem_height_m": 1553.192,
+        "solar_elevation_deg": -58.475,
+        "photon_count_in_segment": 54
+      },
+      {
+        "segment_offset": 90218,
+        "reference_lat": 43.329989,
+        "reference_lon": -112.938408,
+        "dem_height_m": 1553.701,
+        "solar_elevation_deg": -58.477,
+        "photon_count_in_segment": 26
+      },
+      {
+        "segment_offset": 90243,
+        "reference_lat": 43.32548,
+        "reference_lon": -112.938902,
+        "dem_height_m": 1559.606,
+        "solar_elevation_deg": -58.479,
+        "photon_count_in_segment": 43
+      },
+      {
+        "segment_offset": 90268,
+        "reference_lat": 43.320989,
+        "reference_lon": -112.939465,
+        "dem_height_m": 1567.521,
+        "solar_elevation_deg": -58.481,
+        "photon_count_in_segment": 27
+      },
+      {
+        "segment_offset": 90293,
+        "reference_lat": 43.316508,
+        "reference_lon": -112.940106,
+        "dem_height_m": 1569.873,
+        "solar_elevation_deg": -58.483,
+        "photon_count_in_segment": 26
+      },
+      {
+        "segment_offset": 90318,
+        "reference_lat": 43.312018,
+        "reference_lon": -112.94067,
+        "dem_height_m": 1565.321,
+        "solar_elevation_deg": -58.485,
+        "photon_count_in_segment": 40
+      },
+      {
+        "segment_offset": 90343,
+        "reference_lat": 43.307527,
+        "reference_lon": -112.941246,
+        "dem_height_m": 1572.221,
+        "solar_elevation_deg": -58.487,
+        "photon_count_in_segment": 25
+      },
+      {
+        "segment_offset": 90368,
+        "reference_lat": 43.303056,
+        "reference_lon": -112.941735,
+        "dem_height_m": 1568.72,
+        "solar_elevation_deg": -58.489,
+        "photon_count_in_segment": 42
+      },
+      {
+        "segment_offset": 90393,
+        "reference_lat": 43.298542,
+        "reference_lon": -112.942296,
+        "dem_height_m": 1563.228,
+        "solar_elevation_deg": -58.491,
+        "photon_count_in_segment": 41
+      },
+      {
+        "segment_offset": 90418,
+        "reference_lat": 43.29405,
+        "reference_lon": -112.942864,
+        "dem_height_m": 1563.167,
+        "solar_elevation_deg": -58.494,
+        "photon_count_in_segment": 35
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 2580085,
+        "lat": 43.3478525,
+        "lon": -112.9362027,
+        "height_wgs84_m": 2033.003,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54893
+      },
+      {
+        "photon_index": 2580086,
+        "lat": 43.3478481,
+        "lon": -112.9362165,
+        "height_wgs84_m": 2091.812,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54903
+      },
+      {
+        "photon_index": 2580087,
+        "lat": 43.3478449,
+        "lon": -112.9361962,
+        "height_wgs84_m": 2000.192,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54903
+      },
+      {
+        "photon_index": 2580088,
+        "lat": 43.3478412,
+        "lon": -112.9362145,
+        "height_wgs84_m": 2079.232,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54913
+      },
+      {
+        "photon_index": 2580089,
+        "lat": 43.3478415,
+        "lon": -112.9362161,
+        "height_wgs84_m": 2086.289,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54913
+      },
+      {
+        "photon_index": 2580090,
+        "lat": 43.3478354,
+        "lon": -112.9362196,
+        "height_wgs84_m": 2098.34,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54923
+      },
+      {
+        "photon_index": 2580091,
+        "lat": 43.3478353,
+        "lon": -112.9362186,
+        "height_wgs84_m": 2094.154,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54923
+      },
+      {
+        "photon_index": 2580092,
+        "lat": 43.3478327,
+        "lon": -112.9362016,
+        "height_wgs84_m": 2016.866,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54923
+      },
+      {
+        "photon_index": 2580093,
+        "lat": 43.3478288,
+        "lon": -112.9362193,
+        "height_wgs84_m": 2093.274,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54933
+      },
+      {
+        "photon_index": 2580094,
+        "lat": 43.3478148,
+        "lon": -112.9361708,
+        "height_wgs84_m": 1869.706,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54943
+      },
+      {
+        "photon_index": 2580095,
+        "lat": 43.347814,
+        "lon": -112.9362083,
+        "height_wgs84_m": 2035.782,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54953
+      },
+      {
+        "photon_index": 2580096,
+        "lat": 43.3478125,
+        "lon": -112.9361984,
+        "height_wgs84_m": 1991.276,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54953
+      },
+      {
+        "photon_index": 2580097,
+        "lat": 43.3478092,
+        "lon": -112.936219,
+        "height_wgs84_m": 2080.879,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54963
+      },
+      {
+        "photon_index": 2580098,
+        "lat": 43.3478026,
+        "lon": -112.9362192,
+        "height_wgs84_m": 2078.1,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.54973
+      },
+      {
+        "photon_index": 2580099,
+        "lat": 43.3477835,
+        "lon": -112.9362229,
+        "height_wgs84_m": 2083.354,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.55003
+      },
+      {
+        "photon_index": 2580100,
+        "lat": 43.3477828,
+        "lon": -112.9362183,
+        "height_wgs84_m": 2062.696,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.55003
+      },
+      {
+        "photon_index": 2580101,
+        "lat": 43.3477821,
+        "lon": -112.9362137,
+        "height_wgs84_m": 2041.824,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.55003
+      },
+      {
+        "photon_index": 2580102,
+        "lat": 43.3477773,
+        "lon": -112.9362247,
+        "height_wgs84_m": 2087.947,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.55013
+      },
+      {
+        "photon_index": 2580103,
+        "lat": 43.3477756,
+        "lon": -112.936214,
+        "height_wgs84_m": 2039.082,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.55013
+      },
+      {
+        "photon_index": 2580104,
+        "lat": 43.3477709,
+        "lon": -112.9362261,
+        "height_wgs84_m": 2090.434,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.55023
+      },
+      {
+        "photon_index": 2580105,
+        "lat": 43.3477644,
+        "lon": -112.9361838,
+        "height_wgs84_m": 1898.691,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.55023
+      },
+      {
+        "photon_index": 2580106,
+        "lat": 43.3477647,
+        "lon": -112.9362279,
+        "height_wgs84_m": 2094.952,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.55033
+      },
+      {
+        "photon_index": 2580107,
+        "lat": 43.347758,
+        "lon": -112.936227,
+        "height_wgs84_m": 2086.853,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.55043
+      },
+      {
+        "photon_index": 2580108,
+        "lat": 43.3477513,
+        "lon": -112.9362263,
+        "height_wgs84_m": 2079.843,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.55053
+      },
+      {
+        "photon_index": 2580109,
+        "lat": 43.3477503,
+        "lon": -112.9362197,
+        "height_wgs84_m": 2049.962,
+        "land_signal_confidence": -1,
+        "quality_flag": 0,
+        "delta_time_s": 252048864.55053
+      }
+    ]
+  },
+  "earth_lonar_crater": {
+    "site_id": "earth_lonar_crater",
+    "cell_id": "earth_c012",
+    "site_name": "Lonar Basaltic Impact Crater",
+    "query_bbox": [
+      76.06,
+      19.53,
+      76.96,
+      20.43
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251013202523_04472907_007_01.h5",
+      "concept_id": "G3984983491-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-10-13T20:25:21.721Z",
+      "time_end": "2025-10-13T20:32:24.009Z",
+      "size_mb": 296.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/13/ATL03_20251013202523_04472907_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        39484
+      ],
+      "rgt": [
+        447
+      ],
+      "cycle_number": [
+        29
+      ],
+      "sc_orient": [
+        1
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1r",
+      "matched_query_bbox": false,
+      "window_segments_evaluated": 600,
+      "total_segments_in_beam": 149703
+    },
+    "computed_topography": {
+      "relief_m": 33.02,
+      "slope_mean_deg": 1.09,
+      "slope_p90_deg": 2.27,
+      "ruggedness_tri_m": 0.38,
+      "roughness_rms_m": 10.35,
+      "hypsometric_integral": 0.284,
+      "mean_elevation_m": 506.51
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 38297,
+        "reference_lat": 20.087655,
+        "reference_lon": 76.016062,
+        "dem_height_m": 508.488,
+        "solar_elevation_deg": -61.887,
+        "photon_count_in_segment": 21
+      },
+      {
+        "segment_offset": 38321,
+        "reference_lat": 20.083319,
+        "reference_lon": 76.015598,
+        "dem_height_m": 538.969,
+        "solar_elevation_deg": -61.889,
+        "photon_count_in_segment": 25
+      },
+      {
+        "segment_offset": 38346,
+        "reference_lat": 20.078819,
+        "reference_lon": 76.015131,
+        "dem_height_m": 528.038,
+        "solar_elevation_deg": -61.89,
+        "photon_count_in_segment": 24
+      },
+      {
+        "segment_offset": 38371,
+        "reference_lat": 20.074311,
+        "reference_lon": 76.014659,
+        "dem_height_m": 513.243,
+        "solar_elevation_deg": -61.892,
+        "photon_count_in_segment": 30
+      },
+      {
+        "segment_offset": 38396,
+        "reference_lat": 20.069805,
+        "reference_lon": 76.014181,
+        "dem_height_m": 503.4,
+        "solar_elevation_deg": -61.894,
+        "photon_count_in_segment": 18
+      },
+      {
+        "segment_offset": 38421,
+        "reference_lat": 20.065293,
+        "reference_lon": 76.0137,
+        "dem_height_m": 501.396,
+        "solar_elevation_deg": -61.896,
+        "photon_count_in_segment": 19
+      },
+      {
+        "segment_offset": 38446,
+        "reference_lat": 20.060792,
+        "reference_lon": 76.013212,
+        "dem_height_m": 504.615,
+        "solar_elevation_deg": -61.898,
+        "photon_count_in_segment": 18
+      },
+      {
+        "segment_offset": 38471,
+        "reference_lat": 20.056281,
+        "reference_lon": 76.012728,
+        "dem_height_m": 493.341,
+        "solar_elevation_deg": -61.9,
+        "photon_count_in_segment": 22
+      },
+      {
+        "segment_offset": 38496,
+        "reference_lat": 20.051779,
+        "reference_lon": 76.012238,
+        "dem_height_m": 497.539,
+        "solar_elevation_deg": -61.901,
+        "photon_count_in_segment": 17
+      },
+      {
+        "segment_offset": 38521,
+        "reference_lat": 20.047274,
+        "reference_lon": 76.011758,
+        "dem_height_m": 492.923,
+        "solar_elevation_deg": -61.903,
+        "photon_count_in_segment": 19
+      },
+      {
+        "segment_offset": 38546,
+        "reference_lat": 20.042762,
+        "reference_lon": 76.011271,
+        "dem_height_m": 498.425,
+        "solar_elevation_deg": -61.905,
+        "photon_count_in_segment": 43
+      },
+      {
+        "segment_offset": 38571,
+        "reference_lat": 20.038267,
+        "reference_lon": 76.010791,
+        "dem_height_m": 505.52,
+        "solar_elevation_deg": -61.907,
+        "photon_count_in_segment": 17
+      },
+      {
+        "segment_offset": 38596,
+        "reference_lat": 20.033765,
+        "reference_lon": 76.010316,
+        "dem_height_m": 511.884,
+        "solar_elevation_deg": -61.909,
+        "photon_count_in_segment": 13
+      },
+      {
+        "segment_offset": 38621,
+        "reference_lat": 20.029249,
+        "reference_lon": 76.009839,
+        "dem_height_m": 519.392,
+        "solar_elevation_deg": -61.91,
+        "photon_count_in_segment": 15
+      },
+      {
+        "segment_offset": 38646,
+        "reference_lat": 20.024738,
+        "reference_lon": 76.009362,
+        "dem_height_m": 517.259,
+        "solar_elevation_deg": -61.912,
+        "photon_count_in_segment": 14
+      },
+      {
+        "segment_offset": 38671,
+        "reference_lat": 20.020227,
+        "reference_lon": 76.008887,
+        "dem_height_m": 510.944,
+        "solar_elevation_deg": -61.914,
+        "photon_count_in_segment": 21
+      },
+      {
+        "segment_offset": 38696,
+        "reference_lat": 20.015719,
+        "reference_lon": 76.008415,
+        "dem_height_m": 499.927,
+        "solar_elevation_deg": -61.916,
+        "photon_count_in_segment": 67
+      },
+      {
+        "segment_offset": 38721,
+        "reference_lat": 20.011214,
+        "reference_lon": 76.007942,
+        "dem_height_m": 494.993,
+        "solar_elevation_deg": -61.918,
+        "photon_count_in_segment": 20
+      },
+      {
+        "segment_offset": 38746,
+        "reference_lat": 20.006709,
+        "reference_lon": 76.007464,
+        "dem_height_m": 498.526,
+        "solar_elevation_deg": -61.919,
+        "photon_count_in_segment": 22
+      },
+      {
+        "segment_offset": 38771,
+        "reference_lat": 20.002193,
+        "reference_lon": 76.006994,
+        "dem_height_m": 497.384,
+        "solar_elevation_deg": -61.921,
+        "photon_count_in_segment": 20
+      },
+      {
+        "segment_offset": 38796,
+        "reference_lat": 19.997685,
+        "reference_lon": 76.006528,
+        "dem_height_m": 496.762,
+        "solar_elevation_deg": -61.923,
+        "photon_count_in_segment": 26
+      },
+      {
+        "segment_offset": 38821,
+        "reference_lat": 19.993184,
+        "reference_lon": 76.006046,
+        "dem_height_m": 501.395,
+        "solar_elevation_deg": -61.925,
+        "photon_count_in_segment": 20
+      },
+      {
+        "segment_offset": 38846,
+        "reference_lat": 19.988691,
+        "reference_lon": 76.005576,
+        "dem_height_m": 504.069,
+        "solar_elevation_deg": -61.927,
+        "photon_count_in_segment": 11
+      },
+      {
+        "segment_offset": 38871,
+        "reference_lat": 19.984167,
+        "reference_lon": 76.005109,
+        "dem_height_m": 509.549,
+        "solar_elevation_deg": -61.928,
+        "photon_count_in_segment": 33
+      },
+      {
+        "segment_offset": 38896,
+        "reference_lat": 19.97968,
+        "reference_lon": 76.004636,
+        "dem_height_m": 515.584,
+        "solar_elevation_deg": -61.93,
+        "photon_count_in_segment": 24
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 701446,
+        "lat": 20.0336557,
+        "lon": 76.0103049,
+        "height_wgs84_m": 509.868,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.876369
+      },
+      {
+        "photon_index": 701447,
+        "lat": 20.0336557,
+        "lon": 76.0103048,
+        "height_wgs84_m": 510.171,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.876369
+      },
+      {
+        "photon_index": 701448,
+        "lat": 20.0336493,
+        "lon": 76.0103041,
+        "height_wgs84_m": 510.059,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.876469
+      },
+      {
+        "photon_index": 701449,
+        "lat": 20.0336493,
+        "lon": 76.0103042,
+        "height_wgs84_m": 509.758,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.876469
+      },
+      {
+        "photon_index": 701450,
+        "lat": 20.0336107,
+        "lon": 76.0103001,
+        "height_wgs84_m": 509.616,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.877069
+      },
+      {
+        "photon_index": 701451,
+        "lat": 20.0336043,
+        "lon": 76.0102995,
+        "height_wgs84_m": 509.277,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.877169
+      },
+      {
+        "photon_index": 701452,
+        "lat": 20.0335785,
+        "lon": 76.0102965,
+        "height_wgs84_m": 509.631,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.877569
+      },
+      {
+        "photon_index": 701453,
+        "lat": 20.0335657,
+        "lon": 76.0102955,
+        "height_wgs84_m": 508.607,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.877769
+      },
+      {
+        "photon_index": 701454,
+        "lat": 20.033527,
+        "lon": 76.0102908,
+        "height_wgs84_m": 509.869,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.878369
+      },
+      {
+        "photon_index": 701455,
+        "lat": 20.0335206,
+        "lon": 76.0102905,
+        "height_wgs84_m": 508.718,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.878469
+      },
+      {
+        "photon_index": 701456,
+        "lat": 20.0335206,
+        "lon": 76.0102906,
+        "height_wgs84_m": 508.479,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.878469
+      },
+      {
+        "photon_index": 701457,
+        "lat": 20.0335141,
+        "lon": 76.0102884,
+        "height_wgs84_m": 513.125,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.878569
+      },
+      {
+        "photon_index": 701458,
+        "lat": 20.0335142,
+        "lon": 76.0102898,
+        "height_wgs84_m": 508.636,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.878569
+      },
+      {
+        "photon_index": 701459,
+        "lat": 20.0335077,
+        "lon": 76.0102892,
+        "height_wgs84_m": 508.427,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.878669
+      },
+      {
+        "photon_index": 701460,
+        "lat": 20.0334884,
+        "lon": 76.0102867,
+        "height_wgs84_m": 509.64,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.878969
+      },
+      {
+        "photon_index": 701461,
+        "lat": 20.0334819,
+        "lon": 76.0102858,
+        "height_wgs84_m": 510.178,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.879069
+      },
+      {
+        "photon_index": 701462,
+        "lat": 20.0334755,
+        "lon": 76.0102852,
+        "height_wgs84_m": 509.94,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.879169
+      },
+      {
+        "photon_index": 701463,
+        "lat": 20.0334626,
+        "lon": 76.0102833,
+        "height_wgs84_m": 511.203,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.879369
+      },
+      {
+        "photon_index": 701464,
+        "lat": 20.0334562,
+        "lon": 76.0102835,
+        "height_wgs84_m": 508.674,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.879469
+      },
+      {
+        "photon_index": 701465,
+        "lat": 20.0334498,
+        "lon": 76.0102825,
+        "height_wgs84_m": 509.41,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.879569
+      },
+      {
+        "photon_index": 701466,
+        "lat": 20.0334369,
+        "lon": 76.010281,
+        "height_wgs84_m": 509.587,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.879769
+      },
+      {
+        "photon_index": 701467,
+        "lat": 20.0334369,
+        "lon": 76.0102809,
+        "height_wgs84_m": 510.084,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.879769
+      },
+      {
+        "photon_index": 701468,
+        "lat": 20.0334304,
+        "lon": 76.0102801,
+        "height_wgs84_m": 510.352,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.879869
+      },
+      {
+        "photon_index": 701469,
+        "lat": 20.0334304,
+        "lon": 76.0102801,
+        "height_wgs84_m": 510.237,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.879869
+      },
+      {
+        "photon_index": 701470,
+        "lat": 20.0334176,
+        "lon": 76.0102786,
+        "height_wgs84_m": 510.716,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 245622430.880069
+      }
+    ]
+  },
+  "earth_kaibab_arizona_icesat2": {
+    "site_id": "earth_kaibab_arizona_icesat2",
+    "cell_id": "earth_c013",
+    "site_name": "Kaibab Plateau & San Francisco Volcanic Field (ICESat-2 ATL03 Track)",
+    "query_bbox": [
+      -112.72,
+      36.0,
+      -111.72,
+      37.0
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251219054639_00743006_007_01.h5",
+      "concept_id": "G4107980246-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-12-19T05:46:41.991Z",
+      "time_end": "2025-12-19T05:55:12.488Z",
+      "size_mb": 592.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/19/ATL03_20251219054639_00743006_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        40498
+      ],
+      "rgt": [
+        74
+      ],
+      "cycle_number": [
+        30
+      ],
+      "sc_orient": [
+        0
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1l",
+      "matched_query_bbox": true,
+      "window_segments_evaluated": 1200,
+      "total_segments_in_beam": 181023
+    },
+    "computed_topography": {
+      "relief_m": 556.64,
+      "slope_mean_deg": 3.03,
+      "slope_p90_deg": 6.89,
+      "ruggedness_tri_m": 1.07,
+      "roughness_rms_m": 19.55,
+      "hypsometric_integral": 0.515,
+      "mean_elevation_m": 2004.35
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 125446,
+        "reference_lat": 36.999885,
+        "reference_lon": -112.177098,
+        "dem_height_m": 1692.267,
+        "solar_elevation_deg": -65.817,
+        "photon_count_in_segment": 11
+      },
+      {
+        "segment_offset": 125495,
+        "reference_lat": 36.991086,
+        "reference_lon": -112.178126,
+        "dem_height_m": 1714.189,
+        "solar_elevation_deg": -65.821,
+        "photon_count_in_segment": 13
+      },
+      {
+        "segment_offset": 125545,
+        "reference_lat": 36.982079,
+        "reference_lon": -112.179215,
+        "dem_height_m": 1738.253,
+        "solar_elevation_deg": -65.825,
+        "photon_count_in_segment": 19
+      },
+      {
+        "segment_offset": 125595,
+        "reference_lat": 36.973102,
+        "reference_lon": -112.1803,
+        "dem_height_m": 1764.717,
+        "solar_elevation_deg": -65.828,
+        "photon_count_in_segment": 9
+      },
+      {
+        "segment_offset": 125645,
+        "reference_lat": 36.964092,
+        "reference_lon": -112.181414,
+        "dem_height_m": 1793.064,
+        "solar_elevation_deg": -65.832,
+        "photon_count_in_segment": 18
+      },
+      {
+        "segment_offset": 125695,
+        "reference_lat": 36.955114,
+        "reference_lon": -112.182511,
+        "dem_height_m": 1873.055,
+        "solar_elevation_deg": -65.836,
+        "photon_count_in_segment": 31
+      },
+      {
+        "segment_offset": 125745,
+        "reference_lat": 36.946126,
+        "reference_lon": -112.183599,
+        "dem_height_m": 1905.06,
+        "solar_elevation_deg": -65.84,
+        "photon_count_in_segment": 17
+      },
+      {
+        "segment_offset": 125795,
+        "reference_lat": 36.937133,
+        "reference_lon": -112.184671,
+        "dem_height_m": 1910.579,
+        "solar_elevation_deg": -65.844,
+        "photon_count_in_segment": 13
+      },
+      {
+        "segment_offset": 125845,
+        "reference_lat": 36.928144,
+        "reference_lon": -112.185763,
+        "dem_height_m": 1918.748,
+        "solar_elevation_deg": -65.847,
+        "photon_count_in_segment": 26
+      },
+      {
+        "segment_offset": 125895,
+        "reference_lat": 36.919152,
+        "reference_lon": -112.186866,
+        "dem_height_m": 1939.111,
+        "solar_elevation_deg": -65.851,
+        "photon_count_in_segment": 23
+      },
+      {
+        "segment_offset": 125945,
+        "reference_lat": 36.91017,
+        "reference_lon": -112.187967,
+        "dem_height_m": 1933.926,
+        "solar_elevation_deg": -65.855,
+        "photon_count_in_segment": 38
+      },
+      {
+        "segment_offset": 125995,
+        "reference_lat": 36.901173,
+        "reference_lon": -112.189078,
+        "dem_height_m": 1965.977,
+        "solar_elevation_deg": -65.859,
+        "photon_count_in_segment": 29
+      },
+      {
+        "segment_offset": 126045,
+        "reference_lat": 36.892186,
+        "reference_lon": -112.190174,
+        "dem_height_m": 2005.519,
+        "solar_elevation_deg": -65.862,
+        "photon_count_in_segment": 14
+      },
+      {
+        "segment_offset": 126095,
+        "reference_lat": 36.883194,
+        "reference_lon": -112.191251,
+        "dem_height_m": 2036.088,
+        "solar_elevation_deg": -65.866,
+        "photon_count_in_segment": 20
+      },
+      {
+        "segment_offset": 126145,
+        "reference_lat": 36.874211,
+        "reference_lon": -112.192334,
+        "dem_height_m": 2064.904,
+        "solar_elevation_deg": -65.87,
+        "photon_count_in_segment": 33
+      },
+      {
+        "segment_offset": 126195,
+        "reference_lat": 36.865209,
+        "reference_lon": -112.193424,
+        "dem_height_m": 2055.387,
+        "solar_elevation_deg": -65.874,
+        "photon_count_in_segment": 39
+      },
+      {
+        "segment_offset": 126245,
+        "reference_lat": 36.856223,
+        "reference_lon": -112.194542,
+        "dem_height_m": 2102.453,
+        "solar_elevation_deg": -65.878,
+        "photon_count_in_segment": 16
+      },
+      {
+        "segment_offset": 126295,
+        "reference_lat": 36.84726,
+        "reference_lon": -112.195658,
+        "dem_height_m": 2126.277,
+        "solar_elevation_deg": -65.881,
+        "photon_count_in_segment": 17
+      },
+      {
+        "segment_offset": 126345,
+        "reference_lat": 36.838251,
+        "reference_lon": -112.19677,
+        "dem_height_m": 2151.739,
+        "solar_elevation_deg": -65.885,
+        "photon_count_in_segment": 12
+      },
+      {
+        "segment_offset": 126395,
+        "reference_lat": 36.829261,
+        "reference_lon": -112.197885,
+        "dem_height_m": 2174.171,
+        "solar_elevation_deg": -65.889,
+        "photon_count_in_segment": 26
+      },
+      {
+        "segment_offset": 126445,
+        "reference_lat": 36.820274,
+        "reference_lon": -112.198967,
+        "dem_height_m": 2171.482,
+        "solar_elevation_deg": -65.893,
+        "photon_count_in_segment": 34
+      },
+      {
+        "segment_offset": 126495,
+        "reference_lat": 36.811282,
+        "reference_lon": -112.200065,
+        "dem_height_m": 2236.918,
+        "solar_elevation_deg": -65.896,
+        "photon_count_in_segment": 25
+      },
+      {
+        "segment_offset": 126545,
+        "reference_lat": 36.802292,
+        "reference_lon": -112.201141,
+        "dem_height_m": 2259.47,
+        "solar_elevation_deg": -65.9,
+        "photon_count_in_segment": 22
+      },
+      {
+        "segment_offset": 126595,
+        "reference_lat": 36.793296,
+        "reference_lon": -112.202224,
+        "dem_height_m": 2283.028,
+        "solar_elevation_deg": -65.904,
+        "photon_count_in_segment": 27
+      },
+      {
+        "segment_offset": 126645,
+        "reference_lat": 36.784306,
+        "reference_lon": -112.203301,
+        "dem_height_m": 2294.004,
+        "solar_elevation_deg": -65.908,
+        "photon_count_in_segment": 30
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 3299928,
+        "lat": 36.892084,
+        "lon": -112.1901859,
+        "height_wgs84_m": 2005.453,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.254138
+      },
+      {
+        "photon_index": 3299929,
+        "lat": 36.892084,
+        "lon": -112.1901859,
+        "height_wgs84_m": 2005.479,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.254138
+      },
+      {
+        "photon_index": 3299930,
+        "lat": 36.892084,
+        "lon": -112.1901859,
+        "height_wgs84_m": 2005.741,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.254138
+      },
+      {
+        "photon_index": 3299931,
+        "lat": 36.8920713,
+        "lon": -112.1901873,
+        "height_wgs84_m": 2005.251,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.254338
+      },
+      {
+        "photon_index": 3299932,
+        "lat": 36.8920649,
+        "lon": -112.1901882,
+        "height_wgs84_m": 2006.363,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.254438
+      },
+      {
+        "photon_index": 3299933,
+        "lat": 36.8920664,
+        "lon": -112.190225,
+        "height_wgs84_m": 2253.094,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.254538
+      },
+      {
+        "photon_index": 3299934,
+        "lat": 36.8920204,
+        "lon": -112.1901932,
+        "height_wgs84_m": 2005.418,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.255138
+      },
+      {
+        "photon_index": 3299935,
+        "lat": 36.8920204,
+        "lon": -112.1901932,
+        "height_wgs84_m": 2005.485,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.255138
+      },
+      {
+        "photon_index": 3299936,
+        "lat": 36.8920204,
+        "lon": -112.1901933,
+        "height_wgs84_m": 2006.036,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.255138
+      },
+      {
+        "photon_index": 3299937,
+        "lat": 36.8920204,
+        "lon": -112.1901933,
+        "height_wgs84_m": 2006.472,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.255138
+      },
+      {
+        "photon_index": 3299938,
+        "lat": 36.8920013,
+        "lon": -112.1901954,
+        "height_wgs84_m": 2005.503,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.255438
+      },
+      {
+        "photon_index": 3299939,
+        "lat": 36.8920013,
+        "lon": -112.1901954,
+        "height_wgs84_m": 2005.692,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.255438
+      },
+      {
+        "photon_index": 3299940,
+        "lat": 36.8919949,
+        "lon": -112.1901961,
+        "height_wgs84_m": 2005.259,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.255538
+      },
+      {
+        "photon_index": 3299941,
+        "lat": 36.8919949,
+        "lon": -112.1901962,
+        "height_wgs84_m": 2005.865,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.255538
+      },
+      {
+        "photon_index": 3299942,
+        "lat": 36.8919885,
+        "lon": -112.1901968,
+        "height_wgs84_m": 2005.372,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.255638
+      },
+      {
+        "photon_index": 3299943,
+        "lat": 36.8919376,
+        "lon": -112.1902027,
+        "height_wgs84_m": 2005.658,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.256438
+      },
+      {
+        "photon_index": 3299944,
+        "lat": 36.8919313,
+        "lon": -112.1902034,
+        "height_wgs84_m": 2005.678,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.256538
+      },
+      {
+        "photon_index": 3299945,
+        "lat": 36.8919249,
+        "lon": -112.1902042,
+        "height_wgs84_m": 2005.911,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.256638
+      },
+      {
+        "photon_index": 3299946,
+        "lat": 36.8919123,
+        "lon": -112.1902062,
+        "height_wgs84_m": 2009.551,
+        "land_signal_confidence": 3,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.256838
+      },
+      {
+        "photon_index": 3299947,
+        "lat": 36.8919122,
+        "lon": -112.1902057,
+        "height_wgs84_m": 2006.114,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.256838
+      },
+      {
+        "photon_index": 3299948,
+        "lat": 36.8918804,
+        "lon": -112.1902093,
+        "height_wgs84_m": 2006.37,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.257338
+      },
+      {
+        "photon_index": 3299949,
+        "lat": 36.8918676,
+        "lon": -112.1902108,
+        "height_wgs84_m": 2006.48,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.257538
+      },
+      {
+        "photon_index": 3299950,
+        "lat": 36.8918612,
+        "lon": -112.1902114,
+        "height_wgs84_m": 2005.862,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.257638
+      },
+      {
+        "photon_index": 3299951,
+        "lat": 36.8918358,
+        "lon": -112.1902146,
+        "height_wgs84_m": 2008.214,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.258038
+      },
+      {
+        "photon_index": 3299952,
+        "lat": 36.8918294,
+        "lon": -112.190215,
+        "height_wgs84_m": 2006.39,
+        "land_signal_confidence": 4,
+        "quality_flag": 0,
+        "delta_time_s": 251358757.258138
+      }
+    ]
+  },
+  "earth_tuktoyaktuk_permafrost": {
+    "site_id": "earth_tuktoyaktuk_permafrost",
+    "cell_id": "earth_c014",
+    "site_name": "Mackenzie Delta / Tuktoyaktuk Ice-Rich Polygonal Plains",
+    "query_bbox": [
+      -133.48,
+      68.99,
+      -132.58,
+      69.89
+    ],
+    "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+    "granule": {
+      "granule_id": "ATL03_20251107093007_08222905_007_01.h5",
+      "concept_id": "G3985532880-NSIDC_CPRD",
+      "version": "007",
+      "time_start": "2025-11-07T09:30:06.110Z",
+      "time_end": "2025-11-07T09:35:31.707Z",
+      "size_mb": 496.0,
+      "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/07/ATL03_20251107093007_08222905_007_01.h5"
+    },
+    "orbit_info": {
+      "orbit_number": [
+        39859
+      ],
+      "rgt": [
+        822
+      ],
+      "cycle_number": [
+        29
+      ],
+      "sc_orient": [
+        1
+      ]
+    },
+    "sampled_beam": {
+      "beam_id": "gt1r",
+      "matched_query_bbox": true,
+      "window_segments_evaluated": 1200,
+      "total_segments_in_beam": 115331
+    },
+    "computed_topography": {
+      "relief_m": 1.0,
+      "slope_mean_deg": 0.0,
+      "slope_p90_deg": 0.0,
+      "ruggedness_tri_m": 0.0,
+      "roughness_rms_m": 0.03,
+      "hypsometric_integral": 0.42,
+      "mean_elevation_m": -6.9
+    },
+    "geolocation_segments": [
+      {
+        "segment_offset": 57091,
+        "reference_lat": 69.889743,
+        "reference_lon": -133.272528,
+        "dem_height_m": -6.556,
+        "solar_elevation_deg": -35.808,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57129,
+        "reference_lat": 69.883008,
+        "reference_lon": -133.27492,
+        "dem_height_m": -6.583,
+        "solar_elevation_deg": -35.814,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57201,
+        "reference_lat": 69.870175,
+        "reference_lon": -133.279784,
+        "dem_height_m": -6.635,
+        "solar_elevation_deg": -35.827,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57233,
+        "reference_lat": 69.864506,
+        "reference_lon": -133.281754,
+        "dem_height_m": -6.659,
+        "solar_elevation_deg": -35.833,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57287,
+        "reference_lat": 69.854837,
+        "reference_lon": -133.285245,
+        "dem_height_m": -6.698,
+        "solar_elevation_deg": -35.842,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57340,
+        "reference_lat": 69.845465,
+        "reference_lon": -133.288735,
+        "dem_height_m": -6.733,
+        "solar_elevation_deg": -35.852,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57385,
+        "reference_lat": 69.837356,
+        "reference_lon": -133.291685,
+        "dem_height_m": -6.763,
+        "solar_elevation_deg": -35.86,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57439,
+        "reference_lat": 69.827847,
+        "reference_lon": -133.295077,
+        "dem_height_m": -6.8,
+        "solar_elevation_deg": -35.869,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57512,
+        "reference_lat": 69.814747,
+        "reference_lon": -133.299851,
+        "dem_height_m": -6.85,
+        "solar_elevation_deg": -35.882,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57536,
+        "reference_lat": 69.81045,
+        "reference_lon": -133.301376,
+        "dem_height_m": -6.864,
+        "solar_elevation_deg": -35.886,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57581,
+        "reference_lat": 69.802547,
+        "reference_lon": -133.304336,
+        "dem_height_m": -6.884,
+        "solar_elevation_deg": -35.894,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57621,
+        "reference_lat": 69.795389,
+        "reference_lon": -133.306879,
+        "dem_height_m": -6.899,
+        "solar_elevation_deg": -35.901,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57664,
+        "reference_lat": 69.787751,
+        "reference_lon": -133.309613,
+        "dem_height_m": -6.919,
+        "solar_elevation_deg": -35.909,
+        "photon_count_in_segment": 2
+      },
+      {
+        "segment_offset": 57732,
+        "reference_lat": 69.775693,
+        "reference_lon": -133.314157,
+        "dem_height_m": -6.955,
+        "solar_elevation_deg": -35.921,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57766,
+        "reference_lat": 69.769591,
+        "reference_lon": -133.31635,
+        "dem_height_m": -6.965,
+        "solar_elevation_deg": -35.927,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57832,
+        "reference_lat": 69.757747,
+        "reference_lon": -133.320473,
+        "dem_height_m": -6.976,
+        "solar_elevation_deg": -35.938,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57881,
+        "reference_lat": 69.749087,
+        "reference_lon": -133.323656,
+        "dem_height_m": -6.995,
+        "solar_elevation_deg": -35.947,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 57966,
+        "reference_lat": 69.734035,
+        "reference_lon": -133.329069,
+        "dem_height_m": -7.023,
+        "solar_elevation_deg": -35.962,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 58000,
+        "reference_lat": 69.727945,
+        "reference_lon": -133.331339,
+        "dem_height_m": -7.031,
+        "solar_elevation_deg": -35.968,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 58078,
+        "reference_lat": 69.713953,
+        "reference_lon": -133.336434,
+        "dem_height_m": -7.057,
+        "solar_elevation_deg": -35.982,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 58116,
+        "reference_lat": 69.707326,
+        "reference_lon": -133.338817,
+        "dem_height_m": -7.07,
+        "solar_elevation_deg": -35.988,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 58157,
+        "reference_lat": 69.699885,
+        "reference_lon": -133.341362,
+        "dem_height_m": -7.083,
+        "solar_elevation_deg": -35.995,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 58196,
+        "reference_lat": 69.692958,
+        "reference_lon": -133.344007,
+        "dem_height_m": -7.099,
+        "solar_elevation_deg": -36.002,
+        "photon_count_in_segment": 1
+      },
+      {
+        "segment_offset": 58234,
+        "reference_lat": 69.686299,
+        "reference_lon": -133.346395,
+        "dem_height_m": -7.119,
+        "solar_elevation_deg": -36.009,
+        "photon_count_in_segment": 2
+      },
+      {
+        "segment_offset": 58283,
+        "reference_lat": 69.67748,
+        "reference_lon": -133.349562,
+        "dem_height_m": -7.147,
+        "solar_elevation_deg": -36.018,
+        "photon_count_in_segment": 1
+      }
+    ],
+    "photons": [
+      {
+        "photon_index": 2248837,
+        "lat": 69.7877514,
+        "lon": -133.3096129,
+        "height_wgs84_m": -192.89,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.083999
+      },
+      {
+        "photon_index": 2248838,
+        "lat": 69.7877523,
+        "lon": -133.3095982,
+        "height_wgs84_m": -249.927,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.083999
+      },
+      {
+        "photon_index": 2248839,
+        "lat": 69.7874411,
+        "lon": -133.3097318,
+        "height_wgs84_m": -168.809,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.088899
+      },
+      {
+        "photon_index": 2248840,
+        "lat": 69.7863521,
+        "lon": -133.3101945,
+        "height_wgs84_m": 70.988,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.106099
+      },
+      {
+        "photon_index": 2248841,
+        "lat": 69.7861165,
+        "lon": -133.3103263,
+        "height_wgs84_m": 247.49,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.109799
+      },
+      {
+        "photon_index": 2248842,
+        "lat": 69.7833856,
+        "lon": -133.3113418,
+        "height_wgs84_m": 343.205,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.152999
+      },
+      {
+        "photon_index": 2248843,
+        "lat": 69.7827982,
+        "lon": -133.3114338,
+        "height_wgs84_m": -142.992,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.162499
+      },
+      {
+        "photon_index": 2248844,
+        "lat": 69.7809983,
+        "lon": -133.3121983,
+        "height_wgs84_m": 333.682,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.190899
+      },
+      {
+        "photon_index": 2248845,
+        "lat": 69.7808535,
+        "lon": -133.3121445,
+        "height_wgs84_m": -90.646,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.193299
+      },
+      {
+        "photon_index": 2248846,
+        "lat": 69.7771567,
+        "lon": -133.3135407,
+        "height_wgs84_m": 89.86,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.251799
+      },
+      {
+        "photon_index": 2248847,
+        "lat": 69.7759607,
+        "lon": -133.3140176,
+        "height_wgs84_m": 227.388,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.270699
+      },
+      {
+        "photon_index": 2248848,
+        "lat": 69.775693,
+        "lon": -133.314157,
+        "height_wgs84_m": 402.736,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.274899
+      },
+      {
+        "photon_index": 2248849,
+        "lat": 69.7754191,
+        "lon": -133.3141883,
+        "height_wgs84_m": 143.332,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.279299
+      },
+      {
+        "photon_index": 2248850,
+        "lat": 69.7750979,
+        "lon": -133.3143565,
+        "height_wgs84_m": 364.068,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.284299
+      },
+      {
+        "photon_index": 2248851,
+        "lat": 69.7742576,
+        "lon": -133.3145176,
+        "height_wgs84_m": -169.838,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.297599
+      },
+      {
+        "photon_index": 2248852,
+        "lat": 69.7736878,
+        "lon": -133.3148308,
+        "height_wgs84_m": 266.544,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.306499
+      },
+      {
+        "photon_index": 2248853,
+        "lat": 69.773533,
+        "lon": -133.3147655,
+        "height_wgs84_m": -215.709,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.309099
+      },
+      {
+        "photon_index": 2248854,
+        "lat": 69.7726236,
+        "lon": -133.3152574,
+        "height_wgs84_m": 397.252,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.323499
+      },
+      {
+        "photon_index": 2248855,
+        "lat": 69.7718067,
+        "lon": -133.3155686,
+        "height_wgs84_m": 396.921,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.336499
+      },
+      {
+        "photon_index": 2248856,
+        "lat": 69.7717402,
+        "lon": -133.3155512,
+        "height_wgs84_m": 228.447,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.337599
+      },
+      {
+        "photon_index": 2248857,
+        "lat": 69.771112,
+        "lon": -133.3157381,
+        "height_wgs84_m": 70.002,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.347599
+      },
+      {
+        "photon_index": 2248858,
+        "lat": 69.7695911,
+        "lon": -133.3163504,
+        "height_wgs84_m": 378.668,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.371599
+      },
+      {
+        "photon_index": 2248859,
+        "lat": 69.7694522,
+        "lon": -133.3164001,
+        "height_wgs84_m": 375.264,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.373799
+      },
+      {
+        "photon_index": 2248860,
+        "lat": 69.7680082,
+        "lon": -133.3168586,
+        "height_wgs84_m": 108.167,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.396699
+      },
+      {
+        "photon_index": 2248861,
+        "lat": 69.7679479,
+        "lon": -133.316838,
+        "height_wgs84_m": -61.747,
+        "land_signal_confidence": 0,
+        "quality_flag": 0,
+        "delta_time_s": 247743169.397699
+      }
+    ]
+  }
+}

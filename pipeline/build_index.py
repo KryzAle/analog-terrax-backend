@@ -24,10 +24,15 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
 from pipeline.features.topography import summarize_laser_profile  # noqa: E402
-from pipeline.ingest.icesat2_atl03 import build_profile_from_atl03_sample  # noqa: E402
+from pipeline.ingest.icesat2_atl03 import (  # noqa: E402
+    build_profile_from_atl03_sample,
+    load_all_atl03_profiles,
+)
 
 DATA_DIR = ROOT_DIR / "app" / "data"
 PROFILES_DIR = DATA_DIR / "profiles"
+EARTH_ATL03_CATALOG = DATA_DIR / "earth_icesat2_atl03.json"
+TEMP_UTILS_ATL03_ALL = ROOT_DIR.parent / "temporary-utils" / "earth_atl03_extracted.json"
 TEMP_UTILS_ATL03 = ROOT_DIR.parent / "temporary-utils" / "atl03_sample_data.json"
 
 TOPO_FEATURES: list[dict[str, str]] = [
@@ -710,42 +715,87 @@ def pack_npz(sites: list[dict[str, Any]], out_path: Path) -> None:
     )
 
 
+def enrich_earth_sites_with_earthdata(earth_sites: list[dict[str, Any]]) -> None:
+    """Attach real extracted NASA Earthdata ICESat-2 ATL03 granule metadata to curated Earth sites."""
+    catalog_path = EARTH_ATL03_CATALOG if EARTH_ATL03_CATALOG.exists() else TEMP_UTILS_ATL03_ALL
+    if not catalog_path.exists():
+        return
+    raw_catalog: dict[str, dict[str, Any]] = json.loads(catalog_path.read_text(encoding="utf-8"))
+    for site in earth_sites:
+        rec = raw_catalog.get(site["site_id"])
+        if not rec:
+            continue
+        granule = rec.get("granule", {})
+        beam = rec.get("sampled_beam", {})
+        comp = rec.get("computed_topography", {})
+        site["earthdata_granule"] = {
+            "dataset": rec.get(
+                "dataset", "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)"
+            ),
+            "granule_id": granule.get("granule_id", ""),
+            "concept_id": granule.get("concept_id", ""),
+            "time_start": granule.get("time_start", ""),
+            "size_mb": float(granule.get("size_mb", 0.0)),
+            "https_url": granule.get("https_url", ""),
+            "beam_id": beam.get("beam_id", ""),
+            "photon_sample_count": len(rec.get("photons", [])),
+            "segment_count": len(rec.get("geolocation_segments", [])),
+            "along_track_relief_m": float(comp.get("relief_m", 0.0)),
+            "along_track_mean_elevation_m": float(comp.get("mean_elevation_m", 0.0)),
+        }
+
+
 def build_laser_profiles(
     moon_sites: list[dict[str, Any]],
     mars_sites: list[dict[str, Any]],
     earth_sites: list[dict[str, Any]],
 ) -> dict[str, Any]:
-    """Generate laser altimeter transects (ICESat-2 ATLAS, LRO LOLA, MGS MOLA) for curated sites."""
-    real_atl03 = None
+    """Generate laser altimeter transects (real ICESat-2 ATL03 for Earth, LRO LOLA for Moon, MGS MOLA for Mars)."""
+    catalog_path = EARTH_ATL03_CATALOG if EARTH_ATL03_CATALOG.exists() else TEMP_UTILS_ATL03_ALL
+    all_atl03_profiles: dict[str, dict[str, Any]] = {}
+    if catalog_path.exists():
+        all_atl03_profiles = load_all_atl03_profiles(catalog_path)
+
+    real_atl03_single = None
     if TEMP_UTILS_ATL03.exists():
-        real_atl03 = build_profile_from_atl03_sample(TEMP_UTILS_ATL03)
+        real_atl03_single = build_profile_from_atl03_sample(TEMP_UTILS_ATL03)
 
     profiles_by_cell: dict[str, Any] = {}
     all_curated = moon_sites + mars_sites + [s for s in earth_sites if s.get("is_curated_site")]
 
     for site in all_curated:
         cell_id = site["cell_id"]
+        site_id = site["site_id"]
         body = site["body"]
         relief_m, slope_mean_deg, _, _, roughness_rms_m, _ = site["topo"]
         base_elev = float(site["elevation_m"])
 
-        if cell_id == "earth_c013" and real_atl03 is not None and real_atl03["points"]:
-            pts = real_atl03["points"]
+        real_prof = all_atl03_profiles.get(site_id) or all_atl03_profiles.get(cell_id)
+        if real_prof is None and cell_id == "earth_c013" and real_atl03_single is not None:
+            real_prof = real_atl03_single
+
+        if body == "earth" and real_prof is not None and real_prof.get("points"):
+            pts = real_prof["points"]
             dists = [p["distance_km"] for p in pts]
             elevs = [p["elevation_m"] for p in pts]
             stats = summarize_laser_profile(dists, elevs)
             profiles_by_cell[cell_id] = {
                 "cell_id": cell_id,
-                "site_id": site["site_id"],
+                "site_id": site_id,
                 "body": body,
-                "instrument": real_atl03["instrument"],
-                "granule_id": real_atl03["granule_id"],
+                "instrument": real_prof["instrument"],
+                "granule_id": real_prof["granule_id"],
+                "concept_id": real_prof.get("concept_id"),
+                "beam": real_prof.get("beam"),
+                "time_start": real_prof.get("time_start"),
+                "https_url": real_prof.get("https_url"),
+                "photon_sample_count": real_prof.get("photon_sample_count", 0),
                 "points": pts,
                 "stats": stats,
             }
             continue
 
-        # Synthesize a realistic 25-point laser altimeter transect calibrated to the site's relief & RMS roughness
+        # Synthesize a realistic 25-point laser altimeter transect for Moon (LOLA) and Mars (MOLA)
         seed = abs(hash(cell_id)) % (2**31)
         rng = np.random.default_rng(seed)
         num_pts = 25
@@ -759,7 +809,7 @@ def build_laser_profiles(
         abs_elevs = base_elev + rel_elevs
 
         instrument = (
-            "ATLAS / ICESat-2 (ATL08 / SlideRule)"
+            "ATLAS / ICESat-2 (ATL03 v007)"
             if body == "earth"
             else "LRO LOLA (Lunar Orbiter Laser Altimeter)"
             if body == "moon"
@@ -803,6 +853,7 @@ def main() -> None:
     moon_sites = get_moon_sites()
     mars_sites = get_mars_sites()
     curated_earth_sites = get_earth_sites()
+    enrich_earth_sites_with_earthdata(curated_earth_sites)
     bg_earth_cells = generate_background_earth_grid(rng, count=120)
     all_earth_sites = curated_earth_sites + bg_earth_cells
 

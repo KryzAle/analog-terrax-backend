@@ -33,6 +33,29 @@ class EnvironmentalFlags(BaseModel):
     )
 
 
+class EarthdataGranuleSummary(BaseModel):
+    """Summary of the real NASA Earthdata ATLAS/ICESat-2 L2A (ATL03 v007) granule extracted for an Earth site."""
+
+    dataset: str = Field(
+        default="ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        description="NASA Earthdata dataset title",
+    )
+    granule_id: str = Field(..., description="Producer granule HDF5 filename")
+    concept_id: str = Field(..., description="NASA CMR concept ID")
+    time_start: str = Field(..., description="Granule acquisition start UTC timestamp")
+    size_mb: float = Field(..., description="Source HDF5 granule size in megabytes")
+    https_url: str = Field(..., description="NSIDC Earthdata Cloud HTTPS URL")
+    beam_id: str = Field(..., description="Sampled ATLAS laser beam identifier (e.g. gt1l, gt2r)")
+    photon_sample_count: int = Field(..., description="Number of geolocated photons sampled")
+    segment_count: int = Field(..., description="Number of 20m geolocation segments sampled")
+    along_track_relief_m: float = Field(
+        ..., description="Along-track local relief (p95 - p5) from ICESat-2 segments in meters"
+    )
+    along_track_mean_elevation_m: float = Field(
+        ..., description="Along-track mean elevation from ICESat-2 segments in meters"
+    )
+
+
 class PlanetarySite(BaseModel):
     """Complete multi-planetary fingerprint for a Moon, Mars, or Earth location."""
 
@@ -68,6 +91,79 @@ class PlanetarySite(BaseModel):
         description="Relative abundance across the 9 shared mineral dimensions (None if unobserved)",
     )
     flags: EnvironmentalFlags
+    earthdata_granule: EarthdataGranuleSummary | None = Field(
+        default=None,
+        description="Real NASA Earthdata ICESat-2 ATL03 granule metadata (for curated Earth sites)",
+    )
+
+
+class Atl03GranuleMetadata(BaseModel):
+    granule_id: str
+    concept_id: str
+    version: str
+    time_start: str
+    time_end: str
+    size_mb: float
+    https_url: str
+
+
+class Atl03OrbitInfo(BaseModel):
+    orbit_number: list[int]
+    rgt: list[int]
+    cycle_number: list[int]
+    sc_orient: list[int]
+
+
+class Atl03SampledBeam(BaseModel):
+    beam_id: str
+    matched_query_bbox: bool
+    window_segments_evaluated: int
+    total_segments_in_beam: int
+
+
+class Atl03ComputedTopography(BaseModel):
+    relief_m: float
+    slope_mean_deg: float
+    slope_p90_deg: float
+    ruggedness_tri_m: float
+    roughness_rms_m: float
+    hypsometric_integral: float
+    mean_elevation_m: float
+
+
+class Atl03GeolocationSegment(BaseModel):
+    segment_offset: int
+    reference_lat: float
+    reference_lon: float
+    dem_height_m: float | None = None
+    solar_elevation_deg: float | None = None
+    photon_count_in_segment: int
+
+
+class Atl03PhotonSample(BaseModel):
+    photon_index: int
+    lat: float
+    lon: float
+    height_wgs84_m: float
+    land_signal_confidence: int
+    quality_flag: int
+    delta_time_s: float
+
+
+class EarthdataAtl03Record(BaseModel):
+    """Complete extracted NASA Earthdata ATLAS/ICESat-2 L2A (ATL03 v007) record for an Earth analog site."""
+
+    site_id: str
+    cell_id: str
+    site_name: str
+    query_bbox: list[float]
+    dataset: str
+    granule: Atl03GranuleMetadata
+    orbit_info: Atl03OrbitInfo
+    sampled_beam: Atl03SampledBeam
+    computed_topography: Atl03ComputedTopography
+    geolocation_segments: list[Atl03GeolocationSegment]
+    photons: list[Atl03PhotonSample]
 
 
 class LithologyClassSpec(BaseModel):

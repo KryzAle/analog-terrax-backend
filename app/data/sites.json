@@ -614,6 +614,19 @@
         "is_impact": true,
         "has_ice": true,
         "is_volcanic": false
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251217154743_00503003_007_01.h5",
+        "concept_id": "G4106625386-NSIDC_CPRD",
+        "time_start": "2025-12-17T15:47:46.971Z",
+        "size_mb": 816.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/17/ATL03_20251217154743_00503003_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 96.43,
+        "along_track_mean_elevation_m": 326.64
       }
     },
     {
@@ -662,6 +675,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": false
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251014055811_04532908_007_01.h5",
+        "concept_id": "G3984839390-NSIDC_CPRD",
+        "time_start": "2025-10-14T05:58:09.947Z",
+        "size_mb": 368.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/14/ATL03_20251014055811_04532908_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 383.67,
+        "along_track_mean_elevation_m": 847.37
       }
     },
     {
@@ -710,6 +736,19 @@
         "is_impact": false,
         "has_ice": true,
         "is_volcanic": false
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251207112310_12812910_007_01.h5",
+        "concept_id": "G4107119189-NSIDC_CPRD",
+        "time_start": "2025-12-07T11:23:16.716Z",
+        "size_mb": 1656.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/07/ATL03_20251207112310_12812910_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 763.5,
+        "along_track_mean_elevation_m": 1221.62
       }
     },
     {
@@ -758,6 +797,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251023015143_05882906_007_01.h5",
+        "concept_id": "G3984519954-NSIDC_CPRD",
+        "time_start": "2025-10-23T01:51:39.017Z",
+        "size_mb": 248.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/23/ATL03_20251023015143_05882906_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 1.27,
+        "along_track_mean_elevation_m": 45.67
       }
     },
     {
@@ -806,6 +858,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251117101013_09752907_007_01.h5",
+        "concept_id": "G3986018042-NSIDC_CPRD",
+        "time_start": "2025-11-17T10:10:23.286Z",
+        "size_mb": 296.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/17/ATL03_20251117101013_09752907_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 118.91,
+        "along_track_mean_elevation_m": 62.79
       }
     },
     {
@@ -854,6 +919,19 @@
         "is_impact": false,
         "has_ice": true,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251210000636_13202905_007_01.h5",
+        "concept_id": "G4106450333-NSIDC_CPRD",
+        "time_start": "2025-12-10T00:06:37.802Z",
+        "size_mb": 208.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/10/ATL03_20251210000636_13202905_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 101.58,
+        "along_track_mean_elevation_m": 470.64
       }
     },
     {
@@ -902,6 +980,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251109230130_08612907_007_01.h5",
+        "concept_id": "G3986206979-NSIDC_CPRD",
+        "time_start": "2025-11-09T23:01:18.632Z",
+        "size_mb": 616.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/09/ATL03_20251109230130_08612907_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 51.68,
+        "along_track_mean_elevation_m": 416.36
       }
     },
     {
@@ -950,6 +1041,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20250830075521_11542808_007_01.h5",
+        "concept_id": "G3835019472-NSIDC_CPRD",
+        "time_start": "2025-08-30T07:58:09.546Z",
+        "size_mb": 400.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/08/30/ATL03_20250830075521_11542808_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 826.73,
+        "along_track_mean_elevation_m": 4290.33
       }
     },
     {
@@ -998,6 +1102,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251119214457_10132906_007_01.h5",
+        "concept_id": "G3985619957-NSIDC_CPRD",
+        "time_start": "2025-11-19T21:45:00.306Z",
+        "size_mb": 408.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/19/ATL03_20251119214457_10132906_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 410.45,
+        "along_track_mean_elevation_m": 845.62
       }
     },
     {
@@ -1046,6 +1163,19 @@
         "is_impact": false,
         "has_ice": true,
         "is_volcanic": false
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251222204114_01293010_007_01.h5",
+        "concept_id": "G4107185414-NSIDC_CPRD",
+        "time_start": "2025-12-22T20:41:17.226Z",
+        "size_mb": 1024.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/22/ATL03_20251222204114_01293010_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 120.06,
+        "along_track_mean_elevation_m": 1706.74
       }
     },
     {
@@ -1094,6 +1224,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251227053010_01963006_007_01.h5",
+        "concept_id": "G4106886248-NSIDC_CPRD",
+        "time_start": "2025-12-27T05:30:10.535Z",
+        "size_mb": 360.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/27/ATL03_20251227053010_01963006_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 88.02,
+        "along_track_mean_elevation_m": 1563.84
       }
     },
     {
@@ -1142,6 +1285,19 @@
         "is_impact": true,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251013202523_04472907_007_01.h5",
+        "concept_id": "G3984983491-NSIDC_CPRD",
+        "time_start": "2025-10-13T20:25:21.721Z",
+        "size_mb": 296.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/13/ATL03_20251013202523_04472907_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 33.02,
+        "along_track_mean_elevation_m": 506.51
       }
     },
     {
@@ -1190,6 +1346,19 @@
         "is_impact": true,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251219054639_00743006_007_01.h5",
+        "concept_id": "G4107980246-NSIDC_CPRD",
+        "time_start": "2025-12-19T05:46:41.991Z",
+        "size_mb": 592.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/19/ATL03_20251219054639_00743006_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 556.64,
+        "along_track_mean_elevation_m": 2004.35
       }
     },
     {
@@ -1238,6 +1407,19 @@
         "is_impact": false,
         "has_ice": true,
         "is_volcanic": false
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251107093007_08222905_007_01.h5",
+        "concept_id": "G3985532880-NSIDC_CPRD",
+        "time_start": "2025-11-07T09:30:06.110Z",
+        "size_mb": 496.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/07/ATL03_20251107093007_08222905_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 1.0,
+        "along_track_mean_elevation_m": -6.9
       }
     }
   ],
@@ -1288,6 +1470,19 @@
         "is_impact": true,
         "has_ice": true,
         "is_volcanic": false
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251217154743_00503003_007_01.h5",
+        "concept_id": "G4106625386-NSIDC_CPRD",
+        "time_start": "2025-12-17T15:47:46.971Z",
+        "size_mb": 816.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/17/ATL03_20251217154743_00503003_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 96.43,
+        "along_track_mean_elevation_m": 326.64
       }
     },
     {
@@ -1336,6 +1531,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": false
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251014055811_04532908_007_01.h5",
+        "concept_id": "G3984839390-NSIDC_CPRD",
+        "time_start": "2025-10-14T05:58:09.947Z",
+        "size_mb": 368.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/14/ATL03_20251014055811_04532908_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 383.67,
+        "along_track_mean_elevation_m": 847.37
       }
     },
     {
@@ -1384,6 +1592,19 @@
         "is_impact": false,
         "has_ice": true,
         "is_volcanic": false
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251207112310_12812910_007_01.h5",
+        "concept_id": "G4107119189-NSIDC_CPRD",
+        "time_start": "2025-12-07T11:23:16.716Z",
+        "size_mb": 1656.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/07/ATL03_20251207112310_12812910_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 763.5,
+        "along_track_mean_elevation_m": 1221.62
       }
     },
     {
@@ -1432,6 +1653,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251023015143_05882906_007_01.h5",
+        "concept_id": "G3984519954-NSIDC_CPRD",
+        "time_start": "2025-10-23T01:51:39.017Z",
+        "size_mb": 248.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/23/ATL03_20251023015143_05882906_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 1.27,
+        "along_track_mean_elevation_m": 45.67
       }
     },
     {
@@ -1480,6 +1714,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251117101013_09752907_007_01.h5",
+        "concept_id": "G3986018042-NSIDC_CPRD",
+        "time_start": "2025-11-17T10:10:23.286Z",
+        "size_mb": 296.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/17/ATL03_20251117101013_09752907_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 118.91,
+        "along_track_mean_elevation_m": 62.79
       }
     },
     {
@@ -1528,6 +1775,19 @@
         "is_impact": false,
         "has_ice": true,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251210000636_13202905_007_01.h5",
+        "concept_id": "G4106450333-NSIDC_CPRD",
+        "time_start": "2025-12-10T00:06:37.802Z",
+        "size_mb": 208.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/10/ATL03_20251210000636_13202905_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 101.58,
+        "along_track_mean_elevation_m": 470.64
       }
     },
     {
@@ -1576,6 +1836,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251109230130_08612907_007_01.h5",
+        "concept_id": "G3986206979-NSIDC_CPRD",
+        "time_start": "2025-11-09T23:01:18.632Z",
+        "size_mb": 616.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/09/ATL03_20251109230130_08612907_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 51.68,
+        "along_track_mean_elevation_m": 416.36
       }
     },
     {
@@ -1624,6 +1897,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20250830075521_11542808_007_01.h5",
+        "concept_id": "G3835019472-NSIDC_CPRD",
+        "time_start": "2025-08-30T07:58:09.546Z",
+        "size_mb": 400.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/08/30/ATL03_20250830075521_11542808_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 826.73,
+        "along_track_mean_elevation_m": 4290.33
       }
     },
     {
@@ -1672,6 +1958,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251119214457_10132906_007_01.h5",
+        "concept_id": "G3985619957-NSIDC_CPRD",
+        "time_start": "2025-11-19T21:45:00.306Z",
+        "size_mb": 408.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/19/ATL03_20251119214457_10132906_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 410.45,
+        "along_track_mean_elevation_m": 845.62
       }
     },
     {
@@ -1720,6 +2019,19 @@
         "is_impact": false,
         "has_ice": true,
         "is_volcanic": false
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251222204114_01293010_007_01.h5",
+        "concept_id": "G4107185414-NSIDC_CPRD",
+        "time_start": "2025-12-22T20:41:17.226Z",
+        "size_mb": 1024.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/22/ATL03_20251222204114_01293010_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 120.06,
+        "along_track_mean_elevation_m": 1706.74
       }
     },
     {
@@ -1768,6 +2080,19 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251227053010_01963006_007_01.h5",
+        "concept_id": "G4106886248-NSIDC_CPRD",
+        "time_start": "2025-12-27T05:30:10.535Z",
+        "size_mb": 360.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/27/ATL03_20251227053010_01963006_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 88.02,
+        "along_track_mean_elevation_m": 1563.84
       }
     },
     {
@@ -1816,6 +2141,19 @@
         "is_impact": true,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251013202523_04472907_007_01.h5",
+        "concept_id": "G3984983491-NSIDC_CPRD",
+        "time_start": "2025-10-13T20:25:21.721Z",
+        "size_mb": 296.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/13/ATL03_20251013202523_04472907_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 33.02,
+        "along_track_mean_elevation_m": 506.51
       }
     },
     {
@@ -1864,6 +2202,19 @@
         "is_impact": true,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251219054639_00743006_007_01.h5",
+        "concept_id": "G4107980246-NSIDC_CPRD",
+        "time_start": "2025-12-19T05:46:41.991Z",
+        "size_mb": 592.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/19/ATL03_20251219054639_00743006_007_01.h5",
+        "beam_id": "gt1l",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 556.64,
+        "along_track_mean_elevation_m": 2004.35
       }
     },
     {
@@ -1912,6 +2263,19 @@
         "is_impact": false,
         "has_ice": true,
         "is_volcanic": false
+      },
+      "earthdata_granule": {
+        "dataset": "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)",
+        "granule_id": "ATL03_20251107093007_08222905_007_01.h5",
+        "concept_id": "G3985532880-NSIDC_CPRD",
+        "time_start": "2025-11-07T09:30:06.110Z",
+        "size_mb": 496.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/07/ATL03_20251107093007_08222905_007_01.h5",
+        "beam_id": "gt1r",
+        "photon_sample_count": 25,
+        "segment_count": 25,
+        "along_track_relief_m": 1.0,
+        "along_track_mean_elevation_m": -6.9
       }
     },
     {

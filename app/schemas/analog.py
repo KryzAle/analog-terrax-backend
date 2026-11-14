@@ -146,6 +146,11 @@ class SingleLaserProfile(BaseModel):
     body: CelestialBody
     instrument: str
     granule_id: str
+    concept_id: str | None = None
+    beam: str | None = None
+    time_start: str | None = None
+    https_url: str | None = None
+    photon_sample_count: int | None = None
     points: list[LaserProfilePoint]
     stats: LaserProfileStats
 

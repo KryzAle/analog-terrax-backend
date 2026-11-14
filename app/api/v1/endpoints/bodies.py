@@ -2,9 +2,47 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 
 from app.api.deps import FeatureStoreDep
 from app.core.cache import cache_control
-from app.schemas.planetary import CelestialBody, PlanetarySite, TaxonomyResponse
+from app.schemas.planetary import (
+    CelestialBody,
+    EarthdataAtl03Record,
+    PlanetarySite,
+    TaxonomyResponse,
+)
 
 router = APIRouter(tags=["planetary"])
+
+
+@router.get(
+    "/bodies/earth/earthdata",
+    response_model=list[EarthdataAtl03Record],
+    summary="List real extracted NASA Earthdata ATLAS/ICESat-2 L2A (ATL03 v007) records for all Earth sites",
+    dependencies=[Depends(cache_control(s_maxage=3600, stale_while_revalidate=86400))],
+)
+async def list_earthdata_atl03_records(
+    store: FeatureStoreDep,
+) -> list[EarthdataAtl03Record]:
+    """Return full extracted NASA Earthdata ATL03 v007 records (granules, orbit info, geolocation segments, and photons) for all curated Earth sites."""
+    return store.list_earthdata_atl03()
+
+
+@router.get(
+    "/bodies/earth/sites/{site_id}/earthdata",
+    response_model=EarthdataAtl03Record,
+    summary="Get real extracted NASA Earthdata ATLAS/ICESat-2 L2A (ATL03 v007) record for a specific Earth site",
+    dependencies=[Depends(cache_control(s_maxage=3600, stale_while_revalidate=86400))],
+)
+async def get_earthdata_atl03_record(
+    site_id: str,
+    store: FeatureStoreDep,
+) -> EarthdataAtl03Record:
+    """Retrieve the extracted NASA Earthdata ATL03 v007 granule, segments, and photon samples for an Earth site_id or cell_id."""
+    record = store.get_earthdata_atl03(site_id)
+    if record is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Earthdata ATL03 record not found for Earth site '{site_id}'.",
+        )
+    return record
 
 
 @router.get(
