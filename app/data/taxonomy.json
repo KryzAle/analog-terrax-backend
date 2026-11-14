@@ -1,0 +1,188 @@
+{
+  "lithology_classes": [
+    {
+      "id": "basaltic_volcanic",
+      "label": "Basaltic Volcanic & Flood Basalts",
+      "earth_source": "GLiM vb (Basic Volcanics)",
+      "moon_source": "USGS Unified Map Mare Basalts",
+      "mars_source": "USGS SIM 3292 Tharsis/Elysium Volcanics"
+    },
+    {
+      "id": "feldspathic_plutonic",
+      "label": "Feldspathic / Anorthositic Highlands & Plutonic",
+      "earth_source": "GLiM pb/pi (Anorthosite & Mafic Intrusives)",
+      "moon_source": "USGS Feldspathic Highlands Terra",
+      "mars_source": "Noachian Highland Crust"
+    },
+    {
+      "id": "pyroclastic",
+      "label": "Pyroclastic & Dark Mantle Deposits",
+      "earth_source": "GLiM py (Pyroclastics, Tephra & Ash)",
+      "moon_source": "Lunar Dark Mantle Pyroclastic Vents",
+      "mars_source": "Medusae Fossae & Highland Pyroclastics"
+    },
+    {
+      "id": "impact_breccia_regolith",
+      "label": "Impact Breccia, Crater Ejecta & Regolith",
+      "earth_source": "Earth Impact Database + GLiM su",
+      "moon_source": "Copernican/Imbrian Crater & Basin Materials",
+      "mars_source": "Amazonian/Hesperian Impact Units"
+    },
+    {
+      "id": "clastic_sedimentary",
+      "label": "Clastic / Fluvial / Lacustrine Sedimentary",
+      "earth_source": "GLiM ss/sm (Alluvial Fans, Deltas & Paleolakes)",
+      "moon_source": "N/A",
+      "mars_source": "Jezero / Mawrth Fluvial-Lacustrine Units"
+    },
+    {
+      "id": "evaporite_chemical",
+      "label": "Evaporite, Sulfate & Hyper-Arid Playas",
+      "earth_source": "GLiM ev/sc (Salars, Gypsum & Acidic Playas)",
+      "moon_source": "N/A",
+      "mars_source": "Hesperian Sulfate & Chloride Deposits"
+    },
+    {
+      "id": "ice_polar",
+      "label": "Cryospheric, Permafrost & Polar Volatiles",
+      "earth_source": "GLiM ig (Polar Ice Sheets & Dry Permafrost)",
+      "moon_source": "LRO LOLA/LAMP South Pole PSR Ice-Bearing Regolith",
+      "mars_source": "Planum Australe/Boreum & Mid-Latitude Subsurface Ice"
+    }
+  ],
+  "lithology_similarity_matrix": [
+    [
+      1.0,
+      0.35,
+      0.65,
+      0.3,
+      0.15,
+      0.1,
+      0.05
+    ],
+    [
+      0.35,
+      1.0,
+      0.25,
+      0.45,
+      0.15,
+      0.1,
+      0.05
+    ],
+    [
+      0.65,
+      0.25,
+      1.0,
+      0.4,
+      0.25,
+      0.15,
+      0.05
+    ],
+    [
+      0.3,
+      0.45,
+      0.4,
+      1.0,
+      0.35,
+      0.15,
+      0.15
+    ],
+    [
+      0.15,
+      0.15,
+      0.25,
+      0.35,
+      1.0,
+      0.5,
+      0.1
+    ],
+    [
+      0.1,
+      0.1,
+      0.15,
+      0.15,
+      0.5,
+      1.0,
+      0.15
+    ],
+    [
+      0.05,
+      0.05,
+      0.05,
+      0.15,
+      0.1,
+      0.15,
+      1.0
+    ]
+  ],
+  "mineral_dimensions": [
+    {
+      "id": "plagioclase_feldspar",
+      "label": "Plagioclase / Anorthite"
+    },
+    {
+      "id": "pyroxene",
+      "label": "Pyroxene (LCP / HCP)"
+    },
+    {
+      "id": "olivine",
+      "label": "Olivine"
+    },
+    {
+      "id": "fe_oxides",
+      "label": "Fe/Ti Oxides (Ilmenite / Hematite)"
+    },
+    {
+      "id": "phyllosilicates_clays",
+      "label": "Phyllosilicates (Fe/Mg/Al Clays)"
+    },
+    {
+      "id": "sulfates",
+      "label": "Sulfates (Gypsum / Jarosite)"
+    },
+    {
+      "id": "carbonates",
+      "label": "Carbonates (Magnesite / Calcite)"
+    },
+    {
+      "id": "silica_glass",
+      "label": "High-Si Glass / Opaline Silica"
+    },
+    {
+      "id": "h_water_ice",
+      "label": "Water Ice / Hydroxyl (H-Index)"
+    }
+  ],
+  "topography_features": [
+    {
+      "id": "relief_m",
+      "label": "Local Relief (p95 - p5)",
+      "unit": "m"
+    },
+    {
+      "id": "slope_mean_deg",
+      "label": "Mean Slope (500m GSD)",
+      "unit": "deg"
+    },
+    {
+      "id": "slope_p90_deg",
+      "label": "90th Percentile Slope",
+      "unit": "deg"
+    },
+    {
+      "id": "ruggedness_tri_m",
+      "label": "Terrain Ruggedness Index (TRI)",
+      "unit": "m"
+    },
+    {
+      "id": "roughness_rms_m",
+      "label": "Detrended RMS Roughness",
+      "unit": "m"
+    },
+    {
+      "id": "hypsometric_integral",
+      "label": "Hypsometric Integral",
+      "unit": "ratio"
+    }
+  ]
+}

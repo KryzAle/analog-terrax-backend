@@ -1,4 +1,4 @@
-name: Backend CI
+name: Backend CI & CD
 
 on:
   push:
@@ -38,3 +38,25 @@ jobs:
 
       - name: Verify OpenAPI schema export
         run: uv run python scripts/export_openapi.py --output openapi.json
+
+  deploy-production:
+    needs: [quality-and-test]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Vercel Production
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "VERCEL_TOKEN secret not set; relying on Vercel GitHub App integration or add VERCEL_TOKEN to repository secrets."
+            exit 0
+          fi
+          npm install -g vercel@latest
+          vercel pull --yes --environment=production
+          vercel deploy --prod --yes
