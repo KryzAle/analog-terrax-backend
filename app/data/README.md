@@ -1,20 +1,20 @@
-# Organización de `app/data/`
+# `app/data/` layout
 
 ```text
 app/data/
-├── profiles/    Perfiles compactos usados en tiempo de ejecución
-├── *.json       Taxonomía, sitios e índices estadísticos del backend
-├── *.npz        Índices compactos de similitud del backend
-├── input/       Entradas pequeñas versionadas, como sitios.csv
-├── raw/         Rásteres y archivos originales descargados (ignorado por Git)
-├── processed/   El CSV topografia_sitios_25km.csv se versiona; otros resultados se ignoran
-├── catalogs/    Catálogos, planes y validaciones (ignorado por Git)
-└── reference/   Fuentes auxiliares externas (ignorado por Git)
+├── profiles/    Compact profiles used at runtime
+├── *.json       Backend taxonomy, sites, and feature statistics
+├── *.npz        Compact similarity indexes
+├── input/       Small versioned inputs, including sites.csv
+├── raw/         Downloaded source rasters and files (ignored by Git)
+├── processed/   Only topography_sites_25km.csv is versioned; other outputs are ignored
+├── catalogs/    Catalogs, plans, and validation reports (ignored by Git)
+└── reference/   External source datasets (ignored by Git)
 ```
 
-Los JSON y NPZ de la raíz de `app/data/` son artefactos compactos requeridos por
-la API y se mantienen versionados. `input/sitios.csv` es la configuración de
-sitios usada por los procesos científicos. Sólo `processed/topografia_sitios_25km.csv` se versiona para el despliegue;
-los demás resultados procesados se ignoran. Los rásteres originales
-pueden ocupar cientos de megabytes; `raw/`, `catalogs/` y `reference/` se
-ignoran en Git y sus carpetas se crean al ejecutar los flujos.
+The JSON and NPZ files at the root of `app/data/` are compact artifacts used by
+the API and remain versioned. `input/sites.csv` configures the sites used by
+the science workflows. Only `processed/topography_sites_25km.csv` is versioned
+for deployment; other processed outputs are ignored. Source rasters can be
+hundreds of megabytes, so `raw/`, `catalogs/`, and `reference/` are ignored by
+Git and created by the workflows when needed.

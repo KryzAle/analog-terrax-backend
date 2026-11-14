@@ -24,8 +24,8 @@ venv/
 /data/
 app/data/raw/
 app/data/processed/*
-!app/data/processed/topografia_sitios_25km.csv
+!app/data/processed/topography_sites_25km.csv
 app/data/catalogs/
 app/data/reference/
 app/data/input/*
-!app/data/input/sitios.csv
+!app/data/input/sites.csv
