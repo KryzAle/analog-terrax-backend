@@ -32,7 +32,9 @@ from pipeline.ingest.icesat2_atl03 import (  # noqa: E402
 DATA_DIR = ROOT_DIR / "app" / "data"
 PROFILES_DIR = DATA_DIR / "profiles"
 EARTH_ATL03_CATALOG = DATA_DIR / "earth_icesat2_atl03.json"
+EARTH_FULL_REAL_CATALOG = DATA_DIR / "earth_full_real_data.json"
 TEMP_UTILS_ATL03_ALL = ROOT_DIR.parent / "temporary-utils" / "earth_atl03_extracted.json"
+TEMP_UTILS_FULL_REAL = ROOT_DIR.parent / "temporary-utils" / "earth_full_real_data.json"
 TEMP_UTILS_ATL03 = ROOT_DIR.parent / "temporary-utils" / "atl03_sample_data.json"
 
 TOPO_FEATURES: list[dict[str, str]] = [
@@ -592,67 +594,6 @@ def get_earth_sites() -> list[dict[str, Any]]:
     ]
 
 
-def generate_background_earth_grid(
-    rng: np.random.Generator, count: int = 120
-) -> list[dict[str, Any]]:
-    """Generate background terrestrial grid cells across major arid/polar/volcanic belts for global heatmaps."""
-    regions = [
-        ("Atacama / Altiplano Grid", -23.5, -68.5, 4.0, 3.0),
-        ("Sahara / Tibesti Volcanic Grid", 21.0, 17.5, 5.0, 6.0),
-        ("Iceland Volcanic Zone Grid", 64.8, -17.0, 1.0, 2.5),
-        ("Canadian High Arctic Grid", 75.0, -90.0, 3.0, 8.0),
-        ("Antarctic Dry Valleys & Nunataks Grid", -74.0, 100.0, 4.0, 60.0),
-        ("SW USA Basin & Range / Colorado Plateau Grid", 36.5, -113.5, 4.0, 4.0),
-        ("Arabian Harrat Basalt Fields Grid", 25.0, 40.0, 4.0, 4.0),
-        ("Pilbara / Central Australia Arid Grid", -22.5, 120.0, 4.0, 6.0),
-    ]
-    cells: list[dict[str, Any]] = []
-    for idx in range(count):
-        reg_name, base_lat, base_lon, dlat, dlon = regions[idx % len(regions)]
-        lat = float(np.clip(base_lat + rng.uniform(-dlat, dlat), -85.0, 85.0))
-        lon = float(np.clip(base_lon + rng.uniform(-dlon, dlon), -179.9, 179.9))
-
-        topo = [
-            round(float(rng.uniform(120.0, 1900.0)), 1),
-            round(float(rng.uniform(1.5, 16.5)), 2),
-            round(float(rng.uniform(4.0, 30.0)), 2),
-            round(float(rng.uniform(4.5, 44.0)), 2),
-            round(float(rng.uniform(8.0, 70.0)), 2),
-            round(float(rng.uniform(0.35, 0.58)), 3),
-        ]
-        raw_geo = rng.dirichlet(np.ones(7))
-        geo = [round(float(x), 3) for x in raw_geo]
-        raw_min = rng.uniform(0.02, 0.55, size=9)
-        min_vec = [round(float(x), 3) for x in raw_min]
-
-        cells.append(
-            {
-                "site_id": f"earth_grid_{idx + 100:03d}",
-                "cell_id": f"earth_g{idx + 100:03d}",
-                "body": "earth",
-                "name": f"{reg_name} Cell #{idx + 1}",
-                "region": reg_name,
-                "lat": round(lat, 4),
-                "lon": round(lon, 4),
-                "elevation_m": round(float(rng.uniform(50.0, 3500.0)), 1),
-                "is_curated_site": False,
-                "is_known_analog": False,
-                "analog_category": "Global Grid Sample",
-                "mission_relevance": "Regional 25 km grid window sampled at 500 m GSD.",
-                "topo": topo,
-                "geo": geo,
-                "min": min_vec,
-                "flags": {
-                    "ndvi": round(float(rng.uniform(0.01, 0.45)), 2),
-                    "is_impact": bool(rng.random() < 0.12),
-                    "has_ice": bool(abs(lat) > 65.0),
-                    "is_volcanic": bool(rng.random() < 0.45),
-                },
-            }
-        )
-    return cells
-
-
 def pack_npz(sites: list[dict[str, Any]], out_path: Path) -> None:
     """Export sites list into a compact compressed NumPy .npz index."""
     n = len(sites)
@@ -716,33 +657,51 @@ def pack_npz(sites: list[dict[str, Any]], out_path: Path) -> None:
 
 
 def enrich_earth_sites_with_earthdata(earth_sites: list[dict[str, Any]]) -> None:
-    """Attach real extracted NASA Earthdata ICESat-2 ATL03 granule metadata to curated Earth sites."""
+    """Attach real extracted NASA Earthdata ICESat-2 ATL03, EMIT L2B, NASADEM/ASTGTM, MODIS, and Macrostrat metadata."""
     catalog_path = EARTH_ATL03_CATALOG if EARTH_ATL03_CATALOG.exists() else TEMP_UTILS_ATL03_ALL
-    if not catalog_path.exists():
-        return
-    raw_catalog: dict[str, dict[str, Any]] = json.loads(catalog_path.read_text(encoding="utf-8"))
+    full_path = (
+        EARTH_FULL_REAL_CATALOG if EARTH_FULL_REAL_CATALOG.exists() else TEMP_UTILS_FULL_REAL
+    )
+    raw_catalog: dict[str, dict[str, Any]] = (
+        json.loads(catalog_path.read_text(encoding="utf-8")) if catalog_path.exists() else {}
+    )
+    full_catalog: dict[str, dict[str, Any]] = (
+        json.loads(full_path.read_text(encoding="utf-8")) if full_path.exists() else {}
+    )
+
     for site in earth_sites:
         rec = raw_catalog.get(site["site_id"])
-        if not rec:
-            continue
-        granule = rec.get("granule", {})
-        beam = rec.get("sampled_beam", {})
-        comp = rec.get("computed_topography", {})
-        site["earthdata_granule"] = {
-            "dataset": rec.get(
-                "dataset", "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)"
-            ),
-            "granule_id": granule.get("granule_id", ""),
-            "concept_id": granule.get("concept_id", ""),
-            "time_start": granule.get("time_start", ""),
-            "size_mb": float(granule.get("size_mb", 0.0)),
-            "https_url": granule.get("https_url", ""),
-            "beam_id": beam.get("beam_id", ""),
-            "photon_sample_count": len(rec.get("photons", [])),
-            "segment_count": len(rec.get("geolocation_segments", [])),
-            "along_track_relief_m": float(comp.get("relief_m", 0.0)),
-            "along_track_mean_elevation_m": float(comp.get("mean_elevation_m", 0.0)),
-        }
+        if rec:
+            granule = rec.get("granule", {})
+            beam = rec.get("sampled_beam", {})
+            comp = rec.get("computed_topography", {})
+            site["earthdata_granule"] = {
+                "dataset": rec.get(
+                    "dataset", "ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03)"
+                ),
+                "granule_id": granule.get("granule_id", ""),
+                "concept_id": granule.get("concept_id", ""),
+                "time_start": granule.get("time_start", ""),
+                "size_mb": float(granule.get("size_mb", 0.0)),
+                "https_url": granule.get("https_url", ""),
+                "beam_id": beam.get("beam_id", ""),
+                "photon_sample_count": len(rec.get("photons", [])),
+                "segment_count": len(rec.get("geolocation_segments", [])),
+                "along_track_relief_m": float(comp.get("relief_m", 0.0)),
+                "along_track_mean_elevation_m": float(comp.get("mean_elevation_m", 0.0)),
+            }
+
+        full_rec = full_catalog.get(site["site_id"])
+        if full_rec:
+            dem2d = full_rec.get("topography_2d_dem", {})
+            if dem2d.get("mean_elevation_m") is not None:
+                site["elevation_m"] = float(dem2d["mean_elevation_m"])
+            site["earth_provenance"] = {
+                "topography_2d_dem": dem2d,
+                "topography_1d_icesat2": full_rec.get("topography_1d_icesat2", {}),
+                "geology_macrostrat": full_rec.get("geology_macrostrat", {}),
+                "earthdata_satellites": full_rec.get("earthdata_satellites", {}),
+            }
 
 
 def build_laser_profiles(
@@ -849,13 +808,11 @@ def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     PROFILES_DIR.mkdir(parents=True, exist_ok=True)
 
-    rng = np.random.default_rng(42)
     moon_sites = get_moon_sites()
     mars_sites = get_mars_sites()
     curated_earth_sites = get_earth_sites()
     enrich_earth_sites_with_earthdata(curated_earth_sites)
-    bg_earth_cells = generate_background_earth_grid(rng, count=120)
-    all_earth_sites = curated_earth_sites + bg_earth_cells
+    all_earth_sites = curated_earth_sites
 
     # Compute pooled robust normalization stats (median & IQR) across Moon + Mars + Earth
     pooled_topo = np.vstack(
@@ -917,9 +874,7 @@ def main() -> None:
     print(f"Built data artifacts in {DATA_DIR}:")
     print(f"  - Moon sites  : {len(moon_sites)}")
     print(f"  - Mars sites  : {len(mars_sites)}")
-    print(
-        f"  - Earth cells : {len(all_earth_sites)} ({len(curated_earth_sites)} curated + {len(bg_earth_cells)} grid)"
-    )
+    print(f"  - Earth cells : {len(all_earth_sites)} (100% real extracted sites)")
     print(f"  - Profiles    : {len(laser_profiles)} laser altimetry transects")
 
 

@@ -56,6 +56,79 @@ class EarthdataGranuleSummary(BaseModel):
     )
 
 
+class Dem2dTopography(BaseModel):
+    source_tile_url: str
+    window_size_km: float
+    resampled_grid_shape: list[int]
+    resampled_gsd_m: float
+    mean_elevation_m: float
+    min_elevation_m: float
+    max_elevation_m: float
+    relief_m: float
+    slope_mean_deg: float
+    slope_p90_deg: float
+    ruggedness_tri_m: float
+    roughness_rms_m: float
+    hypsometric_integral: float
+
+
+class MacrostratUnit(BaseModel):
+    map_id: int | None = None
+    source_id: int | None = None
+    unit_name: str
+    age: str
+    lithology: str
+    description: str = ""
+
+
+class MacrostratGeology(BaseModel):
+    api_endpoint: str
+    units_count: int
+    mapped_units: list[MacrostratUnit]
+
+
+class CmrGranuleRef(BaseModel):
+    short_name: str
+    concept_id: str
+    granule_id: str
+    time_start: str
+    https_url: str
+
+
+class EmitDetectedMineral(BaseModel):
+    mineral_id: int
+    mineral_name: str
+    pixel_count: int
+    mean_band_depth: float
+
+
+class EmitStreamedMineralogy(BaseModel):
+    granule_id: str
+    concept_id: str
+    https_url: str
+    window_shape: list[int]
+    group_1_mean_band_depth: float
+    group_2_mean_band_depth: float
+    top_group_1_minerals: list[EmitDetectedMineral]
+    top_group_2_minerals: list[EmitDetectedMineral]
+
+
+class EarthdataSatellitesBundle(BaseModel):
+    dem_granule: CmrGranuleRef | None = None
+    modis_ndvi_granule: CmrGranuleRef | None = None
+    modis_cryosphere_granule: CmrGranuleRef | None = None
+    emit_mineralogy_granule: CmrGranuleRef | None = None
+    emit_streamed_mineralogy: EmitStreamedMineralogy | None = None
+
+
+class EarthMultiSourceProvenance(BaseModel):
+    """Real multi-source Earth extraction provenance (2D DEM, Macrostrat Geology API, NASA EMIT/MODIS/NASADEM)."""
+
+    topography_2d_dem: Dem2dTopography
+    geology_macrostrat: MacrostratGeology
+    earthdata_satellites: EarthdataSatellitesBundle
+
+
 class PlanetarySite(BaseModel):
     """Complete multi-planetary fingerprint for a Moon, Mars, or Earth location."""
 
@@ -94,6 +167,10 @@ class PlanetarySite(BaseModel):
     earthdata_granule: EarthdataGranuleSummary | None = Field(
         default=None,
         description="Real NASA Earthdata ICESat-2 ATL03 granule metadata (for curated Earth sites)",
+    )
+    earth_provenance: EarthMultiSourceProvenance | None = Field(
+        default=None,
+        description="Real multi-source provenance (2D DEM, Macrostrat Geology, NASA EMIT L2B & MODIS)",
     )
 
 
@@ -164,6 +241,7 @@ class EarthdataAtl03Record(BaseModel):
     computed_topography: Atl03ComputedTopography
     geolocation_segments: list[Atl03GeolocationSegment]
     photons: list[Atl03PhotonSample]
+    earth_provenance: EarthMultiSourceProvenance | None = None
 
 
 class LithologyClassSpec(BaseModel):
