@@ -1,0 +1,1936 @@
+{
+  "earth_haughton_crater": {
+    "site_id": "earth_haughton_crater",
+    "cell_id": "earth_c001",
+    "name": "Haughton Impact Crater, Devon Island",
+    "lat": 75.38,
+    "lon": -89.68,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/256/177.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 234.3,
+      "min_elevation_m": 19.3,
+      "max_elevation_m": 379.2,
+      "relief_m": 194.97,
+      "slope_mean_deg": 2.55,
+      "slope_p90_deg": 4.66,
+      "ruggedness_tri_m": 18.98,
+      "roughness_rms_m": 56.23,
+      "hypsometric_integral": 0.598
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 96.43,
+      "slope_mean_deg": 3.14,
+      "slope_p90_deg": 6.56,
+      "ruggedness_tri_m": 1.16,
+      "roughness_rms_m": 27.68,
+      "hypsometric_integral": 0.449,
+      "mean_elevation_m": 326.64
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=75.38&lng=-89.68&adjacents=true",
+      "units_count": 3,
+      "mapped_units": [
+        {
+          "map_id": 941479,
+          "source_id": 7,
+          "unit_name": "Neogene sedimentary",
+          "age": "Neogene",
+          "lithology": "sedimentary",
+          "description": ""
+        },
+        {
+          "map_id": 650885,
+          "source_id": 2,
+          "unit_name": "unclassified; Impact structure",
+          "age": "Miocene",
+          "lithology": "impact breccia, impact melt rock, crater fill",
+          "description": "Canada Shield, Greenland Shield, and cover, Foxe Basin, Prince Regent Basin"
+        },
+        {
+          "map_id": 3189765,
+          "source_id": 154,
+          "unit_name": "Paleozoic sedimentary rocks",
+          "age": "Cambrian",
+          "lithology": "sedimentary rocks",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251217154743_00503003_007_01.h5",
+        "concept_id": "G4106625386-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-12-17T15:47:46.971Z",
+        "time_end": "2025-12-17T15:53:12.514Z",
+        "size_mb": 816.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/17/ATL03_20251217154743_00503003_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "ASTGTM",
+        "concept_id": "G1726734970-LPCLOUD",
+        "granule_id": "ASTGTMV003_N74W090",
+        "time_start": "2000-03-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N74W090_dem.tif"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": null,
+      "emit_streamed_mineralogy": null
+    }
+  },
+  "earth_atacama_yungay": {
+    "site_id": "earth_atacama_yungay",
+    "cell_id": "earth_c002",
+    "name": "Atacama Desert \u2014 Yungay Hyper-Arid Core",
+    "lat": -24.08,
+    "lon": -69.92,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/313/582.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 1120.8,
+      "min_elevation_m": 862.0,
+      "max_elevation_m": 1893.0,
+      "relief_m": 476.05,
+      "slope_mean_deg": 3.6,
+      "slope_p90_deg": 7.92,
+      "ruggedness_tri_m": 23.98,
+      "roughness_rms_m": 118.63,
+      "hypsometric_integral": 0.251
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 383.67,
+      "slope_mean_deg": 2.81,
+      "slope_p90_deg": 6.0,
+      "ruggedness_tri_m": 0.99,
+      "roughness_rms_m": 111.56,
+      "hypsometric_integral": 0.462,
+      "mean_elevation_m": 847.37
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=-24.08&lng=-69.92&adjacents=true",
+      "units_count": 2,
+      "mapped_units": [
+        {
+          "map_id": 4973265,
+          "source_id": 1087,
+          "unit_name": "Cretaceous Granitic",
+          "age": "Cretaceous",
+          "lithology": "Granite",
+          "description": ""
+        },
+        {
+          "map_id": 3186158,
+          "source_id": 154,
+          "unit_name": "Mesozoic-Cenozoic intrusive rocks",
+          "age": "Jurassic",
+          "lithology": "intrusive igneous rocks",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251014055811_04532908_007_01.h5",
+        "concept_id": "G3984839390-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-10-14T05:58:09.947Z",
+        "time_end": "2025-10-14T06:05:12.681Z",
+        "size_mb": 368.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/14/ATL03_20251014055811_04532908_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "NASADEM_HGT",
+        "concept_id": "G2816780463-LPCLOUD",
+        "granule_id": "NASADEM_HGT_s24w070",
+        "time_start": "2000-02-11T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/NASADEM_HGT.001/NASADEM_HGT_s24w070/NASADEM_HGT_s24w070.zip"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": {
+        "short_name": "EMITL2BMIN",
+        "concept_id": "G4408565026-LPCLOUD",
+        "granule_id": "EMIT_L2B_MIN_002_20261110T193259",
+        "time_start": "2026-11-10T19:32:59.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261110T193259/EMIT_L2B_MIN_002_20261110T193259.nc"
+      },
+      "emit_streamed_mineralogy": {
+        "granule_id": "EMIT_L2B_MIN_002_20261110T193259",
+        "concept_id": "G4408565026-LPCLOUD",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261110T193259/EMIT_L2B_MIN_002_20261110T193259.nc",
+        "window_shape": [
+          80,
+          80
+        ],
+        "group_1_mean_band_depth": 0.0962,
+        "group_2_mean_band_depth": 0.1049,
+        "top_group_1_minerals": [
+          {
+            "mineral_id": 47,
+            "mineral_name": "fe3+_hematite.nano.BR34b2b",
+            "pixel_count": 2689,
+            "mean_band_depth": 0.1038
+          },
+          {
+            "mineral_id": 2,
+            "mineral_name": "fe3+_hematite.fine.gr.gds76",
+            "pixel_count": 1927,
+            "mean_band_depth": 0.098
+          },
+          {
+            "mineral_id": 45,
+            "mineral_name": "fe3+_hematite.nano.BR34b2",
+            "pixel_count": 1262,
+            "mean_band_depth": 0.0929
+          },
+          {
+            "mineral_id": 46,
+            "mineral_name": "fe3+_hematite-nano+goethite-fg-amix",
+            "pixel_count": 265,
+            "mean_band_depth": 0.0536
+          }
+        ],
+        "top_group_2_minerals": [
+          {
+            "mineral_id": 168,
+            "mineral_name": "smectite_beidellite_gds124",
+            "pixel_count": 3268,
+            "mean_band_depth": 0.1195
+          },
+          {
+            "mineral_id": 125,
+            "mineral_name": "organic_plastic-pete4",
+            "pixel_count": 780,
+            "mean_band_depth": 0.1016
+          },
+          {
+            "mineral_id": 127,
+            "mineral_name": "sulfate_kalun250c",
+            "pixel_count": 635,
+            "mean_band_depth": 0.1036
+          },
+          {
+            "mineral_id": 141,
+            "mineral_name": "sulfate_alun66K34Na.low",
+            "pixel_count": 553,
+            "mean_band_depth": 0.073
+          }
+        ]
+      }
+    }
+  },
+  "earth_mcmurdo_dry_valleys": {
+    "site_id": "earth_mcmurdo_dry_valleys",
+    "cell_id": "earth_c003",
+    "name": "McMurdo Dry Valleys \u2014 University Valley",
+    "lat": -77.86,
+    "lon": 160.71,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/969/877.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 1381.9,
+      "min_elevation_m": 1370.7,
+      "max_elevation_m": 1390.9,
+      "relief_m": 14.5,
+      "slope_mean_deg": 0.04,
+      "slope_p90_deg": 0.1,
+      "ruggedness_tri_m": 0.2,
+      "roughness_rms_m": 0.51,
+      "hypsometric_integral": 0.553
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 763.5,
+      "slope_mean_deg": 5.79,
+      "slope_p90_deg": 16.64,
+      "ruggedness_tri_m": 2.06,
+      "roughness_rms_m": 169.35,
+      "hypsometric_integral": 0.283,
+      "mean_elevation_m": 1221.62
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=-77.86&lng=160.71&adjacents=true",
+      "units_count": 2,
+      "mapped_units": [
+        {
+          "map_id": 4893550,
+          "source_id": 1084,
+          "unit_name": "local glacier till",
+          "age": "Miocene",
+          "lithology": "till, breccia, gravel, tillite",
+          "description": "Locally derived variably weathered till in moraines and rock glaciers, usually associated with alpine glaciers"
+        },
+        {
+          "map_id": 3191717,
+          "source_id": 154,
+          "unit_name": "Mesozoic volcanic rocks",
+          "age": "Jurassic",
+          "lithology": "mafic volcanic rocks",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251207112310_12812910_007_01.h5",
+        "concept_id": "G4107119189-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-12-07T11:23:16.716Z",
+        "time_end": "2025-12-07T11:30:57.697Z",
+        "size_mb": 1656.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/07/ATL03_20251207112310_12812910_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "ASTGTM",
+        "concept_id": "G1726773568-LPCLOUD",
+        "granule_id": "ASTGTMV003_S78E160",
+        "time_start": "2000-03-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_S78E160_dem.tif"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": null,
+      "emit_streamed_mineralogy": null
+    }
+  },
+  "earth_lanzarote_corona_tube": {
+    "site_id": "earth_lanzarote_corona_tube",
+    "cell_id": "earth_c004",
+    "name": "Monte Corona Skylight & Lava Tube System",
+    "lat": 29.16,
+    "lon": -13.44,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/473/425.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 62.6,
+      "min_elevation_m": 0.0,
+      "max_elevation_m": 628.3,
+      "relief_m": 370.6,
+      "slope_mean_deg": 2.2,
+      "slope_p90_deg": 7.25,
+      "ruggedness_tri_m": 15.23,
+      "roughness_rms_m": 109.48,
+      "hypsometric_integral": 0.1
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 1.27,
+      "slope_mean_deg": 0.0,
+      "slope_p90_deg": 0.01,
+      "ruggedness_tri_m": 0.0,
+      "roughness_rms_m": 0.16,
+      "hypsometric_integral": 0.685,
+      "mean_elevation_m": 45.67
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=29.16&lng=-13.44&adjacents=true",
+      "units_count": 5,
+      "mapped_units": [
+        {
+          "map_id": 4202422,
+          "source_id": 1056,
+          "unit_name": "Basalt, Pliocene",
+          "age": "Pliocene",
+          "lithology": "basalt",
+          "description": ""
+        },
+        {
+          "map_id": 2498558,
+          "source_id": 77,
+          "unit_name": "Mapped Unit",
+          "age": "Pleistocene",
+          "lithology": "mafic volcanic rocks",
+          "description": "Strombolian basaltic eruptions"
+        },
+        {
+          "map_id": 3307108,
+          "source_id": 190,
+          "unit_name": "Mapped Unit",
+          "age": "Quaternary",
+          "lithology": "volcanic",
+          "description": ""
+        },
+        {
+          "map_id": 3142470,
+          "source_id": 147,
+          "unit_name": "Pleistocene basalt",
+          "age": "Pleistocene",
+          "lithology": "basalt",
+          "description": ""
+        },
+        {
+          "map_id": 3187167,
+          "source_id": 154,
+          "unit_name": "Cenozoic volcanic rocks",
+          "age": "Quaternary",
+          "lithology": "mafic volcanic rocks",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251023015143_05882906_007_01.h5",
+        "concept_id": "G3984519954-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-10-23T01:51:39.017Z",
+        "time_end": "2025-10-23T02:00:09.168Z",
+        "size_mb": 248.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/23/ATL03_20251023015143_05882906_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "NASADEM_HGT",
+        "concept_id": "G2816796718-LPCLOUD",
+        "granule_id": "NASADEM_HGT_n28w014",
+        "time_start": "2000-02-11T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/NASADEM_HGT.001/NASADEM_HGT_n28w014/NASADEM_HGT_n28w014.zip"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": {
+        "short_name": "EMITL2BMIN",
+        "concept_id": "G4383608975-LPCLOUD",
+        "granule_id": "EMIT_L2B_MIN_002_20261020T114924",
+        "time_start": "2026-10-20T11:49:24.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261020T114924/EMIT_L2B_MIN_002_20261020T114924.nc"
+      },
+      "emit_streamed_mineralogy": {
+        "granule_id": "EMIT_L2B_MIN_002_20261020T114924",
+        "concept_id": "G4383608975-LPCLOUD",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261020T114924/EMIT_L2B_MIN_002_20261020T114924.nc",
+        "window_shape": [
+          80,
+          80
+        ],
+        "group_1_mean_band_depth": 0.0911,
+        "group_2_mean_band_depth": 0.0124,
+        "top_group_1_minerals": [
+          {
+            "mineral_id": 61,
+            "mineral_name": "fe2+_olivine-lrg-gr",
+            "pixel_count": 4,
+            "mean_band_depth": 0.0961
+          },
+          {
+            "mineral_id": 52,
+            "mineral_name": "fe2+fe3+_water_RTsludge",
+            "pixel_count": 2,
+            "mean_band_depth": 0.0353
+          },
+          {
+            "mineral_id": 37,
+            "mineral_name": "fe2+generic_brd.br22c_actinolite",
+            "pixel_count": 2,
+            "mean_band_depth": 0.1333
+          },
+          {
+            "mineral_id": 62,
+            "mineral_name": "fe2+_olivine-fine-gr",
+            "pixel_count": 1,
+            "mean_band_depth": 0.098
+          }
+        ],
+        "top_group_2_minerals": [
+          {
+            "mineral_id": 151,
+            "mineral_name": "kaolgrp_kaolinite_pxl",
+            "pixel_count": 2,
+            "mean_band_depth": 0.0108
+          },
+          {
+            "mineral_id": 146,
+            "mineral_name": "micagrp_illite",
+            "pixel_count": 1,
+            "mean_band_depth": 0.0157
+          }
+        ]
+      }
+    }
+  },
+  "earth_mauna_loa_hiseas": {
+    "site_id": "earth_mauna_loa_hiseas",
+    "cell_id": "earth_c005",
+    "name": "Mauna Loa Basaltic Flank & Tephra Cones",
+    "lat": 19.6,
+    "lon": -155.48,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/69/455.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 2416.8,
+      "min_elevation_m": 1601.0,
+      "max_elevation_m": 4065.0,
+      "relief_m": 1723.1,
+      "slope_mean_deg": 4.61,
+      "slope_p90_deg": 7.3,
+      "ruggedness_tri_m": 25.83,
+      "roughness_rms_m": 244.09,
+      "hypsometric_integral": 0.331
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 118.91,
+      "slope_mean_deg": 1.33,
+      "slope_p90_deg": 4.28,
+      "ruggedness_tri_m": 0.51,
+      "roughness_rms_m": 21.29,
+      "hypsometric_integral": 0.368,
+      "mean_elevation_m": 62.79
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=19.6&lng=-155.48&adjacents=true",
+      "units_count": 3,
+      "mapped_units": [
+        {
+          "map_id": 4488165,
+          "source_id": 558,
+          "unit_name": "Lava flows",
+          "age": "Pleistocene",
+          "lithology": "basalt",
+          "description": "Lava flows aged 200\u2013750 years before present of the Ka\u2018\u016b Basalt"
+        },
+        {
+          "map_id": 2343210,
+          "source_id": 48,
+          "unit_name": "Kau Basalt",
+          "age": "Holocene",
+          "lithology": "Lava flows; basalt",
+          "description": "Pahoehoe and aa; Tholeiitic basalt"
+        },
+        {
+          "map_id": 3186232,
+          "source_id": 154,
+          "unit_name": "Cenozoic volcanic rocks",
+          "age": "Quaternary",
+          "lithology": "shield volcano(s); mafic volcanic rocks",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251117101013_09752907_007_01.h5",
+        "concept_id": "G3986018042-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-11-17T10:10:23.286Z",
+        "time_end": "2025-11-17T10:17:25.783Z",
+        "size_mb": 296.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/17/ATL03_20251117101013_09752907_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "NASADEM_HGT",
+        "concept_id": "G2816842340-LPCLOUD",
+        "granule_id": "NASADEM_HGT_n20w157",
+        "time_start": "2000-02-11T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/NASADEM_HGT.001/NASADEM_HGT_n20w157/NASADEM_HGT_n20w157.zip"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": {
+        "short_name": "EMITL2BMIN",
+        "concept_id": "G4358367170-LPCLOUD",
+        "granule_id": "EMIT_L2B_MIN_002_20261011T014825",
+        "time_start": "2026-10-11T01:48:25.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261011T014825/EMIT_L2B_MIN_002_20261011T014825.nc"
+      },
+      "emit_streamed_mineralogy": {
+        "granule_id": "EMIT_L2B_MIN_002_20261011T014825",
+        "concept_id": "G4358367170-LPCLOUD",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261011T014825/EMIT_L2B_MIN_002_20261011T014825.nc",
+        "window_shape": [
+          80,
+          80
+        ],
+        "group_1_mean_band_depth": 0.0269,
+        "group_2_mean_band_depth": 0.045,
+        "top_group_1_minerals": [
+          {
+            "mineral_id": 37,
+            "mineral_name": "fe2+generic_brd.br22c_actinolite",
+            "pixel_count": 8,
+            "mean_band_depth": 0.0502
+          },
+          {
+            "mineral_id": 36,
+            "mineral_name": "fe2+fe3+mix_with_hematite_br5b",
+            "pixel_count": 6,
+            "mean_band_depth": 0.0154
+          },
+          {
+            "mineral_id": 58,
+            "mineral_name": "copper_carbonate_malachite",
+            "pixel_count": 5,
+            "mean_band_depth": 0.0204
+          },
+          {
+            "mineral_id": 41,
+            "mineral_name": "fe2+generic_basalt_br46b",
+            "pixel_count": 4,
+            "mean_band_depth": 0.0123
+          }
+        ],
+        "top_group_2_minerals": [
+          {
+            "mineral_id": 279,
+            "mineral_name": "serpentine_chrysotile.coarse-fibrous",
+            "pixel_count": 56,
+            "mean_band_depth": 0.0466
+          },
+          {
+            "mineral_id": 271,
+            "mineral_name": "datolite",
+            "pixel_count": 16,
+            "mean_band_depth": 0.044
+          },
+          {
+            "mineral_id": 206,
+            "mineral_name": "chlorite-skarn",
+            "pixel_count": 6,
+            "mean_band_depth": 0.0359
+          },
+          {
+            "mineral_id": 106,
+            "mineral_name": "fe3+_sulfate_jarosite-na-gds100",
+            "pixel_count": 1,
+            "mean_band_depth": 0.0294
+          }
+        ]
+      }
+    }
+  },
+  "earth_askja_highlands": {
+    "site_id": "earth_askja_highlands",
+    "cell_id": "earth_c006",
+    "name": "Askja & Holuhraun Glacio-Volcanic Highlands",
+    "lat": 65.03,
+    "lon": -16.75,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/464/266.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 875.9,
+      "min_elevation_m": 556.0,
+      "max_elevation_m": 1398.8,
+      "relief_m": 555.4,
+      "slope_mean_deg": 3.79,
+      "slope_p90_deg": 8.92,
+      "ruggedness_tri_m": 23.87,
+      "roughness_rms_m": 174.94,
+      "hypsometric_integral": 0.38
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 101.58,
+      "slope_mean_deg": 0.95,
+      "slope_p90_deg": 2.31,
+      "ruggedness_tri_m": 0.75,
+      "roughness_rms_m": 5.31,
+      "hypsometric_integral": 0.52,
+      "mean_elevation_m": 470.64
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=65.03&lng=-16.75&adjacents=true",
+      "units_count": 5,
+      "mapped_units": [
+        {
+          "map_id": 4459232,
+          "source_id": 1080,
+          "unit_name": "Mapped Unit",
+          "age": "Unknown",
+          "lithology": "",
+          "description": ""
+        },
+        {
+          "map_id": 948575,
+          "source_id": 7,
+          "unit_name": "Quaternary volcanic: mafic rocks",
+          "age": "Quaternary",
+          "lithology": "volcanic: mafic rocks",
+          "description": ""
+        },
+        {
+          "map_id": 3142065,
+          "source_id": 147,
+          "unit_name": "Holocene basalt",
+          "age": "Holocene",
+          "lithology": "basalt group",
+          "description": ""
+        },
+        {
+          "map_id": 656505,
+          "source_id": 2,
+          "unit_name": "Igneous: extrusive; Extrusive: mafic",
+          "age": "Quaternary",
+          "lithology": "basalt, olivine basalt, tholeiite, alkali basalt, basanite, pillow basalt, flood basalt",
+          "description": "Arctic-North Atlantic region, Iceland, North Atlantic, East Greenland volcanic belt"
+        },
+        {
+          "map_id": 3185314,
+          "source_id": 154,
+          "unit_name": "Cenozoic volcanic rocks",
+          "age": "Tertiary",
+          "lithology": "mafic volcanic rocks",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251210000636_13202905_007_01.h5",
+        "concept_id": "G4106450333-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-12-10T00:06:37.802Z",
+        "time_end": "2025-12-10T00:12:02.943Z",
+        "size_mb": 208.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/10/ATL03_20251210000636_13202905_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "ASTGTM",
+        "concept_id": "G1726733769-LPCLOUD",
+        "granule_id": "ASTGTMV003_N64W018",
+        "time_start": "2000-03-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N64W018_dem.tif"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": null,
+      "emit_streamed_mineralogy": null
+    }
+  },
+  "earth_waw_an_namus": {
+    "site_id": "earth_waw_an_namus",
+    "cell_id": "earth_c007",
+    "name": "Waw an Namus Dark Pyroclastic Caldera",
+    "lat": 24.91,
+    "lon": 17.76,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/562/438.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 437.0,
+      "min_elevation_m": 361.0,
+      "max_elevation_m": 499.0,
+      "relief_m": 63.0,
+      "slope_mean_deg": 0.46,
+      "slope_p90_deg": 0.83,
+      "ruggedness_tri_m": 3.16,
+      "roughness_rms_m": 15.88,
+      "hypsometric_integral": 0.551
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 51.68,
+      "slope_mean_deg": 0.51,
+      "slope_p90_deg": 1.1,
+      "ruggedness_tri_m": 0.18,
+      "roughness_rms_m": 7.23,
+      "hypsometric_integral": 0.514,
+      "mean_elevation_m": 416.36
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=24.91&lng=17.76&adjacents=true",
+      "units_count": 2,
+      "mapped_units": [
+        {
+          "map_id": 3308965,
+          "source_id": 190,
+          "unit_name": "Mapped Unit",
+          "age": "Quaternary",
+          "lithology": "sedimentary",
+          "description": ""
+        },
+        {
+          "map_id": 3188831,
+          "source_id": 154,
+          "unit_name": "Cenozoic sedimentary rocks",
+          "age": "Quaternary",
+          "lithology": "sandstone-siltstone",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251109230130_08612907_007_01.h5",
+        "concept_id": "G3986206979-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-11-09T23:01:18.632Z",
+        "time_end": "2025-11-09T23:08:21.373Z",
+        "size_mb": 616.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/09/ATL03_20251109230130_08612907_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "NASADEM_HGT",
+        "concept_id": "G2816804782-LPCLOUD",
+        "granule_id": "NASADEM_HGT_n24e018",
+        "time_start": "2000-02-11T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/NASADEM_HGT.001/NASADEM_HGT_n24e018/NASADEM_HGT_n24e018.zip"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": {
+        "short_name": "EMITL2BMIN",
+        "concept_id": "G4339873066-LPCLOUD",
+        "granule_id": "EMIT_L2B_MIN_002_20261002T081311",
+        "time_start": "2026-10-02T08:13:11.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261002T081311/EMIT_L2B_MIN_002_20261002T081311.nc"
+      },
+      "emit_streamed_mineralogy": {
+        "granule_id": "EMIT_L2B_MIN_002_20261002T081311",
+        "concept_id": "G4339873066-LPCLOUD",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261002T081311/EMIT_L2B_MIN_002_20261002T081311.nc",
+        "window_shape": [
+          80,
+          80
+        ],
+        "group_1_mean_band_depth": 0.0977,
+        "group_2_mean_band_depth": 0.0678,
+        "top_group_1_minerals": [
+          {
+            "mineral_id": 46,
+            "mineral_name": "fe3+_hematite-nano+goethite-fg-amix",
+            "pixel_count": 5829,
+            "mean_band_depth": 0.0985
+          },
+          {
+            "mineral_id": 8,
+            "mineral_name": "fe3+_goethite.thincoat",
+            "pixel_count": 365,
+            "mean_band_depth": 0.0815
+          },
+          {
+            "mineral_id": 302,
+            "mineral_name": "sulfate-mix_gypsum.trace.dust+debris-WTC01-28",
+            "pixel_count": 73,
+            "mean_band_depth": 0.0869
+          },
+          {
+            "mineral_id": 4,
+            "mineral_name": "fe3+_goethite+qtz.medgr.gds240",
+            "pixel_count": 46,
+            "mean_band_depth": 0.1452
+          }
+        ],
+        "top_group_2_minerals": [
+          {
+            "mineral_id": 168,
+            "mineral_name": "smectite_beidellite_gds124",
+            "pixel_count": 4456,
+            "mean_band_depth": 0.0694
+          },
+          {
+            "mineral_id": 139,
+            "mineral_name": "sulfate_alun35K65Na.low",
+            "pixel_count": 577,
+            "mean_band_depth": 0.0591
+          },
+          {
+            "mineral_id": 166,
+            "mineral_name": "perchlorate_na",
+            "pixel_count": 454,
+            "mean_band_depth": 0.0696
+          },
+          {
+            "mineral_id": 126,
+            "mineral_name": "sulfate_kalun150c",
+            "pixel_count": 297,
+            "mean_band_depth": 0.0475
+          }
+        ]
+      }
+    }
+  },
+  "earth_salar_de_antofalla": {
+    "site_id": "earth_salar_de_antofalla",
+    "cell_id": "earth_c008",
+    "name": "Salar de Antofalla & Puna Volcanic Basin",
+    "lat": -25.55,
+    "lon": -67.62,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/319/587.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 3729.0,
+      "min_elevation_m": 3320.0,
+      "max_elevation_m": 4907.0,
+      "relief_m": 1131.05,
+      "slope_mean_deg": 6.18,
+      "slope_p90_deg": 14.3,
+      "ruggedness_tri_m": 39.48,
+      "roughness_rms_m": 361.24,
+      "hypsometric_integral": 0.258
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 826.73,
+      "slope_mean_deg": 6.21,
+      "slope_p90_deg": 13.48,
+      "ruggedness_tri_m": 2.22,
+      "roughness_rms_m": 228.07,
+      "hypsometric_integral": 0.313,
+      "mean_elevation_m": 4290.33
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=-25.55&lng=-67.62&adjacents=true",
+      "units_count": 2,
+      "mapped_units": [
+        {
+          "map_id": 4974016,
+          "source_id": 1087,
+          "unit_name": "Neogene Undifferentiated",
+          "age": "Neogene",
+          "lithology": "Volcanic",
+          "description": ""
+        },
+        {
+          "map_id": 3186221,
+          "source_id": 154,
+          "unit_name": "Cenozoic volcanic rocks",
+          "age": "Tertiary",
+          "lithology": "intermediate-felsic volcanic rocks",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20250830075521_11542808_007_01.h5",
+        "concept_id": "G3835019472-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-08-30T07:58:09.546Z",
+        "time_end": "2025-08-30T08:02:22.786Z",
+        "size_mb": 400.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/08/30/ATL03_20250830075521_11542808_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "NASADEM_HGT",
+        "concept_id": "G2816781226-LPCLOUD",
+        "granule_id": "NASADEM_HGT_s25w069",
+        "time_start": "2000-02-11T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/NASADEM_HGT.001/NASADEM_HGT_s25w069/NASADEM_HGT_s25w069.zip"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": {
+        "short_name": "EMITL2BMIN",
+        "concept_id": "G4324963061-LPCLOUD",
+        "granule_id": "EMIT_L2B_MIN_002_20260924T140622",
+        "time_start": "2026-09-24T14:06:22.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20260924T140622/EMIT_L2B_MIN_002_20260924T140622.nc"
+      },
+      "emit_streamed_mineralogy": {
+        "granule_id": "EMIT_L2B_MIN_002_20260924T140622",
+        "concept_id": "G4324963061-LPCLOUD",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20260924T140622/EMIT_L2B_MIN_002_20260924T140622.nc",
+        "window_shape": [
+          80,
+          80
+        ],
+        "group_1_mean_band_depth": 0.0817,
+        "group_2_mean_band_depth": 0.0478,
+        "top_group_1_minerals": [
+          {
+            "mineral_id": 45,
+            "mineral_name": "fe3+_hematite.nano.BR34b2",
+            "pixel_count": 3074,
+            "mean_band_depth": 0.0881
+          },
+          {
+            "mineral_id": 302,
+            "mineral_name": "sulfate-mix_gypsum.trace.dust+debris-WTC01-28",
+            "pixel_count": 760,
+            "mean_band_depth": 0.0809
+          },
+          {
+            "mineral_id": 8,
+            "mineral_name": "fe3+_goethite.thincoat",
+            "pixel_count": 393,
+            "mean_band_depth": 0.0609
+          },
+          {
+            "mineral_id": 47,
+            "mineral_name": "fe3+_hematite.nano.BR34b2b",
+            "pixel_count": 260,
+            "mean_band_depth": 0.0723
+          }
+        ],
+        "top_group_2_minerals": [
+          {
+            "mineral_id": 152,
+            "mineral_name": "kaolgrp_halloysite",
+            "pixel_count": 4146,
+            "mean_band_depth": 0.0488
+          },
+          {
+            "mineral_id": 144,
+            "mineral_name": "micagrp_muscovite-medhigh-Al",
+            "pixel_count": 231,
+            "mean_band_depth": 0.0454
+          },
+          {
+            "mineral_id": 141,
+            "mineral_name": "sulfate_alun66K34Na.low",
+            "pixel_count": 93,
+            "mean_band_depth": 0.0319
+          },
+          {
+            "mineral_id": 237,
+            "mineral_name": "carbonate_siderite",
+            "pixel_count": 71,
+            "mean_band_depth": 0.0472
+          }
+        ]
+      }
+    }
+  },
+  "earth_lake_salda_delta": {
+    "site_id": "earth_lake_salda_delta",
+    "cell_id": "earth_c009",
+    "name": "Lake Salda Hydromagnesite Fan-Delta",
+    "lat": 37.55,
+    "lon": 29.68,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/596/396.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 1324.8,
+      "min_elevation_m": 981.6,
+      "max_elevation_m": 2048.8,
+      "relief_m": 666.38,
+      "slope_mean_deg": 5.31,
+      "slope_p90_deg": 10.92,
+      "ruggedness_tri_m": 36.49,
+      "roughness_rms_m": 185.1,
+      "hypsometric_integral": 0.322
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 410.45,
+      "slope_mean_deg": 5.12,
+      "slope_p90_deg": 11.89,
+      "ruggedness_tri_m": 1.85,
+      "roughness_rms_m": 136.26,
+      "hypsometric_integral": 0.316,
+      "mean_elevation_m": 845.62
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=37.55&lng=29.68&adjacents=true",
+      "units_count": 2,
+      "mapped_units": [
+        {
+          "map_id": 3158928,
+          "source_id": 147,
+          "unit_name": "ophiolite complex",
+          "age": "Triassic",
+          "lithology": "Major:{basalt group}, Minor{gabbro,serpentinite}",
+          "description": ""
+        },
+        {
+          "map_id": 3186586,
+          "source_id": 154,
+          "unit_name": "Mesozoic intrusive rocks",
+          "age": "Mesozoic",
+          "lithology": "intrusive igneous rocks",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251119214457_10132906_007_01.h5",
+        "concept_id": "G3985619957-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-11-19T21:45:00.306Z",
+        "time_end": "2025-11-19T21:53:31.199Z",
+        "size_mb": 408.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/19/ATL03_20251119214457_10132906_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "NASADEM_HGT",
+        "concept_id": "G2816842486-LPCLOUD",
+        "granule_id": "NASADEM_HGT_n37e029",
+        "time_start": "2000-02-11T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/NASADEM_HGT.001/NASADEM_HGT_n37e029/NASADEM_HGT_n37e029.zip"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": {
+        "short_name": "EMITL2BMIN",
+        "concept_id": "G4354563608-LPCLOUD",
+        "granule_id": "EMIT_L2B_MIN_002_20261006T064524",
+        "time_start": "2026-10-06T06:45:24.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261006T064524/EMIT_L2B_MIN_002_20261006T064524.nc"
+      },
+      "emit_streamed_mineralogy": {
+        "granule_id": "EMIT_L2B_MIN_002_20261006T064524",
+        "concept_id": "G4354563608-LPCLOUD",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261006T064524/EMIT_L2B_MIN_002_20261006T064524.nc",
+        "window_shape": [
+          80,
+          80
+        ],
+        "group_1_mean_band_depth": 0.0401,
+        "group_2_mean_band_depth": 0.0893,
+        "top_group_1_minerals": [
+          {
+            "mineral_id": 47,
+            "mineral_name": "fe3+_hematite.nano.BR34b2b",
+            "pixel_count": 20,
+            "mean_band_depth": 0.0536
+          },
+          {
+            "mineral_id": 303,
+            "mineral_name": "chrysotile.gypsum.wtc01-8",
+            "pixel_count": 13,
+            "mean_band_depth": 0.0178
+          },
+          {
+            "mineral_id": 87,
+            "mineral_name": "fe3+_maghemite",
+            "pixel_count": 6,
+            "mean_band_depth": 0.0569
+          },
+          {
+            "mineral_id": 32,
+            "mineral_name": "fe3+_hematite.fine.gr.fe2602",
+            "pixel_count": 4,
+            "mean_band_depth": 0.0152
+          }
+        ],
+        "top_group_2_minerals": [
+          {
+            "mineral_id": 216,
+            "mineral_name": "chlorite_cookeite-car-1.a",
+            "pixel_count": 173,
+            "mean_band_depth": 0.1012
+          },
+          {
+            "mineral_id": 97,
+            "mineral_name": "fe3+_hematite.nano-0.3+qtz",
+            "pixel_count": 116,
+            "mean_band_depth": 0.0772
+          },
+          {
+            "mineral_id": 215,
+            "mineral_name": "chlorite_clinochlore.fe.sc-cca-1",
+            "pixel_count": 13,
+            "mean_band_depth": 0.0561
+          },
+          {
+            "mineral_id": 232,
+            "mineral_name": "carbonate_calcite",
+            "pixel_count": 2,
+            "mean_band_depth": 0.0284
+          }
+        ]
+      }
+    }
+  },
+  "earth_queen_maud_anorthosite": {
+    "site_id": "earth_queen_maud_anorthosite",
+    "cell_id": "earth_c010",
+    "name": "Gruber Mountains (Wohlthat Massif) Anorthosite Ridge",
+    "lat": -71.35,
+    "lon": 13.45,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/550/806.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 1030.4,
+      "min_elevation_m": 140.8,
+      "max_elevation_m": 2134.3,
+      "relief_m": 1390.52,
+      "slope_mean_deg": 5.05,
+      "slope_p90_deg": 9.4,
+      "ruggedness_tri_m": 29.71,
+      "roughness_rms_m": 211.53,
+      "hypsometric_integral": 0.446
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 120.06,
+      "slope_mean_deg": 0.62,
+      "slope_p90_deg": 1.65,
+      "ruggedness_tri_m": 0.21,
+      "roughness_rms_m": 14.32,
+      "hypsometric_integral": 0.436,
+      "mean_elevation_m": 1706.74
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=-71.35&lng=13.45&adjacents=true",
+      "units_count": 1,
+      "mapped_units": [
+        {
+          "map_id": 3191302,
+          "source_id": 154,
+          "unit_name": "Proterozoic intrusive rocks",
+          "age": "Proterozoic",
+          "lithology": "intrusive igneous rocks",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251222204114_01293010_007_01.h5",
+        "concept_id": "G4107185414-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-12-22T20:41:17.226Z",
+        "time_end": "2025-12-22T20:48:58.376Z",
+        "size_mb": 1024.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/22/ATL03_20251222204114_01293010_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "ASTGTM",
+        "concept_id": "G1726742093-LPCLOUD",
+        "granule_id": "ASTGTMV003_S71E014",
+        "time_start": "2000-03-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_S71E014_dem.tif"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": null,
+      "emit_streamed_mineralogy": null
+    }
+  },
+  "earth_craters_of_the_moon": {
+    "site_id": "earth_craters_of_the_moon",
+    "cell_id": "earth_c011",
+    "name": "Craters of the Moon \u2014 Great Rift Basalt Plains",
+    "lat": 43.42,
+    "lon": -113.52,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/189/374.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 1750.2,
+      "min_elevation_m": 1555.0,
+      "max_elevation_m": 2805.0,
+      "relief_m": 574.15,
+      "slope_mean_deg": 2.64,
+      "slope_p90_deg": 9.46,
+      "ruggedness_tri_m": 18.2,
+      "roughness_rms_m": 133.67,
+      "hypsometric_integral": 0.156
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 88.02,
+      "slope_mean_deg": 1.17,
+      "slope_p90_deg": 2.54,
+      "ruggedness_tri_m": 0.41,
+      "roughness_rms_m": 22.49,
+      "hypsometric_integral": 0.318,
+      "mean_elevation_m": 1563.84
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=43.42&lng=-113.52&adjacents=true",
+      "units_count": 5,
+      "mapped_units": [
+        {
+          "map_id": 3771017,
+          "source_id": 462,
+          "unit_name": "Granite and gneiss, undivided",
+          "age": "Archean",
+          "lithology": "gneiss, granite",
+          "description": "Covered"
+        },
+        {
+          "map_id": 4547639,
+          "source_id": 546,
+          "unit_name": "Basalt",
+          "age": "Quaternary",
+          "lithology": "basalt, latite",
+          "description": "Flows and cinder cones of olivine tholeiite basalt and minor latite and alkaline basalt less than 15 ka; includes Shoshone, Craters of the Moon, Wapi, Cerro Grande, and Hells Half Acre lava fields. Little or no loess cover"
+        },
+        {
+          "map_id": 2960470,
+          "source_id": 133,
+          "unit_name": "Basalt (Quaternary)",
+          "age": "Late Pleistocene",
+          "lithology": "Major:{basalt}, Minor:{latite}",
+          "description": "Flows and cinder cones of olivine tholeiite basalt and minor latite and alkaline basalt less than 15 ka; includes Shoshone, Craters of the Moon, Wapi, Cerro Grande, and Hells Half Acre lava fields. Little or no loess cover.  (Quaternary to "
+        },
+        {
+          "map_id": 972301,
+          "source_id": 7,
+          "unit_name": "Quaternary volcanic: mafic rocks",
+          "age": "Quaternary",
+          "lithology": "volcanic: mafic rocks",
+          "description": ""
+        },
+        {
+          "map_id": 3186305,
+          "source_id": 154,
+          "unit_name": "Cenozoic volcanic rocks",
+          "age": "Neogene",
+          "lithology": "flood basalt(s); mafic volcanic rocks; basalt",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251227053010_01963006_007_01.h5",
+        "concept_id": "G4106886248-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-12-27T05:30:10.535Z",
+        "time_end": "2025-12-27T05:38:40.730Z",
+        "size_mb": 360.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/27/ATL03_20251227053010_01963006_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "NASADEM_HGT",
+        "concept_id": "G2816847571-LPCLOUD",
+        "granule_id": "NASADEM_HGT_n43w115",
+        "time_start": "2000-02-11T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/NASADEM_HGT.001/NASADEM_HGT_n43w115/NASADEM_HGT_n43w115.zip"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": {
+        "short_name": "EMITL2BMIN",
+        "concept_id": "G4358365568-LPCLOUD",
+        "granule_id": "EMIT_L2B_MIN_002_20261010T210021",
+        "time_start": "2026-10-10T21:00:21.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261010T210021/EMIT_L2B_MIN_002_20261010T210021.nc"
+      },
+      "emit_streamed_mineralogy": {
+        "granule_id": "EMIT_L2B_MIN_002_20261010T210021",
+        "concept_id": "G4358365568-LPCLOUD",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261010T210021/EMIT_L2B_MIN_002_20261010T210021.nc",
+        "window_shape": [
+          80,
+          80
+        ],
+        "group_1_mean_band_depth": 0.0139,
+        "group_2_mean_band_depth": 0.0525,
+        "top_group_1_minerals": [
+          {
+            "mineral_id": 47,
+            "mineral_name": "fe3+_hematite.nano.BR34b2b",
+            "pixel_count": 1977,
+            "mean_band_depth": 0.0129
+          },
+          {
+            "mineral_id": 32,
+            "mineral_name": "fe3+_hematite.fine.gr.fe2602",
+            "pixel_count": 985,
+            "mean_band_depth": 0.0181
+          },
+          {
+            "mineral_id": 303,
+            "mineral_name": "chrysotile.gypsum.wtc01-8",
+            "pixel_count": 926,
+            "mean_band_depth": 0.0121
+          },
+          {
+            "mineral_id": 33,
+            "mineral_name": "fe3+_hematite.fine.gr.ws161",
+            "pixel_count": 169,
+            "mean_band_depth": 0.0135
+          }
+        ],
+        "top_group_2_minerals": [
+          {
+            "mineral_id": 97,
+            "mineral_name": "fe3+_hematite.nano-0.3+qtz",
+            "pixel_count": 3713,
+            "mean_band_depth": 0.0527
+          },
+          {
+            "mineral_id": 100,
+            "mineral_name": "fe3+_hematite.1+goethite.9hg1",
+            "pixel_count": 642,
+            "mean_band_depth": 0.0356
+          },
+          {
+            "mineral_id": 216,
+            "mineral_name": "chlorite_cookeite-car-1.a",
+            "pixel_count": 459,
+            "mean_band_depth": 0.0592
+          },
+          {
+            "mineral_id": 250,
+            "mineral_name": "phyllosilicate.clintonite",
+            "pixel_count": 439,
+            "mean_band_depth": 0.0848
+          }
+        ]
+      }
+    }
+  },
+  "earth_lonar_crater": {
+    "site_id": "earth_lonar_crater",
+    "cell_id": "earth_c012",
+    "name": "Lonar Basaltic Impact Crater",
+    "lat": 19.98,
+    "lon": 76.51,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/729/453.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 546.9,
+      "min_elevation_m": 479.0,
+      "max_elevation_m": 615.0,
+      "relief_m": 94.0,
+      "slope_mean_deg": 1.02,
+      "slope_p90_deg": 1.9,
+      "ruggedness_tri_m": 7.05,
+      "roughness_rms_m": 21.38,
+      "hypsometric_integral": 0.499
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 33.02,
+      "slope_mean_deg": 1.09,
+      "slope_p90_deg": 2.27,
+      "ruggedness_tri_m": 0.38,
+      "roughness_rms_m": 10.35,
+      "hypsometric_integral": 0.284,
+      "mean_elevation_m": 506.51
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=19.98&lng=76.51&adjacents=true",
+      "units_count": 1,
+      "mapped_units": [
+        {
+          "map_id": 3188379,
+          "source_id": 154,
+          "unit_name": "Mesozoic-Cenozoic volcanic rocks",
+          "age": "Cretaceous",
+          "lithology": "flood basalt(s); mafic volcanic rocks; basalt",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251013202523_04472907_007_01.h5",
+        "concept_id": "G3984983491-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-10-13T20:25:21.721Z",
+        "time_end": "2025-10-13T20:32:24.009Z",
+        "size_mb": 296.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/10/13/ATL03_20251013202523_04472907_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "NASADEM_HGT",
+        "concept_id": "G2816791163-LPCLOUD",
+        "granule_id": "NASADEM_HGT_n19e076",
+        "time_start": "2000-02-11T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/NASADEM_HGT.001/NASADEM_HGT_n19e076/NASADEM_HGT_n19e076.zip"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": {
+        "short_name": "EMITL2BMIN",
+        "concept_id": "G4336251565-LPCLOUD",
+        "granule_id": "EMIT_L2B_MIN_002_20261001T041837",
+        "time_start": "2026-10-01T04:18:37.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261001T041837/EMIT_L2B_MIN_002_20261001T041837.nc"
+      },
+      "emit_streamed_mineralogy": {
+        "granule_id": "EMIT_L2B_MIN_002_20261001T041837",
+        "concept_id": "G4336251565-LPCLOUD",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261001T041837/EMIT_L2B_MIN_002_20261001T041837.nc",
+        "window_shape": [
+          80,
+          80
+        ],
+        "group_1_mean_band_depth": 0.0892,
+        "group_2_mean_band_depth": 0.073,
+        "top_group_1_minerals": [
+          {
+            "mineral_id": 20,
+            "mineral_name": "fe2+generic_nrw.cummingtonite",
+            "pixel_count": 6,
+            "mean_band_depth": 0.0892
+          }
+        ],
+        "top_group_2_minerals": [
+          {
+            "mineral_id": 97,
+            "mineral_name": "fe3+_hematite.nano-0.3+qtz",
+            "pixel_count": 3,
+            "mean_band_depth": 0.083
+          },
+          {
+            "mineral_id": 221,
+            "mineral_name": "sulfate_jarosite-Na",
+            "pixel_count": 1,
+            "mean_band_depth": 0.0431
+          }
+        ]
+      }
+    }
+  },
+  "earth_kaibab_arizona_icesat2": {
+    "site_id": "earth_kaibab_arizona_icesat2",
+    "cell_id": "earth_c013",
+    "name": "Kaibab Plateau & San Francisco Volcanic Field (ICESat-2 ATL03 Track)",
+    "lat": 36.5,
+    "lon": -112.22,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/192/400.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": 2547.5,
+      "min_elevation_m": 1969.0,
+      "max_elevation_m": 2809.0,
+      "relief_m": 427.05,
+      "slope_mean_deg": 2.94,
+      "slope_p90_deg": 5.12,
+      "ruggedness_tri_m": 22.92,
+      "roughness_rms_m": 104.51,
+      "hypsometric_integral": 0.689
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 556.64,
+      "slope_mean_deg": 3.03,
+      "slope_p90_deg": 6.89,
+      "ruggedness_tri_m": 1.07,
+      "roughness_rms_m": 19.55,
+      "hypsometric_integral": 0.515,
+      "mean_elevation_m": 2004.35
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=36.5&lng=-112.22&adjacents=true",
+      "units_count": 5,
+      "mapped_units": [
+        {
+          "map_id": 3204236,
+          "source_id": 156,
+          "unit_name": "Valley-fill deposits",
+          "age": "Holocene",
+          "lithology": "alluvium",
+          "description": "Gray to light-red, slope-forming, unsorted mixture of mud, silt, sand, gravel, small pebbles, and cobbles. Partly consolidated by calcite and gypsum cement. Include sandstone, limestone, and chert clasts in sandy matrix locally derived from"
+        },
+        {
+          "map_id": 2728387,
+          "source_id": 133,
+          "unit_name": "Permian sedimentary rocks",
+          "age": "Kungurian",
+          "lithology": "Major:{sandstone,limestone}, Minor:{chert}",
+          "description": "Gray to tan, cherty limestone of Kaibab and Toroweap Formations, and underlying white to tan, fine-grained Coconino Sandstone. Limestone was deposited in a shallow sea, and sandstone was deposited in near-shore dunes and beach settings.  (2"
+        },
+        {
+          "map_id": 3901753,
+          "source_id": 490,
+          "unit_name": "Permian sedimentary rocks",
+          "age": "Permian",
+          "lithology": "sedimentary, limestone, sandstone",
+          "description": "Gray to tan, cherty limestone of Kaibab and Toroweap Formations, and underlying white to tan, fine-grained Coconino Sandstone. Limestone was deposited in a shallow sea, and sandstone was deposited in near-shore dunes and beach settings.  (2"
+        },
+        {
+          "map_id": 936383,
+          "source_id": 7,
+          "unit_name": "Permian sedimentary",
+          "age": "Permian",
+          "lithology": "sedimentary",
+          "description": ""
+        },
+        {
+          "map_id": 3187666,
+          "source_id": 154,
+          "unit_name": "Paleozoic sedimentary rocks",
+          "age": "Permian",
+          "lithology": "sedimentary rocks",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251219054639_00743006_007_01.h5",
+        "concept_id": "G4107980246-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-12-19T05:46:41.991Z",
+        "time_end": "2025-12-19T05:55:12.488Z",
+        "size_mb": 592.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/12/19/ATL03_20251219054639_00743006_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "NASADEM_HGT",
+        "concept_id": "G2816849633-LPCLOUD",
+        "granule_id": "NASADEM_HGT_n35w112",
+        "time_start": "2000-02-11T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/NASADEM_HGT.001/NASADEM_HGT_n35w112/NASADEM_HGT_n35w112.zip"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": {
+        "short_name": "EMITL2BMIN",
+        "concept_id": "G4341790142-LPCLOUD",
+        "granule_id": "EMIT_L2B_MIN_002_20261002T173451",
+        "time_start": "2026-10-02T17:34:51.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261002T173451/EMIT_L2B_MIN_002_20261002T173451.nc"
+      },
+      "emit_streamed_mineralogy": {
+        "granule_id": "EMIT_L2B_MIN_002_20261002T173451",
+        "concept_id": "G4341790142-LPCLOUD",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/EMITL2BMIN.002/EMIT_L2B_MIN_002_20261002T173451/EMIT_L2B_MIN_002_20261002T173451.nc",
+        "window_shape": [
+          80,
+          80
+        ],
+        "group_1_mean_band_depth": 0.1884,
+        "group_2_mean_band_depth": 0.0331,
+        "top_group_1_minerals": [
+          {
+            "mineral_id": 2,
+            "mineral_name": "fe3+_hematite.fine.gr.gds76",
+            "pixel_count": 3293,
+            "mean_band_depth": 0.1821
+          },
+          {
+            "mineral_id": 47,
+            "mineral_name": "fe3+_hematite.nano.BR34b2b",
+            "pixel_count": 2578,
+            "mean_band_depth": 0.2137
+          },
+          {
+            "mineral_id": 303,
+            "mineral_name": "chrysotile.gypsum.wtc01-8",
+            "pixel_count": 518,
+            "mean_band_depth": 0.103
+          },
+          {
+            "mineral_id": 89,
+            "mineral_name": "mn_oxide_pyrolusite",
+            "pixel_count": 4,
+            "mean_band_depth": 0.1917
+          }
+        ],
+        "top_group_2_minerals": [
+          {
+            "mineral_id": 125,
+            "mineral_name": "organic_plastic-pete4",
+            "pixel_count": 2585,
+            "mean_band_depth": 0.0338
+          },
+          {
+            "mineral_id": 131,
+            "mineral_name": "sulfate_naalun450c",
+            "pixel_count": 1256,
+            "mean_band_depth": 0.0325
+          },
+          {
+            "mineral_id": 126,
+            "mineral_name": "sulfate_kalun150c",
+            "pixel_count": 1235,
+            "mean_band_depth": 0.0271
+          },
+          {
+            "mineral_id": 227,
+            "mineral_name": "talc.fngrnd",
+            "pixel_count": 433,
+            "mean_band_depth": 0.0257
+          }
+        ]
+      }
+    }
+  },
+  "earth_tuktoyaktuk_permafrost": {
+    "site_id": "earth_tuktoyaktuk_permafrost",
+    "cell_id": "earth_c014",
+    "name": "Mackenzie Delta / Tuktoyaktuk Ice-Rich Polygonal Plains",
+    "lat": 69.44,
+    "lon": -133.03,
+    "topography_2d_dem": {
+      "source_tile_url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/10/133/233.png",
+      "window_size_km": 25.0,
+      "resampled_grid_shape": [
+        50,
+        50
+      ],
+      "resampled_gsd_m": 500.0,
+      "mean_elevation_m": -0.3,
+      "min_elevation_m": -8.4,
+      "max_elevation_m": 62.6,
+      "relief_m": 25.39,
+      "slope_mean_deg": 0.32,
+      "slope_p90_deg": 0.85,
+      "ruggedness_tri_m": 2.56,
+      "roughness_rms_m": 6.51,
+      "hypsometric_integral": 0.114
+    },
+    "topography_1d_icesat2": {
+      "relief_m": 1.0,
+      "slope_mean_deg": 0.0,
+      "slope_p90_deg": 0.0,
+      "ruggedness_tri_m": 0.0,
+      "roughness_rms_m": 0.03,
+      "hypsometric_integral": 0.42,
+      "mean_elevation_m": -6.9
+    },
+    "geology_macrostrat": {
+      "api_endpoint": "https://macrostrat.org/api/v2/geologic_units/map?lat=69.44&lng=-133.03&adjacents=true",
+      "units_count": 3,
+      "mapped_units": [
+        {
+          "map_id": 651674,
+          "source_id": 2,
+          "unit_name": "Sedimentary; Clastic: deltaic and nearshore",
+          "age": "Pliocene",
+          "lithology": "sandstone, siltstone, shale, coal; plant fossils",
+          "description": "Arctic Ocean, Mackenzie Delta, Beaufort Sea, Arctic Coastal Plain"
+        },
+        {
+          "map_id": 942430,
+          "source_id": 7,
+          "unit_name": "Quaternary sedimentary",
+          "age": "Quaternary",
+          "lithology": "sedimentary",
+          "description": ""
+        },
+        {
+          "map_id": 3185957,
+          "source_id": 154,
+          "unit_name": "Cenozoic sedimentary rocks",
+          "age": "Quaternary",
+          "lithology": "sedimentary rocks",
+          "description": ""
+        }
+      ]
+    },
+    "earthdata_satellites": {
+      "icesat2_atl03": {
+        "granule_id": "ATL03_20251107093007_08222905_007_01.h5",
+        "concept_id": "G3985532880-NSIDC_CPRD",
+        "version": "007",
+        "time_start": "2025-11-07T09:30:06.110Z",
+        "time_end": "2025-11-07T09:35:31.707Z",
+        "size_mb": 496.0,
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/ATLAS/ATL03/007/2025/11/07/ATL03_20251107093007_08222905_007_01.h5"
+      },
+      "dem_granule": {
+        "short_name": "ASTGTM",
+        "concept_id": "G1726795302-LPCLOUD",
+        "granule_id": "ASTGTMV003_N68W134",
+        "time_start": "2000-03-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N68W134_dem.tif"
+      },
+      "modis_ndvi_granule": {
+        "short_name": "MOD13C2",
+        "concept_id": "G4399766668-LPCLOUD",
+        "granule_id": "MOD13C2.A2026274.061.2026307134330",
+        "time_start": "2026-10-01T00:00:00.000Z",
+        "https_url": "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/MOD13C2.061/MOD13C2.A2026274.061.2026307134330/MOD13C2.A2026274.061.2026307134330.hdf"
+      },
+      "modis_cryosphere_granule": {
+        "short_name": "MOD10C1",
+        "concept_id": "G4411305091-NSIDC_CPRD",
+        "granule_id": "MOD10C1.A2026316.061.2026318041318.hdf",
+        "time_start": "2026-11-12T00:00:00.000Z",
+        "https_url": "https://data.nsidc.earthdatacloud.nasa.gov/nsidc-cumulus-prod-protected/MODIS/MOD10C1/61/2026/11/12/MOD10C1.A2026316.061.2026318041318.hdf"
+      },
+      "emit_mineralogy_granule": null,
+      "emit_streamed_mineralogy": null
+    }
+  }
+}
