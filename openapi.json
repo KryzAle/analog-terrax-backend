@@ -1,0 +1,80 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Analog Terrax API",
+    "description": "Scalable FastAPI backend infrastructure for Analog Terrax.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/health": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "System health and readiness check",
+        "description": "Return service health metadata for monitoring and frontend status checks.",
+        "operationId": "system_get_health",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthCheckResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HealthCheckResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "degraded"
+            ],
+            "title": "Status",
+            "description": "Service health state",
+            "default": "ok"
+          },
+          "service": {
+            "type": "string",
+            "title": "Service",
+            "description": "Service name"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version",
+            "description": "Deployed semantic version"
+          },
+          "environment": {
+            "type": "string",
+            "title": "Environment",
+            "description": "Runtime environment name"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Timestamp",
+            "description": "UTC server timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "service",
+          "version",
+          "environment",
+          "timestamp"
+        ],
+        "title": "HealthCheckResponse",
+        "description": "System health and readiness status."
+      }
+    }
+  }
+}
