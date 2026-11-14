@@ -1,0 +1,9 @@
+# Exclude offline data pipeline, tests, and local caches from Vercel serverless bundle
+pipeline/
+tests/
+scripts/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.md

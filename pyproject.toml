@@ -8,6 +8,7 @@ dependencies = [
     "cachetools>=5.5.0",
     "fastapi>=0.115.0",
     "httpx>=0.28.0",
+    "numpy>=2.0.0",
     "pydantic>=2.10.0",
     "pydantic-settings>=2.7.0",
     "tenacity>=9.0.0",
@@ -29,6 +30,7 @@ line-length = 100
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"

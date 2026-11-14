@@ -1,0 +1,49 @@
+{
+  "window_size_km": 25.0,
+  "resampled_gsd_m": 500.0,
+  "sigma_topo": 1.65,
+  "topography_features": [
+    {
+      "id": "relief_m",
+      "label": "Local Relief (p95 - p5)",
+      "unit": "m",
+      "median": 999.3,
+      "iqr": 956.1
+    },
+    {
+      "id": "slope_mean_deg",
+      "label": "Mean Slope (500m GSD)",
+      "unit": "deg",
+      "median": 8.265,
+      "iqr": 7.468
+    },
+    {
+      "id": "slope_p90_deg",
+      "label": "90th Percentile Slope",
+      "unit": "deg",
+      "median": 15.2,
+      "iqr": 13.228
+    },
+    {
+      "id": "ruggedness_tri_m",
+      "label": "Terrain Ruggedness Index (TRI)",
+      "unit": "m",
+      "median": 23.4,
+      "iqr": 17.975
+    },
+    {
+      "id": "roughness_rms_m",
+      "label": "Detrended RMS Roughness",
+      "unit": "m",
+      "median": 39.53,
+      "iqr": 34.332
+    },
+    {
+      "id": "hypsometric_integral",
+      "label": "Hypsometric Integral",
+      "unit": "ratio",
+      "median": 0.474,
+      "iqr": 0.12
+    }
+  ]
+}

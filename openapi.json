@@ -27,10 +27,764 @@
           }
         }
       }
+    },
+    "/api/v1/taxonomy": {
+      "get": {
+        "tags": [
+          "planetary"
+        ],
+        "summary": "Get harmonized cross-planet taxonomy and feature normalization stats",
+        "description": "Return shared lithology classes, similarity matrix, mineral dimensions, and topo stats.",
+        "operationId": "planetary_get_taxonomy",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaxonomyResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bodies/{body}/sites": {
+      "get": {
+        "tags": [
+          "planetary"
+        ],
+        "summary": "List curated reference sites for Moon, Mars, or Earth",
+        "description": "Return curated candidate base locations (Moon/Mars) or terrestrial analogs (Earth).",
+        "operationId": "planetary_list_body_sites",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "enum": [
+                "moon",
+                "mars",
+                "earth"
+              ],
+              "type": "string",
+              "title": "Body"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PlanetarySite"
+                  },
+                  "title": "Response Planetary List Body Sites"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bodies/{body}/sites/{site_id}": {
+      "get": {
+        "tags": [
+          "planetary"
+        ],
+        "summary": "Get fingerprint for a specific site or cell ID",
+        "description": "Retrieve a single planetary site fingerprint by site_id or cell_id.",
+        "operationId": "planetary_get_body_site",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "enum": [
+                "moon",
+                "mars",
+                "earth"
+              ],
+              "type": "string",
+              "title": "Body"
+            }
+          },
+          {
+            "name": "site_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Site Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanetarySite"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bodies/{body}/cells": {
+      "get": {
+        "tags": [
+          "planetary"
+        ],
+        "summary": "Snap latitude/longitude coordinates to the nearest indexed cell",
+        "description": "Snap a click at (lat, lon) on Moon, Mars, or Earth to its nearest indexed cell.",
+        "operationId": "planetary_snap_body_cell",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "enum": [
+                "moon",
+                "mars",
+                "earth"
+              ],
+              "type": "string",
+              "title": "Body"
+            }
+          },
+          {
+            "name": "lat",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "maximum": 90.0,
+              "minimum": -90.0,
+              "description": "Latitude in decimal degrees",
+              "title": "Lat"
+            },
+            "description": "Latitude in decimal degrees"
+          },
+          {
+            "name": "lon",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "maximum": 180.0,
+              "minimum": -180.0,
+              "description": "Longitude in decimal degrees",
+              "title": "Lon"
+            },
+            "description": "Longitude in decimal degrees"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlanetarySite"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/analogs/search": {
+      "post": {
+        "tags": [
+          "analogs"
+        ],
+        "summary": "Find top-K similar Earth analog locations for a Moon or Mars site",
+        "description": "Execute weighted multi-criteria similarity search across topography (robust z-score kernel),\ngeology (harmonized lithology similarity matrix), and mineralogy (masked cosine similarity).",
+        "operationId": "analogs_search_earth_analogs",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnalogSearchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalogSearchResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/analogs/heatmap": {
+      "get": {
+        "tags": [
+          "analogs"
+        ],
+        "summary": "Get quantized similarity scores across all Earth cells for global heatmap rendering",
+        "description": "Return quantized uint8 (0-100) similarity scores across all indexed Earth cells.",
+        "operationId": "analogs_get_earth_analog_heatmap",
+        "parameters": [
+          {
+            "name": "target_body",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "moon",
+                "mars"
+              ],
+              "type": "string",
+              "default": "moon",
+              "title": "Target Body"
+            }
+          },
+          {
+            "name": "target_site_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "moon_shackleton_rim",
+              "title": "Target Site Id"
+            }
+          },
+          {
+            "name": "w_topo",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "default": 0.45,
+              "title": "W Topo"
+            }
+          },
+          {
+            "name": "w_geo",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "default": 0.35,
+              "title": "W Geo"
+            }
+          },
+          {
+            "name": "w_min",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "default": 0.2,
+              "title": "W Min"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalogHeatmapResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/analogs/{earth_cell}/profile": {
+      "get": {
+        "tags": [
+          "analogs"
+        ],
+        "summary": "Compare laser altimeter elevation profiles (ICESat-2 vs LOLA / MOLA)",
+        "description": "Return side-by-side laser altimeter transects (ICESat-2 ATLAS vs LRO LOLA or MGS MOLA).",
+        "operationId": "analogs_get_laser_profile_comparison",
+        "parameters": [
+          {
+            "name": "earth_cell",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Earth Cell"
+            }
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "description": "Target Moon/Mars site_id or cell_id for laser profile comparison",
+              "default": "moon_shackleton_rim",
+              "title": "Target"
+            },
+            "description": "Target Moon/Mars site_id or cell_id for laser profile comparison"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LaserProfileComparisonResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "AnalogHeatmapResponse": {
+        "properties": {
+          "target_site_id": {
+            "type": "string",
+            "title": "Target Site Id"
+          },
+          "target_name": {
+            "type": "string",
+            "title": "Target Name"
+          },
+          "target_body": {
+            "type": "string",
+            "enum": [
+              "moon",
+              "mars"
+            ],
+            "title": "Target Body"
+          },
+          "cells": {
+            "items": {
+              "$ref": "#/components/schemas/HeatmapCellScore"
+            },
+            "type": "array",
+            "title": "Cells"
+          }
+        },
+        "type": "object",
+        "required": [
+          "target_site_id",
+          "target_name",
+          "target_body",
+          "cells"
+        ],
+        "title": "AnalogHeatmapResponse",
+        "description": "Global Earth similarity heatmap response."
+      },
+      "AnalogMatchResult": {
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "title": "Rank"
+          },
+          "site": {
+            "$ref": "#/components/schemas/PlanetarySite"
+          },
+          "scores": {
+            "$ref": "#/components/schemas/ScoreBreakdown"
+          },
+          "top_contributing_features": {
+            "items": {
+              "$ref": "#/components/schemas/FeatureContribution"
+            },
+            "type": "array",
+            "title": "Top Contributing Features"
+          }
+        },
+        "type": "object",
+        "required": [
+          "rank",
+          "site",
+          "scores",
+          "top_contributing_features"
+        ],
+        "title": "AnalogMatchResult",
+        "description": "Ranked Earth analog site with full score breakdown and feature explanations."
+      },
+      "AnalogSearchFilters": {
+        "properties": {
+          "curated_only": {
+            "type": "boolean",
+            "title": "Curated Only",
+            "description": "Return curated benchmark + under-studied sites (False includes raw grid cells)",
+            "default": true
+          },
+          "exclude_vegetated": {
+            "type": "boolean",
+            "title": "Exclude Vegetated",
+            "description": "Exclude Earth cells with MODIS NDVI > max_ndvi",
+            "default": true
+          },
+          "max_ndvi": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Max Ndvi",
+            "description": "Maximum allowed NDVI",
+            "default": 0.3
+          },
+          "require_impact": {
+            "type": "boolean",
+            "title": "Require Impact",
+            "description": "Only match Earth sites with impact structures",
+            "default": false
+          },
+          "require_ice": {
+            "type": "boolean",
+            "title": "Require Ice",
+            "description": "Only match Earth sites with polar ice or permafrost",
+            "default": false
+          },
+          "require_volcanic": {
+            "type": "boolean",
+            "title": "Require Volcanic",
+            "description": "Only match volcanic Earth sites",
+            "default": false
+          }
+        },
+        "type": "object",
+        "title": "AnalogSearchFilters",
+        "description": "Optional toggleable filters for narrowing Earth analog candidates."
+      },
+      "AnalogSearchRequest": {
+        "properties": {
+          "target_body": {
+            "type": "string",
+            "enum": [
+              "moon",
+              "mars"
+            ],
+            "title": "Target Body",
+            "description": "Target planetary body ('moon' or 'mars')",
+            "default": "moon"
+          },
+          "target_site_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target Site Id",
+            "description": "Curated target site ID (if omitted, snaps target_lat/target_lon to nearest cell)",
+            "default": "moon_shackleton_rim"
+          },
+          "target_lat": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 90.0,
+                "minimum": -90.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target Lat",
+            "description": "Custom target latitude on Moon or Mars"
+          },
+          "target_lon": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 180.0,
+                "minimum": -180.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target Lon",
+            "description": "Custom target longitude on Moon or Mars"
+          },
+          "weights": {
+            "$ref": "#/components/schemas/SimilarityWeights"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/AnalogSearchFilters"
+          },
+          "k": {
+            "type": "integer",
+            "maximum": 50.0,
+            "minimum": 1.0,
+            "title": "K",
+            "description": "Number of top Earth matches to return",
+            "default": 8
+          }
+        },
+        "type": "object",
+        "title": "AnalogSearchRequest",
+        "description": "Request payload for finding the most similar Earth locations to a Moon or Mars site."
+      },
+      "AnalogSearchResponse": {
+        "properties": {
+          "target": {
+            "$ref": "#/components/schemas/PlanetarySite"
+          },
+          "normalized_weights": {
+            "$ref": "#/components/schemas/SimilarityWeights"
+          },
+          "total_candidates_evaluated": {
+            "type": "integer",
+            "title": "Total Candidates Evaluated"
+          },
+          "matches": {
+            "items": {
+              "$ref": "#/components/schemas/AnalogMatchResult"
+            },
+            "type": "array",
+            "title": "Matches"
+          }
+        },
+        "type": "object",
+        "required": [
+          "target",
+          "normalized_weights",
+          "total_candidates_evaluated",
+          "matches"
+        ],
+        "title": "AnalogSearchResponse",
+        "description": "Response returned by POST /api/v1/analogs/search."
+      },
+      "DimensionSpec": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unit"
+          },
+          "median": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Median"
+          },
+          "iqr": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Iqr"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "label"
+        ],
+        "title": "DimensionSpec"
+      },
+      "EnvironmentalFlags": {
+        "properties": {
+          "ndvi": {
+            "type": "number",
+            "title": "Ndvi",
+            "description": "MODIS vegetation index (0 = barren)",
+            "default": 0.0
+          },
+          "is_impact": {
+            "type": "boolean",
+            "title": "Is Impact",
+            "description": "Contains impact crater or ejecta structure",
+            "default": false
+          },
+          "has_ice": {
+            "type": "boolean",
+            "title": "Has Ice",
+            "description": "Contains polar ice, permafrost, or PSR volatiles",
+            "default": false
+          },
+          "is_volcanic": {
+            "type": "boolean",
+            "title": "Is Volcanic",
+            "description": "Contains volcanic basalt flows, tephra, or lava tubes",
+            "default": false
+          }
+        },
+        "type": "object",
+        "title": "EnvironmentalFlags",
+        "description": "Toggleable hard-filter metadata flags for a location."
+      },
+      "FeatureContribution": {
+        "properties": {
+          "family": {
+            "type": "string",
+            "enum": [
+              "topography",
+              "geology",
+              "mineralogy"
+            ],
+            "title": "Family"
+          },
+          "feature_id": {
+            "type": "string",
+            "title": "Feature Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "target_value": {
+            "type": "number",
+            "title": "Target Value"
+          },
+          "earth_value": {
+            "type": "number",
+            "title": "Earth Value"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          },
+          "closeness_pct": {
+            "type": "number",
+            "title": "Closeness Pct",
+            "description": "Closeness score (0-100%) for this feature"
+          }
+        },
+        "type": "object",
+        "required": [
+          "family",
+          "feature_id",
+          "label",
+          "target_value",
+          "earth_value",
+          "unit",
+          "closeness_pct"
+        ],
+        "title": "FeatureContribution",
+        "description": "Explainability item describing a key matching feature between target and Earth analog."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
       "HealthCheckResponse": {
         "properties": {
           "status": {
@@ -74,6 +828,585 @@
         ],
         "title": "HealthCheckResponse",
         "description": "System health and readiness status."
+      },
+      "HeatmapCellScore": {
+        "properties": {
+          "cell_id": {
+            "type": "string",
+            "title": "Cell Id"
+          },
+          "site_id": {
+            "type": "string",
+            "title": "Site Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "lat": {
+            "type": "number",
+            "title": "Lat"
+          },
+          "lon": {
+            "type": "number",
+            "title": "Lon"
+          },
+          "is_curated_site": {
+            "type": "boolean",
+            "title": "Is Curated Site"
+          },
+          "score_uint8": {
+            "type": "integer",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Score Uint8",
+            "description": "Quantized similarity score (0-100)"
+          },
+          "topography_uint8": {
+            "type": "integer",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Topography Uint8"
+          },
+          "geology_uint8": {
+            "type": "integer",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Geology Uint8"
+          },
+          "mineralogy_uint8": {
+            "type": "integer",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Mineralogy Uint8"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cell_id",
+          "site_id",
+          "name",
+          "lat",
+          "lon",
+          "is_curated_site",
+          "score_uint8",
+          "topography_uint8",
+          "geology_uint8",
+          "mineralogy_uint8"
+        ],
+        "title": "HeatmapCellScore",
+        "description": "Compact cell similarity score for rendering a global Earth heatmap layer."
+      },
+      "LaserProfileComparisonResponse": {
+        "properties": {
+          "target_profile": {
+            "$ref": "#/components/schemas/SingleLaserProfile"
+          },
+          "earth_analog_profile": {
+            "$ref": "#/components/schemas/SingleLaserProfile"
+          },
+          "roughness_ratio": {
+            "type": "number",
+            "title": "Roughness Ratio",
+            "description": "Ratio of Earth RMS roughness to target planetary RMS roughness"
+          },
+          "slope_delta_deg": {
+            "type": "number",
+            "title": "Slope Delta Deg",
+            "description": "Absolute difference in laser transect mean slope (degrees)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "target_profile",
+          "earth_analog_profile",
+          "roughness_ratio",
+          "slope_delta_deg"
+        ],
+        "title": "LaserProfileComparisonResponse",
+        "description": "Side-by-side laser altimeter transect comparison (ICESat-2 vs LOLA / MOLA)."
+      },
+      "LaserProfilePoint": {
+        "properties": {
+          "distance_km": {
+            "type": "number",
+            "title": "Distance Km"
+          },
+          "elevation_m": {
+            "type": "number",
+            "title": "Elevation M"
+          },
+          "relative_elevation_m": {
+            "type": "number",
+            "title": "Relative Elevation M"
+          },
+          "lat": {
+            "type": "number",
+            "title": "Lat"
+          },
+          "lon": {
+            "type": "number",
+            "title": "Lon"
+          }
+        },
+        "type": "object",
+        "required": [
+          "distance_km",
+          "elevation_m",
+          "relative_elevation_m",
+          "lat",
+          "lon"
+        ],
+        "title": "LaserProfilePoint"
+      },
+      "LaserProfileStats": {
+        "properties": {
+          "relief_m": {
+            "type": "number",
+            "title": "Relief M"
+          },
+          "mean_slope_deg": {
+            "type": "number",
+            "title": "Mean Slope Deg"
+          },
+          "rms_roughness_m": {
+            "type": "number",
+            "title": "Rms Roughness M"
+          }
+        },
+        "type": "object",
+        "required": [
+          "relief_m",
+          "mean_slope_deg",
+          "rms_roughness_m"
+        ],
+        "title": "LaserProfileStats"
+      },
+      "LithologyClassSpec": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "earth_source": {
+            "type": "string",
+            "title": "Earth Source"
+          },
+          "moon_source": {
+            "type": "string",
+            "title": "Moon Source"
+          },
+          "mars_source": {
+            "type": "string",
+            "title": "Mars Source"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "earth_source",
+          "moon_source",
+          "mars_source"
+        ],
+        "title": "LithologyClassSpec"
+      },
+      "PlanetarySite": {
+        "properties": {
+          "site_id": {
+            "type": "string",
+            "title": "Site Id",
+            "description": "Unique site identifier"
+          },
+          "cell_id": {
+            "type": "string",
+            "title": "Cell Id",
+            "description": "Grid cell identifier"
+          },
+          "body": {
+            "type": "string",
+            "enum": [
+              "moon",
+              "mars",
+              "earth"
+            ],
+            "title": "Body",
+            "description": "Celestial body ('moon', 'mars', or 'earth')"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Human-readable site or region name"
+          },
+          "region": {
+            "type": "string",
+            "title": "Region",
+            "description": "Physiographic or planetary region"
+          },
+          "lat": {
+            "type": "number",
+            "title": "Lat",
+            "description": "Latitude in decimal degrees"
+          },
+          "lon": {
+            "type": "number",
+            "title": "Lon",
+            "description": "Longitude in decimal degrees"
+          },
+          "elevation_m": {
+            "type": "number",
+            "title": "Elevation M",
+            "description": "Mean datum elevation in meters"
+          },
+          "is_curated_site": {
+            "type": "boolean",
+            "title": "Is Curated Site",
+            "description": "True if curated target/analog site, False if background grid cell",
+            "default": true
+          },
+          "is_known_analog": {
+            "type": "boolean",
+            "title": "Is Known Analog",
+            "description": "True if established benchmark analog, False if newly surfaced candidate",
+            "default": false
+          },
+          "analog_category": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Analog Category",
+            "description": "Analog classification or discovery tier"
+          },
+          "mission_relevance": {
+            "type": "string",
+            "title": "Mission Relevance",
+            "description": "Scientific and operational rationale for permanent base / analog testing"
+          },
+          "topography": {
+            "$ref": "#/components/schemas/TopographyFingerprint"
+          },
+          "geology_fractions": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Geology Fractions",
+            "description": "Fractional coverage across the 7 harmonized cross-planet lithology classes"
+          },
+          "mineralogy": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Mineralogy",
+            "description": "Relative abundance across the 9 shared mineral dimensions (None if unobserved)"
+          },
+          "flags": {
+            "$ref": "#/components/schemas/EnvironmentalFlags"
+          }
+        },
+        "type": "object",
+        "required": [
+          "site_id",
+          "cell_id",
+          "body",
+          "name",
+          "region",
+          "lat",
+          "lon",
+          "elevation_m",
+          "mission_relevance",
+          "topography",
+          "geology_fractions",
+          "mineralogy",
+          "flags"
+        ],
+        "title": "PlanetarySite",
+        "description": "Complete multi-planetary fingerprint for a Moon, Mars, or Earth location."
+      },
+      "ScoreBreakdown": {
+        "properties": {
+          "overall_score": {
+            "type": "number",
+            "title": "Overall Score",
+            "description": "Weighted composite similarity score (0 to 1)"
+          },
+          "overall_pct": {
+            "type": "number",
+            "title": "Overall Pct",
+            "description": "Weighted composite match percentage (0 to 100)"
+          },
+          "topography_score": {
+            "type": "number",
+            "title": "Topography Score",
+            "description": "Gaussian kernel score on robust z-scores"
+          },
+          "geology_score": {
+            "type": "number",
+            "title": "Geology Score",
+            "description": "Bilinear lithology similarity matrix score"
+          },
+          "mineralogy_score": {
+            "type": "number",
+            "title": "Mineralogy Score",
+            "description": "Masked cosine similarity on shared minerals"
+          },
+          "compared_mineral_dimensions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Compared Mineral Dimensions",
+            "description": "Mineral dimensions present in both target and Earth site"
+          }
+        },
+        "type": "object",
+        "required": [
+          "overall_score",
+          "overall_pct",
+          "topography_score",
+          "geology_score",
+          "mineralogy_score",
+          "compared_mineral_dimensions"
+        ],
+        "title": "ScoreBreakdown",
+        "description": "Normalized similarity scores in [0, 1] and percentage [0, 100]."
+      },
+      "SimilarityWeights": {
+        "properties": {
+          "topography": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Topography",
+            "description": "Weight for topography",
+            "default": 0.45
+          },
+          "geology": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Geology",
+            "description": "Weight for geology",
+            "default": 0.35
+          },
+          "mineralogy": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Mineralogy",
+            "description": "Weight for mineralogy (semi-quantitative indicator)",
+            "default": 0.2
+          }
+        },
+        "type": "object",
+        "title": "SimilarityWeights",
+        "description": "User-adjustable weights across the three planetary comparison families."
+      },
+      "SingleLaserProfile": {
+        "properties": {
+          "cell_id": {
+            "type": "string",
+            "title": "Cell Id"
+          },
+          "site_id": {
+            "type": "string",
+            "title": "Site Id"
+          },
+          "body": {
+            "type": "string",
+            "enum": [
+              "moon",
+              "mars",
+              "earth"
+            ],
+            "title": "Body"
+          },
+          "instrument": {
+            "type": "string",
+            "title": "Instrument"
+          },
+          "granule_id": {
+            "type": "string",
+            "title": "Granule Id"
+          },
+          "points": {
+            "items": {
+              "$ref": "#/components/schemas/LaserProfilePoint"
+            },
+            "type": "array",
+            "title": "Points"
+          },
+          "stats": {
+            "$ref": "#/components/schemas/LaserProfileStats"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cell_id",
+          "site_id",
+          "body",
+          "instrument",
+          "granule_id",
+          "points",
+          "stats"
+        ],
+        "title": "SingleLaserProfile"
+      },
+      "TaxonomyResponse": {
+        "properties": {
+          "window_size_km": {
+            "type": "number",
+            "title": "Window Size Km"
+          },
+          "resampled_gsd_m": {
+            "type": "number",
+            "title": "Resampled Gsd M"
+          },
+          "topography_features": {
+            "items": {
+              "$ref": "#/components/schemas/DimensionSpec"
+            },
+            "type": "array",
+            "title": "Topography Features"
+          },
+          "lithology_classes": {
+            "items": {
+              "$ref": "#/components/schemas/LithologyClassSpec"
+            },
+            "type": "array",
+            "title": "Lithology Classes"
+          },
+          "lithology_similarity_matrix": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Lithology Similarity Matrix"
+          },
+          "mineral_dimensions": {
+            "items": {
+              "$ref": "#/components/schemas/DimensionSpec"
+            },
+            "type": "array",
+            "title": "Mineral Dimensions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "window_size_km",
+          "resampled_gsd_m",
+          "topography_features",
+          "lithology_classes",
+          "lithology_similarity_matrix",
+          "mineral_dimensions"
+        ],
+        "title": "TaxonomyResponse",
+        "description": "Harmonized cross-planetary taxonomy, feature normalization stats, and similarity matrix."
+      },
+      "TopographyFingerprint": {
+        "properties": {
+          "relief_m": {
+            "type": "number",
+            "title": "Relief M",
+            "description": "Local relief (p95 - p5 elevation) in meters"
+          },
+          "slope_mean_deg": {
+            "type": "number",
+            "title": "Slope Mean Deg",
+            "description": "Mean window slope in degrees"
+          },
+          "slope_p90_deg": {
+            "type": "number",
+            "title": "Slope P90 Deg",
+            "description": "90th percentile slope in degrees"
+          },
+          "ruggedness_tri_m": {
+            "type": "number",
+            "title": "Ruggedness Tri M",
+            "description": "Terrain Ruggedness Index (TRI) in meters"
+          },
+          "roughness_rms_m": {
+            "type": "number",
+            "title": "Roughness Rms M",
+            "description": "Planar-detrended RMS surface roughness in meters"
+          },
+          "hypsometric_integral": {
+            "type": "number",
+            "title": "Hypsometric Integral",
+            "description": "Hypsometric integral (mean - min) / (max - min)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "relief_m",
+          "slope_mean_deg",
+          "slope_p90_deg",
+          "ruggedness_tri_m",
+          "roughness_rms_m",
+          "hypsometric_integral"
+        ],
+        "title": "TopographyFingerprint",
+        "description": "Fixed-scale (500m GSD, 25km window) topographic metrics."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
       }
     }
   }
