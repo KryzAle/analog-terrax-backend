@@ -956,6 +956,115 @@
         ],
         "title": "Atl03SampledBeam"
       },
+      "CmrGranuleRef": {
+        "properties": {
+          "short_name": {
+            "type": "string",
+            "title": "Short Name"
+          },
+          "concept_id": {
+            "type": "string",
+            "title": "Concept Id"
+          },
+          "granule_id": {
+            "type": "string",
+            "title": "Granule Id"
+          },
+          "time_start": {
+            "type": "string",
+            "title": "Time Start"
+          },
+          "https_url": {
+            "type": "string",
+            "title": "Https Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "short_name",
+          "concept_id",
+          "granule_id",
+          "time_start",
+          "https_url"
+        ],
+        "title": "CmrGranuleRef"
+      },
+      "Dem2dTopography": {
+        "properties": {
+          "source_tile_url": {
+            "type": "string",
+            "title": "Source Tile Url"
+          },
+          "window_size_km": {
+            "type": "number",
+            "title": "Window Size Km"
+          },
+          "resampled_grid_shape": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Resampled Grid Shape"
+          },
+          "resampled_gsd_m": {
+            "type": "number",
+            "title": "Resampled Gsd M"
+          },
+          "mean_elevation_m": {
+            "type": "number",
+            "title": "Mean Elevation M"
+          },
+          "min_elevation_m": {
+            "type": "number",
+            "title": "Min Elevation M"
+          },
+          "max_elevation_m": {
+            "type": "number",
+            "title": "Max Elevation M"
+          },
+          "relief_m": {
+            "type": "number",
+            "title": "Relief M"
+          },
+          "slope_mean_deg": {
+            "type": "number",
+            "title": "Slope Mean Deg"
+          },
+          "slope_p90_deg": {
+            "type": "number",
+            "title": "Slope P90 Deg"
+          },
+          "ruggedness_tri_m": {
+            "type": "number",
+            "title": "Ruggedness Tri M"
+          },
+          "roughness_rms_m": {
+            "type": "number",
+            "title": "Roughness Rms M"
+          },
+          "hypsometric_integral": {
+            "type": "number",
+            "title": "Hypsometric Integral"
+          }
+        },
+        "type": "object",
+        "required": [
+          "source_tile_url",
+          "window_size_km",
+          "resampled_grid_shape",
+          "resampled_gsd_m",
+          "mean_elevation_m",
+          "min_elevation_m",
+          "max_elevation_m",
+          "relief_m",
+          "slope_mean_deg",
+          "slope_p90_deg",
+          "ruggedness_tri_m",
+          "roughness_rms_m",
+          "hypsometric_integral"
+        ],
+        "title": "Dem2dTopography"
+      },
       "DimensionSpec": {
         "properties": {
           "id": {
@@ -1007,6 +1116,27 @@
         ],
         "title": "DimensionSpec"
       },
+      "EarthMultiSourceProvenance": {
+        "properties": {
+          "topography_2d_dem": {
+            "$ref": "#/components/schemas/Dem2dTopography"
+          },
+          "geology_macrostrat": {
+            "$ref": "#/components/schemas/MacrostratGeology"
+          },
+          "earthdata_satellites": {
+            "$ref": "#/components/schemas/EarthdataSatellitesBundle"
+          }
+        },
+        "type": "object",
+        "required": [
+          "topography_2d_dem",
+          "geology_macrostrat",
+          "earthdata_satellites"
+        ],
+        "title": "EarthMultiSourceProvenance",
+        "description": "Real multi-source Earth extraction provenance (2D DEM, Macrostrat Geology API, NASA EMIT/MODIS/NASADEM)."
+      },
       "EarthdataAtl03Record": {
         "properties": {
           "site_id": {
@@ -1057,6 +1187,16 @@
             },
             "type": "array",
             "title": "Photons"
+          },
+          "earth_provenance": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EarthMultiSourceProvenance"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "type": "object",
@@ -1150,6 +1290,147 @@
         ],
         "title": "EarthdataGranuleSummary",
         "description": "Summary of the real NASA Earthdata ATLAS/ICESat-2 L2A (ATL03 v007) granule extracted for an Earth site."
+      },
+      "EarthdataSatellitesBundle": {
+        "properties": {
+          "dem_granule": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CmrGranuleRef"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "modis_ndvi_granule": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CmrGranuleRef"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "modis_cryosphere_granule": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CmrGranuleRef"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "emit_mineralogy_granule": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CmrGranuleRef"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "emit_streamed_mineralogy": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EmitStreamedMineralogy"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "EarthdataSatellitesBundle"
+      },
+      "EmitDetectedMineral": {
+        "properties": {
+          "mineral_id": {
+            "type": "integer",
+            "title": "Mineral Id"
+          },
+          "mineral_name": {
+            "type": "string",
+            "title": "Mineral Name"
+          },
+          "pixel_count": {
+            "type": "integer",
+            "title": "Pixel Count"
+          },
+          "mean_band_depth": {
+            "type": "number",
+            "title": "Mean Band Depth"
+          }
+        },
+        "type": "object",
+        "required": [
+          "mineral_id",
+          "mineral_name",
+          "pixel_count",
+          "mean_band_depth"
+        ],
+        "title": "EmitDetectedMineral"
+      },
+      "EmitStreamedMineralogy": {
+        "properties": {
+          "granule_id": {
+            "type": "string",
+            "title": "Granule Id"
+          },
+          "concept_id": {
+            "type": "string",
+            "title": "Concept Id"
+          },
+          "https_url": {
+            "type": "string",
+            "title": "Https Url"
+          },
+          "window_shape": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Window Shape"
+          },
+          "group_1_mean_band_depth": {
+            "type": "number",
+            "title": "Group 1 Mean Band Depth"
+          },
+          "group_2_mean_band_depth": {
+            "type": "number",
+            "title": "Group 2 Mean Band Depth"
+          },
+          "top_group_1_minerals": {
+            "items": {
+              "$ref": "#/components/schemas/EmitDetectedMineral"
+            },
+            "type": "array",
+            "title": "Top Group 1 Minerals"
+          },
+          "top_group_2_minerals": {
+            "items": {
+              "$ref": "#/components/schemas/EmitDetectedMineral"
+            },
+            "type": "array",
+            "title": "Top Group 2 Minerals"
+          }
+        },
+        "type": "object",
+        "required": [
+          "granule_id",
+          "concept_id",
+          "https_url",
+          "window_shape",
+          "group_1_mean_band_depth",
+          "group_2_mean_band_depth",
+          "top_group_1_minerals",
+          "top_group_2_minerals"
+        ],
+        "title": "EmitStreamedMineralogy"
       },
       "EnvironmentalFlags": {
         "properties": {
@@ -1475,6 +1756,82 @@
         ],
         "title": "LithologyClassSpec"
       },
+      "MacrostratGeology": {
+        "properties": {
+          "api_endpoint": {
+            "type": "string",
+            "title": "Api Endpoint"
+          },
+          "units_count": {
+            "type": "integer",
+            "title": "Units Count"
+          },
+          "mapped_units": {
+            "items": {
+              "$ref": "#/components/schemas/MacrostratUnit"
+            },
+            "type": "array",
+            "title": "Mapped Units"
+          }
+        },
+        "type": "object",
+        "required": [
+          "api_endpoint",
+          "units_count",
+          "mapped_units"
+        ],
+        "title": "MacrostratGeology"
+      },
+      "MacrostratUnit": {
+        "properties": {
+          "map_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Map Id"
+          },
+          "source_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Id"
+          },
+          "unit_name": {
+            "type": "string",
+            "title": "Unit Name"
+          },
+          "age": {
+            "type": "string",
+            "title": "Age"
+          },
+          "lithology": {
+            "type": "string",
+            "title": "Lithology"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "unit_name",
+          "age",
+          "lithology"
+        ],
+        "title": "MacrostratUnit"
+      },
       "PlanetarySite": {
         "properties": {
           "site_id": {
@@ -1590,6 +1947,17 @@
               }
             ],
             "description": "Real NASA Earthdata ICESat-2 ATL03 granule metadata (for curated Earth sites)"
+          },
+          "earth_provenance": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EarthMultiSourceProvenance"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Real multi-source provenance (2D DEM, Macrostrat Geology, NASA EMIT L2B & MODIS)"
           }
         },
         "type": "object",

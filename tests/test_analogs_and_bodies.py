@@ -85,7 +85,7 @@ async def test_heatmap_and_laser_profile_endpoints(async_client: AsyncClient) ->
     )
     assert hm_resp.status_code == 200
     hm_data = hm_resp.json()
-    assert len(hm_data["cells"]) >= 100
+    assert len(hm_data["cells"]) == 14
     assert all(0 <= c["score_uint8"] <= 100 for c in hm_data["cells"])
 
     # Compare real extracted ICESat-2 ATL03 profile (earth_c013 and earth_c001) against Moon Shackleton LOLA
@@ -116,6 +116,13 @@ async def test_earthdata_atl03_endpoints_for_all_14_earth_sites(
         assert gran["concept_id"].endswith("-NSIDC_CPRD")
         assert gran["segment_count"] == 25
         assert gran["photon_sample_count"] == 25
+
+        prov = site["earth_provenance"]
+        assert prov is not None
+        assert prov["topography_2d_dem"]["window_size_km"] == 25.0
+        assert prov["geology_macrostrat"]["units_count"] >= 1
+        assert prov["earthdata_satellites"]["dem_granule"] is not None
+        assert prov["earthdata_satellites"]["modis_ndvi_granule"] is not None
 
     all_ed_resp = await async_client.get("/api/v1/bodies/earth/earthdata")
     assert all_ed_resp.status_code == 200

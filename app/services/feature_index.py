@@ -15,6 +15,7 @@ from app.schemas.planetary import (
     DimensionSpec,
     EarthdataAtl03Record,
     EarthdataGranuleSummary,
+    EarthMultiSourceProvenance,
     EnvironmentalFlags,
     LithologyClassSpec,
     PlanetarySite,
@@ -67,6 +68,12 @@ class FeatureIndexStore:
         atl03_path = data_dir / "earth_icesat2_atl03.json"
         self.earth_atl03_raw: dict[str, dict[str, Any]] = (
             json.loads(atl03_path.read_text(encoding="utf-8")) if atl03_path.exists() else {}
+        )
+        full_real_path = data_dir / "earth_full_real_data.json"
+        self.earth_full_real_raw: dict[str, dict[str, Any]] = (
+            json.loads(full_real_path.read_text(encoding="utf-8"))
+            if full_real_path.exists()
+            else {}
         )
 
         self.lithology_ids: list[str] = [c["id"] for c in self.taxonomy_raw["lithology_classes"]]
@@ -142,6 +149,8 @@ class FeatureIndexStore:
         fl = raw.get("flags", {})
         eg_raw = raw.get("earthdata_granule")
         earthdata_granule = EarthdataGranuleSummary(**eg_raw) if eg_raw else None
+        ep_raw = raw.get("earth_provenance")
+        earth_provenance = EarthMultiSourceProvenance(**ep_raw) if ep_raw else None
         return PlanetarySite(
             site_id=raw["site_id"],
             cell_id=raw["cell_id"],
@@ -165,6 +174,7 @@ class FeatureIndexStore:
                 is_volcanic=bool(fl.get("is_volcanic", False)),
             ),
             earthdata_granule=earthdata_granule,
+            earth_provenance=earth_provenance,
         )
 
     def list_curated_sites(self, body: CelestialBody) -> list[PlanetarySite]:
@@ -219,8 +229,20 @@ class FeatureIndexStore:
             return None
         return SingleLaserProfile(**raw)
 
+    def _attach_provenance_to_atl03(self, rec: dict[str, Any]) -> EarthdataAtl03Record:
+        site_id = rec["site_id"]
+        full_rec = self.earth_full_real_raw.get(site_id)
+        prov = None
+        if full_rec:
+            prov = EarthMultiSourceProvenance(
+                topography_2d_dem=full_rec["topography_2d_dem"],
+                geology_macrostrat=full_rec["geology_macrostrat"],
+                earthdata_satellites=full_rec["earthdata_satellites"],
+            )
+        return EarthdataAtl03Record(**rec, earth_provenance=prov)
+
     def list_earthdata_atl03(self) -> list[EarthdataAtl03Record]:
-        return [EarthdataAtl03Record(**rec) for rec in self.earth_atl03_raw.values()]
+        return [self._attach_provenance_to_atl03(rec) for rec in self.earth_atl03_raw.values()]
 
     def get_earthdata_atl03(self, identifier: str) -> EarthdataAtl03Record | None:
         rec = self.earth_atl03_raw.get(identifier)
@@ -230,7 +252,7 @@ class FeatureIndexStore:
                 rec = self.earth_atl03_raw.get(site.site_id)
         if rec is None:
             return None
-        return EarthdataAtl03Record(**rec)
+        return self._attach_provenance_to_atl03(rec)
 
 
 @lru_cache
