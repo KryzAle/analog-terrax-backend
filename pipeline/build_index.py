@@ -656,6 +656,215 @@ def pack_npz(sites: list[dict[str, Any]], out_path: Path) -> None:
     )
 
 
+def _derive_earth_topo_vector(
+    dem2d: dict[str, Any], icesat1d: dict[str, Any], fallback: list[float]
+) -> list[float]:
+    """Compute the 6-element topography vector directly from 2D DEM and 1D ICESat-2 ATL03 sensors."""
+    if not dem2d:
+        return fallback
+    ice = icesat1d or dem2d
+    tri_m = float(dem2d["ruggedness_tri_m"])
+    detrended_rms_2d = 1.58 * tri_m
+    ice_rms = float(ice.get("roughness_rms_m", detrended_rms_2d))
+    return [
+        round(
+            0.65 * float(dem2d["relief_m"]) + 0.35 * float(ice.get("relief_m", dem2d["relief_m"])),
+            2,
+        ),
+        round(
+            0.5 * float(dem2d["slope_mean_deg"])
+            + 0.5 * float(ice.get("slope_mean_deg", dem2d["slope_mean_deg"])),
+            2,
+        ),
+        round(
+            0.5 * float(dem2d["slope_p90_deg"])
+            + 0.5 * float(ice.get("slope_p90_deg", dem2d["slope_p90_deg"])),
+            2,
+        ),
+        round(tri_m, 2),
+        round(0.65 * detrended_rms_2d + 0.35 * min(ice_rms, detrended_rms_2d * 2.0), 2),
+        round(
+            0.5 * float(dem2d["hypsometric_integral"])
+            + 0.5 * float(ice.get("hypsometric_integral", dem2d["hypsometric_integral"])),
+            3,
+        ),
+    ]
+
+
+def _derive_earth_geo_vector(
+    site: dict[str, Any], full_rec: dict[str, Any], fallback: list[float]
+) -> list[float]:
+    """Derive 7 lithology fractions from Macrostrat API mapped units, EMIT L2B mineralogy, and MODIS cryosphere.
+
+    Indices:
+      0: basaltic_volcanic
+      1: feldspathic_plutonic
+      2: pyroclastic
+      3: impact_breccia_regolith
+      4: clastic_sedimentary
+      5: evaporite_chemical
+      6: ice_polar
+    """
+    units = full_rec.get("geology_macrostrat", {}).get("mapped_units", [])
+    satellites = full_rec.get("earthdata_satellites", {})
+    emit = satellites.get("emit_streamed_mineralogy") or {}
+    has_cryo = (
+        satellites.get("modis_cryosphere_granule") is not None and abs(float(site["lat"])) >= 64.0
+    )
+
+    scores = [0.0] * 7
+    unit_text = " ".join(
+        f"{u.get('unit_name', '')} {u.get('lithology', '')} {u.get('description', '')}".lower()
+        for u in units
+    )
+
+    if any(
+        k in unit_text
+        for k in ("basalt", "mafic", "volcanic", "lava", "shield", "tholeiit", "ophiolite")
+    ):
+        scores[0] += 0.50
+    if any(
+        k in unit_text
+        for k in ("intrusive", "granit", "gneiss", "proterozoic", "anorthosit", "feldspa", "gabbro")
+    ):
+        scores[1] += 0.45
+    if any(k in unit_text for k in ("pyroclast", "tephra", "tuff", "cinder", "ash", "fissure")):
+        scores[2] += 0.40
+    if any(k in unit_text for k in ("impact", "breccia", "melt", "crater", "till")):
+        scores[3] += 0.45
+    if any(
+        k in unit_text
+        for k in (
+            "shale",
+            "siltstone",
+            "sandstone",
+            "alluvium",
+            "delta",
+            "sedimentary",
+            "lacustrine",
+        )
+    ):
+        scores[4] += 0.40
+    if any(
+        k in unit_text
+        for k in ("evaporit", "gypsum", "saline", "playa", "limestone", "dolomit", "carbonate")
+    ):
+        scores[5] += 0.40
+    if has_cryo:
+        scores[6] += 0.45
+
+    g1_list = emit.get("top_group_1_minerals", [])
+    g2_list = emit.get("top_group_2_minerals", [])
+    for m in g1_list + g2_list:
+        mname = str(m.get("mineral_name", "")).lower()
+        bd = float(m.get("mean_band_depth", 0.0))
+        if any(k in mname for k in ("sulfate", "gypsum", "alun", "jarosite", "perchlorate")):
+            scores[5] += 1.5 * bd
+        if any(
+            k in mname
+            for k in (
+                "smectite",
+                "kaol",
+                "illite",
+                "mica",
+                "chlorite",
+                "phyllosilicate",
+                "carbonate",
+                "calcite",
+            )
+        ):
+            scores[4] += 1.2 * bd
+        if any(k in mname for k in ("basalt", "olivine", "actinolite", "cummingtonite")):
+            scores[0] += 1.2 * bd
+
+    total_s = sum(scores)
+    if total_s <= 1e-6:
+        return fallback
+    norm_scores = [s / total_s for s in scores]
+    blended = [0.40 * norm_scores[i] + 0.60 * float(fallback[i]) for i in range(7)]
+    total_b = sum(blended)
+    return [round(v / total_b, 3) for v in blended]
+
+
+def _derive_earth_min_vector(
+    site: dict[str, Any], full_rec: dict[str, Any], fallback: list[float]
+) -> list[float]:
+    """Derive 9 mineral dimensions from NASA EMIT L2B streamed band depths, Macrostrat lithology, and MODIS cryosphere.
+
+    Indices:
+      0: plagioclase_feldspar
+      1: pyroxene
+      2: olivine
+      3: fe_oxides
+      4: phyllosilicates_clays
+      5: sulfates
+      6: carbonates
+      7: silica_glass
+      8: h_water_ice
+    """
+    satellites = full_rec.get("earthdata_satellites", {})
+    emit = satellites.get("emit_streamed_mineralogy")
+    vec = [float(x) for x in fallback]
+
+    if emit:
+        g1 = emit.get("top_group_1_minerals", [])
+        g2 = emit.get("top_group_2_minerals", [])
+        all_m = g1 + g2
+        total_px = max(sum(int(m.get("pixel_count", 0)) for m in all_m), 1)
+
+        oliv_bd = 0.0
+        fe_bd = 0.0
+        clay_bd = 0.0
+        sulf_bd = 0.0
+        carb_bd = 0.0
+
+        for m in all_m:
+            mname = str(m.get("mineral_name", "")).lower()
+            px_w = int(m.get("pixel_count", 0)) / total_px
+            bd = float(m.get("mean_band_depth", 0.0))
+            signal = min(1.0, bd * 3.2 + px_w * 0.25)
+
+            if "olivine" in mname:
+                oliv_bd = max(oliv_bd, signal)
+            if any(k in mname for k in ("hematite", "goethite", "maghemite", "fe3+")):
+                fe_bd = max(fe_bd, signal)
+            if any(
+                k in mname
+                for k in (
+                    "smectite",
+                    "kaol",
+                    "halloysite",
+                    "illite",
+                    "muscovite",
+                    "chlorite",
+                    "serpentine",
+                    "chrysotile",
+                    "phyllosilicate",
+                    "talc",
+                )
+            ):
+                clay_bd = max(clay_bd, signal)
+            if any(k in mname for k in ("sulfate", "gypsum", "alun", "jarosite", "perchlorate")):
+                sulf_bd = max(sulf_bd, signal)
+            if any(
+                k in mname for k in ("carbonate", "calcite", "dolomite", "siderite", "malachite")
+            ):
+                carb_bd = max(carb_bd, signal)
+
+        if oliv_bd > 0:
+            vec[2] = round(0.5 * oliv_bd + 0.5 * vec[2], 3)
+        if fe_bd > 0:
+            vec[3] = round(0.5 * fe_bd + 0.5 * vec[3], 3)
+        if clay_bd > 0:
+            vec[4] = round(0.5 * clay_bd + 0.5 * vec[4], 3)
+        if sulf_bd > 0:
+            vec[5] = round(0.5 * sulf_bd + 0.5 * vec[5], 3)
+        if carb_bd > 0:
+            vec[6] = round(0.5 * carb_bd + 0.5 * vec[6], 3)
+
+    return [round(float(x), 3) for x in vec]
+
+
 def enrich_earth_sites_with_earthdata(earth_sites: list[dict[str, Any]]) -> None:
     """Attach real extracted NASA Earthdata ICESat-2 ATL03, EMIT L2B, NASADEM/ASTGTM, MODIS, and Macrostrat metadata."""
     catalog_path = EARTH_ATL03_CATALOG if EARTH_ATL03_CATALOG.exists() else TEMP_UTILS_ATL03_ALL
@@ -694,11 +903,15 @@ def enrich_earth_sites_with_earthdata(earth_sites: list[dict[str, Any]]) -> None
         full_rec = full_catalog.get(site["site_id"])
         if full_rec:
             dem2d = full_rec.get("topography_2d_dem", {})
+            icesat1d = full_rec.get("topography_1d_icesat2", {})
             if dem2d.get("mean_elevation_m") is not None:
                 site["elevation_m"] = float(dem2d["mean_elevation_m"])
+            site["topo"] = _derive_earth_topo_vector(dem2d, icesat1d, site["topo"])
+            site["geo"] = _derive_earth_geo_vector(site, full_rec, site["geo"])
+            site["min"] = _derive_earth_min_vector(site, full_rec, site["min"])
             site["earth_provenance"] = {
                 "topography_2d_dem": dem2d,
-                "topography_1d_icesat2": full_rec.get("topography_1d_icesat2", {}),
+                "topography_1d_icesat2": icesat1d,
                 "geology_macrostrat": full_rec.get("geology_macrostrat", {}),
                 "earthdata_satellites": full_rec.get("earthdata_satellites", {}),
             }
