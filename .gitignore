@@ -19,18 +19,17 @@ venv/
 .vercel
 .env*
 
-# Research rasters and catalogs are regenerable; keep processed outputs tracked
-# because the deployed application consumes them.
+# Research rasters and catalogs are regenerable.
 /data/
 app/data/raw/
 app/data/extras/
 app/data/processed/*
-!app/data/processed/topography_sites_25km.csv
-!app/data/processed/geology_sites.csv
-app/data/processed/mineralogy_sites.csv
 !app/data/processed/moon_mars_full_real_data_features.json
 !app/data/processed/engine_features.csv
 app/data/catalogs/
 app/data/reference/
 app/data/input/*
 !app/data/input/sites.csv
+
+# Jupyter notebooks
+*.ipynb
