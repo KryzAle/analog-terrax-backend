@@ -8,32 +8,32 @@
       "region": "Lunar South Pole (89.9\u00b0S)",
       "lat": -89.54,
       "lon": 129.78,
-      "elevation_m": 2150.0,
+      "elevation_m": -10.16,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "Peaks of near-eternal sunlight adjacent to permanently shadowed water-ice cold traps; steep rugged highland rim.",
       "topo": [
-        1850.0,
-        15.8,
-        28.4,
-        42.5,
-        68.0,
-        0.54
+        2630.66,
+        16.9,
+        29.72,
+        70.78,
+        488.9,
+        0.583
       ],
       "geo": [
-        0.05,
-        0.35,
+        0.071,
+        0.421,
         0.0,
-        0.35,
+        0.296,
         0.0,
         0.0,
-        0.25
+        0.211
       ],
       "min": [
-        0.68,
-        0.12,
-        0.04,
-        0.03,
+        0.727,
+        0.109,
+        0.079,
+        0.022,
         -1.0,
         -1.0,
         -1.0,
@@ -45,6 +45,118 @@
         "is_impact": true,
         "has_ice": true,
         "is_volcanic": false
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "LRO-L-LOLA-4-GDR-V1.0",
+          "granule_id": "LDEM_80S_80M.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/POLAR/IMG/LDEM_80S_80M.IMG",
+          "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/POLAR/IMG/LDEM_80S_80M.LBL",
+          "native_gsd_m": 80.0,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": -10.16,
+          "min_elevation_m": -2846.96,
+          "max_elevation_m": 1532.63,
+          "relief_m": 3801.64,
+          "slope_mean_deg": 18.56,
+          "slope_p90_deg": 31.71,
+          "ruggedness_tri_m": 113.19,
+          "roughness_rms_m": 1120.25,
+          "hypsometric_integral": 0.648
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/earth/moon_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MOON_POLY&BBOX=114.7800,-90.0000,144.7800,-87.0400&MAXFEATURES=8",
+          "features_count": 2,
+          "mapped_features": [
+            {
+              "feature_id": "15325",
+              "feature_name": "Slater",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 25.12,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "5450",
+              "feature_name": "Shackleton",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 20.92,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "LP-L-GRS-5-ELEM-ABUNDANCE-V1.0",
+          "product_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.tab",
+          "label_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.lbl",
+          "min_lat": -90.0,
+          "max_lat": -87.5,
+          "min_lon": -180.0,
+          "max_lon": 180.0,
+          "atomic_mass": 21.609,
+          "neutron_density": 1.5344e-06,
+          "mgo_wt_pct": 7.621,
+          "al2o3_wt_pct": 28.67,
+          "sio2_wt_pct": 44.507,
+          "cao_wt_pct": 15.633,
+          "tio2_wt_pct": 0.167,
+          "feo_wt_pct": 4.943,
+          "k_ppm": 433.89,
+          "th_ppm": 0.792,
+          "u_ppm": 0.2151
+        },
+        "pds_orbital_products": {
+          "m3_reflectance": {
+            "found": true,
+            "instrument": "CH1-ORB/M3/REFIMG",
+            "product_id": "M3G20090131T112714_V01_L2",
+            "start_time": "2009-01-31T11:27:14.000",
+            "comment": "",
+            "label_url": "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200901/L2/M3G20090131T112714_V01_L2.LBL",
+            "ode_page": "http://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=M3G20090131T112714_V01_RFL&product_idGeo=13446943",
+            "file_urls": [
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200901/L2/M3G20090131T112714_V01_L2.LBL",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200901/L2/M3G20090131T112714_V01_RFL.IMG",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200901/L2/M3G20090131T112714_V01_SUP.IMG"
+            ]
+          },
+          "diviner_gdr": {
+            "found": true,
+            "instrument": "LRO/DLRE/GDR_L3",
+            "product_id": "dgdr_tbol_avg_cyl_20090705d_001_img.img",
+            "start_time": "2009-07-05T16:00:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_tbol_avg_cyl_20090705d_001_img.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=dgdr_tbol_avg_cyl_20090705d_001_img&product_idGeo=37701156",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_tbol_avg_cyl_20090705d_001_img.img",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_tbol_avg_cyl_20090705d_001_img.lbl",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_tbol_avg_cyl_20090705d_001_img.xml"
+            ]
+          },
+          "lola_gdr": {
+            "found": true,
+            "instrument": "LRO/LOLA/GDRDEM",
+            "product_id": "ldem_128_float.img",
+            "start_time": "2009-07-13T17:33:17Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=ldem_128_float&product_idGeo=33197296",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.img",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.lbl",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
+            ]
+          }
+        }
       }
     },
     {
@@ -55,32 +167,32 @@
       "region": "Oceanus Procellarum",
       "lat": 14.09,
       "lon": -56.77,
-      "elevation_m": -1820.0,
+      "elevation_m": -1495.99,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "Subsurface basaltic lava tube skylight offering natural radiation shielding and stable thermal environment for permanent habitats.",
       "topo": [
-        310.0,
-        4.2,
-        9.8,
-        11.4,
-        18.5,
-        0.42
+        280.6,
+        3.06,
+        6.98,
+        9.91,
+        27.28,
+        0.465
       ],
       "geo": [
-        0.78,
-        0.02,
-        0.15,
-        0.05,
+        0.732,
+        0.023,
+        0.199,
+        0.046,
         0.0,
         0.0,
         0.0
       ],
       "min": [
-        0.28,
-        0.44,
-        0.18,
-        0.22,
+        0.169,
+        0.459,
+        0.162,
+        0.341,
         -1.0,
         -1.0,
         -1.0,
@@ -92,6 +204,172 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "LRO-L-LOLA-4-GDR-V1.0",
+          "granule_id": "LDEM_64.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.IMG",
+          "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.LBL",
+          "native_gsd_m": 473.802,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": -1495.99,
+          "min_elevation_m": -1683.8,
+          "max_elevation_m": -1330.86,
+          "relief_m": 236.49,
+          "slope_mean_deg": 1.35,
+          "slope_p90_deg": 2.74,
+          "ruggedness_tri_m": 7.67,
+          "roughness_rms_m": 40.46,
+          "hypsometric_integral": 0.532
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/earth/moon_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MOON_POLY&BBOX=-59.3475,11.5900,-54.1925,16.5900&MAXFEATURES=8",
+          "features_count": 8,
+          "mapped_features": [
+            {
+              "feature_id": "11185",
+              "feature_name": "Marius L",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 6.93,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "11189",
+              "feature_name": "Marius Q",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 4.89,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "9754",
+              "feature_name": "Hayford T",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 30.24,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "9755",
+              "feature_name": "Hayford U",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 20.49,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "9296",
+              "feature_name": "Galilaei L",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 3.37,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "9297",
+              "feature_name": "Galilaei M",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 3.24,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "4395",
+              "feature_name": "Oceanus Procellarum",
+              "feature_type": "Oceanus, oceani",
+              "code": "OC",
+              "diameter_km": 2592.24,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "5061",
+              "feature_name": "Rima Galilaei",
+              "feature_type": "Rima, rimae",
+              "code": "RI",
+              "diameter_km": 185.88,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POINT"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "LP-L-GRS-5-ELEM-ABUNDANCE-V1.0",
+          "product_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.tab",
+          "label_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.lbl",
+          "min_lat": 12.5,
+          "max_lat": 17.5,
+          "min_lon": -60.0,
+          "max_lon": -55.0,
+          "atomic_mass": 23.62,
+          "neutron_density": 6.6166e-07,
+          "mgo_wt_pct": 8.447,
+          "al2o3_wt_pct": 1.202,
+          "sio2_wt_pct": 38.669,
+          "cao_wt_pct": 11.467,
+          "tio2_wt_pct": 6.978,
+          "feo_wt_pct": 25.09,
+          "k_ppm": 1492.2,
+          "th_ppm": 3.491,
+          "u_ppm": 0.952
+        },
+        "pds_orbital_products": {
+          "m3_reflectance": {
+            "found": true,
+            "instrument": "CH1-ORB/M3/REFIMG",
+            "product_id": "M3G20090113T183344_V01_L2",
+            "start_time": "2009-01-13T18:33:44.000",
+            "comment": "",
+            "label_url": "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200901/L2/M3G20090113T183344_V01_L2.LBL",
+            "ode_page": "http://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=M3G20090113T183344_V01_RFL&product_idGeo=13446925",
+            "file_urls": [
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200901/L2/M3G20090113T183344_V01_L2.LBL",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200901/L2/M3G20090113T183344_V01_RFL.IMG",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200901/L2/M3G20090113T183344_V01_SUP.IMG"
+            ]
+          },
+          "diviner_gdr": {
+            "found": true,
+            "instrument": "LRO/DLRE/GDR_L3",
+            "product_id": "dgdr_ra_clc_cyl_20090705n_128_img.img",
+            "start_time": "2009-07-05T17:00:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=dgdr_ra_clc_cyl_20090705n_128_img&product_idGeo=37701108",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.img",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.lbl",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.xml"
+            ]
+          },
+          "lola_gdr": {
+            "found": true,
+            "instrument": "LRO/LOLA/GDRDEM",
+            "product_id": "ldem_128_float.img",
+            "start_time": "2009-07-13T17:33:17Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=ldem_128_float&product_idGeo=33197296",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.img",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.lbl",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
+            ]
+          }
+        }
       }
     },
     {
@@ -102,32 +380,32 @@
       "region": "Northwest Nearside Highlands/Mare Boundary",
       "lat": 24.55,
       "lon": -51.4,
-      "elevation_m": 450.0,
+      "elevation_m": -965.68,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "Largest lunar dark-mantle pyroclastic deposit; prime target for oxygen ISRU from iron/titanium-rich volcanic glass.",
       "topo": [
-        920.0,
-        8.6,
-        17.2,
-        24.0,
-        39.0,
-        0.48
+        801.92,
+        6.26,
+        12.94,
+        20.78,
+        60.52,
+        0.437
       ],
       "geo": [
-        0.3,
-        0.1,
-        0.5,
-        0.1,
+        0.333,
+        0.134,
+        0.402,
+        0.131,
         0.0,
         0.0,
         0.0
       ],
       "min": [
-        0.22,
-        0.32,
-        0.16,
-        0.28,
+        0.271,
+        0.367,
+        0.183,
+        0.284,
         -1.0,
         -1.0,
         -1.0,
@@ -139,6 +417,181 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "LRO-L-LOLA-4-GDR-V1.0",
+          "granule_id": "LDEM_64.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.IMG",
+          "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.LBL",
+          "native_gsd_m": 473.802,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": -965.68,
+          "min_elevation_m": -1331.54,
+          "max_elevation_m": -351.43,
+          "relief_m": 624.8,
+          "slope_mean_deg": 2.75,
+          "slope_p90_deg": 6.54,
+          "ruggedness_tri_m": 15.94,
+          "roughness_rms_m": 92.79,
+          "hypsometric_integral": 0.373
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/earth/moon_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MOON_POLY&BBOX=-54.1485,22.0500,-48.6515,27.0500&MAXFEATURES=8",
+          "features_count": 9,
+          "mapped_features": [
+            {
+              "feature_id": "9921",
+              "feature_name": "Herodotus H",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 6.22,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "9920",
+              "feature_name": "Herodotus G",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 3.51,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "9922",
+              "feature_name": "Herodotus K",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 4.72,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "9923",
+              "feature_name": "Herodotus L",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 3.93,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "9924",
+              "feature_name": "Herodotus N",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 4.32,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "4395",
+              "feature_name": "Oceanus Procellarum",
+              "feature_type": "Oceanus, oceani",
+              "code": "OC",
+              "diameter_km": 2592.24,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "2475",
+              "feature_name": "Herodotus",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 35.87,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "2022",
+              "feature_name": "Freud",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 2.85,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "6300",
+              "feature_name": "Vallis Schroteri",
+              "feature_type": "Vallis, valles",
+              "code": "VA",
+              "diameter_km": 185.32,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POINT"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "LP-L-GRS-5-ELEM-ABUNDANCE-V1.0",
+          "product_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.tab",
+          "label_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.lbl",
+          "min_lat": 22.5,
+          "max_lat": 27.5,
+          "min_lon": -55.0,
+          "max_lon": -50.0,
+          "atomic_mass": 23.116,
+          "neutron_density": 6.6105e-07,
+          "mgo_wt_pct": 12.719,
+          "al2o3_wt_pct": 12.16,
+          "sio2_wt_pct": 34.206,
+          "cao_wt_pct": 12.886,
+          "tio2_wt_pct": 4.112,
+          "feo_wt_pct": 22.053,
+          "k_ppm": 2969.1,
+          "th_ppm": 7.181,
+          "u_ppm": 1.9593
+        },
+        "pds_orbital_products": {
+          "m3_reflectance": {
+            "found": true,
+            "instrument": "CH1-ORB/M3/REFIMG",
+            "product_id": "M3G20090516T040653_V01_L2",
+            "start_time": "2009-05-16T04:06:53.000",
+            "comment": "",
+            "label_url": "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20090415_20090816/200905/L2/M3G20090516T040653_V01_L2.LBL",
+            "ode_page": "http://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=M3G20090516T040653_V01_RFL&product_idGeo=13447392",
+            "file_urls": [
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20090415_20090816/200905/L2/M3G20090516T040653_V01_L2.LBL",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20090415_20090816/200905/L2/M3G20090516T040653_V01_RFL.IMG",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20090415_20090816/200905/L2/M3G20090516T040653_V01_SUP.IMG"
+            ]
+          },
+          "diviner_gdr": {
+            "found": true,
+            "instrument": "LRO/DLRE/GDR_L3",
+            "product_id": "dgdr_ra_clc_cyl_20090705n_128_img.img",
+            "start_time": "2009-07-05T17:00:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=dgdr_ra_clc_cyl_20090705n_128_img&product_idGeo=37701108",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.img",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.lbl",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.xml"
+            ]
+          },
+          "lola_gdr": {
+            "found": true,
+            "instrument": "LRO/LOLA/GDRDEM",
+            "product_id": "ldem_128_float.img",
+            "start_time": "2009-07-13T17:33:17Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=ldem_128_float&product_idGeo=33197296",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.img",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.lbl",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
+            ]
+          }
+        }
       }
     },
     {
@@ -149,32 +602,32 @@
       "region": "Lunar South Pole",
       "lat": -88.45,
       "lon": -68.3,
-      "elevation_m": 1680.0,
+      "elevation_m": 95.72,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "Anorthositic impact-cratered ridge bordering deep cryogenic PSRs with high H-index signatures.",
       "topo": [
-        1620.0,
-        14.1,
-        25.6,
-        38.0,
-        59.5,
-        0.51
+        1921.69,
+        13.22,
+        22.86,
+        50.58,
+        287.78,
+        0.486
       ],
       "geo": [
+        0.043,
+        0.47,
         0.0,
-        0.42,
-        0.0,
-        0.38,
+        0.317,
         0.0,
         0.0,
-        0.2
+        0.171
       ],
       "min": [
-        0.74,
-        0.1,
-        0.03,
-        0.02,
+        0.76,
+        0.098,
+        0.074,
+        0.016,
         -1.0,
         -1.0,
         -1.0,
@@ -186,6 +639,163 @@
         "is_impact": true,
         "has_ice": true,
         "is_volcanic": false
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "LRO-L-LOLA-4-GDR-V1.0",
+          "granule_id": "LDEM_80S_80M.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/POLAR/IMG/LDEM_80S_80M.IMG",
+          "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/POLAR/IMG/LDEM_80S_80M.LBL",
+          "native_gsd_m": 80.0,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": 95.72,
+          "min_elevation_m": -1306.83,
+          "max_elevation_m": 1803.0,
+          "relief_m": 2374.22,
+          "slope_mean_deg": 11.91,
+          "slope_p90_deg": 18.75,
+          "ruggedness_tri_m": 69.46,
+          "roughness_rms_m": 630.21,
+          "hypsometric_integral": 0.451
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/earth/moon_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MOON_POLY&BBOX=-83.3000,-90.0000,-53.3000,-85.9500&MAXFEATURES=8",
+          "features_count": 7,
+          "mapped_features": [
+            {
+              "feature_id": "14534",
+              "feature_name": "Ibn Bajja",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 11.98,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "1439",
+              "feature_name": "de Gerlache",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 32.71,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "953",
+              "feature_name": "Cabeus",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 100.58,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "16008",
+              "feature_name": "Marvin",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 4.6,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "16007",
+              "feature_name": "Spudis",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 13.0,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "5450",
+              "feature_name": "Shackleton",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 20.92,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "16415",
+              "feature_name": "Lacus Tenebrarum",
+              "feature_type": "Lacus, lac\u016bs",
+              "code": "LC",
+              "diameter_km": 85.0,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "LP-L-GRS-5-ELEM-ABUNDANCE-V1.0",
+          "product_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.tab",
+          "label_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.lbl",
+          "min_lat": -90.0,
+          "max_lat": -87.5,
+          "min_lon": -180.0,
+          "max_lon": 180.0,
+          "atomic_mass": 21.609,
+          "neutron_density": 1.5344e-06,
+          "mgo_wt_pct": 7.621,
+          "al2o3_wt_pct": 28.67,
+          "sio2_wt_pct": 44.507,
+          "cao_wt_pct": 15.633,
+          "tio2_wt_pct": 0.167,
+          "feo_wt_pct": 4.943,
+          "k_ppm": 433.89,
+          "th_ppm": 0.792,
+          "u_ppm": 0.2151
+        },
+        "pds_orbital_products": {
+          "m3_reflectance": {
+            "found": true,
+            "instrument": "CH1-ORB/M3/REFIMG",
+            "product_id": "M3G20090201T224531_V01_L2",
+            "start_time": "2009-02-01T22:45:31.000",
+            "comment": "",
+            "label_url": "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200902/L2/M3G20090201T224531_V01_L2.LBL",
+            "ode_page": "http://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=M3G20090201T224531_V01_RFL&product_idGeo=13446959",
+            "file_urls": [
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200902/L2/M3G20090201T224531_V01_L2.LBL",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200902/L2/M3G20090201T224531_V01_RFL.IMG",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200902/L2/M3G20090201T224531_V01_SUP.IMG"
+            ]
+          },
+          "diviner_gdr": {
+            "found": true,
+            "instrument": "LRO/DLRE/GDR_L3",
+            "product_id": "dgdr_tbol_avg_cyl_20090705d_001_img.img",
+            "start_time": "2009-07-05T16:00:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_tbol_avg_cyl_20090705d_001_img.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=dgdr_tbol_avg_cyl_20090705d_001_img&product_idGeo=37701156",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_tbol_avg_cyl_20090705d_001_img.img",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_tbol_avg_cyl_20090705d_001_img.lbl",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_tbol_avg_cyl_20090705d_001_img.xml"
+            ]
+          },
+          "lola_gdr": {
+            "found": true,
+            "instrument": "LRO/LOLA/GDRDEM",
+            "product_id": "ldem_128_float.img",
+            "start_time": "2009-07-13T17:33:17Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=ldem_128_float&product_idGeo=33197296",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.img",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.lbl",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
+            ]
+          }
+        }
       }
     },
     {
@@ -196,32 +806,32 @@
       "region": "Mare Tranquillitatis",
       "lat": 8.33,
       "lon": 33.22,
-      "elevation_m": -2410.0,
+      "elevation_m": -780.33,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "Confirmed radar-imaged overhang and subsurface conduit in flat titanium-rich mare basalts.",
       "topo": [
-        195.0,
-        2.9,
-        6.8,
-        7.8,
-        12.4,
-        0.39
+        140.38,
+        1.89,
+        4.35,
+        5.6,
+        11.76,
+        0.442
       ],
       "geo": [
-        0.85,
-        0.0,
-        0.05,
-        0.1,
+        0.727,
+        0.045,
+        0.047,
+        0.181,
         0.0,
         0.0,
         0.0
       ],
       "min": [
-        0.24,
-        0.42,
-        0.12,
-        0.31,
+        0.186,
+        0.39,
+        0.139,
+        0.399,
         -1.0,
         -1.0,
         -1.0,
@@ -233,6 +843,172 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "LRO-L-LOLA-4-GDR-V1.0",
+          "granule_id": "LDEM_64.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.IMG",
+          "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.LBL",
+          "native_gsd_m": 473.802,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": -780.33,
+          "min_elevation_m": -832.38,
+          "max_elevation_m": -732.11,
+          "relief_m": 58.45,
+          "slope_mean_deg": 0.37,
+          "slope_p90_deg": 0.68,
+          "ruggedness_tri_m": 2.3,
+          "roughness_rms_m": 10.8,
+          "hypsometric_integral": 0.519
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/earth/moon_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MOON_POLY&BBOX=30.6933,5.8300,35.7467,10.8300&MAXFEATURES=8",
+          "features_count": 8,
+          "mapped_features": [
+            {
+              "feature_id": "13114",
+              "feature_name": "Sinas H",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 4.13,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "13111",
+              "feature_name": "Sinas A",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 5.13,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "13112",
+              "feature_name": "Sinas E",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 8.66,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "13113",
+              "feature_name": "Sinas G",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 3.64,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "13115",
+              "feature_name": "Sinas J",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 4.31,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "13116",
+              "feature_name": "Sinas K",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 3.41,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "8177",
+              "feature_name": "Cauchy M",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 3.36,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "5552",
+              "feature_name": "Sinas",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 11.67,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "LP-L-GRS-5-ELEM-ABUNDANCE-V1.0",
+          "product_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.tab",
+          "label_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.lbl",
+          "min_lat": 7.5,
+          "max_lat": 12.5,
+          "min_lon": 30.0,
+          "max_lon": 35.0,
+          "atomic_mass": 23.299,
+          "neutron_density": 7.3847e-07,
+          "mgo_wt_pct": 9.746,
+          "al2o3_wt_pct": 4.367,
+          "sio2_wt_pct": 41.516,
+          "cao_wt_pct": 11.977,
+          "tio2_wt_pct": 7.24,
+          "feo_wt_pct": 18.347,
+          "k_ppm": 763.49,
+          "th_ppm": 1.255,
+          "u_ppm": 0.3416
+        },
+        "pds_orbital_products": {
+          "m3_reflectance": {
+            "found": true,
+            "instrument": "CH1-ORB/M3/REFIMG",
+            "product_id": "M3G20090203T041059_V01_L2",
+            "start_time": "2009-02-03T04:10:59.000",
+            "comment": "",
+            "label_url": "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200902/L2/M3G20090203T041059_V01_L2.LBL",
+            "ode_page": "http://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=M3G20090203T041059_V01_RFL&product_idGeo=13446982",
+            "file_urls": [
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200902/L2/M3G20090203T041059_V01_L2.LBL",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200902/L2/M3G20090203T041059_V01_RFL.IMG",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20081118_20090214/200902/L2/M3G20090203T041059_V01_SUP.IMG"
+            ]
+          },
+          "diviner_gdr": {
+            "found": true,
+            "instrument": "LRO/DLRE/GDR_L3",
+            "product_id": "dgdr_ra_clc_cyl_20090705n_128_img.img",
+            "start_time": "2009-07-05T17:00:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=dgdr_ra_clc_cyl_20090705n_128_img&product_idGeo=37701108",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.img",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.lbl",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.xml"
+            ]
+          },
+          "lola_gdr": {
+            "found": true,
+            "instrument": "LRO/LOLA/GDRDEM",
+            "product_id": "ldem_128_float.img",
+            "start_time": "2009-07-13T17:33:17Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=ldem_128_float&product_idGeo=33197296",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.img",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.lbl",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
+            ]
+          }
+        }
       }
     },
     {
@@ -243,32 +1019,32 @@
       "region": "Lunar Far Side South Polar Region",
       "lat": -75.0,
       "lon": 132.4,
-      "elevation_m": -3200.0,
+      "elevation_m": -4583.17,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "Peak-ring impact basin combining anorthositic uplift, impact melt sheet, and a major pyroclastic cone.",
       "topo": [
-        1340.0,
-        11.4,
-        22.1,
-        31.2,
-        49.0,
-        0.46
+        870.09,
+        7.45,
+        14.58,
+        22.46,
+        51.08,
+        0.56
       ],
       "geo": [
-        0.2,
-        0.25,
-        0.2,
-        0.35,
+        0.167,
+        0.354,
+        0.174,
+        0.304,
         0.0,
         0.0,
         0.0
       ],
       "min": [
-        0.52,
-        0.24,
-        0.14,
-        0.08,
+        0.597,
+        0.177,
+        0.141,
+        0.044,
         -1.0,
         -1.0,
         -1.0,
@@ -280,6 +1056,127 @@
         "is_impact": true,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "LRO-L-LOLA-4-GDR-V1.0",
+          "granule_id": "LDEM_64.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.IMG",
+          "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.LBL",
+          "native_gsd_m": 473.802,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": -4583.17,
+          "min_elevation_m": -4980.7,
+          "max_elevation_m": -4421.35,
+          "relief_m": 165.22,
+          "slope_mean_deg": 1.53,
+          "slope_p90_deg": 3.3,
+          "ruggedness_tri_m": 9.34,
+          "roughness_rms_m": 54.21,
+          "hypsometric_integral": 0.711
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/earth/moon_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MOON_POLY&BBOX=122.7407,-77.5000,142.0593,-72.5000&MAXFEATURES=8",
+          "features_count": 3,
+          "mapped_features": [
+            {
+              "feature_id": "12957",
+              "feature_name": "Schrodinger G",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 5.93,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "7910",
+              "feature_name": "Brashear P",
+              "feature_type": "Satellite Feature",
+              "code": "SF",
+              "diameter_km": 68.65,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            },
+            {
+              "feature_id": "5381",
+              "feature_name": "Schrodinger",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 316.39,
+              "controlnet": "LOLA 2011",
+              "layer": "MOON_POLY"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "LP-L-GRS-5-ELEM-ABUNDANCE-V1.0",
+          "product_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.tab",
+          "label_url": "https://pds-geosciences.wustl.edu/lunar/lp-l-grs-5-elem-abundance-v1/lp_9001/data/lpgrs_high1_elem_abundance_5deg.lbl",
+          "min_lat": -77.5,
+          "max_lat": -72.5,
+          "min_lon": 126.0,
+          "max_lon": 144.0,
+          "atomic_mass": 21.668,
+          "neutron_density": 1.5529e-06,
+          "mgo_wt_pct": 8.513,
+          "al2o3_wt_pct": 25.284,
+          "sio2_wt_pct": 45.222,
+          "cao_wt_pct": 16.341,
+          "tio2_wt_pct": 0.0,
+          "feo_wt_pct": 5.178,
+          "k_ppm": 372.67,
+          "th_ppm": 0.758,
+          "u_ppm": 0.2059
+        },
+        "pds_orbital_products": {
+          "m3_reflectance": {
+            "found": true,
+            "instrument": "CH1-ORB/M3/REFIMG",
+            "product_id": "M3G20090529T100749_V01_L2",
+            "start_time": "2009-05-29T10:07:49.000",
+            "comment": "",
+            "label_url": "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20090415_20090816/200905/L2/M3G20090529T100749_V01_L2.LBL",
+            "ode_page": "http://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=M3G20090529T100749_V01_RFL&product_idGeo=13447402",
+            "file_urls": [
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20090415_20090816/200905/L2/M3G20090529T100749_V01_L2.LBL",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20090415_20090816/200905/L2/M3G20090529T100749_V01_RFL.IMG",
+              "https://planetarydata.jpl.nasa.gov/img/data/m3/CH1M3_0004/DATA/20090415_20090816/200905/L2/M3G20090529T100749_V01_SUP.IMG"
+            ]
+          },
+          "diviner_gdr": {
+            "found": true,
+            "instrument": "LRO/DLRE/GDR_L3",
+            "product_id": "dgdr_ra_clc_cyl_20090705n_128_img.img",
+            "start_time": "2009-07-05T17:00:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=dgdr_ra_clc_cyl_20090705n_128_img&product_idGeo=37701108",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.img",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.lbl",
+              "https://pds-geosciences.wustl.edu/lro/urn-nasa-pds-lro_diviner_derived1/data_derived_gdr_l3/2009/cylindrical/img/dgdr_ra_clc_cyl_20090705n_128_img.xml"
+            ]
+          },
+          "lola_gdr": {
+            "found": true,
+            "instrument": "LRO/LOLA/GDRDEM",
+            "product_id": "ldem_128_float.img",
+            "start_time": "2009-07-13T17:33:17Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/moon/indexproductpage.aspx?product_id=ldem_128_float&product_idGeo=33197296",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.img",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.lbl",
+              "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
+            ]
+          }
+        }
       }
     }
   ],
@@ -292,24 +1189,24 @@
       "region": "Syrtis Major / Isidis Planitia Border",
       "lat": 18.38,
       "lon": 77.58,
-      "elevation_m": -2550.0,
+      "elevation_m": -2597.13,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "Ancient fluvio-lacustrine fan-delta rich in Fe/Mg smectite clays, olivine-carbonate units, and volcanic floor basalts.",
       "topo": [
-        740.0,
-        6.8,
-        15.4,
-        18.9,
-        31.5,
-        0.44
+        627.51,
+        5.43,
+        12.24,
+        16.02,
+        40.59,
+        0.365
       ],
       "geo": [
-        0.25,
-        0.05,
-        0.0,
-        0.2,
-        0.4,
+        0.298,
+        0.041,
+        0.045,
+        0.193,
+        0.323,
         0.1,
         0.0
       ],
@@ -317,9 +1214,9 @@
         0.22,
         0.26,
         0.28,
-        0.16,
-        0.42,
-        0.14,
+        0.221,
+        0.349,
+        0.162,
         0.34,
         0.18,
         0.09
@@ -329,6 +1226,224 @@
         "is_impact": true,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+          "granule_id": "MEGT44N000HB.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n000hb.img",
+          "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n000hb.lbl",
+          "native_gsd_m": 463.0,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": -2597.13,
+          "min_elevation_m": -2716.47,
+          "max_elevation_m": -1869.62,
+          "relief_m": 290.06,
+          "slope_mean_deg": 1.31,
+          "slope_p90_deg": 2.75,
+          "ruggedness_tri_m": 7.39,
+          "roughness_rms_m": 67.84,
+          "hypsometric_integral": 0.141
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/mars/mars_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MARS_POLY&BBOX=74.9456,15.8800,80.2144,20.8800&MAXFEATURES=8",
+          "features_count": 13,
+          "mapped_features": [
+            {
+              "feature_id": "336",
+              "feature_name": "Arabia Terra",
+              "feature_type": "Terra, terrae",
+              "code": "TA",
+              "diameter_km": 4851.74,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "2734",
+              "feature_name": "Isidis Dorsa",
+              "feature_type": "Dorsum, dorsa",
+              "code": "DO",
+              "diameter_km": 1074.7,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "2735",
+              "feature_name": "Isidis Planitia",
+              "feature_type": "Planitia, planitiae",
+              "code": "PL",
+              "diameter_km": 1224.58,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "4271",
+              "feature_name": "Nili Fossae",
+              "feature_type": "Fossa, fossae",
+              "code": "FO",
+              "diameter_km": 727.91,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "5931",
+              "feature_name": "Terra Sabaea",
+              "feature_type": "Terra, terrae",
+              "code": "TA",
+              "diameter_km": 4688.44,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "14191",
+              "feature_name": "Hargraves",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 60.28,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "14300",
+              "feature_name": "Jezero",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 47.52,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "15880",
+              "feature_name": "Nili Planum",
+              "feature_type": "Planum, plana",
+              "code": "PM",
+              "diameter_km": 128.55,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "15904",
+              "feature_name": "Sava Vallis",
+              "feature_type": "Vallis, valles",
+              "code": "VA",
+              "diameter_km": 62.0,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POINT"
+            },
+            {
+              "feature_id": "15871",
+              "feature_name": "Hartwell",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 1.7,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POINT"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "ODY-M-GRS-5-ELEMENTS-V1.0",
+          "base_url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed",
+          "fe_wt_pct": 16.625,
+          "fe_wt_pct_sigma": 0.616,
+          "matched_bin_lat": 17.5,
+          "matched_bin_lon_e": 77.5,
+          "h2o_wt_pct": 3.531,
+          "h2o_wt_pct_sigma": 0.363,
+          "si_wt_pct": 20.605,
+          "si_wt_pct_sigma": 0.441,
+          "cl_wt_pct": 0.389,
+          "cl_wt_pct_sigma": 0.034,
+          "k_wt_pct": 0.316,
+          "k_wt_pct_sigma": 0.023,
+          "th_ppm": 0.599,
+          "th_ppm_sigma": 0.064
+        },
+        "pds_orbital_products": {
+          "crism_mtrdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/MTRDR",
+            "product_id": "hrl000040ff_07_if183j_mtr3.img",
+            "start_time": "2007-01-29T10:48:10.159Z",
+            "comment": "COORD Target - 989 Depositional Fan",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_029/hrl000040ff/hrl000040ff_07_if183j_mtr3.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=hrl000040ff_07_if183j_mtr3&product_idGeo=47360644",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_029/hrl000040ff/hrl000040ff_07_de183l_mtr1.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_029/hrl000040ff/hrl000040ff_07_de183l_mtr1.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_029/hrl000040ff/hrl000040ff_07_de183l_mtr1.xml"
+            ]
+          },
+          "crism_mrdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/MRDR4",
+            "product_id": "t1178_mrral_15n078_0327_4.img",
+            "start_time": "",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc13/t1178_mrral_15n078_0327_4.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=t1178_mrral_15n078_0327_4&product_idGeo=47858141",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc13/t1178_mrral_15n078_0327_4.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc13/t1178_mrral_15n078_0327_4.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc13/t1178_mrral_15n078_0327_4.xml"
+            ]
+          },
+          "crism_trdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/TRDR",
+            "product_id": "msv0005c6ee_01_if150s_trr3.img",
+            "start_time": "2022-05-03T13:41:46.768Z",
+            "comment": "COORD Target - Ride-Along (HiRISE) - 183730 M2020 Perseverance landing site in Jezero Crater",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2022/2022_123/msv0005c6ee/msv0005c6ee_01_if150s_trr3.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=msv0005c6ee_01_if150s_trr3&product_idGeo=50286741",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2022/2022_123/msv0005c6ee/msv0005c6ee_01_if150s_trr3.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2022/2022_123/msv0005c6ee/msv0005c6ee_01_if150s_trr3.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2022/2022_123/msv0005c6ee/msv0005c6ee_01_if150s_trr3.xml"
+            ]
+          },
+          "omega_edr": {
+            "found": true,
+            "instrument": "MEX/OMEGA/EDR",
+            "product_id": "orb2767_0",
+            "start_time": "2006-03-08T08:42:52.013",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mex/mex-m-omega-2-edr-flight-ext-v1/mexomg-0002/data/gem27/orb2767_0.nav",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=ORB2767_0_GEOM&product_idGeo=24393269",
+            "file_urls": []
+          },
+          "themis_ir": {
+            "found": true,
+            "instrument": "ODY/THEMIS/IRPBT2",
+            "product_id": "I55850005PBT",
+            "start_time": "2014-07-17T11:47:26.115",
+            "comment": "",
+            "label_url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i558xxpbt/I55850005PBT.IMG",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=I55850005PBT&product_idGeo=26239625",
+            "file_urls": [
+              "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i558xxpbt/I55850005PBT.IMG"
+            ]
+          },
+          "mola_megdr": {
+            "found": true,
+            "instrument": "MGS/MOLA/MEGDR",
+            "product_id": "mega90n000cb.img",
+            "start_time": "1997-09-15T19:10:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=mega90n000cb&product_idGeo=55579621",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.img",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.lbl",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
+            ]
+          }
+        }
       }
     },
     {
@@ -339,34 +1454,34 @@
       "region": "Northern Lowlands",
       "lat": 39.2,
       "lon": -188.0,
-      "elevation_m": -4100.0,
+      "elevation_m": -3960.99,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "Prime human landing site candidate: flat low-elevation volcanic plains underlain by shallow SHARAD-detected water ice sheets.",
       "topo": [
-        140.0,
-        1.9,
-        4.5,
-        5.2,
-        8.8,
-        0.36
+        113.69,
+        1.46,
+        3.46,
+        4.15,
+        8.12,
+        0.349
       ],
       "geo": [
-        0.45,
+        0.418,
         0.0,
-        0.05,
-        0.1,
-        0.1,
-        0.0,
-        0.3
+        0.041,
+        0.128,
+        0.128,
+        0.037,
+        0.249
       ],
       "min": [
         0.3,
         0.28,
         0.1,
-        0.18,
-        0.08,
-        0.06,
+        0.224,
+        0.178,
+        0.12,
         0.04,
         0.22,
         0.55
@@ -376,6 +1491,179 @@
         "is_impact": false,
         "has_ice": true,
         "is_volcanic": true
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+          "granule_id": "MEGT44N090HB.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n090hb.img",
+          "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n090hb.lbl",
+          "native_gsd_m": 463.0,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": -3960.99,
+          "min_elevation_m": -3982.12,
+          "max_elevation_m": -3915.05,
+          "relief_m": 34.77,
+          "slope_mean_deg": 0.16,
+          "slope_p90_deg": 0.33,
+          "ruggedness_tri_m": 1.0,
+          "roughness_rms_m": 6.06,
+          "hypsometric_integral": 0.315
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/mars/mars_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MARS_POLY&BBOX=168.7740,36.7000,175.2260,41.7000&MAXFEATURES=8",
+          "features_count": 5,
+          "mapped_features": [
+            {
+              "feature_id": "336",
+              "feature_name": "Arabia Terra",
+              "feature_type": "Terra, terrae",
+              "code": "TA",
+              "diameter_km": 4851.74,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "4700",
+              "feature_name": "Phlegra Dorsa",
+              "feature_type": "Dorsum, dorsa",
+              "code": "DO",
+              "diameter_km": 2818.61,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "6168",
+              "feature_name": "Tyndall",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 83.05,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "348",
+              "feature_name": "Arcadia Planitia",
+              "feature_type": "Planitia, planitiae",
+              "code": "PL",
+              "diameter_km": 2245.0,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "38",
+              "feature_name": "Acidalia Planitia",
+              "feature_type": "Planitia, planitiae",
+              "code": "PL",
+              "diameter_km": 3505.0,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "ODY-M-GRS-5-ELEMENTS-V1.0",
+          "base_url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed",
+          "fe_wt_pct": 15.407,
+          "fe_wt_pct_sigma": 0.65,
+          "matched_bin_lat": 37.5,
+          "matched_bin_lon_e": 172.5,
+          "h2o_wt_pct": 4.719,
+          "h2o_wt_pct_sigma": 0.409,
+          "si_wt_pct": 19.71,
+          "si_wt_pct_sigma": 0.586,
+          "cl_wt_pct": 0.418,
+          "cl_wt_pct_sigma": 0.037,
+          "k_wt_pct": 0.367,
+          "k_wt_pct_sigma": 0.027,
+          "th_ppm": 0.579,
+          "th_ppm_sigma": 0.07
+        },
+        "pds_orbital_products": {
+          "crism_mtrdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/MTRDR",
+            "product_id": "frt00008ee5_07_if167j_mtr3.img",
+            "start_time": "2007-12-23T23:26:38.610Z",
+            "comment": "COORD Target - Arcadia dome dark toned",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_357/frt00008ee5/frt00008ee5_07_if167j_mtr3.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=frt00008ee5_07_if167j_mtr3&product_idGeo=47362312",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_357/frt00008ee5/frt00008ee5_07_de167l_mtr1.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_357/frt00008ee5/frt00008ee5_07_de167l_mtr1.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_357/frt00008ee5/frt00008ee5_07_de167l_mtr1.xml"
+            ]
+          },
+          "crism_mrdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/MRDR4",
+            "product_id": "t1557_mrral_40n173_0327_4.img",
+            "start_time": "",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1557_mrral_40n173_0327_4.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=t1557_mrral_40n173_0327_4&product_idGeo=47856777",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1557_mrral_40n173_0327_4.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1557_mrral_40n173_0327_4.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc07/t1557_mrral_40n173_0327_4.xml"
+            ]
+          },
+          "crism_trdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/TRDR",
+            "product_id": "msv00056151_01_if152s_trr3.img",
+            "start_time": "2020-11-09T20:55:30.038Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2115/trdr/2020/2020_314/msv00056151/msv00056151_01_if152s_trr3.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=msv00056151_01_if152s_trr3&product_idGeo=50299509",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2115/trdr/2020/2020_314/msv00056151/msv00056151_01_if152s_trr3.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2115/trdr/2020/2020_314/msv00056151/msv00056151_01_if152s_trr3.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2115/trdr/2020/2020_314/msv00056151/msv00056151_01_if152s_trr3.xml"
+            ]
+          },
+          "omega_edr": {
+            "found": true,
+            "instrument": "MEX/OMEGA/EDR",
+            "product_id": "orb2619_0",
+            "start_time": "2006-01-26T02:33:47.067",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mex/mex-m-omega-2-edr-flight-ext-v1/mexomg-0002/data/gem26/orb2619_0.nav",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=ORB2619_0_GEOM&product_idGeo=24392883",
+            "file_urls": []
+          },
+          "themis_ir": {
+            "found": true,
+            "instrument": "ODY/THEMIS/IRPBT2",
+            "product_id": "I55747025PBT",
+            "start_time": "2014-07-09T00:14:03.475",
+            "comment": "",
+            "label_url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i557xxpbt/I55747025PBT.IMG",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=I55747025PBT&product_idGeo=26238250",
+            "file_urls": [
+              "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i557xxpbt/I55747025PBT.IMG"
+            ]
+          },
+          "mola_megdr": {
+            "found": true,
+            "instrument": "MGS/MOLA/MEGDR",
+            "product_id": "mega90n000cb.img",
+            "start_time": "1997-09-15T19:10:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=mega90n000cb&product_idGeo=55579621",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.img",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.lbl",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
+            ]
+          }
+        }
       }
     },
     {
@@ -386,34 +1674,34 @@
       "region": "Equatorial Volcanic Plains",
       "lat": 4.5,
       "lon": 135.9,
-      "elevation_m": -2650.0,
+      "elevation_m": -2655.41,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "Young Amazonian flood basalts and tectonic fissures with maximum solar availability for equatorial surface bases.",
       "topo": [
-        220.0,
-        2.7,
-        6.2,
-        7.4,
-        13.0,
-        0.41
+        172.29,
+        2.08,
+        4.75,
+        5.87,
+        11.47,
+        0.409
       ],
       "geo": [
-        0.8,
+        0.66,
         0.0,
-        0.1,
-        0.1,
-        0.0,
-        0.0,
+        0.084,
+        0.131,
+        0.066,
+        0.059,
         0.0
       ],
       "min": [
         0.35,
         0.4,
         0.2,
-        0.22,
-        0.04,
-        0.05,
+        0.254,
+        0.166,
+        0.154,
         0.02,
         0.16,
         0.05
@@ -423,6 +1711,170 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+          "granule_id": "MEGT44N090HB.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n090hb.img",
+          "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n090hb.lbl",
+          "native_gsd_m": 463.0,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": -2655.41,
+          "min_elevation_m": -2680.0,
+          "max_elevation_m": -2619.49,
+          "relief_m": 29.18,
+          "slope_mean_deg": 0.22,
+          "slope_p90_deg": 0.4,
+          "ruggedness_tri_m": 1.29,
+          "roughness_rms_m": 6.9,
+          "hypsometric_integral": 0.406
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/mars/mars_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MARS_POLY&BBOX=133.3923,2.0000,138.4077,7.0000&MAXFEATURES=8",
+          "features_count": 5,
+          "mapped_features": [
+            {
+              "feature_id": "66",
+              "feature_name": "Aeolis Mensae",
+              "feature_type": "Mensa, mensae",
+              "code": "MN",
+              "diameter_km": 785.09,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "336",
+              "feature_name": "Arabia Terra",
+              "feature_type": "Terra, terrae",
+              "code": "TA",
+              "diameter_km": 4851.74,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "1784",
+              "feature_name": "Elysium Planitia",
+              "feature_type": "Planitia, planitiae",
+              "code": "PL",
+              "diameter_km": 3000.79,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "4207",
+              "feature_name": "Nepenthes Mensae",
+              "feature_type": "Mensa, mensae",
+              "code": "MN",
+              "diameter_km": 2176.23,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "15998",
+              "feature_name": "Mikumi",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 16.12,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "ODY-M-GRS-5-ELEMENTS-V1.0",
+          "base_url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed",
+          "fe_wt_pct": 16.258,
+          "fe_wt_pct_sigma": 0.682,
+          "matched_bin_lat": 2.5,
+          "matched_bin_lon_e": 137.5,
+          "h2o_wt_pct": 5.162,
+          "h2o_wt_pct_sigma": 0.41,
+          "si_wt_pct": 20.284,
+          "si_wt_pct_sigma": 0.475,
+          "cl_wt_pct": 0.622,
+          "cl_wt_pct_sigma": 0.039,
+          "k_wt_pct": 0.279,
+          "k_wt_pct_sigma": 0.025,
+          "th_ppm": 0.564,
+          "th_ppm_sigma": 0.066
+        },
+        "pds_orbital_products": {
+          "crism_mtrdr": {
+            "found": false,
+            "instrument": "MRO/CRISM/MTRDR",
+            "error": "'str' object has no attribute 'get'"
+          },
+          "crism_mrdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/MRDR4",
+            "product_id": "t1045_mrral_05n133_0327_4.img",
+            "start_time": "",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc14/t1045_mrral_05n133_0327_4.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=t1045_mrral_05n133_0327_4&product_idGeo=47858293",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc14/t1045_mrral_05n133_0327_4.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc14/t1045_mrral_05n133_0327_4.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc14/t1045_mrral_05n133_0327_4.xml"
+            ]
+          },
+          "crism_trdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/TRDR",
+            "product_id": "msv0005acb1_01_if151s_trr3.img",
+            "start_time": "2021-11-25T03:14:14.553Z",
+            "comment": "COORD Target - Ride-Along (CTX) - Elysium Planitia",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_329/msv0005acb1/msv0005acb1_01_if151s_trr3.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=msv0005acb1_01_if151s_trr3&product_idGeo=50250155",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_329/msv0005acb1/msv0005acb1_01_if151s_trr3.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_329/msv0005acb1/msv0005acb1_01_if151s_trr3.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_329/msv0005acb1/msv0005acb1_01_if151s_trr3.xml"
+            ]
+          },
+          "omega_edr": {
+            "found": true,
+            "instrument": "MEX/OMEGA/EDR",
+            "product_id": "orbb405_0",
+            "start_time": "2012-12-17T20:22:30.094",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mex/mex-m-omega-2-edr-flight-ext4-v1/mexomg_0005/data/gemb4/orbb405_0.nav",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=ORBB405_0_GEOM&product_idGeo=24393448",
+            "file_urls": []
+          },
+          "themis_ir": {
+            "found": true,
+            "instrument": "ODY/THEMIS/IRPBT2",
+            "product_id": "I55748043PBT",
+            "start_time": "2014-07-09T02:25:35.766",
+            "comment": "",
+            "label_url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i557xxpbt/I55748043PBT.IMG",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=I55748043PBT&product_idGeo=26238275",
+            "file_urls": [
+              "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i557xxpbt/I55748043PBT.IMG"
+            ]
+          },
+          "mola_megdr": {
+            "found": true,
+            "instrument": "MGS/MOLA/MEGDR",
+            "product_id": "mega90n000cb.img",
+            "start_time": "1997-09-15T19:10:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=mega90n000cb&product_idGeo=55579621",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.img",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.lbl",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
+            ]
+          }
+        }
       }
     },
     {
@@ -433,34 +1885,34 @@
       "region": "Chryse Planitia / Arabia Terra Dichotomy",
       "lat": 23.99,
       "lon": -19.05,
-      "elevation_m": -2100.0,
+      "elevation_m": -2271.77,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "Thick stratified sequences of Al/Fe/Mg clays and jarosite sulfates; high astrobiology and bound-water ISRU value.",
       "topo": [
-        580.0,
-        5.4,
-        12.8,
-        15.0,
-        26.2,
-        0.45
+        539.79,
+        4.55,
+        10.54,
+        14.1,
+        53.19,
+        0.519
       ],
       "geo": [
-        0.1,
-        0.05,
-        0.05,
-        0.15,
-        0.4,
-        0.25,
+        0.212,
+        0.042,
+        0.042,
+        0.165,
+        0.327,
+        0.211,
         0.0
       ],
       "min": [
         0.18,
         0.14,
         0.06,
-        0.28,
-        0.56,
-        0.38,
+        0.294,
+        0.486,
+        0.329,
         0.08,
         0.3,
         0.16
@@ -470,6 +1922,188 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": false
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+          "granule_id": "MEGT44N270HB.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n270hb.img",
+          "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n270hb.lbl",
+          "native_gsd_m": 463.0,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": -2271.77,
+          "min_elevation_m": -3040.2,
+          "max_elevation_m": -1980.5,
+          "relief_m": 419.15,
+          "slope_mean_deg": 2.0,
+          "slope_p90_deg": 3.74,
+          "ruggedness_tri_m": 11.38,
+          "roughness_rms_m": 134.15,
+          "hypsometric_integral": 0.725
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/mars/mars_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MARS_POLY&BBOX=-21.7864,21.4900,-16.3136,26.4900&MAXFEATURES=8",
+          "features_count": 6,
+          "mapped_features": [
+            {
+              "feature_id": "14654",
+              "feature_name": "Oyama",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 100.78,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "3782",
+              "feature_name": "McLaughlin",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 90.92,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "15115",
+              "feature_name": "Muara",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 3.83,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "15116",
+              "feature_name": "Tarrafal",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 4.89,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "15750",
+              "feature_name": "Oituz",
+              "feature_type": "Crater, craters",
+              "code": "AA",
+              "diameter_km": 15.3,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "3763",
+              "feature_name": "Mawrth Vallis",
+              "feature_type": "Vallis, valles",
+              "code": "VA",
+              "diameter_km": 634.63,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POINT"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "ODY-M-GRS-5-ELEMENTS-V1.0",
+          "base_url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed",
+          "fe_wt_pct": 16.808,
+          "fe_wt_pct_sigma": 0.693,
+          "matched_bin_lat": 22.5,
+          "matched_bin_lon_e": 342.5,
+          "h2o_wt_pct": 5.464,
+          "h2o_wt_pct_sigma": 0.429,
+          "si_wt_pct": 21.029,
+          "si_wt_pct_sigma": 0.531,
+          "cl_wt_pct": 0.506,
+          "cl_wt_pct_sigma": 0.04,
+          "k_wt_pct": 0.334,
+          "k_wt_pct_sigma": 0.026,
+          "th_ppm": 0.712,
+          "th_ppm_sigma": 0.07
+        },
+        "pds_orbital_products": {
+          "crism_mtrdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/MTRDR",
+            "product_id": "hrl00004962_07_if183j_mtr3.img",
+            "start_time": "2007-03-06T16:26:30.860Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_065/hrl00004962/hrl00004962_07_if183j_mtr3.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=hrl00004962_07_if183j_mtr3&product_idGeo=47360765",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_065/hrl00004962/hrl00004962_07_de183l_mtr1.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_065/hrl00004962/hrl00004962_07_de183l_mtr1.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_065/hrl00004962/hrl00004962_07_de183l_mtr1.xml"
+            ]
+          },
+          "crism_mrdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/MRDR4",
+            "product_id": "t1374_mrral_25n338_0327_4.img",
+            "start_time": "",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc11/t1374_mrral_25n338_0327_4.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=t1374_mrral_25n338_0327_4&product_idGeo=47857773",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc11/t1374_mrral_25n338_0327_4.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc11/t1374_mrral_25n338_0327_4.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc11/t1374_mrral_25n338_0327_4.xml"
+            ]
+          },
+          "crism_trdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/TRDR",
+            "product_id": "msv0005ab32_01_if152s_trr3.img",
+            "start_time": "2021-11-16T07:58:22.765Z",
+            "comment": "COORD Target - COORD Target - 195136 Mawrth Vallis dark-toned cap associated with well-preserved crater ejecta  Impact Processes - urgent for stereo completion",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_320/msv0005ab32/msv0005ab32_01_if152s_trr3.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=msv0005ab32_01_if152s_trr3&product_idGeo=50248090",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_320/msv0005ab32/msv0005ab32_01_if152s_trr3.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_320/msv0005ab32/msv0005ab32_01_if152s_trr3.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_320/msv0005ab32/msv0005ab32_01_if152s_trr3.xml"
+            ]
+          },
+          "omega_edr": {
+            "found": true,
+            "instrument": "MEX/OMEGA/EDR",
+            "product_id": "orbb274_0",
+            "start_time": "2012-11-09T18:58:09.046",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mex/mex-m-omega-2-edr-flight-ext4-v1/mexomg_0005/data/gemb2/orbb274_0.nav",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=ORBB274_0_GEOM&product_idGeo=24392906",
+            "file_urls": []
+          },
+          "themis_ir": {
+            "found": true,
+            "instrument": "ODY/THEMIS/IRPBT2",
+            "product_id": "I55760011PBT",
+            "start_time": "2014-07-10T01:17:39.971",
+            "comment": "",
+            "label_url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i557xxpbt/I55760011PBT.IMG",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=I55760011PBT&product_idGeo=26238680",
+            "file_urls": [
+              "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i557xxpbt/I55760011PBT.IMG"
+            ]
+          },
+          "mola_megdr": {
+            "found": true,
+            "instrument": "MGS/MOLA/MEGDR",
+            "product_id": "mega90n000cb.img",
+            "start_time": "1997-09-15T19:10:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=mega90n000cb&product_idGeo=55579621",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.img",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.lbl",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
+            ]
+          }
+        }
       }
     },
     {
@@ -480,34 +2114,34 @@
       "region": "Tharsis Montes",
       "lat": -7.25,
       "lon": -120.45,
-      "elevation_m": 6200.0,
+      "elevation_m": 14656.65,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "Deep volcanic collapse skylights on shield volcano flanks providing subsurface radiation shelter.",
       "topo": [
-        690.0,
-        7.1,
-        16.0,
-        19.4,
-        33.0,
-        0.49
+        904.11,
+        6.34,
+        13.29,
+        19.77,
+        33.61,
+        0.493
       ],
       "geo": [
-        0.75,
+        0.644,
         0.0,
-        0.2,
-        0.05,
+        0.205,
+        0.048,
         0.0,
-        0.0,
+        0.103,
         0.0
       ],
       "min": [
         0.34,
         0.38,
         0.18,
-        0.2,
-        0.02,
-        0.04,
+        0.205,
+        0.107,
+        0.161,
         0.01,
         0.24,
         0.03
@@ -517,6 +2151,170 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+          "granule_id": "MEGT00N180HB.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n180hb.img",
+          "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n180hb.lbl",
+          "native_gsd_m": 463.0,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": 14656.65,
+          "min_elevation_m": 13739.28,
+          "max_elevation_m": 15558.19,
+          "relief_m": 1546.42,
+          "slope_mean_deg": 4.07,
+          "slope_p90_deg": 5.15,
+          "ruggedness_tri_m": 20.9,
+          "roughness_rms_m": 35.42,
+          "hypsometric_integral": 0.504
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/mars/mars_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MARS_POLY&BBOX=-122.9701,-9.7500,-117.9299,-4.7500&MAXFEATURES=8",
+          "features_count": 4,
+          "mapped_features": [
+            {
+              "feature_id": "393",
+              "feature_name": "Arsia Chasmata",
+              "feature_type": "Chasma, chasmata",
+              "code": "CM",
+              "diameter_km": 97.06,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "394",
+              "feature_name": "Arsia Mons",
+              "feature_type": "Mons, montes",
+              "code": "MO",
+              "diameter_km": 470.0,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "1380",
+              "feature_name": "Daedalia Planum",
+              "feature_type": "Planum, plana",
+              "code": "PM",
+              "diameter_km": 1922.02,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "5948",
+              "feature_name": "Tharsis Montes",
+              "feature_type": "Mons, montes",
+              "code": "MO",
+              "diameter_km": 2058.91,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "ODY-M-GRS-5-ELEMENTS-V1.0",
+          "base_url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed",
+          "fe_wt_pct": 11.388,
+          "fe_wt_pct_sigma": 0.472,
+          "matched_bin_lat": -7.5,
+          "matched_bin_lon_e": 237.5,
+          "h2o_wt_pct": 3.446,
+          "h2o_wt_pct_sigma": 0.246,
+          "si_wt_pct": 18.938,
+          "si_wt_pct_sigma": 0.291,
+          "cl_wt_pct": 0.686,
+          "cl_wt_pct_sigma": 0.025,
+          "k_wt_pct": 0.317,
+          "k_wt_pct_sigma": 0.012,
+          "th_ppm": 0.548,
+          "th_ppm_sigma": 0.042
+        },
+        "pds_orbital_products": {
+          "crism_mtrdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/MTRDR",
+            "product_id": "frt000074b4_07_if163j_mtr3.img",
+            "start_time": "2007-08-25T13:43:10.927Z",
+            "comment": "COORD Target - Arsia Mons possible skylight (Wendy)",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_237/frt000074b4/frt000074b4_07_if163j_mtr3.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=frt000074b4_07_if163j_mtr3&product_idGeo=47361392",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_237/frt000074b4/frt000074b4_07_de163l_mtr1.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_237/frt000074b4/frt000074b4_07_de163l_mtr1.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_237/frt000074b4/frt000074b4_07_de163l_mtr1.xml"
+            ]
+          },
+          "crism_mrdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/MRDR4",
+            "product_id": "t0850_mrral_10s238_0327_4.img",
+            "start_time": "",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc17/t0850_mrral_10s238_0327_4.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=t0850_mrral_10s238_0327_4&product_idGeo=47859025",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc17/t0850_mrral_10s238_0327_4.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc17/t0850_mrral_10s238_0327_4.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc17/t0850_mrral_10s238_0327_4.xml"
+            ]
+          },
+          "crism_trdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/TRDR",
+            "product_id": "msv0005b552_01_if152s_trr3.img",
+            "start_time": "2022-01-17T06:45:53.443Z",
+            "comment": "COORD Target - COORD Target - 8390 Section of uncollapsed flank material. Geologic Contacts/Stratigraphy PUB",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2022/2022_017/msv0005b552/msv0005b552_01_if152s_trr3.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=msv0005b552_01_if152s_trr3&product_idGeo=50260876",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2022/2022_017/msv0005b552/msv0005b552_01_if152s_trr3.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2022/2022_017/msv0005b552/msv0005b552_01_if152s_trr3.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2022/2022_017/msv0005b552/msv0005b552_01_if152s_trr3.xml"
+            ]
+          },
+          "omega_edr": {
+            "found": true,
+            "instrument": "MEX/OMEGA/EDR",
+            "product_id": "orb7705_2",
+            "start_time": "2010-01-05T13:12:11.049",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mex/mex-m-omega-2-edr-flight-ext3-v1/mexomg_0004/data/gem77/orb7705_2.nav",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=ORB7705_2_GEOM&product_idGeo=24392870",
+            "file_urls": []
+          },
+          "themis_ir": {
+            "found": true,
+            "instrument": "ODY/THEMIS/IRPBT2",
+            "product_id": "I55976002PBT",
+            "start_time": "2014-07-27T19:43:27.869",
+            "comment": "",
+            "label_url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i559xxpbt/I55976002PBT.IMG",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=I55976002PBT&product_idGeo=26240162",
+            "file_urls": [
+              "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i559xxpbt/I55976002PBT.IMG"
+            ]
+          },
+          "mola_megdr": {
+            "found": true,
+            "instrument": "MGS/MOLA/MEGDR",
+            "product_id": "mega90n000cb.img",
+            "start_time": "1997-09-15T19:10:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=mega90n000cb&product_idGeo=55579621",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.img",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.lbl",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
+            ]
+          }
+        }
       }
     },
     {
@@ -527,34 +2325,34 @@
       "region": "Central Valles Marineris",
       "lat": -9.8,
       "lon": -73.6,
-      "elevation_m": -3800.0,
+      "elevation_m": -3202.68,
       "is_curated_site": true,
       "is_known_analog": false,
       "mission_relevance": "High-atmospheric-pressure canyon floor with polyhydrated sulfate mounds and steep basaltic walls.",
       "topo": [
-        1480.0,
-        13.5,
-        26.8,
-        36.4,
-        57.0,
-        0.5
+        1251.58,
+        10.73,
+        21.11,
+        30.66,
+        72.28,
+        0.451
       ],
       "geo": [
-        0.3,
+        0.351,
         0.0,
-        0.1,
+        0.121,
         0.0,
-        0.25,
-        0.35,
+        0.241,
+        0.287,
         0.0
       ],
       "min": [
         0.24,
         0.28,
         0.1,
-        0.26,
-        0.18,
-        0.52,
+        0.271,
+        0.219,
+        0.419,
         0.06,
         0.22,
         0.14
@@ -564,6 +2362,215 @@
         "is_impact": false,
         "has_ice": false,
         "is_volcanic": true
+      },
+      "planetary_provenance": {
+        "topography_2d_dem": {
+          "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+          "granule_id": "MEGT00N270HB.IMG",
+          "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n270hb.img",
+          "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n270hb.lbl",
+          "native_gsd_m": 463.0,
+          "window_size_km": 25.0,
+          "resampled_grid_shape": [
+            50,
+            50
+          ],
+          "resampled_gsd_m": 500.0,
+          "mean_elevation_m": -3202.68,
+          "min_elevation_m": -3503.91,
+          "max_elevation_m": -2509.02,
+          "relief_m": 566.31,
+          "slope_mean_deg": 2.43,
+          "slope_p90_deg": 4.05,
+          "ruggedness_tri_m": 13.43,
+          "roughness_rms_m": 118.14,
+          "hypsometric_integral": 0.303
+        },
+        "geology_usgs_wfs": {
+          "api_endpoint": "https://planetarymaps.usgs.gov/cgi-bin/mapserv?map=/maps/mars/mars_nomen_wfs.map&SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=MARS_POLY&BBOX=-76.1370,-12.3000,-71.0630,-7.3000&MAXFEATURES=8",
+          "features_count": 9,
+          "mapped_features": [
+            {
+              "feature_id": "999",
+              "feature_name": "Candor Chaos",
+              "feature_type": "Chaos, chaoses",
+              "code": "CH",
+              "diameter_km": 0.0,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "1000",
+              "feature_name": "Candor Chasma",
+              "feature_type": "Chasma, chasmata",
+              "code": "CM",
+              "diameter_km": 810.61,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "3812",
+              "feature_name": "Melas Chasma",
+              "feature_type": "Chasma, chasmata",
+              "code": "CM",
+              "diameter_km": 563.52,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "3815",
+              "feature_name": "Melas Labes",
+              "feature_type": "Labes, lab\u0113s",
+              "code": "LA",
+              "diameter_km": 107.24,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "5547",
+              "feature_name": "Sinai Dorsa",
+              "feature_type": "Dorsum, dorsa",
+              "code": "DO",
+              "diameter_km": 456.54,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "6288",
+              "feature_name": "Valles Marineris",
+              "feature_type": "Vallis, valles",
+              "code": "VA",
+              "diameter_km": 3761.28,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "15438",
+              "feature_name": "Coprates Mensa",
+              "feature_type": "Mensa, mensae",
+              "code": "MN",
+              "diameter_km": 240.0,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "15439",
+              "feature_name": "Ius Mensa",
+              "feature_type": "Mensa, mensae",
+              "code": "MN",
+              "diameter_km": 160.0,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POLY"
+            },
+            {
+              "feature_id": "15437",
+              "feature_name": "Melas Mensa",
+              "feature_type": "Mensa, mensae",
+              "code": "MN",
+              "diameter_km": 245.0,
+              "controlnet": "MDIM 2.1",
+              "layer": "MARS_POINT"
+            }
+          ]
+        },
+        "geochemistry_grs": {
+          "dataset": "ODY-M-GRS-5-ELEMENTS-V1.0",
+          "base_url": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/smoothed",
+          "fe_wt_pct": 15.31,
+          "fe_wt_pct_sigma": 0.58,
+          "matched_bin_lat": -7.5,
+          "matched_bin_lon_e": 287.5,
+          "h2o_wt_pct": 4.054,
+          "h2o_wt_pct_sigma": 0.319,
+          "si_wt_pct": 20.746,
+          "si_wt_pct_sigma": 0.346,
+          "cl_wt_pct": 0.536,
+          "cl_wt_pct_sigma": 0.032,
+          "k_wt_pct": 0.313,
+          "k_wt_pct_sigma": 0.017,
+          "th_ppm": 0.458,
+          "th_ppm_sigma": 0.05
+        },
+        "pds_orbital_products": {
+          "crism_mtrdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/MTRDR",
+            "product_id": "hrs000044e6_07_if173j_mtr3.img",
+            "start_time": "2007-02-17T09:06:22.482Z",
+            "comment": "COORD Target - 3655 ILD in Melas Chasma",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_048/hrs000044e6/hrs000044e6_07_if173j_mtr3.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=hrs000044e6_07_if173j_mtr3&product_idGeo=47360700",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_048/hrs000044e6/hrs000044e6_07_de173l_mtr1.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_048/hrs000044e6/hrs000044e6_07_de173l_mtr1.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-mptargeted-v1/mrocr_4001/mtrdr/2007/2007_048/hrs000044e6/hrs000044e6_07_de173l_mtr1.xml"
+            ]
+          },
+          "crism_mrdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/MRDR4",
+            "product_id": "t0860_mrral_10s288_0327_4.img",
+            "start_time": "",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc18/t0860_mrral_10s288_0327_4.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=t0860_mrral_10s288_0327_4&product_idGeo=47859245",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc18/t0860_mrral_10s288_0327_4.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc18/t0860_mrral_10s288_0327_4.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-5-rdr-multispectral-v1/mrocr_3201/mrdr/mc18/t0860_mrral_10s288_0327_4.xml"
+            ]
+          },
+          "crism_trdr": {
+            "found": true,
+            "instrument": "MRO/CRISM/TRDR",
+            "product_id": "msv0005b17e_01_if152s_trr3.img",
+            "start_time": "2021-12-24T12:17:59.627Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_358/msv0005b17e/msv0005b17e_01_if152s_trr3.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=msv0005b17e_01_if152s_trr3&product_idGeo=50256137",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_358/msv0005b17e/msv0005b17e_01_if152s_trr3.img",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_358/msv0005b17e/msv0005b17e_01_if152s_trr3.lbl",
+              "https://pds-geosciences.wustl.edu/mro/mro-m-crism-3-rdr-targeted-v1/mrocr_2116/trdr/2021/2021_358/msv0005b17e/msv0005b17e_01_if152s_trr3.xml"
+            ]
+          },
+          "omega_edr": {
+            "found": true,
+            "instrument": "MEX/OMEGA/EDR",
+            "product_id": "orb7701_3",
+            "start_time": "2010-01-04T09:39:12.056",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mex/mex-m-omega-2-edr-flight-ext3-v1/mexomg_0004/data/gem77/orb7701_3.nav",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=ORB7701_3_GEOM&product_idGeo=24392841",
+            "file_urls": []
+          },
+          "themis_ir": {
+            "found": true,
+            "instrument": "ODY/THEMIS/IRPBT2",
+            "product_id": "I55887004PBT",
+            "start_time": "2014-07-20T11:56:00.514",
+            "comment": "",
+            "label_url": "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i558xxpbt/I55887004PBT.IMG",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=I55887004PBT&product_idGeo=26239891",
+            "file_urls": [
+              "https://static.mars.asu.edu/pds/ODTGEO_v2/data/odtip2_0051/i558xxpbt/I55887004PBT.IMG"
+            ]
+          },
+          "mola_megdr": {
+            "found": true,
+            "instrument": "MGS/MOLA/MEGDR",
+            "product_id": "mega90n000cb.img",
+            "start_time": "1997-09-15T19:10:00.000Z",
+            "comment": "",
+            "label_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml",
+            "ode_page": "https://ode.rsl.wustl.edu/mars/indexproductpage.aspx?product_id=mega90n000cb&product_idGeo=55579621",
+            "file_urls": [
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.img",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.lbl",
+              "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
+            ]
+          }
+        }
       }
     }
   ],
