@@ -1,4 +1,5 @@
 import logging
+import re
 import time
 import uuid
 from collections.abc import Awaitable, Callable
@@ -7,6 +8,8 @@ from fastapi import Request, Response
 from starlette.middleware.base import BaseHTTPMiddleware
 
 logger = logging.getLogger("analog_terrax")
+
+_REQUEST_ID_PATTERN = re.compile(r"^[A-Za-z0-9\-]{1,64}$")
 
 
 def setup_logging() -> None:
@@ -25,7 +28,11 @@ class RequestContextMiddleware(BaseHTTPMiddleware):
         request: Request,
         call_next: Callable[[Request], Awaitable[Response]],
     ) -> Response:
-        request_id = request.headers.get("X-Request-ID", str(uuid.uuid4()))
+        incoming_id = request.headers.get("X-Request-ID", "")
+        # Never trust client-supplied IDs: they end up in logs and response headers.
+        request_id = (
+            incoming_id if _REQUEST_ID_PATTERN.fullmatch(incoming_id) else str(uuid.uuid4())
+        )
         request.state.request_id = request_id
         start_time = time.perf_counter()
 

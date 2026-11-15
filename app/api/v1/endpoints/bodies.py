@@ -1,4 +1,6 @@
-from fastapi import APIRouter, Depends, HTTPException, Query, status
+from typing import Annotated
+
+from fastapi import APIRouter, Depends, HTTPException, Path, Query, status
 
 from app.api.deps import FeatureStoreDep
 from app.core.cache import cache_control
@@ -32,7 +34,7 @@ async def list_earthdata_atl03_records(
     dependencies=[Depends(cache_control(s_maxage=3600, stale_while_revalidate=86400))],
 )
 async def get_earthdata_atl03_record(
-    site_id: str,
+    site_id: Annotated[str, Path(max_length=128)],
     store: FeatureStoreDep,
 ) -> EarthdataAtl03Record:
     """Retrieve the extracted NASA Earthdata ATL03 v007 granule, segments, and photon samples for an Earth site_id or cell_id."""
@@ -78,7 +80,7 @@ async def list_body_sites(
 )
 async def get_body_site(
     body: CelestialBody,
-    site_id: str,
+    site_id: Annotated[str, Path(max_length=128)],
     store: FeatureStoreDep,
 ) -> PlanetarySite:
     """Retrieve a single planetary site fingerprint by site_id or cell_id."""
