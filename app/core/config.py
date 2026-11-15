@@ -28,7 +28,10 @@ class Settings(BaseSettings):
             "https://analog-terrax-frontend.vercel.app",
         ]
     )
-    CORS_ORIGIN_REGEX: str = r"^https://analog-terrax-frontend.*\.vercel\.app$"
+    CORS_ORIGIN_REGEX: str = r"^https://analog-terrax-frontend[a-z0-9-]*\.vercel\.app$"
+
+    # Per-IP requests/minute on compute-heavy endpoints (0 disables)
+    RATE_LIMIT_PER_MINUTE: int = 60
 
     # Outbound HTTP & NASA API Settings
     UPSTREAM_TIMEOUT_SECONDS: float = 15.0
