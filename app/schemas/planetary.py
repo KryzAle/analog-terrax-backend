@@ -1,4 +1,4 @@
-from typing import Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -171,6 +171,10 @@ class PlanetarySite(BaseModel):
     earth_provenance: EarthMultiSourceProvenance | None = Field(
         default=None,
         description="Real multi-source provenance (2D DEM, Macrostrat Geology, NASA EMIT L2B & MODIS)",
+    )
+    planetary_provenance: dict[str, Any] | None = Field(
+        default=None,
+        description="Real NASA PDS & USGS Astrogeology multi-source provenance for Moon and Mars sites",
     )
 
 

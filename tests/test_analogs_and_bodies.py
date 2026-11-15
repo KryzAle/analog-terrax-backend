@@ -18,12 +18,22 @@ async def test_list_moon_and_mars_sites(async_client: AsyncClient) -> None:
     moon_sites = moon_resp.json()
     assert len(moon_sites) >= 6
     assert any(s["site_id"] == "moon_shackleton_rim" for s in moon_sites)
+    for site in moon_sites:
+        prov = site["planetary_provenance"]
+        assert prov is not None
+        assert prov["topography_2d_dem"]["window_size_km"] == 25.0
+        assert prov["geochemistry_grs"]["dataset"] == "LP-L-GRS-5-ELEM-ABUNDANCE-V1.0"
 
     mars_resp = await async_client.get("/api/v1/bodies/mars/sites")
     assert mars_resp.status_code == 200
     mars_sites = mars_resp.json()
     assert len(mars_sites) >= 6
     assert any(s["site_id"] == "mars_jezero_crater" for s in mars_sites)
+    for site in mars_sites:
+        prov = site["planetary_provenance"]
+        assert prov is not None
+        assert prov["topography_2d_dem"]["window_size_km"] == 25.0
+        assert prov["geochemistry_grs"]["dataset"] == "ODY-M-GRS-5-ELEMENTS-V1.0"
 
 
 async def test_snap_coordinates_to_cell(async_client: AsyncClient) -> None:
@@ -99,6 +109,8 @@ async def test_heatmap_and_laser_profile_endpoints(async_client: AsyncClient) ->
         assert prof_data["earth_analog_profile"]["granule_id"].startswith("ATL03_")
         assert prof_data["earth_analog_profile"]["granule_id"].endswith(".h5")
         assert "LOLA" in prof_data["target_profile"]["instrument"]
+        assert prof_data["target_profile"]["granule_id"] == "LDEM_80S_80M.IMG"
+        assert len(prof_data["target_profile"]["points"]) == 64
         assert len(prof_data["earth_analog_profile"]["points"]) == 25
 
 

@@ -8,42 +8,42 @@
       "label": "Local Relief (p95 - p5)",
       "unit": "m",
       "median": 458.065,
-      "iqr": 714.062
+      "iqr": 706.055
     },
     {
       "id": "slope_mean_deg",
       "label": "Mean Slope (500m GSD)",
       "unit": "deg",
       "median": 2.975,
-      "iqr": 4.197
+      "iqr": 4.055
     },
     {
       "id": "slope_p90_deg",
       "label": "90th Percentile Slope",
       "unit": "deg",
-      "median": 6.88,
-      "iqr": 9.41
+      "median": 6.48,
+      "iqr": 7.82
     },
     {
       "id": "ruggedness_tri_m",
       "label": "Terrain Ruggedness Index (TRI)",
       "unit": "m",
-      "median": 19.19,
-      "iqr": 20.04
+      "median": 19.375,
+      "iqr": 17.602
     },
     {
       "id": "roughness_rms_m",
       "label": "Detrended RMS Roughness",
       "unit": "m",
-      "median": 29.78,
-      "iqr": 32.825
+      "median": 31.995,
+      "iqr": 39.935
     },
     {
       "id": "hypsometric_integral",
       "label": "Hypsometric Integral",
       "unit": "ratio",
-      "median": 0.43,
-      "iqr": 0.12
+      "median": 0.439,
+      "iqr": 0.132
     }
   ]
 }

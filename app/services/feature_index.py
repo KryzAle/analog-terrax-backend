@@ -175,6 +175,7 @@ class FeatureIndexStore:
             ),
             earthdata_granule=earthdata_granule,
             earth_provenance=earth_provenance,
+            planetary_provenance=raw.get("planetary_provenance"),
         )
 
     def list_curated_sites(self, body: CelestialBody) -> list[PlanetarySite]:
