@@ -23,8 +23,13 @@ venv/
 # because the deployed application consumes them.
 /data/
 app/data/raw/
+app/data/extras/
 app/data/processed/*
 !app/data/processed/topography_sites_25km.csv
+!app/data/processed/geology_sites.csv
+app/data/processed/mineralogy_sites.csv
+!app/data/processed/moon_mars_full_real_data_features.json
+!app/data/processed/engine_features.csv
 app/data/catalogs/
 app/data/reference/
 app/data/input/*

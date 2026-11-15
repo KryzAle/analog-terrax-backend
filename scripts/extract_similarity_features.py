@@ -500,39 +500,84 @@ def _sugerir_clase(texto: str):
 
 
 def load_geology(body: str, carpeta: Path):
-    """Devuelve un GeoDataFrame de poligonos de unidades + (col_simbolo, col_name)."""
+    """Load the best polygon unit layer from Shapefile, GeoPackage, or FileGDB sources."""
     import geopandas as gpd
 
-    shps = sorted(carpeta.rglob("*.shp"))
-    if not shps:
+    vector_paths = sorted(
+        [*carpeta.rglob("*.shp"), *carpeta.rglob("*.gpkg"), *carpeta.rglob("*.geojson")]
+    )
+    vector_paths.extend(sorted(path for path in carpeta.rglob("*.gdb") if path.is_dir()))
+    vector_paths.sort(
+        key=lambda path: (
+            0
+            if (body == "moon" and path.stem.lower() == "geounits")
+            or (body == "mars" and path.stem.lower() == "sim3292_global_geology")
+            else 1,
+            path.name.lower(),
+        )
+    )
+    if not vector_paths:
         raise FileNotFoundError(
-            f"No hay .shp en {carpeta}. Descarga/extrae el mapa geologico primero."
+            f"No polygon GIS data found in {carpeta}; expected .shp, .gpkg, .geojson, or .gdb."
         )
     mejor = None
-    for shp in shps:
+    inspected = []
+    for vector_path in vector_paths:
         try:
-            g = gpd.read_file(shp)
+            layers = (
+                gpd.list_layers(vector_path)["name"].tolist()
+                if vector_path.suffix.lower() in (".gdb", ".gpkg")
+                else [None]
+            )
         except Exception:
             continue
-        if g.empty or not g.geom_type.astype(str).str.contains("Polygon").all():
-            continue
-        cols = [c for c in g.columns if re.search(r"unit|symbol|map_?unit|geo", c, re.I)]
-        if cols and (mejor is None or len(g) > len(mejor[0])):
-            mejor = (g, shp, cols)
+        if body == "mars" and vector_path.suffix.lower() == ".gdb":
+            preferred_layer = next(
+                (layer for layer in layers if layer.lower() == "sim3292_global_geology"), None
+            )
+            if preferred_layer:
+                layers = [preferred_layer]
+        for layer in layers:
+            try:
+                g = gpd.read_file(vector_path, layer=layer) if layer else gpd.read_file(vector_path)
+            except Exception:
+                continue
+            if g.empty or not g.geom_type.astype(str).str.contains("Polygon").all():
+                continue
+            cols = [c for c in g.columns if re.search(r"unit|symbol|map_?unit|geo", c, re.I)]
+            if cols:
+                inspected.append(f"{vector_path.name}:{layer or ''}")
+                if mejor is None or len(g) > len(mejor[0]):
+                    mejor = (g, vector_path, layer, cols)
+                if (body == "moon" and vector_path.stem.lower() == "geounits") or (
+                    body == "mars" and vector_path.stem.lower() == "sim3292_global_geology"
+                ):
+                    break
+        if mejor and (
+            (body == "moon" and vector_path.stem.lower() == "geounits")
+            or (body == "mars" and vector_path.stem.lower() == "sim3292_global_geology")
+        ):
+            break
     if mejor is None:
         raise RuntimeError(
-            "No encontre una capa de poligonos con columna de unidad. "
-            f"Capas vistas: {[s.name for s in shps]}"
+            "No polygon map-unit layer was found. "
+            f"Polygon layers inspected: {inspected or [path.name for path in vector_paths]}"
         )
-    g, shp, cols = mejor
+    g, vector_path, layer, cols = mejor
     col_sim = next(
         (c for c in cols if re.search(r"symbol|^unit$|first_unit|map_?unit", c, re.I)), cols[0]
     )
     col_nom = next(
-        (c for c in g.columns if re.search(r"name|descr|label|unitname", c, re.I)), col_sim
+        (
+            c
+            for c in g.columns
+            if re.search(r"unitdesc|first_un_2|name|descr|label|unitname", c, re.I)
+        ),
+        col_sim,
     )
     print(
-        f"  capa geologica: {shp.name} | {len(g)} poligonos | simbolo='{col_sim}' name='{col_nom}'"
+        f"  geology layer: {vector_path.name}:{layer or ''} | {len(g)} polygons "
+        f"| unit='{col_sim}' name='{col_nom}'"
     )
     return g, col_sim, col_nom
 
@@ -681,7 +726,7 @@ def sample_raster(ruta_o_url, lat, lon, body, lado_km=WINDOW_KM, estadistico=np.
 
     R = RADIO_KM[body] * 1000.0
     src = ruta_o_url if not str(ruta_o_url).startswith("http") else "/vsicurl/" + str(ruta_o_url)
-    with rasterio.open(src) as ds:
+    with rasterio.Env(GDAL_HTTP_TIMEOUT=20, GDAL_HTTP_MAX_RETRY=1), rasterio.open(src) as ds:
         b = bbox_km(lat, lon, lado_km, RADIO_KM[body])
         lons = np.array([lon - b["delta_lon_deg"] / 2, lon + b["delta_lon_deg"] / 2])
         lats = np.array([b["minlat"], b["maxlat"]])
@@ -696,7 +741,7 @@ def sample_raster(ruta_o_url, lat, lon, body, lado_km=WINDOW_KM, estadistico=np.
         z = ds.read(1, window=win, boundless=True, fill_value=np.nan).astype(float)
         if ds.nodata is not None:
             z[z == ds.nodata] = np.nan
-    return float(estadistico(z)) if np.isfinite(z).any() else np.nan
+        return float(estadistico(z)) if np.isfinite(z).any() else np.nan
 
 
 def lunar_mineralogy(lat, lon):
