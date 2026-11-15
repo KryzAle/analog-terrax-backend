@@ -205,7 +205,7 @@ def _extract_source_archives() -> None:
                 "GIS_Mela.zip": "MC18_Coprates_GeoUnits",
             }[archive_name]
             needed = next(destination.rglob(f"{target_shp}.shp"), destination / f"{target_shp}.shp")
-            def selector(name: str) -> bool:
+            def selector(name: str, target_shp: str = target_shp) -> bool:
                 return Path(name).name.startswith(target_shp) and Path(name).suffix.lower() in {
                     ".shp",
                     ".dbf",
