@@ -102,9 +102,7 @@ def main() -> None:
 
     _extract_source_archives()
     geology, coverage = _extract_geology(sites)
-    minerals = _extract_mineralogy(
-        sites, not args.skip_live_moon_mi, args.cached_moon_mi_csv
-    )
+    minerals = _extract_mineralogy(sites, not args.skip_live_moon_mi, args.cached_moon_mi_csv)
     rows: list[dict[str, Any]] = []
 
     lunar_craters = source.craters_csv(MOON_CRATERS) if MOON_CRATERS.exists() else None
@@ -154,7 +152,9 @@ def main() -> None:
     print(f"Wrote {len(rows)} site rows to {args.output_csv}")
     print(f"Added engine_features for {len(rows)} sites to {args.output_json}")
     missing_geo = [site_id for site_id, value in coverage.items() if value < 0.999]
-    missing_minerals = [key for key in MINERAL_KEYS if all(pd.isna(v[key]) for v in minerals.values())]
+    missing_minerals = [
+        key for key in MINERAL_KEYS if all(pd.isna(v[key]) for v in minerals.values())
+    ]
     if missing_geo:
         print("Geology map coverage is incomplete for:", ", ".join(missing_geo))
     if missing_minerals:
@@ -205,6 +205,7 @@ def _extract_source_archives() -> None:
                 "GIS_Mela.zip": "MC18_Coprates_GeoUnits",
             }[archive_name]
             needed = next(destination.rglob(f"{target_shp}.shp"), destination / f"{target_shp}.shp")
+
             def selector(name: str, target_shp: str = target_shp) -> bool:
                 return Path(name).name.startswith(target_shp) and Path(name).suffix.lower() in {
                     ".shp",
@@ -213,6 +214,7 @@ def _extract_source_archives() -> None:
                     ".prj",
                     ".cpg",
                 }
+
         if not needed.exists():
             _safe_extract(archive, destination, selector)
 
@@ -241,7 +243,9 @@ def _safe_extract(archive: Path, destination: Path, selector: Any = None) -> Non
     destination.mkdir(parents=True, exist_ok=True)
     root = destination.resolve()
     with zipfile.ZipFile(archive) as zipped:
-        members = [member for member in zipped.infolist() if selector is None or selector(member.filename)]
+        members = [
+            member for member in zipped.infolist() if selector is None or selector(member.filename)
+        ]
         for member in members:
             target = (destination / member.filename).resolve()
             if target != root and root not in target.parents:
@@ -250,7 +254,9 @@ def _safe_extract(archive: Path, destination: Path, selector: Any = None) -> Non
             zipped.extract(member, destination)
 
 
-def _extract_geology(sites: pd.DataFrame) -> tuple[dict[str, dict[str, float | None]], dict[str, float]]:
+def _extract_geology(
+    sites: pd.DataFrame,
+) -> tuple[dict[str, dict[str, float | None]], dict[str, float]]:
     map_frames: dict[str, tuple[gpd.GeoDataFrame, str, str, dict[str, str]]] = {}
     for body in ("moon", "mars"):
         map_dir = next(
@@ -307,10 +313,7 @@ def _normalize_classified_fractions(
     total = sum(value for value in fractions.values() if value is not None)
     if total <= 0:
         return fractions
-    return {
-        key: (value / total if value is not None else None)
-        for key, value in fractions.items()
-    }
+    return {key: (value / total if value is not None else None) for key, value in fractions.items()}
 
 
 def _load_regional_maps() -> dict[str, gpd.GeoDataFrame]:
@@ -354,9 +357,7 @@ def _regional_geology(
     nearby = frame[frame.geometry.intersects(search)].copy()
     if nearby.empty:
         return None
-    local_crs = CRS.from_proj4(
-        f"+proj=aeqd +lat_0={lat} +lon_0={lon} +R=3396190 +units=m +no_defs"
-    )
+    local_crs = CRS.from_proj4(f"+proj=aeqd +lat_0={lat} +lon_0={lon} +R=3396190 +units=m +no_defs")
     nearby = nearby.to_crs(local_crs)
     half = source.WINDOW_KM * 500.0
     window = box(-half, -half, half, half)
@@ -366,7 +367,11 @@ def _regional_geology(
         return None
 
     unit_column = next(
-        (name for name in ("name", "U_Name", "UName", "U_Symbol", "unit", "Unit") if name in nearby),
+        (
+            name
+            for name in ("name", "U_Name", "UName", "U_Symbol", "unit", "Unit")
+            if name in nearby
+        ),
         None,
     )
     if unit_column is None:
@@ -393,8 +398,7 @@ def _regional_geology(
     if coverage == 0:
         return {class_id: None for class_id in GEOLOGY_KEYS}, 0.0
     return {
-        class_id: float(mapped[index] / total_window)
-        for index, class_id in enumerate(GEOLOGY_KEYS)
+        class_id: float(mapped[index] / total_window) for index, class_id in enumerate(GEOLOGY_KEYS)
     }, coverage
 
 
@@ -452,8 +456,7 @@ def _polygon_fractions(
     if coverage == 0:
         return {class_id: None for class_id in GEOLOGY_KEYS}, 0.0
     return {
-        class_id: float(mapped[index] / window_area)
-        for index, class_id in enumerate(GEOLOGY_KEYS)
+        class_id: float(mapped[index] / window_area) for index, class_id in enumerate(GEOLOGY_KEYS)
     }, coverage
 
 
@@ -635,7 +638,11 @@ def _sample_tes_stack(sites: pd.DataFrame) -> dict[str, dict[str, float | None]]
     result: dict[str, dict[str, float | None]] = {}
     for site_id in windows:
         result[site_id] = {
-            name: (float(sums[site_id][band] / counts[site_id][band]) if counts[site_id][band] else None)
+            name: (
+                float(sums[site_id][band] / counts[site_id][band])
+                if counts[site_id][band]
+                else None
+            )
             for name, band in TES_BANDS.items()
         }
     return result
@@ -660,10 +667,7 @@ def _bounded(value: float | None) -> float | None:
 
 def _topography(record: dict[str, Any]) -> dict[str, float | None]:
     existing = record.get("topography_2d_dem", {})
-    return {
-        key: _finite_number(existing.get(key))
-        for key in TOPOGRAPHY_KEYS
-    }
+    return {key: _finite_number(existing.get(key)) for key in TOPOGRAPHY_KEYS}
 
 
 def _provenance(
@@ -767,14 +771,20 @@ def _flags(
     impact: bool | None = None
     try:
         if body == "moon" and lunar_craters is not None:
-            impact = source.craterized_fraction(
-                lunar_craters, float(site["lat"]), float(site["lon"]), "moon"
-            ) >= source.IMPACT_THRESHOLD
+            impact = (
+                source.craterized_fraction(
+                    lunar_craters, float(site["lat"]), float(site["lon"]), "moon"
+                )
+                >= source.IMPACT_THRESHOLD
+            )
         elif body == "mars" and query_mars_craters:
             crater_data = source.craters_mars_api(float(site["lat"]), float(site["lon"]))
-            impact = source.craterized_fraction(
-                crater_data, float(site["lat"]), float(site["lon"]), "mars"
-            ) >= source.IMPACT_THRESHOLD
+            impact = (
+                source.craterized_fraction(
+                    crater_data, float(site["lat"]), float(site["lon"]), "mars"
+                )
+                >= source.IMPACT_THRESHOLD
+            )
     except Exception:
         impact = None
 
