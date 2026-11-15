@@ -37,7 +37,7 @@ PROCESSED_DIR = DATA_DIR / "processed"
 REFERENCE_DIR = DATA_DIR / "reference"
 SOURCE_MAPS_DIR = PROCESSED_DIR / "engine_source_maps"
 INPUT_JSON = DATA_DIR / "moon_mars_full_real_data.json"
-OUTPUT_JSON = PROCESSED_DIR / "moon_mars_full_real_data_features.json"
+OUTPUT_JSON = DATA_DIR / "moon_mars_full_real_data.json"
 OUTPUT_CSV = PROCESSED_DIR / "engine_features.csv"
 MOON_CRATERS = REFERENCE_DIR / "craters_moon" / "lunar_crater_database_robbins_2018.csv"
 
