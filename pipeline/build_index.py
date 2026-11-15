@@ -33,8 +33,10 @@ DATA_DIR = ROOT_DIR / "app" / "data"
 PROFILES_DIR = DATA_DIR / "profiles"
 EARTH_ATL03_CATALOG = DATA_DIR / "earth_icesat2_atl03.json"
 EARTH_FULL_REAL_CATALOG = DATA_DIR / "earth_full_real_data.json"
+MOON_MARS_FULL_REAL_CATALOG = DATA_DIR / "moon_mars_full_real_data.json"
 TEMP_UTILS_ATL03_ALL = ROOT_DIR.parent / "temporary-utils" / "earth_atl03_extracted.json"
 TEMP_UTILS_FULL_REAL = ROOT_DIR.parent / "temporary-utils" / "earth_full_real_data.json"
+TEMP_UTILS_MOON_MARS_FULL = ROOT_DIR.parent / "temporary-utils" / "moon_mars_full_real_data.json"
 TEMP_UTILS_ATL03 = ROOT_DIR.parent / "temporary-utils" / "atl03_sample_data.json"
 
 TOPO_FEATURES: list[dict[str, str]] = [
@@ -865,6 +867,157 @@ def _derive_earth_min_vector(
     return [round(float(x), 3) for x in vec]
 
 
+def _derive_planetary_topo_vector(
+    body: str, lat: float, dem2d: dict[str, Any], fallback: list[float]
+) -> list[float]:
+    """Blend real 25km LOLA/MOLA 2D DEM metrics with site-scale benchmark crater/pit morphology.
+
+    Because equatorial Mars MOLA MEGDR (|lat| < 45 deg) interpolates across 4-12 km track gaps
+    (per MEGT44N000HB.LBL), we use 0.25 sensor weight there and 0.40 elsewhere.
+    """
+    if not dem2d:
+        return fallback
+    tri_m = float(dem2d.get("ruggedness_tri_m", fallback[3]))
+    rms_m = float(dem2d.get("roughness_rms_m", fallback[4]))
+    sensor = [
+        float(dem2d.get("relief_m", fallback[0])),
+        float(dem2d.get("slope_mean_deg", fallback[1])),
+        float(dem2d.get("slope_p90_deg", fallback[2])),
+        tri_m,
+        rms_m,
+        float(dem2d.get("hypsometric_integral", fallback[5])),
+    ]
+    w_sensor = 0.25 if (body == "mars" and abs(lat) < 45.0) else 0.40
+    w_fb = 1.0 - w_sensor
+    return [
+        round(w_sensor * sensor[i] + w_fb * float(fallback[i]), 3 if i == 5 else 2)
+        for i in range(6)
+    ]
+
+
+def _derive_moon_geo_min_vectors(
+    site: dict[str, Any], rec: dict[str, Any]
+) -> tuple[list[float], list[float]]:
+    """Derive lunar lithology & mineralogy signals from LP-GRS abundances and USGS WFS features."""
+    grs = rec.get("geochemistry_grs", {})
+    feats = rec.get("geology_usgs_wfs", {}).get("mapped_features", [])
+    feat_types = " ".join(
+        f"{f.get('feature_type', '')} {f.get('feature_name', '')}".lower() for f in feats
+    )
+
+    feo = float(grs.get("feo_wt_pct", 10.0)) / 25.0
+    al2o3 = float(grs.get("al2o3_wt_pct", 15.0)) / 30.0
+    tio2 = float(grs.get("tio2_wt_pct", 0.5)) / 5.0
+    mgo = float(grs.get("mgo_wt_pct", 8.0)) / 15.0
+
+    # Geo: [basalt, feldspathic, pyroclastic, impact, clastic, evaporite, ice]
+    fb_geo = [float(x) for x in site["geo"]]
+    grs_geo = [
+        min(1.0, feo * 0.85),
+        min(1.0, al2o3 * 0.90),
+        0.35 if ("rima" in feat_types or "mons" in feat_types) else fb_geo[2],
+        min(1.0, 0.35 if "crater" in feat_types else fb_geo[3]),
+        0.0,
+        0.0,
+        fb_geo[6],
+    ]
+    s_tot = max(sum(grs_geo), 1e-6)
+    norm_grs_geo = [v / s_tot for v in grs_geo]
+    geo = [round(0.40 * norm_grs_geo[i] + 0.60 * fb_geo[i], 3) for i in range(7)]
+    geo_tot = max(sum(geo), 1e-6)
+    geo = [round(v / geo_tot, 3) for v in geo]
+
+    # Min: [plagioclase, pyroxene, olivine, fe_oxides, (-1,-1,-1), silica_glass, h_water_ice]
+    fb_min = [float(x) for x in site["min"]]
+    min_vec = list(fb_min)
+    min_vec[0] = round(0.45 * min(1.0, al2o3 * 0.82) + 0.55 * fb_min[0], 3)
+    min_vec[1] = round(0.45 * min(1.0, feo * 0.48) + 0.55 * fb_min[1], 3)
+    min_vec[2] = round(0.45 * min(1.0, mgo * 0.25) + 0.55 * fb_min[2], 3)
+    min_vec[3] = round(0.45 * min(1.0, tio2 * 0.35) + 0.55 * fb_min[3], 3)
+    return geo, [round(float(x), 3) for x in min_vec]
+
+
+def _derive_mars_geo_min_vectors(
+    site: dict[str, Any], rec: dict[str, Any]
+) -> tuple[list[float], list[float]]:
+    """Derive Martian lithology & mineralogy signals from ODY-GRS elements and USGS WFS features."""
+    grs = rec.get("geochemistry_grs", {})
+    feats = rec.get("geology_usgs_wfs", {}).get("mapped_features", [])
+    feat_types = " ".join(
+        f"{f.get('feature_type', '')} {f.get('feature_name', '')}".lower() for f in feats
+    )
+
+    fe_pct = float(grs.get("fe_wt_pct") or 15.0)
+    h2o_pct = float(grs.get("h2o_wt_pct") or 4.0)
+    cl_pct = float(grs.get("cl_wt_pct") or 0.45)
+
+    fb_geo = [float(x) for x in site["geo"]]
+    grs_geo = [
+        min(1.0, fe_pct / 22.0),
+        fb_geo[1],
+        0.25
+        if ("mons" in feat_types or "fossa" in feat_types or "chasma" in feat_types)
+        else fb_geo[2],
+        0.35 if "crater" in feat_types else fb_geo[3],
+        0.35
+        if ("vallis" in feat_types or "planitia" in feat_types or h2o_pct > 4.5)
+        else fb_geo[4],
+        min(1.0, cl_pct * 0.5),
+        fb_geo[6],
+    ]
+    s_tot = max(sum(grs_geo), 1e-6)
+    norm_grs_geo = [v / s_tot for v in grs_geo]
+    geo = [round(0.35 * norm_grs_geo[i] + 0.65 * fb_geo[i], 3) for i in range(7)]
+    geo_tot = max(sum(geo), 1e-6)
+    geo = [round(v / geo_tot, 3) for v in geo]
+
+    fb_min = [float(x) for x in site["min"]]
+    min_vec = list(fb_min)
+    fe_sig = min(1.0, fe_pct / 24.0) * 0.45
+    hyd_sig = min(1.0, h2o_pct / 8.0) * 0.55
+    cl_sig = min(1.0, cl_pct / 0.9) * 0.45
+    min_vec[3] = round(0.40 * fe_sig + 0.60 * fb_min[3], 3)
+    min_vec[4] = round(0.40 * hyd_sig + 0.60 * fb_min[4], 3)
+    min_vec[5] = round(0.40 * cl_sig + 0.60 * fb_min[5], 3)
+    return geo, [round(float(x), 3) for x in min_vec]
+
+
+def enrich_moon_mars_sites_with_pds(
+    moon_sites: list[dict[str, Any]],
+    mars_sites: list[dict[str, Any]],
+) -> None:
+    """Attach real extracted NASA PDS (LOLA/MOLA, LP-GRS/ODY-GRS, M3/CRISM) & USGS Astrogeology provenance."""
+    catalog_path = (
+        MOON_MARS_FULL_REAL_CATALOG
+        if MOON_MARS_FULL_REAL_CATALOG.exists()
+        else TEMP_UTILS_MOON_MARS_FULL
+    )
+    if not catalog_path.exists():
+        return
+    catalog: dict[str, dict[str, Any]] = json.loads(catalog_path.read_text(encoding="utf-8"))
+
+    for site in moon_sites + mars_sites:
+        rec = catalog.get(site["site_id"])
+        if not rec:
+            continue
+        dem2d = rec.get("topography_2d_dem", {})
+        if dem2d.get("mean_elevation_m") is not None:
+            site["elevation_m"] = float(dem2d["mean_elevation_m"])
+        site["topo"] = _derive_planetary_topo_vector(
+            site["body"], float(site["lat"]), dem2d, site["topo"]
+        )
+        if site["body"] == "moon":
+            site["geo"], site["min"] = _derive_moon_geo_min_vectors(site, rec)
+        else:
+            site["geo"], site["min"] = _derive_mars_geo_min_vectors(site, rec)
+        site["planetary_provenance"] = {
+            "topography_2d_dem": dem2d,
+            "geology_usgs_wfs": rec.get("geology_usgs_wfs", {}),
+            "geochemistry_grs": rec.get("geochemistry_grs", {}),
+            "pds_orbital_products": rec.get("pds_orbital_products", {}),
+        }
+
+
 def enrich_earth_sites_with_earthdata(earth_sites: list[dict[str, Any]]) -> None:
     """Attach real extracted NASA Earthdata ICESat-2 ATL03, EMIT L2B, NASADEM/ASTGTM, MODIS, and Macrostrat metadata."""
     catalog_path = EARTH_ATL03_CATALOG if EARTH_ATL03_CATALOG.exists() else TEMP_UTILS_ATL03_ALL
@@ -932,6 +1085,15 @@ def build_laser_profiles(
     if TEMP_UTILS_ATL03.exists():
         real_atl03_single = build_profile_from_atl03_sample(TEMP_UTILS_ATL03)
 
+    mm_path = (
+        MOON_MARS_FULL_REAL_CATALOG
+        if MOON_MARS_FULL_REAL_CATALOG.exists()
+        else TEMP_UTILS_MOON_MARS_FULL
+    )
+    mm_catalog: dict[str, dict[str, Any]] = (
+        json.loads(mm_path.read_text(encoding="utf-8")) if mm_path.exists() else {}
+    )
+
     profiles_by_cell: dict[str, Any] = {}
     all_curated = moon_sites + mars_sites + [s for s in earth_sites if s.get("is_curated_site")]
 
@@ -964,6 +1126,22 @@ def build_laser_profiles(
                 "photon_sample_count": real_prof.get("photon_sample_count", 0),
                 "points": pts,
                 "stats": stats,
+            }
+            continue
+
+        mm_rec = mm_catalog.get(site_id, {})
+        mm_transect = mm_rec.get("laser_transect_1d")
+        if body in ("moon", "mars") and mm_transect and mm_transect.get("points"):
+            profiles_by_cell[cell_id] = {
+                "cell_id": cell_id,
+                "site_id": site_id,
+                "body": body,
+                "instrument": mm_transect["instrument"],
+                "granule_id": mm_transect["granule_id"],
+                "concept_id": mm_transect.get("concept_id"),
+                "https_url": mm_transect.get("https_url"),
+                "points": mm_transect["points"],
+                "stats": mm_transect["stats"],
             }
             continue
 
@@ -1023,6 +1201,7 @@ def main() -> None:
 
     moon_sites = get_moon_sites()
     mars_sites = get_mars_sites()
+    enrich_moon_mars_sites_with_pds(moon_sites, mars_sites)
     curated_earth_sites = get_earth_sites()
     enrich_earth_sites_with_earthdata(curated_earth_sites)
     all_earth_sites = curated_earth_sites

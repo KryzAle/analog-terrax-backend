@@ -1958,6 +1958,19 @@
               }
             ],
             "description": "Real multi-source provenance (2D DEM, Macrostrat Geology, NASA EMIT L2B & MODIS)"
+          },
+          "planetary_provenance": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Planetary Provenance",
+            "description": "Real NASA PDS & USGS Astrogeology multi-source provenance for Moon and Mars sites"
           }
         },
         "type": "object",
