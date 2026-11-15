@@ -576,6 +576,90 @@
           "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
         ]
       }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 3801.64,
+        "slope_mean_deg": 18.56,
+        "slope_p90_deg": 31.71,
+        "ruggedness_tri_m": 113.19,
+        "roughness_rms_m": 1120.25,
+        "hypsometric_integral": 0.648
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": 0.0,
+        "feldspathic_plutonic": 0.0,
+        "pyroclastic": 0.0,
+        "impact_breccia_regolith": 1.0,
+        "clastic_sedimentary": 0.0,
+        "evaporite_chemical": 0.0,
+        "ice_polar": 0.0
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.8064644950381398,
+        "pyroxene": 0.1141183432301826,
+        "olivine": 0.07941715968442122,
+        "fe_oxides": 0.2532948379403741,
+        "phyllosilicates_clays": null,
+        "sulfates": null,
+        "carbonates": null,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": true,
+        "has_ice": false,
+        "is_volcanic": false
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "LRO-L-LOLA-4-GDR-V1.0",
+        "granule_id": "LDEM_80S_80M.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/POLAR/IMG/LDEM_80S_80M.IMG",
+        "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/POLAR/IMG/LDEM_80S_80M.LBL",
+        "native_gsd_m": 80.0,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "USGS Unified Geologic Map of the Moon GIS",
+          "app/data/processed/harmonization_moon.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 0.9999998805277083,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "app/data/extras/gridded_plagioclase_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_low_calcium_pyroxene_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_high_calcium_pyroxene_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_olivine_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_feo_mosaic_south_pole.tif.zip"
+        ],
+        "window_size_km": 25,
+        "method": "Mean of valid pixels in the 25 km window; FeO divided by 25.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "sulfates",
+          "carbonates",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Robbins lunar crater catalog (local CSV)",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
+      }
     }
   },
   "moon_marius_hills_pit": {
@@ -1208,6 +1292,87 @@
           "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.lbl",
           "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
         ]
+      }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 236.49,
+        "slope_mean_deg": 1.35,
+        "slope_p90_deg": 2.74,
+        "ruggedness_tri_m": 7.67,
+        "roughness_rms_m": 40.46,
+        "hypsometric_integral": 0.532
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": 0.0,
+        "feldspathic_plutonic": 0.0,
+        "pyroclastic": 1.0,
+        "impact_breccia_regolith": 0.0,
+        "clastic_sedimentary": 0.0,
+        "evaporite_chemical": 0.0,
+        "ice_polar": 0.0
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.0028532608929535902,
+        "pyroxene": 0.0062398354429724235,
+        "olivine": 0.0009069036896595081,
+        "fe_oxides": 0.7859715352927821,
+        "phyllosilicates_clays": null,
+        "sulfates": null,
+        "carbonates": null,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": false,
+        "has_ice": false,
+        "is_volcanic": true
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "LRO-L-LOLA-4-GDR-V1.0",
+        "granule_id": "LDEM_64.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.IMG",
+        "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.LBL",
+        "native_gsd_m": 473.802,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "USGS Unified Geologic Map of the Moon GIS",
+          "app/data/processed/harmonization_moon.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 1.0,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "Kaguya MI maps configured in scripts/extract_similarity_features.py",
+          "app/data/processed/mineralogy_sites.csv as fallback for missing live-map values"
+        ],
+        "window_size_km": 25,
+        "method": "Kaguya MI sampling; cached CSV values fill missing live-map values.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "sulfates",
+          "carbonates",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Robbins lunar crater catalog (local CSV)",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
       }
     }
   },
@@ -1851,6 +2016,87 @@
           "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
         ]
       }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 624.8,
+        "slope_mean_deg": 2.75,
+        "slope_p90_deg": 6.54,
+        "ruggedness_tri_m": 15.94,
+        "roughness_rms_m": 92.79,
+        "hypsometric_integral": 0.373
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": 0.0,
+        "feldspathic_plutonic": 0.0,
+        "pyroclastic": 0.6807640824064229,
+        "impact_breccia_regolith": 0.31923591759357717,
+        "clastic_sedimentary": 0.0,
+        "evaporite_chemical": 0.0,
+        "ice_polar": 0.0
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.0048879749195611865,
+        "pyroxene": 0.0031003300670311316,
+        "olivine": 0.0020116949740100654,
+        "fe_oxides": 0.615440104157731,
+        "phyllosilicates_clays": null,
+        "sulfates": null,
+        "carbonates": null,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": false,
+        "has_ice": false,
+        "is_volcanic": true
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "LRO-L-LOLA-4-GDR-V1.0",
+        "granule_id": "LDEM_64.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.IMG",
+        "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.LBL",
+        "native_gsd_m": 473.802,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "USGS Unified Geologic Map of the Moon GIS",
+          "app/data/processed/harmonization_moon.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 1.0,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "Kaguya MI maps configured in scripts/extract_similarity_features.py",
+          "app/data/processed/mineralogy_sites.csv as fallback for missing live-map values"
+        ],
+        "window_size_km": 25,
+        "method": "Kaguya MI sampling; cached CSV values fill missing live-map values.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "sulfates",
+          "carbonates",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Robbins lunar crater catalog (local CSV)",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
+      }
     }
   },
   "moon_de_gerlache_rim": {
@@ -2404,7 +2650,7 @@
         {
           "feature_id": "16415",
           "feature_name": "Lacus Tenebrarum",
-          "feature_type": "Lacus, lac\u016bs",
+          "feature_type": "Lacus, lacūs",
           "code": "LC",
           "diameter_km": 85.0,
           "controlnet": "LOLA 2011",
@@ -2474,6 +2720,90 @@
           "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.lbl",
           "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
         ]
+      }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 2374.22,
+        "slope_mean_deg": 11.91,
+        "slope_p90_deg": 18.75,
+        "ruggedness_tri_m": 69.46,
+        "roughness_rms_m": 630.21,
+        "hypsometric_integral": 0.451
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": 0.0,
+        "feldspathic_plutonic": 0.0,
+        "pyroclastic": 0.0,
+        "impact_breccia_regolith": 1.0,
+        "clastic_sedimentary": 0.0,
+        "evaporite_chemical": 0.0,
+        "ice_polar": 0.0
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.7524260356581423,
+        "pyroxene": 0.16895710042892742,
+        "olivine": 0.07861686379720385,
+        "fe_oxides": 0.291533121921607,
+        "phyllosilicates_clays": null,
+        "sulfates": null,
+        "carbonates": null,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": true,
+        "has_ice": false,
+        "is_volcanic": false
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "LRO-L-LOLA-4-GDR-V1.0",
+        "granule_id": "LDEM_80S_80M.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/POLAR/IMG/LDEM_80S_80M.IMG",
+        "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/POLAR/IMG/LDEM_80S_80M.LBL",
+        "native_gsd_m": 80.0,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "USGS Unified Geologic Map of the Moon GIS",
+          "app/data/processed/harmonization_moon.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 0.9999999999999997,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "app/data/extras/gridded_plagioclase_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_low_calcium_pyroxene_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_high_calcium_pyroxene_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_olivine_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_feo_mosaic_south_pole.tif.zip"
+        ],
+        "window_size_km": 25,
+        "method": "Mean of valid pixels in the 25 km window; FeO divided by 25.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "sulfates",
+          "carbonates",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Robbins lunar crater catalog (local CSV)",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
       }
     }
   },
@@ -3108,13 +3438,94 @@
           "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
         ]
       }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 58.45,
+        "slope_mean_deg": 0.37,
+        "slope_p90_deg": 0.68,
+        "ruggedness_tri_m": 2.3,
+        "roughness_rms_m": 10.8,
+        "hypsometric_integral": 0.519
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": 1.0,
+        "feldspathic_plutonic": 0.0,
+        "pyroclastic": 0.0,
+        "impact_breccia_regolith": 0.0,
+        "clastic_sedimentary": 0.0,
+        "evaporite_chemical": 0.0,
+        "ice_polar": 0.0
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.0023305559750620595,
+        "pyroxene": 0.0070535802390243926,
+        "olivine": 0.0006158637979173619,
+        "fe_oxides": 0.781721288660559,
+        "phyllosilicates_clays": null,
+        "sulfates": null,
+        "carbonates": null,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": true,
+        "has_ice": false,
+        "is_volcanic": true
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "LRO-L-LOLA-4-GDR-V1.0",
+        "granule_id": "LDEM_64.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.IMG",
+        "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.LBL",
+        "native_gsd_m": 473.802,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "USGS Unified Geologic Map of the Moon GIS",
+          "app/data/processed/harmonization_moon.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 1.0,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "Kaguya MI maps configured in scripts/extract_similarity_features.py",
+          "app/data/processed/mineralogy_sites.csv as fallback for missing live-map values"
+        ],
+        "window_size_km": 25,
+        "method": "Kaguya MI sampling; cached CSV values fill missing live-map values.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "sulfates",
+          "carbonates",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Robbins lunar crater catalog (local CSV)",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
+      }
     }
   },
   "moon_schrodinger_basin": {
     "site_id": "moon_schrodinger_basin",
     "cell_id": "moon_c006",
     "body": "moon",
-    "name": "Schr\u00f6dinger Impact Basin Floor & Pyroclastic Vent",
+    "name": "Schrödinger Impact Basin Floor & Pyroclastic Vent",
     "lat": -75.0,
     "lon": 132.4,
     "topography_2d_dem": {
@@ -3695,6 +4106,90 @@
           "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.lbl",
           "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/data/lola_gdr/cylindrical/float_img/ldem_128_float.xml"
         ]
+      }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 165.22,
+        "slope_mean_deg": 1.53,
+        "slope_p90_deg": 3.3,
+        "ruggedness_tri_m": 9.34,
+        "roughness_rms_m": 54.21,
+        "hypsometric_integral": 0.711
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": 0.0,
+        "feldspathic_plutonic": 0.0,
+        "pyroclastic": 0.0,
+        "impact_breccia_regolith": 1.0,
+        "clastic_sedimentary": 0.0,
+        "evaporite_chemical": 0.0,
+        "ice_polar": 0.0
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.7696615367669326,
+        "pyroxene": 0.19659076947289017,
+        "olivine": 0.033747692341701344,
+        "fe_oxides": 0.24979711849506084,
+        "phyllosilicates_clays": null,
+        "sulfates": null,
+        "carbonates": null,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": true,
+        "has_ice": false,
+        "is_volcanic": false
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "LRO-L-LOLA-4-GDR-V1.0",
+        "granule_id": "LDEM_64.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.IMG",
+        "lbl_url": "https://pds-geosciences.wustl.edu/lro/lro-l-lola-3-rdr-v1/lrolol_1xxx/DATA/LOLA_GDR/CYLINDRICAL/IMG/LDEM_64.LBL",
+        "native_gsd_m": 473.802,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "USGS Unified Geologic Map of the Moon GIS",
+          "app/data/processed/harmonization_moon.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 1.0,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "app/data/extras/gridded_plagioclase_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_low_calcium_pyroxene_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_high_calcium_pyroxene_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_olivine_mosaic_south_pole.tiff.zip",
+          "app/data/extras/gridded_feo_mosaic_south_pole.tif.zip"
+        ],
+        "window_size_km": 25,
+        "method": "Mean of valid pixels in the 25 km window; FeO divided by 25.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "sulfates",
+          "carbonates",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Robbins lunar crater catalog (local CSV)",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
       }
     }
   },
@@ -4381,6 +4876,85 @@
           "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
         ]
       }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 290.06,
+        "slope_mean_deg": 1.31,
+        "slope_p90_deg": 2.75,
+        "ruggedness_tri_m": 7.39,
+        "roughness_rms_m": 67.84,
+        "hypsometric_integral": 0.141
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": 0.8602018082602868,
+        "feldspathic_plutonic": 0.0,
+        "pyroclastic": 0.0,
+        "impact_breccia_regolith": 0.02288120267674104,
+        "clastic_sedimentary": 0.11691698906297221,
+        "evaporite_chemical": 0.0,
+        "ice_polar": 0.0
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.49834851707730976,
+        "pyroxene": 0.2061862658177103,
+        "olivine": 0.07673401917730059,
+        "fe_oxides": 0.006070198225123542,
+        "phyllosilicates_clays": null,
+        "sulfates": 0.18716936132737566,
+        "carbonates": 0.24099272276673997,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": null,
+        "has_ice": null,
+        "is_volcanic": null
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+        "granule_id": "MEGT44N000HB.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n000hb.img",
+        "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n000hb.lbl",
+        "native_gsd_m": 463.0,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "jezero_database.zip (USGS SIM 3464, Nili.gdb)",
+          "Global Mars geology map in app/data/reference/mars_geologia or mars_geology",
+          "app/data/processed/harmonization_mars.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 0.6346381638783443,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "app/data/extras/TES_mineral_maps_4_ppd.ascii.gz"
+        ],
+        "window_size_km": 25,
+        "method": "Mean over the 25 km window; abundance divided by 0.2 and clipped to [0, 1]. TES combines sheet silicates and high-silica glass and has no water-ice layer.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Astrogeology Robbins Mars crater API",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
+      }
     }
   },
   "mars_arcadia_planitia": {
@@ -5021,6 +5595,85 @@
           "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
         ]
       }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 34.77,
+        "slope_mean_deg": 0.16,
+        "slope_p90_deg": 0.33,
+        "ruggedness_tri_m": 1.0,
+        "roughness_rms_m": 6.06,
+        "hypsometric_integral": 0.315
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": null,
+        "feldspathic_plutonic": null,
+        "pyroclastic": null,
+        "impact_breccia_regolith": null,
+        "clastic_sedimentary": null,
+        "evaporite_chemical": null,
+        "ice_polar": null
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.6017152518033981,
+        "pyroxene": 0.1501867352053523,
+        "olivine": 0.01592203602194786,
+        "fe_oxides": 0.09931031614542007,
+        "phyllosilicates_clays": null,
+        "sulfates": 0.14812522381544113,
+        "carbonates": 0.17565230652689934,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": null,
+        "has_ice": null,
+        "is_volcanic": null
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+        "granule_id": "MEGT44N090HB.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n090hb.img",
+        "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n090hb.lbl",
+        "native_gsd_m": 463.0,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "GIS_Arcadia.zip",
+          "Global Mars geology map in app/data/reference/mars_geologia or mars_geology",
+          "app/data/processed/harmonization_mars.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 0.0,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "app/data/extras/TES_mineral_maps_4_ppd.ascii.gz"
+        ],
+        "window_size_km": 25,
+        "method": "Mean over the 25 km window; abundance divided by 0.2 and clipped to [0, 1]. TES combines sheet silicates and high-silica glass and has no water-ice layer.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Astrogeology Robbins Mars crater API",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
+      }
     }
   },
   "mars_elysium_planitia": {
@@ -5651,6 +6304,85 @@
           "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.lbl",
           "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
         ]
+      }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 29.18,
+        "slope_mean_deg": 0.22,
+        "slope_p90_deg": 0.4,
+        "ruggedness_tri_m": 1.29,
+        "roughness_rms_m": 6.9,
+        "hypsometric_integral": 0.406
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": 1.0,
+        "feldspathic_plutonic": 0.0,
+        "pyroclastic": 0.0,
+        "impact_breccia_regolith": 0.0,
+        "clastic_sedimentary": 0.0,
+        "evaporite_chemical": 0.0,
+        "ice_polar": 0.0
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.0,
+        "pyroxene": 0.0,
+        "olivine": 0.0,
+        "fe_oxides": 0.0,
+        "phyllosilicates_clays": null,
+        "sulfates": 0.09031677246093749,
+        "carbonates": 0.061734337359666824,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": null,
+        "has_ice": false,
+        "is_volcanic": true
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+        "granule_id": "MEGT44N090HB.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n090hb.img",
+        "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n090hb.lbl",
+        "native_gsd_m": 463.0,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "Mars_Elysium_5M_I2147_Viking_GIS.zip",
+          "Global Mars geology map in app/data/reference/mars_geologia or mars_geology",
+          "app/data/processed/harmonization_mars.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 1.0,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "app/data/extras/TES_mineral_maps_4_ppd.ascii.gz"
+        ],
+        "window_size_km": 25,
+        "method": "Mean over the 25 km window; abundance divided by 0.2 and clipped to [0, 1]. TES combines sheet silicates and high-silica glass and has no water-ice layer.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Astrogeology Robbins Mars crater API",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
       }
     }
   },
@@ -6301,6 +7033,84 @@
           "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
         ]
       }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 419.15,
+        "slope_mean_deg": 2.0,
+        "slope_p90_deg": 3.74,
+        "ruggedness_tri_m": 11.38,
+        "roughness_rms_m": 134.15,
+        "hypsometric_integral": 0.725
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": 0.0,
+        "feldspathic_plutonic": 1.0,
+        "pyroclastic": 0.0,
+        "impact_breccia_regolith": 0.0,
+        "clastic_sedimentary": 0.0,
+        "evaporite_chemical": 0.0,
+        "ice_polar": 0.0
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.4684772839148839,
+        "pyroxene": 0.17516019637696445,
+        "olivine": 0.02325476186039547,
+        "fe_oxides": 0.11666361552973588,
+        "phyllosilicates_clays": null,
+        "sulfates": 0.18070120364427567,
+        "carbonates": 0.19294192393620807,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": null,
+        "has_ice": false,
+        "is_volcanic": false
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+        "granule_id": "MEGT44N270HB.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n270hb.img",
+        "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt44n270hb.lbl",
+        "native_gsd_m": 463.0,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "Global Mars geology map in app/data/reference/mars_geologia or mars_geology",
+          "app/data/processed/harmonization_mars.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 1.0,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "app/data/extras/TES_mineral_maps_4_ppd.ascii.gz"
+        ],
+        "window_size_km": 25,
+        "method": "Mean over the 25 km window; abundance divided by 0.2 and clipped to [0, 1]. TES combines sheet silicates and high-silica glass and has no water-ice layer.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Astrogeology Robbins Mars crater API",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
+      }
     }
   },
   "mars_arsia_mons_pits": {
@@ -6932,13 +7742,91 @@
           "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
         ]
       }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 1546.42,
+        "slope_mean_deg": 4.07,
+        "slope_p90_deg": 5.15,
+        "ruggedness_tri_m": 20.9,
+        "roughness_rms_m": 35.42,
+        "hypsometric_integral": 0.504
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": 1.0,
+        "feldspathic_plutonic": 0.0,
+        "pyroclastic": 0.0,
+        "impact_breccia_regolith": 0.0,
+        "clastic_sedimentary": 0.0,
+        "evaporite_chemical": 0.0,
+        "ice_polar": 0.0
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.11460179463028908,
+        "pyroxene": 0.04257801175117493,
+        "olivine": 0.0,
+        "fe_oxides": 0.010649756528437136,
+        "phyllosilicates_clays": null,
+        "sulfates": 0.02993303444236517,
+        "carbonates": 0.0453353114426136,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": null,
+        "has_ice": false,
+        "is_volcanic": true
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+        "granule_id": "MEGT00N180HB.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n180hb.img",
+        "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n180hb.lbl",
+        "native_gsd_m": 463.0,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "Global Mars geology map in app/data/reference/mars_geologia or mars_geology",
+          "app/data/processed/harmonization_mars.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 1.0,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "app/data/extras/TES_mineral_maps_4_ppd.ascii.gz"
+        ],
+        "window_size_km": 25,
+        "method": "Mean over the 25 km window; abundance divided by 0.2 and clipped to [0, 1]. TES combines sheet silicates and high-silica glass and has no water-ice layer.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Astrogeology Robbins Mars crater API",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
+      }
     }
   },
   "mars_melas_chasma": {
     "site_id": "mars_melas_chasma",
     "cell_id": "mars_c006",
     "body": "mars",
-    "name": "Valles Marineris \u2014 Melas Chasma Sulfate Terrace",
+    "name": "Valles Marineris — Melas Chasma Sulfate Terrace",
     "lat": -9.8,
     "lon": -73.6,
     "topography_2d_dem": {
@@ -7458,7 +8346,7 @@
         {
           "feature_id": "3815",
           "feature_name": "Melas Labes",
-          "feature_type": "Labes, lab\u0113s",
+          "feature_type": "Labes, labēs",
           "code": "LA",
           "diameter_km": 107.24,
           "controlnet": "MDIM 2.1",
@@ -7607,6 +8495,85 @@
           "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.lbl",
           "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg004/mega90n000cb.xml"
         ]
+      }
+    },
+    "engine_features": {
+      "topography": {
+        "relief_m": 566.31,
+        "slope_mean_deg": 2.43,
+        "slope_p90_deg": 4.05,
+        "ruggedness_tri_m": 13.43,
+        "roughness_rms_m": 118.14,
+        "hypsometric_integral": 0.303
+      },
+      "geology_fractions": {
+        "basaltic_volcanic": 0.0,
+        "feldspathic_plutonic": 0.0,
+        "pyroclastic": 0.0,
+        "impact_breccia_regolith": 1.0,
+        "clastic_sedimentary": 0.0,
+        "evaporite_chemical": 0.0,
+        "ice_polar": 0.0
+      },
+      "mineralogy": {
+        "plagioclase_feldspar": 0.49597086384892464,
+        "pyroxene": 0.15233826241455972,
+        "olivine": 0.04646200221031904,
+        "fe_oxides": 0.11920014396309853,
+        "phyllosilicates_clays": null,
+        "sulfates": 0.0982926762662828,
+        "carbonates": 0.20602493546903133,
+        "silica_glass": null,
+        "h_water_ice": null
+      },
+      "flags": {
+        "ndvi": 0.0,
+        "is_impact": null,
+        "has_ice": null,
+        "is_volcanic": null
+      }
+    },
+    "engine_features_provenance": {
+      "topography": {
+        "source": "MGS-M-MOLA-5-MEGDR-L3-V1.0 (128 ppd)",
+        "granule_id": "MEGT00N270HB.IMG",
+        "img_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n270hb.img",
+        "lbl_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg128/megt00n270hb.lbl",
+        "native_gsd_m": 463.0,
+        "window_size_km": 25.0,
+        "resampled_grid_shape": [
+          50,
+          50
+        ],
+        "resampled_gsd_m": 500.0
+      },
+      "geology_fractions": {
+        "sources": [
+          "GIS_Mela.zip",
+          "Global Mars geology map in app/data/reference/mars_geologia or mars_geology",
+          "app/data/processed/harmonization_mars.csv if present"
+        ],
+        "window_size_km": 25,
+        "classified_window_fraction": 0.03660127559188081,
+        "method": "Fractions normalized within the classifiable area; classified_window_fraction reports the classified share of the full window."
+      },
+      "mineralogy": {
+        "sources": [
+          "app/data/extras/TES_mineral_maps_4_ppd.ascii.gz"
+        ],
+        "window_size_km": 25,
+        "method": "Mean over the 25 km window; abundance divided by 0.2 and clipped to [0, 1]. TES combines sheet silicates and high-silica glass and has no water-ice layer.",
+        "unavailable_fields": [
+          "phyllosilicates_clays",
+          "silica_glass",
+          "h_water_ice"
+        ]
+      },
+      "flags": {
+        "ndvi": "Placeholder 0.0; no NDVI raster was sampled.",
+        "is_impact": "USGS Astrogeology Robbins Mars crater API",
+        "has_ice": "Derived from geology_fractions.ice_polar; only set when geology coverage is complete.",
+        "is_volcanic": "Derived from basaltic_volcanic + pyroclastic fractions; only set when coverage is complete."
       }
     }
   }

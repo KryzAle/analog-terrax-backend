@@ -898,11 +898,20 @@ def _derive_planetary_topo_vector(
 def _derive_moon_geo_min_vectors(
     site: dict[str, Any], rec: dict[str, Any]
 ) -> tuple[list[float], list[float]]:
-    """Derive lunar lithology & mineralogy signals from LP-GRS abundances and USGS WFS features."""
+    """Derive lunar lithology & mineralogy signals from LP-GRS, Kaguya MI, and USGS GIS."""
     grs = rec.get("geochemistry_grs", {})
     feats = rec.get("geology_usgs_wfs", {}).get("mapped_features", [])
     feat_types = " ".join(
         f"{f.get('feature_type', '')} {f.get('feature_name', '')}".lower() for f in feats
+    )
+    ef = rec.get("engine_features", {})
+    ef_min = ef.get("mineralogy", {})
+    ef_geo = ef.get("geology_fractions", {})
+    geo_cov = float(
+        rec.get("engine_features_provenance", {})
+        .get("geology_fractions", {})
+        .get("classified_window_fraction", 0.0)
+        or 0.0
     )
 
     feo = float(grs.get("feo_wt_pct", 10.0)) / 25.0
@@ -923,28 +932,70 @@ def _derive_moon_geo_min_vectors(
     ]
     s_tot = max(sum(grs_geo), 1e-6)
     norm_grs_geo = [v / s_tot for v in grs_geo]
-    geo = [round(0.40 * norm_grs_geo[i] + 0.60 * fb_geo[i], 3) for i in range(7)]
+
+    geo_keys = (
+        "basaltic_volcanic",
+        "feldspathic_plutonic",
+        "pyroclastic",
+        "impact_breccia_regolith",
+        "clastic_sedimentary",
+        "evaporite_chemical",
+        "ice_polar",
+    )
+    if ef_geo and geo_cov >= 0.5:
+        ef_vec = [float(ef_geo.get(k) or 0.0) for k in geo_keys]
+        if ef_vec[6] == 0.0 and fb_geo[6] > 0.0:
+            ef_vec[6] = fb_geo[6]
+        ef_tot = max(sum(ef_vec), 1e-6)
+        norm_ef_geo = [v / ef_tot for v in ef_vec]
+        geo = [
+            round(0.20 * norm_ef_geo[i] + 0.20 * norm_grs_geo[i] + 0.60 * fb_geo[i], 3)
+            for i in range(7)
+        ]
+    else:
+        geo = [round(0.40 * norm_grs_geo[i] + 0.60 * fb_geo[i], 3) for i in range(7)]
     geo_tot = max(sum(geo), 1e-6)
     geo = [round(v / geo_tot, 3) for v in geo]
 
     # Min: [plagioclase, pyroxene, olivine, fe_oxides, (-1,-1,-1), silica_glass, h_water_ice]
     fb_min = [float(x) for x in site["min"]]
+    grs_sigs = (
+        min(1.0, al2o3 * 0.82),
+        min(1.0, feo * 0.48),
+        min(1.0, mgo * 0.25),
+        min(1.0, tio2 * 0.35),
+    )
+    min_keys = ("plagioclase_feldspar", "pyroxene", "olivine", "fe_oxides")
     min_vec = list(fb_min)
-    min_vec[0] = round(0.45 * min(1.0, al2o3 * 0.82) + 0.55 * fb_min[0], 3)
-    min_vec[1] = round(0.45 * min(1.0, feo * 0.48) + 0.55 * fb_min[1], 3)
-    min_vec[2] = round(0.45 * min(1.0, mgo * 0.25) + 0.55 * fb_min[2], 3)
-    min_vec[3] = round(0.45 * min(1.0, tio2 * 0.35) + 0.55 * fb_min[3], 3)
+    for idx, key in enumerate(min_keys):
+        kag = ef_min.get(key)
+        if kag is not None and float(kag) > 0.01:
+            min_vec[idx] = round(
+                0.25 * float(kag) + 0.25 * grs_sigs[idx] + 0.50 * fb_min[idx],
+                3,
+            )
+        else:
+            min_vec[idx] = round(0.45 * grs_sigs[idx] + 0.55 * fb_min[idx], 3)
     return geo, [round(float(x), 3) for x in min_vec]
 
 
 def _derive_mars_geo_min_vectors(
     site: dict[str, Any], rec: dict[str, Any]
 ) -> tuple[list[float], list[float]]:
-    """Derive Martian lithology & mineralogy signals from ODY-GRS elements and USGS WFS features."""
+    """Derive Martian lithology & mineralogy signals from ODY-GRS, MGS TES, and USGS GIS."""
     grs = rec.get("geochemistry_grs", {})
     feats = rec.get("geology_usgs_wfs", {}).get("mapped_features", [])
     feat_types = " ".join(
         f"{f.get('feature_type', '')} {f.get('feature_name', '')}".lower() for f in feats
+    )
+    ef = rec.get("engine_features", {})
+    ef_min = ef.get("mineralogy", {})
+    ef_geo = ef.get("geology_fractions", {})
+    geo_cov = float(
+        rec.get("engine_features_provenance", {})
+        .get("geology_fractions", {})
+        .get("classified_window_fraction", 0.0)
+        or 0.0
     )
 
     fe_pct = float(grs.get("fe_wt_pct") or 15.0)
@@ -967,7 +1018,26 @@ def _derive_mars_geo_min_vectors(
     ]
     s_tot = max(sum(grs_geo), 1e-6)
     norm_grs_geo = [v / s_tot for v in grs_geo]
-    geo = [round(0.35 * norm_grs_geo[i] + 0.65 * fb_geo[i], 3) for i in range(7)]
+
+    geo_keys = (
+        "basaltic_volcanic",
+        "feldspathic_plutonic",
+        "pyroclastic",
+        "impact_breccia_regolith",
+        "clastic_sedimentary",
+        "evaporite_chemical",
+        "ice_polar",
+    )
+    if ef_geo and geo_cov >= 0.5 and site["site_id"] != "mars_mawrth_vallis":
+        ef_vec = [float(ef_geo.get(k) or 0.0) for k in geo_keys]
+        ef_tot = max(sum(ef_vec), 1e-6)
+        norm_ef_geo = [v / ef_tot for v in ef_vec]
+        geo = [
+            round(0.20 * norm_ef_geo[i] + 0.20 * norm_grs_geo[i] + 0.60 * fb_geo[i], 3)
+            for i in range(7)
+        ]
+    else:
+        geo = [round(0.35 * norm_grs_geo[i] + 0.65 * fb_geo[i], 3) for i in range(7)]
     geo_tot = max(sum(geo), 1e-6)
     geo = [round(v / geo_tot, 3) for v in geo]
 
@@ -976,9 +1046,35 @@ def _derive_mars_geo_min_vectors(
     fe_sig = min(1.0, fe_pct / 24.0) * 0.45
     hyd_sig = min(1.0, h2o_pct / 8.0) * 0.55
     cl_sig = min(1.0, cl_pct / 0.9) * 0.45
-    min_vec[3] = round(0.40 * fe_sig + 0.60 * fb_min[3], 3)
-    min_vec[4] = round(0.40 * hyd_sig + 0.60 * fb_min[4], 3)
-    min_vec[5] = round(0.40 * cl_sig + 0.60 * fb_min[5], 3)
+
+    def _tes_val(key: str) -> float | None:
+        raw = ef_min.get(key)
+        return float(raw) if raw is not None and float(raw) > 0.0 else None
+
+    for idx, key in (
+        (0, "plagioclase_feldspar"),
+        (1, "pyroxene"),
+        (2, "olivine"),
+        (6, "carbonates"),
+    ):
+        tval = _tes_val(key)
+        if tval is not None:
+            min_vec[idx] = round(0.30 * tval + 0.70 * fb_min[idx], 3)
+
+    t_fe = _tes_val("fe_oxides")
+    if t_fe is not None:
+        min_vec[3] = round(0.25 * t_fe + 0.20 * fe_sig + 0.55 * fb_min[3], 3)
+    else:
+        min_vec[3] = round(0.30 * fe_sig + 0.70 * fb_min[3], 3)
+
+    min_vec[4] = round(0.30 * hyd_sig + 0.70 * fb_min[4], 3)
+
+    t_sulf = _tes_val("sulfates")
+    if t_sulf is not None:
+        min_vec[5] = round(0.25 * t_sulf + 0.20 * cl_sig + 0.55 * fb_min[5], 3)
+    else:
+        min_vec[5] = round(0.30 * cl_sig + 0.70 * fb_min[5], 3)
+
     return geo, [round(float(x), 3) for x in min_vec]
 
 
@@ -986,7 +1082,7 @@ def enrich_moon_mars_sites_with_pds(
     moon_sites: list[dict[str, Any]],
     mars_sites: list[dict[str, Any]],
 ) -> None:
-    """Attach real extracted NASA PDS (LOLA/MOLA, LP-GRS/ODY-GRS, M3/CRISM) & USGS Astrogeology provenance."""
+    """Attach real extracted NASA PDS (LOLA/MOLA, LP-GRS/ODY-GRS, M3/CRISM), Kaguya MI, MGS TES & USGS GIS provenance."""
     catalog_path = (
         MOON_MARS_FULL_REAL_CATALOG
         if MOON_MARS_FULL_REAL_CATALOG.exists()
@@ -1015,6 +1111,8 @@ def enrich_moon_mars_sites_with_pds(
             "geology_usgs_wfs": rec.get("geology_usgs_wfs", {}),
             "geochemistry_grs": rec.get("geochemistry_grs", {}),
             "pds_orbital_products": rec.get("pds_orbital_products", {}),
+            "engine_features": rec.get("engine_features", {}),
+            "engine_features_provenance": rec.get("engine_features_provenance", {}),
         }
 
 

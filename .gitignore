@@ -18,3 +18,16 @@ venv/
 
 .vercel
 .env*
+
+# Research rasters and catalogs are regenerable.
+/data/
+app/data/raw/
+app/data/extras/
+app/data/processed/*
+!app/data/processed/engine_features.csv
+app/data/catalogs/
+app/data/reference/
+app/data/input/
+
+# Jupyter notebooks
+*.ipynb
