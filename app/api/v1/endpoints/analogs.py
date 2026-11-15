@@ -1,6 +1,6 @@
-from typing import Literal
+from typing import Annotated, Literal
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, Path, Query
 
 from app.api.deps import SimilarityEngineDep
 from app.core.cache import cache_control
@@ -41,7 +41,7 @@ async def search_earth_analogs(
 async def get_earth_analog_heatmap(
     engine: SimilarityEngineDep,
     target_body: Literal["moon", "mars"] = Query(default="moon"),
-    target_site_id: str = Query(default="moon_shackleton_rim"),
+    target_site_id: str = Query(default="moon_shackleton_rim", max_length=128),
     w_topo: float = Query(default=0.45, ge=0.0, le=1.0),
     w_geo: float = Query(default=0.35, ge=0.0, le=1.0),
     w_min: float = Query(default=0.20, ge=0.0, le=1.0),
@@ -62,10 +62,11 @@ async def get_earth_analog_heatmap(
     dependencies=[Depends(cache_control(s_maxage=3600, stale_while_revalidate=86400))],
 )
 async def get_laser_profile_comparison(
-    earth_cell: str,
+    earth_cell: Annotated[str, Path(max_length=128)],
     engine: SimilarityEngineDep,
     target: str = Query(
         default="moon_shackleton_rim",
+        max_length=128,
         description="Target Moon/Mars site_id or cell_id for laser profile comparison",
     ),
 ) -> LaserProfileComparisonResponse:

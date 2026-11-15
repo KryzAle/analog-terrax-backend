@@ -46,6 +46,7 @@ class AnalogSearchRequest(BaseModel):
     )
     target_site_id: str | None = Field(
         default="moon_shackleton_rim",
+        max_length=128,
         description="Curated target site ID (if omitted, snaps target_lat/target_lon to nearest cell)",
     )
     target_lat: float | None = Field(

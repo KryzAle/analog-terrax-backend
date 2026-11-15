@@ -69,6 +69,7 @@
             "required": true,
             "schema": {
               "type": "string",
+              "maxLength": 128,
               "title": "Site Id"
             }
           }
@@ -200,6 +201,7 @@
             "required": true,
             "schema": {
               "type": "string",
+              "maxLength": 128,
               "title": "Site Id"
             }
           }
@@ -373,6 +375,7 @@
             "required": false,
             "schema": {
               "type": "string",
+              "maxLength": 128,
               "default": "moon_shackleton_rim",
               "title": "Target Site Id"
             }
@@ -453,6 +456,7 @@
             "required": true,
             "schema": {
               "type": "string",
+              "maxLength": 128,
               "title": "Earth Cell"
             }
           },
@@ -462,6 +466,7 @@
             "required": false,
             "schema": {
               "type": "string",
+              "maxLength": 128,
               "description": "Target Moon/Mars site_id or cell_id for laser profile comparison",
               "default": "moon_shackleton_rim",
               "title": "Target"
@@ -622,7 +627,8 @@
           "target_site_id": {
             "anyOf": [
               {
-                "type": "string"
+                "type": "string",
+                "maxLength": 128
               },
               {
                 "type": "null"
