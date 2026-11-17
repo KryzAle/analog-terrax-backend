@@ -22,6 +22,19 @@ def custom_generate_unique_id(route: APIRoute) -> str:
     return route.name
 
 
+def inject_web_analytics(html_content: str) -> str:
+    """Inject Vercel Web Analytics script into HTML content.
+    
+    Args:
+        html_content: HTML string to inject analytics into
+        
+    Returns:
+        HTML string with analytics script injected before closing head tag
+    """
+    analytics_script = '<script defer src="/_vercel/insights/script.js"></script>'
+    return html_content.replace("</head>", f"{analytics_script}</head>")
+
+
 @asynccontextmanager
 async def lifespan(_app: FastAPI) -> AsyncIterator[None]:
     """Initialize and clean up shared infrastructure resources."""
@@ -71,6 +84,7 @@ def create_app() -> FastAPI:
     application.include_router(api_v1_router, prefix=settings.API_V1_STR)
 
     # Custom documentation routes with Vercel Web Analytics integration
+    # Documentation is available in non-production environments
     if not is_production:
 
         @application.get("/docs", include_in_schema=False)
@@ -83,11 +97,13 @@ def create_app() -> FastAPI:
                 swagger_js_url="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js",
                 swagger_css_url="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css",
             )
-            # Inject Vercel Web Analytics script before closing head tag
-            analytics_script = '<script defer src="/_vercel/insights/script.js"></script>'
             html_body = html.body if isinstance(html.body, bytes) else bytes(html.body)
             html_content = html_body.decode("utf-8")
-            html_content = html_content.replace("</head>", f"{analytics_script}</head>")
+            
+            # Inject Vercel Web Analytics if enabled
+            if settings.ENABLE_WEB_ANALYTICS:
+                html_content = inject_web_analytics(html_content)
+            
             return HTMLResponse(content=html_content)
 
         @application.get("/redoc", include_in_schema=False)
@@ -98,11 +114,13 @@ def create_app() -> FastAPI:
                 title=f"{application.title} - ReDoc",
                 redoc_js_url="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js",
             )
-            # Inject Vercel Web Analytics script before closing head tag
-            analytics_script = '<script defer src="/_vercel/insights/script.js"></script>'
             html_body = html.body if isinstance(html.body, bytes) else bytes(html.body)
             html_content = html_body.decode("utf-8")
-            html_content = html_content.replace("</head>", f"{analytics_script}</head>")
+            
+            # Inject Vercel Web Analytics if enabled
+            if settings.ENABLE_WEB_ANALYTICS:
+                html_content = inject_web_analytics(html_content)
+            
             return HTMLResponse(content=html_content)
 
     return application

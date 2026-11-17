@@ -5,5 +5,11 @@
     "app/main.py": {
       "maxDuration": 60
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/_vercel/insights/:path*",
+      "destination": "/_vercel/insights/:path*"
+    }
+  ]
 }

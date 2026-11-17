@@ -33,6 +33,9 @@ class Settings(BaseSettings):
     # Per-IP requests/minute on compute-heavy endpoints (0 disables)
     RATE_LIMIT_PER_MINUTE: int = 60
 
+    # Vercel Web Analytics
+    ENABLE_WEB_ANALYTICS: bool = True
+
     # Outbound HTTP & NASA API Settings
     UPSTREAM_TIMEOUT_SECONDS: float = 15.0
     NASA_API_KEY: str = "DEMO_KEY"
