@@ -3,8 +3,6 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.openapi.docs import get_redoc_html, get_swagger_ui_html
-from fastapi.responses import HTMLResponse
 from fastapi.routing import APIRoute
 
 from app.api.v1.router import api_v1_router
@@ -42,8 +40,8 @@ def create_app() -> FastAPI:
         version=settings.VERSION,
         description="Scalable FastAPI backend infrastructure for Analog Terrax.",
         openapi_url="/openapi.json",
-        docs_url=None,
-        redoc_url=None,
+        docs_url=None if is_production else "/docs",
+        redoc_url=None if is_production else "/redoc",
         generate_unique_id_function=custom_generate_unique_id,
         lifespan=lifespan,
     )
@@ -69,41 +67,6 @@ def create_app() -> FastAPI:
 
     register_exception_handlers(application)
     application.include_router(api_v1_router, prefix=settings.API_V1_STR)
-
-    # Custom documentation routes with Vercel Web Analytics integration
-    if not is_production:
-
-        @application.get("/docs", include_in_schema=False)
-        async def custom_swagger_ui_html() -> HTMLResponse:
-            """Swagger UI documentation with Vercel Web Analytics."""
-            html = get_swagger_ui_html(
-                openapi_url=application.openapi_url or "/openapi.json",
-                title=f"{application.title} - Swagger UI",
-                oauth2_redirect_url=application.swagger_ui_oauth2_redirect_url,
-                swagger_js_url="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js",
-                swagger_css_url="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css",
-            )
-            # Inject Vercel Web Analytics script before closing head tag
-            analytics_script = '<script defer src="/_vercel/insights/script.js"></script>'
-            html_body = html.body if isinstance(html.body, bytes) else bytes(html.body)
-            html_content = html_body.decode("utf-8")
-            html_content = html_content.replace("</head>", f"{analytics_script}</head>")
-            return HTMLResponse(content=html_content)
-
-        @application.get("/redoc", include_in_schema=False)
-        async def custom_redoc_html() -> HTMLResponse:
-            """ReDoc documentation with Vercel Web Analytics."""
-            html = get_redoc_html(
-                openapi_url=application.openapi_url or "/openapi.json",
-                title=f"{application.title} - ReDoc",
-                redoc_js_url="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js",
-            )
-            # Inject Vercel Web Analytics script before closing head tag
-            analytics_script = '<script defer src="/_vercel/insights/script.js"></script>'
-            html_body = html.body if isinstance(html.body, bytes) else bytes(html.body)
-            html_content = html_body.decode("utf-8")
-            html_content = html_content.replace("</head>", f"{analytics_script}</head>")
-            return HTMLResponse(content=html_content)
 
     return application
 
